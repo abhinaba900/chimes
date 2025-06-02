@@ -1753,3 +1753,7 @@ body {
   letter-spacing: -4%;
   text-align: center;
 }
+
+.elevating-every-moment-slider-text-button-and-text-holder button span:last-child{
+  padding-top: 1rem;
+}
