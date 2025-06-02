@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 function FloorPlan() {
-  var settings = {
+  const settings = {
     dots: true,
     infinite: false,
     speed: 500,

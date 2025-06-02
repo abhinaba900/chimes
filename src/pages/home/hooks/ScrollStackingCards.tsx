@@ -1,6 +1,6 @@
 ﻿"use client";
 
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 
 interface ScrollStackingCardsProps {
   children: React.ReactNode;

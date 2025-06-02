@@ -1,5 +1,4 @@
-﻿import Image from "next/image";
-import React from "react";
+﻿import React from "react";
 
 function HeroSection() {
   return (
