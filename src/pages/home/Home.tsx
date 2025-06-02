@@ -8,6 +8,7 @@ import NaturallybuiltArea from "./components/NaturallybuiltArea";
 import ElevatingeveryMomentSlider from "./components/ElevatingeveryMomentSlider";
 import AcreofTheChimes from "./components/AcreofTheChimes";
 import FloorPlan from "./components/FloorPlan";
+import WhatMatters from "./components/WhatMatters";
 
 function HomeSection() {
   return (
@@ -20,6 +21,7 @@ function HomeSection() {
       <ElevatingeveryMomentSlider />
       <AcreofTheChimes />
       <FloorPlan />
+      <WhatMatters/>
     </div>
   );
 }

@@ -172,7 +172,7 @@ function ElevatingEveryMomentSlider() {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <g clip-path="url(#clip0_130_9449)">
+              <g clipPath="url(#clip0_130_9449)">
                 <path
                   fillRule="evenodd"
                   clipRule="evenodd"
@@ -199,7 +199,7 @@ function ElevatingEveryMomentSlider() {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <g clip-path="url(#clip0_130_9445)">
+              <g clipPath="url(#clip0_130_9445)">
                 <path
                   fillRule="evenodd"
                   clipRule="evenodd"
@@ -228,7 +228,7 @@ function ElevatingEveryMomentSlider() {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <g clip-path="url(#clip0_130_9441)">
+              <g clipPath="url(#clip0_130_9441)">
                 <path
                   fillRule="evenodd"
                   clipRule="evenodd"
