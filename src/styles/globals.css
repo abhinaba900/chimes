@@ -152,19 +152,20 @@ body {
 .nav-item .nav-link {
   color: var(--text-color);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   padding: 0.5rem 1rem;
   border-radius: var(--border-radius);
   transition: all var(--transition-medium);
   display: flex;
   align-items: center;
   gap: 5px;
+  font-family: var(--font-family);
 }
 
 .nav-item .nav-link:hover,
 .nav-item .nav-link.active,
 .enquiry-button:hover {
-  color: white;
+  color: #C5D92F;
   background: #15420e;
   transform: translateY(-2px);
   background-color: #15420e;
