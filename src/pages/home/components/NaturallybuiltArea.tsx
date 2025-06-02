@@ -1,7 +1,6 @@
 ﻿import React from "react";
-import {
+import ScrollStackingCards, {
   Card,
-  ScrollStackingCards,
 } from "@/pages/home/hooks/ScrollStackingCards";
 
 function NaturallybuiltArea() {
@@ -45,8 +44,8 @@ function NaturallybuiltArea() {
                   Designed to honour the principles of Vastu, every villa is
                   aligned to maximize positivity and flow.Sunlight, airflow, and
                   layout come together in harmony—offering spatial logic with
-                  spiritual rhythm. It&apos;s architecture that&apos;s as intuitive as it
-                  is intentional.
+                  spiritual rhythm. It&apos;s architecture that&apos;s as
+                  intuitive as it is intentional.
                 </p>
               </section>
             </div>
@@ -64,9 +63,10 @@ function NaturallybuiltArea() {
                 </h3>
                 <p>
                   With rooftop solar panels on every villa, you generate your
-                  own power and often send extra back to the grid. This isn&apos;t
-                  just green—it&apos;s smart, reducing energy costs while increasing
-                  independence. Live off the sun, stay connected to the city.
+                  own power and often send extra back to the grid. This
+                  isn&apos;t just green—it&apos;s smart, reducing energy costs
+                  while increasing independence. Live off the sun, stay
+                  connected to the city.
                 </p>
               </section>
             </div>
@@ -83,7 +83,8 @@ function NaturallybuiltArea() {
                   Our Eco STP (Sewage Treatment Plant) and grey water filtration
                   systems ensure nothing goes to waste. Used water gets a second
                   life—flushing toilets, watering gardens, cooling
-                  landscapes.It&apos;s water wisdom, built into your everyday living.
+                  landscapes.It&apos;s water wisdom, built into your everyday
+                  living.
                 </p>
               </section>
             </div>

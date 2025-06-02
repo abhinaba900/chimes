@@ -8,7 +8,7 @@ interface ScrollStackingCardsProps {
   className?: string;
 }
 
-export const ScrollStackingCards = ({
+ const ScrollStackingCards = ({
   children,
   className = "",
 }: ScrollStackingCardsProps) => {
@@ -42,3 +42,6 @@ export const Card = ({ children, className = "" }: CardProps) => {
     </div>
   );
 };
+
+
+export default ScrollStackingCards;
