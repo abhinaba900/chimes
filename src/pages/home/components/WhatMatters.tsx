@@ -80,6 +80,7 @@ export default function WhatMatters() {
           borderRadius: "32px",
           zIndex: 0,
           boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+          border: "1px solid #358927",
         }}
       />
     </div>
