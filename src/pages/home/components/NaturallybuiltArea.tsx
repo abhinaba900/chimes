@@ -28,7 +28,7 @@ function NaturallybuiltArea() {
                   bricks made with 85% natural earth.This passive design keeps
                   indoor temperatures regulated—cooler in summer, warmer in
                   winter.The result? Lesser dependence on artificial cooling,
-                  and a home that's always in sync with the seasons.
+                  and a home that&apos;s always in sync with the seasons.
                 </p>
               </section>
             </div>
@@ -45,7 +45,7 @@ function NaturallybuiltArea() {
                   Designed to honour the principles of Vastu, every villa is
                   aligned to maximize positivity and flow.Sunlight, airflow, and
                   layout come together in harmony—offering spatial logic with
-                  spiritual rhythm. It's architecture that's as intuitive as it
+                  spiritual rhythm. It&apos;s architecture that&apos;s as intuitive as it
                   is intentional.
                 </p>
               </section>
@@ -64,8 +64,8 @@ function NaturallybuiltArea() {
                 </h3>
                 <p>
                   With rooftop solar panels on every villa, you generate your
-                  own power and often send extra back to the grid. This isn't
-                  just green—it's smart, reducing energy costs while increasing
+                  own power and often send extra back to the grid. This isn&apos;t
+                  just green—it&apos;s smart, reducing energy costs while increasing
                   independence. Live off the sun, stay connected to the city.
                 </p>
               </section>
@@ -83,7 +83,7 @@ function NaturallybuiltArea() {
                   Our Eco STP (Sewage Treatment Plant) and grey water filtration
                   systems ensure nothing goes to waste. Used water gets a second
                   life—flushing toilets, watering gardens, cooling
-                  landscapes.It's water wisdom, built into your everyday living.
+                  landscapes.It&apos;s water wisdom, built into your everyday living.
                 </p>
               </section>
             </div>
