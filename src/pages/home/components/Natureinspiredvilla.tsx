@@ -66,7 +66,7 @@ function Natureinspiredvilla() {
             <div className="natureinspiredvilla-sub-container-content">
               <TiltedCard
                 className="section-overlay"
-                imageSrc="assets/Modern eco-luxury villa private lounge or spa space with large windows, natural light, indoor plants, warm earthy tones, minimalistic furniture, and peaceful ambience – spacious and serene interior design.png"
+                imageSrc="assets/Modern eco-luxury villa private lounge.png"
                 altText="Powered by the Sun, Not the Grid"
                 containerHeight="100%"
                 containerWidth="100%"
