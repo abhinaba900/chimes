@@ -18,6 +18,7 @@ interface TiltedCardProps {
   overlayContent?: React.ReactNode;
   displayOverlayContent?: boolean;
   className?: string;
+  mainBodyClassName?: string;
 }
 
 const springValues: SpringOptions = {
@@ -41,6 +42,7 @@ export default function TiltedCard({
   overlayContent = null,
   displayOverlayContent = false,
   className = "",
+  mainBodyClassName = "",
 }: TiltedCardProps) {
   const ref = useRef<HTMLElement>(null);
 
@@ -95,7 +97,7 @@ export default function TiltedCard({
   return (
     <figure
       ref={ref}
-      className={styles.figure}
+      className={styles.figure + " " + mainBodyClassName}
       style={{
         height: containerHeight,
         width: containerWidth,
@@ -139,7 +141,7 @@ export default function TiltedCard({
             left: 0,
             width: "100%",
             height: "100%",
-            overflow: "hidden",
+            scale: `${scale}`,
           }}
         >
           {displayOverlayContent && overlayContent && (
@@ -153,7 +155,7 @@ export default function TiltedCard({
                 height: "100%",
                 rotateX: rotateX,
                 rotateY: rotateY,
-                scale: scale,
+                // scale: scale,
               }}
             >
               {overlayContent}

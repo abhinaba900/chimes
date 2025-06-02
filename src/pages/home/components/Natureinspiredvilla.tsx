@@ -35,132 +35,128 @@ function Natureinspiredvilla() {
           Where every Brick <br /> has a <span>Brain</span>
         </h3>
 
-        <div className="natureinspiredvilla-content-holder-image">
-          <TiltedCard
-            imageSrc="assets/Powered by the Sun,Not the Grid.jpg"
-            altText="Powered by the Sun, Not the Grid"
-            captionText="Kendrick Lamar - GNX"
-            containerHeight="100%"
-            containerWidth="100%"
-            imageHeight="100%"
-            imageWidth="100%"
-            rotateAmplitude={18}
-            scaleOnHover={1}
-            showMobileWarning={false}
-            showTooltip={false}
-            displayOverlayContent={true}
-            overlayContent={
-              <section className="natureinspiredvilla-content-holder-text">
-                <h4>
-                  Powered by the Sun, <br />
-                  Not the Grid
-                </h4>
-                <p>Zero electricity bills. Pure solar living</p>
-              </section>
-            }
-          />
-        </div>
+        <TiltedCard
+          mainBodyClassName="natureinspiredvilla-content-holder-image"
+          imageSrc="assets/Powered by the Sun,Not the Grid.jpg"
+          altText="Powered by the Sun, Not the Grid"
+          captionText="Kendrick Lamar - GNX"
+          containerHeight="100%"
+          containerWidth="100%"
+          imageHeight="100%"
+          imageWidth="100%"
+          rotateAmplitude={13}
+          scaleOnHover={1}
+          showMobileWarning={false}
+          showTooltip={false}
+          displayOverlayContent={true}
+          overlayContent={
+            <section className="natureinspiredvilla-content-holder-text">
+              <h4>
+                Powered by the Sun, <br />
+                Not the Grid
+              </h4>
+              <p>Zero electricity bills. Pure solar living</p>
+            </section>
+          }
+        />
 
         <div className="natureinspiredvilla-sub-container-content-holder">
           <div className="natureinspiredvilla-sub-container">
-            <div className="natureinspiredvilla-sub-container-content">
-              <TiltedCard
-                className="section-overlay"
-                imageSrc="assets/Modern eco-luxury villa private lounge.png"
-                altText="Powered by the Sun, Not the Grid"
-                containerHeight="100%"
-                containerWidth="100%"
-                imageHeight="100%"
-                imageWidth="100%"
-                rotateAmplitude={18}
-                scaleOnHover={1}
-                showMobileWarning={false}
-                showTooltip={false}
-                displayOverlayContent={true}
-                overlayContent={
-                  <section className="natureinspiredvilla-content-holder-text ">
-                    <h4>
-                      Your own <br /> Private Sanctuary
-                    </h4>
-                    <p>240 Sq.ft of space for wellness and quiet luxury</p>
-                  </section>
-                }
-              />
-            </div>
-            <div className="natureinspiredvilla-sub-container-content ">
-              <TiltedCard
-                className="section-overlay"
-                imageSrc="assets/Modern servant’s quarter in a luxury eco-villa – clean, well-lit, living space with a bed, small kitchenette, private bathroom, functional and dignified design, neutral tones, warm ambience.png"
-                altText="Powered by the Sun, Not the Grid"
-                captionText="Kendrick Lamar - GNX"
-                containerHeight="100%"
-                containerWidth="100%"
-                imageHeight="100%"
-                imageWidth="100%"
-                rotateAmplitude={18}
-                scaleOnHover={1}
-                showMobileWarning={false}
-                showTooltip={false}
-                displayOverlayContent={true}
-                overlayContent={
-                  <section className="natureinspiredvilla-content-holder-text ">
-                    <h4>
-                      Space that Respects <br /> every role
-                    </h4>
-                    <p>Includes a spacious 400 Sq.ft servant’s quarter</p>
-                  </section>
-                }
-              />
-            </div>
-          </div>
-          <div className="natureinspiredvilla-sub-container-content-right-section ">
             <TiltedCard
-              className="section-overlay"
-              imageSrc="assets/Modern eco-friendly villa.png"
+              mainBodyClassName="natureinspiredvilla-content-holder-image-2"
+              className="section-overlay border-r-2"
+              imageSrc="assets/Modern eco-luxury villa private lounge.png"
               altText="Powered by the Sun, Not the Grid"
-              captionText="Kendrick Lamar - GNX"
               containerHeight="100%"
               containerWidth="100%"
               imageHeight="100%"
               imageWidth="100%"
-              rotateAmplitude={18}
+              rotateAmplitude={13}
               scaleOnHover={1}
               showMobileWarning={false}
               showTooltip={false}
               displayOverlayContent={true}
               overlayContent={
                 <section className="natureinspiredvilla-content-holder-text ">
-                  <section className="natureinspiredvilla-content-holder-text-inner">
-                    <div>
-                      <h4>
-                        World Bank-Approved <br /> Sustainability
-                      </h4>
-                      <p>IFC Green certified for eco-conscious living</p>
-                    </div>
-
-                    <section className="natureinspiredvilla-content-holder-text-inner-image">
-                      {images && images.length > 0 ? (
-                        <Stack
-                          randomRotation={true}
-                          sensitivity={5}
-                          sendToBackOnClick={false}
-                          cardDimensions={{ width: 450, height: 267 }}
-                          cardsData={images}
-                        />
-                      ) : (
-                        <div>No images available</div>
-                      )}
-
-                      <a>
-                        Mud interlocking bricks that keep your villa cooler in
-                        summer, warmer in winter.
-                      </a>
-                    </section>
-                  </section>
+                  <h4>
+                    Your own <br /> Private Sanctuary
+                  </h4>
+                  <p>240 Sq.ft of space for wellness and quiet luxury</p>
+                </section>
+              }
+            />
+            <TiltedCard
+              mainBodyClassName="natureinspiredvilla-content-holder-image-2"
+              className="section-overlay"
+              imageSrc="assets/Modern servant’s quarter in a luxury eco-villa – clean, well-lit, living space with a bed, small kitchenette, private bathroom, functional and dignified design, neutral tones, warm ambience.png"
+              altText="Powered by the Sun, Not the Grid"
+              captionText="Kendrick Lamar - GNX"
+              containerHeight="100%"
+              containerWidth="100%"
+              imageHeight="100%"
+              imageWidth="100%"
+              rotateAmplitude={13}
+              scaleOnHover={1}
+              showMobileWarning={false}
+              showTooltip={false}
+              displayOverlayContent={true}
+              overlayContent={
+                <section className="natureinspiredvilla-content-holder-text ">
+                  <h4>
+                    Space that Respects <br /> every role
+                  </h4>
+                  <p>Includes a spacious 400 Sq.ft servant’s quarter</p>
                 </section>
               }
             />
           </div>
+          <TiltedCard
+            mainBodyClassName="natureinspiredvilla-content-holder-image-2"
+            className="section-overlay "
+            imageSrc="assets/Modern eco-friendly villa.png"
+            altText="Powered by the Sun, Not the Grid"
+            captionText="Kendrick Lamar - GNX"
+            containerHeight="100%"
+            containerWidth="100%"
+            imageHeight="100%"
+            imageWidth="100%"
+            rotateAmplitude={13}
+            scaleOnHover={1}
+            showMobileWarning={false}
+            showTooltip={false}
+            displayOverlayContent={true}
+            overlayContent={
+              <section className="natureinspiredvilla-content-holder-text ">
+                <section className="natureinspiredvilla-content-holder-text-inner">
+                  <div>
+                    <h4>
+                      World Bank-Approved <br /> Sustainability
+                    </h4>
+                    <p>IFC Green certified for eco-conscious living</p>
+                  </div>
+
+                  <section className="natureinspiredvilla-content-holder-text-inner-image">
+                    {images && images.length > 0 ? (
+                      <Stack
+                        randomRotation={true}
+                        sensitivity={5}
+                        sendToBackOnClick={false}
+                        cardDimensions={{ width: 450, height: 267 }}
+                        cardsData={images}
+                      />
+                    ) : (
+                      <div>No images available</div>
+                    )}
+
+                    <a>
+                      Mud interlocking bricks that keep your villa cooler in
+                      summer, warmer in winter.
+                    </a>
+                  </section>
+                </section>
+              </section>
+            }
+          />
         </div>
       </div>
     </div>

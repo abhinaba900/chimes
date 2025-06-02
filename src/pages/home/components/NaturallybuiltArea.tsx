@@ -20,7 +20,7 @@ function NaturallybuiltArea() {
                 src="assets/Eco-friendly villa.png"
                 alt="Eco-friendly villa"
               />
-              <section>
+              <section className="">
                 <h3>Cooler Summers, Warmer Winters</h3>
                 <p>
                   These villas breathe with nature, thanks to mud interlocking
