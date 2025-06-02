@@ -474,7 +474,7 @@ body {
   height: 100%;
   object-fit: cover;
 
-  margin-bottom: -15.5rem;
+  margin-bottom: -15rem;
 }
 
 .hero-section .text-section {
@@ -514,7 +514,7 @@ body {
   font-size: 15.625em;
   text-align: center;
   color: #f1ebe3;
-  line-height: 0.69;
+  line-height: 0.63;
 }
 
 /* hero section responsive */
