@@ -9,10 +9,12 @@ import ElevatingeveryMomentSlider from "./components/ElevatingeveryMomentSlider"
 import AcreofTheChimes from "./components/AcreofTheChimes";
 import FloorPlan from "./components/FloorPlan";
 import WhatMatters from "./components/WhatMatters";
+import NearbyHighlights from "./components/NearbyHighlights";
+import ConnectedtoWhatMatters from "./components/ConnectedtoWhatMatters";
 
 function HomeSection() {
   return (
-    <div >
+    <div>
       <HeroSection />
       <BuildVillas />
       <Natureinspiredvilla />
@@ -21,7 +23,9 @@ function HomeSection() {
       <ElevatingeveryMomentSlider />
       <AcreofTheChimes />
       <FloorPlan />
-      <WhatMatters/>
+      <WhatMatters />
+      <NearbyHighlights />
+      <ConnectedtoWhatMatters />
     </div>
   );
 }

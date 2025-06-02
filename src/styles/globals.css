@@ -1621,7 +1621,7 @@ body {
   letter-spacing: 0%;
   text-align: center;
   vertical-align: middle;
-  color: #15420E;
+  color: #15420e;
 }
 .popup-content-holder p {
   font-family: var(--font-family-sequel-book);
@@ -1631,5 +1631,125 @@ body {
   letter-spacing: 0%;
   text-align: center;
   vertical-align: middle;
-  color: #15420E;
+  color: #15420e;
+}
+
+/* NearbyHighlights */
+
+.nearby-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 4rem 0;
+  max-width: 1339px;
+  margin: auto;
+}
+
+.nearby-highlights h3 {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #000100;
+}
+.nearby-highlights h4 {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.nearby-highlights p {
+  font-family: var(--font-family-sequel-random);
+  font-weight: 410;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0px;
+  text-align: center;
+  max-width: 260px;
+  color: #4f584f;
+}
+
+.nearby-highlights-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.sidebar-image {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  bottom: 0;
+}
+
+.sidebar-image-2 {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  bottom: 0;
+}
+
+.connected-to-what-matters {
+  padding: 4rem 0;
+  max-width: 1339px;
+  margin: auto;
+  position: relative;
+}
+
+.connected-to-what-matters-text-holder {
+  max-width: 1072px;
+  max-height: 404px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: #ffffff;
+  border-radius: 1rem;
+}
+
+.connected-to-what-matters-text-button-and-text-holder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  gap: 1rem;
+}
+
+.connected-to-what-matters-text-button-and-text-holder
+  .elevating-every-moment-slider-text-button-and-text-holder {
+  padding: 0;
+  margin: 0 auto;
+}
+
+.connected-to-what-matters-text-button-and-text-holder h3 {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 46px;
+  line-height: 54px;
+  letter-spacing: -4%;
+  text-align: center;
+  color: #15420e;
+}
+.connected-to-what-matters-text-button-and-text-holder h3 span {
+  font-weight: 600;
+  font-style: italic;
+  font-size: 46px;
+  line-height: 54px;
+  letter-spacing: -4%;
+  text-align: center;
 }
