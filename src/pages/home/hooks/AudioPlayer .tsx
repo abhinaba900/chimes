@@ -71,7 +71,7 @@ const AudioPlayer = () => {
       <audio
         ref={audioRef}
         src={audioSrc}
-        autoPlay={isPlaying}
+        autoPlay
         loop
         className="hidden"
       />
