@@ -2,17 +2,19 @@
 import Image from "next/image";
 
 const AudioPlayer = () => {
-  const [isPlaying, setIsPlaying] = useState(true); // Set initial state to true
+  const [isPlaying, setIsPlaying] = useState(false); // Set initial state to true
   const audioRef = useRef<HTMLAudioElement>(null);
 
   // Replace with your actual audio file path
   const audioSrc = "assets/Healing Chimes (mp3cut.net).mp3";
 
-  const togglePlayPause = () => {
+  const togglePlayPause = async () => {
     if (isPlaying) {
-      audioRef.current?.pause();
-    } else {
-      audioRef.current?.play();
+      await audioRef.current?.pause();
+    } else if (!isPlaying) {
+      console.log("playing");
+
+      await audioRef.current?.play();
     }
     setIsPlaying(!isPlaying);
   };
