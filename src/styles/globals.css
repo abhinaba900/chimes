@@ -2496,3 +2496,24 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+@media (min-width: 1200px) and (max-width: 1360px) {
+  .slider-content-holder {
+    margin: auto;
+  }
+  .footer-section-text-holder,
+  .footer-copyright-section {
+    padding: 2rem 0.5rem;
+  }
+
+  .naturallybuiltarea-text-holder-top p,
+  .naturallybuiltarea-text-holder-top h5,
+  .naturallybuiltarea-text-holder-bottom h5,
+  .naturallybuiltarea-text-holder-bottom p,
+  .elevating-every-moment-slider-text-button-and-text-holder h3,
+  .elevating-every-moment-slider-text-button-and-text-holder p,
+  .elevating-every-moment-slider-text-button-and-text-holder button,
+  .elevatingeverymomentslider-text-holder-bottom-area {
+    margin-left: 0.5rem;
+  }
+}
