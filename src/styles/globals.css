@@ -355,6 +355,7 @@ body {
 @media (max-width: 1025px) {
   .navbar {
     padding: 1rem;
+    background: #f1ebe3;
   }
 
   .nav-actions {
@@ -2097,6 +2098,9 @@ body {
     font-size: 0.8rem;
     line-height: 15px;
   }
+  .footer-brand-name {
+    justify-content: center;
+  }
 
   .connected-to-what-matters-text-button-and-text-holder h3,
   .connected-to-what-matters-text-button-and-text-holder h3 span {
@@ -2104,7 +2108,7 @@ body {
     line-height: 28px;
   }
 
-  .footer-section-text-holder p{
+  .footer-section-text-holder p {
     font-size: 0.8rem;
     line-height: 15px;
   }
@@ -2209,11 +2213,16 @@ body {
   .natureinspiredvilla-sub-container-content-holder {
     grid-template-columns: repeat(1, 1fr);
   }
+  .mobile-section-dropdown {
+    position: fixed;
+    background: rgba(65, 56, 56, 0.366);
+    top: -320%;
+  }
 
   .natureinspiredvilla-text-holder-and-content-holder h3,
   .natureinspiredvilla-text-holder-and-content-holder span {
-    font-size: 30px;
-    line-height: 30px;
+    font-size: 40px;
+    line-height: 40px;
   }
 
   .natureinspiredvilla-content-holder-text h4 {
@@ -2239,6 +2248,11 @@ body {
     font-size: 45px;
     line-height: 45px;
     padding-left: 0.5rem;
+    text-align: center;
+  }
+
+  .naturallybuiltarea-text-holder-top p {
+    text-align: center;
   }
 
   .naturallybuiltarea-text-holder-top h5 span,
@@ -2303,6 +2317,7 @@ body {
   .right-side-section-inFloor-plan h3 span {
     font-size: 40px;
     line-height: 40px;
+    margin: auto;
   }
 
   .clickid-item-holder-in-floor-plan {
@@ -2351,6 +2366,8 @@ body {
   .footer-brand-name {
     font-size: 50px;
     line-height: 100px;
+    justify-content: center;
+    margin-top: 3rem;
   }
 
   .natureinspiredvilla-content-holder-image {
@@ -2374,6 +2391,11 @@ body {
   .naturallybuiltarea-card-content-holder h3 {
     font-size: 35px;
     line-height: 35px;
+    text-align: center;
+  }
+  .naturallybuiltarea-card-content-holder p {
+    text-align: center;
+    margin: auto;
   }
 
   .elevating-every-moment-slider-text-button-and-text-holder h3 span,
@@ -2389,6 +2411,9 @@ body {
 }
 
 @media (min-width: 1000px) and (max-width: 1200px) {
+  .navbar {
+    background: #f1ebe3;
+  }
   .natureinspiredvilla-sub-container-content-holder {
     grid-template-columns: repeat(1, 1fr);
   }
