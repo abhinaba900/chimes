@@ -2,49 +2,78 @@
 import Image from "next/image";
 
 const AudioPlayer = () => {
-  const [isPlaying, setIsPlaying] = useState(true); // Set initial state to true
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPermissionGranted, setIsPermissionGranted] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
 
-  // Replace with your actual audio file path
-  const audioSrc = "assets/Healing Chimes (mp3cut.net).mp3";
+  const audioSrc = "/assets/Healing Chimes (mp3cut.net).mp3";
 
-  useEffect(() => {
-    // Ensure audio plays when component mounts
-    if (audioRef.current) {
-      audioRef.current.play().catch(error => {
-        console.error("Autoplay was prevented:", error);
-        // Handle autoplay restrictions (might need user interaction)
-      });
-    }
-  }, []);
+  const requestAudioPermission = async () => {
+    try {
+      // Request microphone permission (which indirectly grants audio playback rights)
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
 
-  const togglePlayPause = () => {
-    if (isPlaying) {
-      audioRef.current?.pause();
-    } else {
-      audioRef.current?.play();
+      // Immediately stop the microphone access (we only needed the permission)
+      stream.getTracks().forEach((track) => track.stop());
+
+      setIsPermissionGranted(true);
+
+      // Automatically start playback after permission is granted
+      await audioRef.current?.play();
+      setIsPlaying(true);
+    } catch (error) {
+      console.error("Audio permission denied:", error);
+      setIsPermissionGranted(false);
     }
-    setIsPlaying(!isPlaying);
   };
 
+  const togglePlayPause = async () => {
+    if (!audioRef.current) return;
+
+    if (!isPermissionGranted) {
+      // Request permission when first clicking play
+      await requestAudioPermission();
+      return;
+    }
+
+    try {
+      if (isPlaying) {
+        await audioRef.current.pause();
+      } else {
+        await audioRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    } catch (error) {
+      console.error("Playback error:", error);
+    }
+  };
+
+  useEffect(() => {
+    requestAudioPermission();
+  }, []);
+
   return (
-    <div>
-      <button onClick={togglePlayPause} className="cursor-pointer">
-        <Image 
-          src="assets/music-icon.svg" 
-          alt={isPlaying ? "Pause music" : "Play music"} 
-          width={44} 
-          height={44} 
+    <div className="relative">
+      <button
+        onClick={togglePlayPause}
+        className="focus:outline-none"
+        aria-label={isPlaying ? "Pause music" : "Play music"}
+      >
+        <Image
+          src="/assets/music-icon.svg"
+          alt={isPlaying ? "Pause icon" : "Play icon"}
+          width={44}
+          height={44}
+          className={isPlaying ? "opacity-100" : "opacity-70"}
         />
       </button>
 
-      {/* Hidden audio element with autoPlay */}
-      <audio 
-        className="hidden" 
-        ref={audioRef} 
-        src={audioSrc} 
-        autoPlay 
-        loop // Optional: add if you want the audio to loop
+      <audio
+        ref={audioRef}
+        src={audioSrc}
+        autoPlay={isPlaying}
+        loop
+        className="hidden"
       />
     </div>
   );
