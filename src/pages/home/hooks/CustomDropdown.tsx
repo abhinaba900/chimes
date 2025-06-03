@@ -58,16 +58,15 @@ const GlassDropdown = ({
             fill="white"
           />
         </svg>
-
       </span>
 
       {isOpen && (
-        <ul className="absolute left-0 backdrop-blur-3xl border-1 border-black  rounded-md top-full mt-2  w-full backdrop:blur-sm">
+        <ul className="absolute left-0  backdrop-blur-3xl border-1 border-black  rounded-md top-7 mt-2  w-full backdrop:blur-sm z-1 mobile-section-dropdown">
           {options.map((option) => (
             <li
               key={option}
               onClick={() => handleSelect(option)}
-              className="px-3 py-1 hover:bg-white/20 cursor-pointer transition-colors"
+              className="px-3 py-1 hover:bg-white/20 cursor-pointer transition-colors mobile-section-dropdown-item"
             >
               {option}
             </li>

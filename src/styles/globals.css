@@ -708,30 +708,30 @@ body {
 
 @media (max-width: 600px) {
   .build-villas-text-holder h4 {
-    font-size: 32px;
+    font-size: 28px;
     line-height: 40px;
     padding: 0 0.3rem;
   }
 
   .build-villas-text-holder h4 span {
-    font-size: 32px;
+    font-size: 28px;
     line-height: 40px;
   }
 
   .coma-icon {
     position: absolute;
     top: 5%;
-    left: -0%;
+    left: -8%;
   }
 
   .coma-icon2 {
     position: absolute;
     top: 5%;
-    right: -0%;
+    right: -8%;
   }
 
   .build-villas-content-holder p {
-    font-size: 16px;
+    font-size: 0.8rem;
     line-height: 24px;
     padding: 0.3rem;
   }
@@ -1926,19 +1926,28 @@ body {
 
   .natureinspiredvilla-text-holder-and-content-holder h3,
   .natureinspiredvilla-text-holder-and-content-holder span {
-    font-size: 30px;
-    line-height: 30px;
+    font-size: 28px;
+    line-height: 28px;
   }
 
   .natureinspiredvilla-content-holder-text h4 {
-    font-size: 25px;
+    font-size: 1.125rem;
     line-height: 25px;
     margin-bottom: 0.5rem;
   }
 
   .natureinspiredvilla-content-holder-text p {
-    font-size: 13px;
+    font-size: 0.7rem;
     line-height: 20px;
+  }
+
+  .natureinspiredvilla-content-holder-text {
+    padding: 2rem;
+  }
+
+  .naturallybuiltarea-text-holder-top p {
+    font-size: 1rem;
+    text-align: center;
   }
 
   .swiper {
@@ -1950,9 +1959,10 @@ body {
 
   .naturallybuiltarea-text-holder-top h5,
   .naturallybuiltarea-text-holder-bottom h5 {
-    font-size: 35px;
-    line-height: 35px;
+    font-size: 28px;
+    line-height: 28px;
     padding-left: 0.5rem;
+    text-align: center;
   }
 
   .naturallybuiltarea-text-holder-top h5 span,
@@ -1966,9 +1976,20 @@ body {
   }
 
   .elevating-every-moment-slider-text-button-and-text-holder h3,
-  .elevating-every-moment-slider-text-button-and-text-holder span {
-    font-size: 30px;
-    line-height: 30px;
+  .elevating-every-moment-slider-text-button-and-text-holder h3 span {
+    font-size: 28px;
+    line-height: 28px;
+    text-align: center;
+  }
+
+  .elevating-every-moment-slider-text-button-and-text-holder p {
+    font-size: 0.7rem;
+    line-height: 15px;
+    text-align: center;
+  }
+
+  .elevating-every-moment-slider-text-button-and-text-holder button {
+    margin: auto;
   }
 
   .acreo-of-the-chimes-section p,
@@ -1984,12 +2005,20 @@ body {
   .acreo-of-the-chimes-text-and-image-container
     .text-area-inside-text-and-image-container {
     width: 100%;
+    font-size: 25px;
+    line-height: 25px;
+    text-align: center;
   }
 
   .floor-plan-container-holder {
     grid-template-columns: 1fr;
     height: 100%;
     width: 100%;
+  }
+
+  .floor-plan-container-holder .download-button {
+    width: 90%;
+    font-size: 1rem;
   }
 
   .floor-plan-container-holder .slider-content-holder {
@@ -2015,14 +2044,25 @@ body {
 
   .right-side-section-inFloor-plan h3,
   .right-side-section-inFloor-plan h3 span {
-    font-size: 25px;
-    line-height: 25px;
+    font-size: 28px;
+    line-height: 28px;
   }
 
   .clickid-item-holder-in-floor-plan {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     height: fit-content;
     padding: 0.5rem;
+  }
+
+  .mobile-section-dropdown {
+    position: fixed;
+    background: rgba(65, 56, 56, 0.366);
+    top: -320%;
+  }
+
+  .mobile-section-dropdown .mobile-section-dropdown-item {
+    position: relative;
+    z-index: 999;
   }
 
   .right-side-section-inFloor-plan {
@@ -2054,12 +2094,19 @@ body {
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
+    font-size: 0.8rem;
+    line-height: 15px;
   }
 
   .connected-to-what-matters-text-button-and-text-holder h3,
   .connected-to-what-matters-text-button-and-text-holder h3 span {
-    font-size: 30px;
-    line-height: 30px;
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .footer-section-text-holder p{
+    font-size: 0.8rem;
+    line-height: 15px;
   }
 
   .footer-brand-name {
@@ -2077,11 +2124,31 @@ body {
 
   .what-matters-content-holder-parent h3,
   .what-matters-content-holder-parent h3 span {
-    font-size: 50px;
-    line-height: 50px;
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .what-matters-content-holder-parent p {
+    font-size: 0.5rem;
+    line-height: 15px;
+    text-align: center;
+  }
+
+  .nearby-highlights p {
+    font-size: 0.7rem;
+    line-height: 15px;
+  }
+
+  .nearby-highlights h4 {
+    font-size: 0.7rem;
+    line-height: 15px;
+  }
+  .sidebar-image,
+  .sidebar-image-2 {
+    display: none;
   }
   .popup-content-holder h3 {
-    font-size: 15px;
+    font-size: 0.7rem;
     line-height: 15px;
   }
 
@@ -2091,8 +2158,46 @@ body {
   }
 
   .naturallybuiltarea-card-content-holder h3 {
-    font-size: 30px;
-    line-height: 30px;
+    font-size: 28px;
+    line-height: 28px;
+    text-align: center;
+  }
+
+  .naturallybuiltarea-card-content-holder p {
+    font-size: 0.7rem;
+    line-height: 15px;
+    text-align: center;
+  }
+
+  .scroll-stack-card {
+    padding: 1rem;
+    margin: 0;
+  }
+
+  .naturallybuiltarea-card-content-holder {
+    padding: 1rem 0;
+  }
+
+  .naturallybuiltarea-text-holder-bottom p {
+    font-size: 0.7rem;
+    line-height: 15px;
+    text-align: center;
+  }
+
+  .elevating-every-moment-slider-image-text h3 {
+    font-size: 25px;
+    line-height: 25px;
+  }
+
+  .elevating-every-moment-slider-image-text p {
+    font-size: 0.7rem;
+    line-height: 15px;
+    text-align: center;
+  }
+
+  .elevating-every-moment-slider-button {
+    right: 2%;
+    bottom: 4%;
   }
 
   .naturallybuiltarea-card-content-holder img {
@@ -2262,7 +2367,7 @@ body {
     line-height: 15px;
   }
 
-  .footer-section{
+  .footer-section {
     max-height: 100%;
   }
 
@@ -2284,70 +2389,70 @@ body {
 }
 
 @media (min-width: 1000px) and (max-width: 1200px) {
-  .natureinspiredvilla-sub-container-content-holder{
+  .natureinspiredvilla-sub-container-content-holder {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .floor-plan-container-holder{
+  .floor-plan-container-holder {
     grid-template-columns: 1fr;
     height: 100%;
     width: 100%;
   }
-  .slider-content-holder{
+  .slider-content-holder {
     margin: auto;
     width: 100%;
     max-width: 600px;
     max-height: 600px;
   }
 
-  .full-container-holder-floor-plan{
+  .full-container-holder-floor-plan {
     height: 100vh;
   }
 
-  .acreo-of-the-chimes-text-and-image-container{
+  .acreo-of-the-chimes-text-and-image-container {
     grid-template-columns: 1fr 1fr;
   }
 
-  .naturallybuiltarea-card-content-holder{
+  .naturallybuiltarea-card-content-holder {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .swiper{
+  .swiper {
     width: 100% !important;
     max-width: 400px !important;
     height: 100% !important;
     max-height: 400px !important;
   }
 
-  .natureinspiredvilla-content-holder-text-inner{
+  .natureinspiredvilla-content-holder-text-inner {
     width: 100%;
     margin: auto;
     padding: 1rem 0;
-    margin: 1rem ;
+    margin: 1rem;
     justify-content: center;
     gap: 4rem;
   }
 
-  .natureinspiredvilla-content-holder-image-2{
+  .natureinspiredvilla-content-holder-image-2 {
     height: fit-content !important;
   }
 
-  .natureinspiredvilla-content-holder-text h4{
+  .natureinspiredvilla-content-holder-text h4 {
     font-size: 60px;
     margin-bottom: 1rem;
   }
 
-  .natureinspiredvilla-content-holder-text p{
+  .natureinspiredvilla-content-holder-text p {
     font-size: 25px;
     line-height: 25px;
   }
 
-  .natureinspiredvilla-content-holder-text-inner a{
+  .natureinspiredvilla-content-holder-text-inner a {
     font-size: 25px;
     line-height: 25px;
   }
 
-  .footer-brand-name{
+  .footer-brand-name {
     font-size: 150px;
     line-height: 100px;
   }

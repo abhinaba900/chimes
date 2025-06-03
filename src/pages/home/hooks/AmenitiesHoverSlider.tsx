@@ -59,8 +59,16 @@ const AmenitiesHoverSlider = () => {
                       font-family-2 
                       font-normal 
                       text-left 
-                      text-[52px] 
-                      leading-[68px] 
+                      text-[20px]
+                        sm:text-[24px]
+                        md:text-[32px]
+                        lg:text-[40px]
+                        xl:text-[52px]
+                      leading-[24px]
+                      sm:leading-[30px]
+                      md:leading-[40px]
+                      lg:leading-[48px]
+                      xl:leading-[60px] 
                       tracking-tighter 
                       transition-opacity 
                       duration-300 
@@ -80,10 +88,10 @@ const AmenitiesHoverSlider = () => {
                   {index < amenities.length - 1 && (
                     <span
                       className={`
-                        text-[32px]
-                        sm:text-[36px]
-                        md:text-[42px]
-                        lg:text-[48px]
+                        text-[20px]
+                        sm:text-[24px]
+                        md:text-[32px]
+                        lg:text-[40px]
                         xl:text-[52px]
                         mx-1 
                         text-[#010701]
