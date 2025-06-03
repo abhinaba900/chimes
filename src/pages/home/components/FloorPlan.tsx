@@ -97,19 +97,19 @@ function FloorPlan({
 
   return (
     <div
-      className={`relative w-full h-full flex justify-center items-center overflow-hidden ${containerClassName} full-container-holder-floor-plan`}
+      className={`relative w-fit h-full flex justify-center items-center  ${containerClassName} full-container-holder-floor-plan`}
     >
       {/* Use either the passed backgroundImage or the active floor's background */}
       {(backgroundImage || activeFloor.backgroundImage) && (
         <img
           src={backgroundImage || activeFloor.backgroundImage}
           alt="floor plan background"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover floor-plan-background-image"
         />
       )}
 
       <div className="floor-plan-container-holder">
-        <div className="bottom-8 left-0 right-0 mx-auto w-full h-full max-w-[569px] px-4">
+        <div className="bottom-8 left-0 right-0 mx-auto w-full h-full max-w-[569px] px-4 slider-content-holder">
           <div className="bg-white bg-opacity-90 p-4 rounded-[16px] shadow-lg h-full">
             {plansToShow.length > 0 ? (
               <Slider {...defaultSettings} className={sliderClassName}>
@@ -122,7 +122,7 @@ function FloorPlan({
                       <img
                         src={plan.image}
                         alt={plan.alt || `Floor plan ${index + 1}`}
-                        className="w-full h-100 max-h-[461.4649658203125px] object-contain mx-auto object-fit-cover mb-4 overflow-hidden "
+                        className="w-full h-100 max-h-[461.4649658203125px] object-contain mx-auto object-fit-cover mb-4 "
                       />
                       {/* {plan.caption && (
                         <p className="text-center mt-2 text-sm">

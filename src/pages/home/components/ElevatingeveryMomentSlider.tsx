@@ -46,24 +46,32 @@ function ElevatingEveryMomentSlider() {
     centerPadding: "180px",
     slidesToShow: 1,
     slidesToScroll: 1,
-    // responsive: [
-    //   {
-    //     breakpoint: 1280,
-    //     settings: { slidesToShow: 3 },
-    //   },
-    //   {
-    //     breakpoint: 1024,
-    //     settings: { slidesToShow: 2 },
-    //   },
-    //   {
-    //     breakpoint: 768,
-    //     settings: { slidesToShow: 2 },
-    //   },
-    //   {
-    //     breakpoint: 640,
-    //     settings: { slidesToShow: 1 },
-    //   },
-    // ],
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerPadding: "100px",
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerPadding: "20px",
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerPadding: "10px",
+        },
+      },
+    ],
   };
 
   return (
@@ -251,8 +259,8 @@ function ElevatingEveryMomentSlider() {
         </button>
       </div>
 
-      <div  className="elevatingeverymomentslider-text-holder-bottom-area">
-        <AmenitiesHoverSlider/>
+      <div className="elevatingeverymomentslider-text-holder-bottom-area">
+        <AmenitiesHoverSlider />
       </div>
     </div>
   );

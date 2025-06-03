@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import AudioPlayer from "../home/hooks/AudioPlayer ";
 
 export default function Navbar() {
   const [isActive, setIsActive] = useState(false);
@@ -193,12 +194,7 @@ export default function Navbar() {
             transition={{ duration: 0.3 }}
             className="nav-action"
           >
-            <Image
-              src="assets\music-icon.svg"
-              alt="Logo"
-              width={44}
-              height={44}
-            />
+            <AudioPlayer />
             <Link href="/login" className="nav-link">
               <button className="enquiry-button not-in-mobile">
                 Send Enquiry

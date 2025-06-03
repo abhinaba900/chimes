@@ -28,7 +28,9 @@ const AmenitiesHoverSlider = () => {
     },
   ];
 
-  const [hoveredItem, setHoveredItem] = useState<AmenitiesItemProps | null>(null);
+  const [hoveredItem, setHoveredItem] = useState<AmenitiesItemProps | null>(
+    null
+  );
 
   return (
     <div className="flex justify-center w-full min-h-[500px]">
@@ -64,7 +66,11 @@ const AmenitiesHoverSlider = () => {
                       duration-300 
                       cursor-pointer
                       text-[#010701]
-                      ${hoveredItem && hoveredItem.text !== amenity.text ? "opacity-50" : "opacity-100"}
+                      ${
+                        hoveredItem && hoveredItem.text !== amenity.text
+                          ? "opacity-50"
+                          : "opacity-100"
+                      }
                     `}
                     onMouseEnter={() => setHoveredItem(amenity)}
                     onMouseLeave={() => setHoveredItem(null)}
@@ -72,9 +78,13 @@ const AmenitiesHoverSlider = () => {
                     {amenity.text}
                   </span>
                   {index < amenities.length - 1 && (
-                    <span 
+                    <span
                       className={`
-                        text-[52px] 
+                        text-[32px]
+                        sm:text-[36px]
+                        md:text-[42px]
+                        lg:text-[48px]
+                        xl:text-[52px]
                         mx-1 
                         text-[#010701]
                         ${hoveredItem ? "opacity-50" : "opacity-100"}

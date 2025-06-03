@@ -69,20 +69,7 @@ export default function WhatMatters() {
         Discover a location that balances convenience with calm — close to top
         schools, malls, and city hubs, yet wrapped in nature's quiet
       </p>
-      <div
-        ref={mapRef}
-        style={{
-          height: "100vh",
-          width: "100%",
-          maxWidth: "1339px",
-          maxHeight: "750px",
-          margin: "0 auto",
-          borderRadius: "32px",
-          zIndex: 0,
-          boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
-          border: "1px solid #358927",
-        }}
-      />
+      <div ref={mapRef} className="map-container" />
     </div>
   );
 }

@@ -1230,26 +1230,7 @@ body {
   max-height: 750px;
 }
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 750px;
-  object-fit: cover;
-}
-
 /* elevating every moment slider */
-
-.slick-slide {
-  padding: 1rem;
-}
-
-.slick-slide .elevating-every-moment-slider-button {
-  display: none;
-}
-
-.slick-active .elevating-every-moment-slider-button {
-  display: flex;
-}
 
 .elevating-every-moment-slider-image-text h3 {
   font-family: var(--font-family);
@@ -1891,4 +1872,230 @@ body {
   z-index: 2;
 
   /* padding-right: 2rem; */
+}
+
+.swiper {
+  max-width: 450px;
+  width: 100%;
+  max-height: 267px;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.slick-slide {
+  padding: 0.5rem;
+}
+
+.elevating-every-moment-slider-button {
+  display: none;
+}
+
+.slick-active .elevating-every-moment-slider-button {
+  display: flex;
+}
+
+.map-container {
+  height: 100vh;
+  width: 100%;
+  max-width: 1339px;
+  max-height: 750px;
+  margin: 0 auto;
+  border-radius: 32px;
+  z-index: 0;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: 1px solid #358927;
+}
+
+.full-container-holder-floor-plan{
+  overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  .natureinspiredvilla-sub-container-content-holder {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .natureinspiredvilla-text-holder-and-content-holder h3,
+  .natureinspiredvilla-text-holder-and-content-holder span {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .natureinspiredvilla-content-holder-text h4 {
+    font-size: 25px;
+    line-height: 25px;
+    margin-bottom: 0.5rem;
+  }
+
+  .natureinspiredvilla-content-holder-text p {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .swiper {
+    max-width: 250px;
+    width: 100%;
+    max-height: 150px;
+    height: 100%;
+  }
+
+  .naturallybuiltarea-text-holder-top h5,
+  .naturallybuiltarea-text-holder-bottom h5 {
+    font-size: 35px;
+    line-height: 35px;
+    padding-left: 0.5rem;
+  }
+
+  .naturallybuiltarea-text-holder-top h5 span,
+  .naturallybuiltarea-text-holder-bottom h5 span {
+    font-size: 35px;
+    line-height: 35px;
+  }
+
+  .naturallybuiltarea-card-content-holder {
+    grid-template-columns: 1fr;
+  }
+
+  .elevating-every-moment-slider-text-button-and-text-holder h3,
+  .elevating-every-moment-slider-text-button-and-text-holder span {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .acreo-of-the-chimes-section p,
+  .acreo-of-the-chimes-section p span {
+    font-size: 25px;
+    line-height: 25px;
+  }
+
+  .acreo-of-the-chimes-text-and-image-container {
+    grid-template-columns: 1fr;
+  }
+
+  .acreo-of-the-chimes-text-and-image-container
+    .text-area-inside-text-and-image-container {
+    width: 100%;
+  }
+
+  .floor-plan-container-holder {
+    grid-template-columns: 1fr;
+    height: 100%;
+    width: 100%;
+  }
+
+  .floor-plan-container-holder .slider-content-holder {
+    max-width: 350px;
+    max-height: 350px;
+    height: 100%;
+    margin: auto;
+    width: 100%;
+  }
+
+  .slider-content-holder .slick-slide img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .floor-plan-container-holder .download-button {
+  }
+
+  .floor-plan-background-image {
+    width: 100vh;
+    height: 100vh;
+  }
+
+  .right-side-section-inFloor-plan h3,
+  .right-side-section-inFloor-plan h3 span {
+    font-size: 25px;
+    line-height: 25px;
+  }
+
+  .clickid-item-holder-in-floor-plan {
+    grid-template-columns: repeat(3, 1fr);
+    height: fit-content;
+    padding: 0.5rem;
+  }
+
+  .right-side-section-inFloor-plan {
+    padding: 0.3rem;
+  }
+
+  .map-container {
+    max-height: 400px;
+  }
+
+  .nearby-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .social-media-icons-and-image-holder {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-section-text-holder {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .footer-copyright-section {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .connected-to-what-matters-text-button-and-text-holder h3,
+  .connected-to-what-matters-text-button-and-text-holder h3 span {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .footer-brand-name {
+    font-size: 50px;
+    line-height: 100px;
+  }
+
+  .natureinspiredvilla-content-holder-image {
+    height: fit-content !important;
+  }
+
+  .hero-section .text-section h2 {
+    font-size: 3.5em;
+  }
+
+  .what-matters-content-holder-parent h3,
+  .what-matters-content-holder-parent h3 span {
+    font-size: 50px;
+    line-height: 50px;
+  }
+  .popup-content-holder h3 {
+    font-size: 15px;
+    line-height: 15px;
+  }
+
+  .nearby-highlights h3{
+    font-size: 25px;
+    line-height: 15px;
+  }
+
+  .naturallybuiltarea-card-content-holder h3{
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .naturallybuiltarea-card-content-holder img{
+    max-height: 400px;
+  }
 }

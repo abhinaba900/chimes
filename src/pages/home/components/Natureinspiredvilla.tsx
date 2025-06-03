@@ -3,6 +3,12 @@ import Stack from "@/ReactBits/Stack/Stack";
 import TiltedCard from "@/ReactBits/TiltedCard/TiltedCard";
 import React from "react";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCards } from "swiper/modules";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-cards";
+
 function Natureinspiredvilla() {
   const images = [
     {
@@ -135,15 +141,27 @@ function Natureinspiredvilla() {
                     <p>IFC Green certified for eco-conscious living</p>
                   </div>
 
-                  <section className="natureinspiredvilla-content-holder-text-inner-image">
+                  <section className="natureinspiredvilla-content-holder-text-inner-image relative">
                     {images && images.length > 0 ? (
-                      <Stack
-                        randomRotation={true}
-                        sensitivity={5}
-                        sendToBackOnClick={false}
-                        cardDimensions={{ width: 450, height: 267 }}
-                        cardsData={images}
-                      />
+                      // <Stack
+                      //   randomRotation={true}
+                      //   sensitivity={5}
+                      //   sendToBackOnClick={false}
+                      //   cardDimensions={{ width: 450, height: 267 }}
+                      //   cardsData={images}
+                      // />
+                      <Swiper
+                        effect={"cards"}
+                        grabCursor={true}
+                        modules={[EffectCards]}
+                        className="mySwiper"
+                      >
+                        {images.map((image) => (
+                          <SwiperSlide key={image.id}>
+                            <img src={image.img} alt={`Image ${image.id}`} />
+                          </SwiperSlide>
+                        ))}
+                      </Swiper>
                     ) : (
                       <div>No images available</div>
                     )}
