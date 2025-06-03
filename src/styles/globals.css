@@ -353,6 +353,11 @@ body {
 
 /* Responsive styles */
 @media (max-width: 1025px) {
+  .sidebar-image-2,
+  .sidebar-image {
+    display: none !important;
+  }
+
   .navbar {
     padding: 1rem;
     background: #f1ebe3;
@@ -2480,5 +2485,14 @@ body {
   .footer-brand-name {
     font-size: 150px;
     line-height: 100px;
+  }
+
+  .footer-section-text-holder,
+  .footer-copyright-section {
+    padding: 2rem 0.5rem;
+  }
+
+  .nearby-highlights {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
