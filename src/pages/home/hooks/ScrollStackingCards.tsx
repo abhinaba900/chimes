@@ -1,6 +1,6 @@
 ﻿"use client";
 
-import React, { useEffect, useState, useRef, useCallback } from "react";
+import React, { useEffect, useRef } from "react";
 import {
   motion,
   useScroll,
@@ -8,45 +8,47 @@ import {
   AnimatePresence,
 } from "framer-motion";
 
+// Types
+
 type SectionProps = {
   children: React.ReactNode;
   className?: string;
   animationType?:
-    | "parallax"
     | "scaleDown"
     | "rotate"
     | "gallery"
     | "catch"
     | "opacity"
-    | "fixed";
+    | "fixed"
+    | "parallax";
   hijacking?: "on" | "off";
   index?: number;
   totalSections?: number;
-  activeIndex?: number;
-  setActiveIndex?: (index: number) => void;
 };
 
 type ScrollAnimationComponentProps = {
   children: React.ReactNode;
   animationType?:
-    | "parallax"
     | "scaleDown"
     | "rotate"
     | "gallery"
     | "catch"
     | "opacity"
-    | "fixed";
+    | "fixed"
+    | "parallax";
   hijacking?: "on" | "off";
   className?: string;
 };
 
-const ScrollAnimationSection = ({ 
-  children, 
-  className = "", 
-  activeIndex, 
-  index,
-  setActiveIndex,
-  hijacking
+// Scroll Animation Section Component
+
+const ScrollAnimationSection = ({
+  children,
+  className = "",
+  animationType = "parallax",
+  hijacking = "off",
+  index = 0,
+  totalSections = 1,
 }: SectionProps) => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -54,53 +56,81 @@ const ScrollAnimationSection = ({
     offset: ["start end", "end start"],
   });
 
-  const isActive = activeIndex === index;
-  
-  const sectionClass = `sticky-section ${className} ${isActive ? 'active-section active-viewport-tab' : 'inactive-section'}`;
+  // Animation values
+  const translateY = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
 
-  const translateY = useTransform(scrollYProgress, [0, 1], ["10%", "0%"]);
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.95]);
-  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0.85]);
-
-  // Check visibility when scrolling
-  useEffect(() => {
-    if (hijacking === "off" && sectionRef.current && setActiveIndex) {
-      const handleScroll = () => {
-        const rect = sectionRef.current?.getBoundingClientRect();
-        if (rect) {
-          const isVisible = rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2;
-          if (isVisible && index !== undefined) {
-            setActiveIndex(index);
-          }
-        }
-      };
-
-      window.addEventListener('scroll', handleScroll);
-      return () => window.removeEventListener('scroll', handleScroll);
+  const getAnimationProps = () => {
+    switch (animationType) {
+      case "scaleDown":
+        return { style: { scale } };
+      case "rotate":
+        return {
+          style: {
+            rotateX: useTransform(scrollYProgress, [0, 1], ["0deg", "90deg"]),
+          },
+        };
+      case "gallery":
+        return {
+          style: {
+            scale,
+            translateY,
+            boxShadow: useTransform(
+              scrollYProgress,
+              [0, 0.5, 1],
+              [
+                "0px 0px 0px rgba(0,0,0,0)",
+                "0px 10px 40px rgba(0,0,0,0.3)",
+                "0px 0px 0px rgba(0,0,0,0)",
+              ]
+            ),
+          },
+        };
+      case "catch":
+        return {
+          style: {
+            translateY: useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]),
+            boxShadow: useTransform(
+              scrollYProgress,
+              [0, 0.5, 1],
+              [
+                "0px 0px 0px rgba(0,0,0,0)",
+                "0px 5px 20px rgba(0,0,0,0.2)",
+                "0px 0px 0px rgba(0,0,0,0)",
+              ]
+            ),
+          },
+        };
+      case "opacity":
+        return {
+          style: {
+            scale: useTransform(scrollYProgress, [0, 1], [1, 1.2]),
+          },
+        };
+      case "parallax":
+      default:
+        return {
+          style: {
+            translateY: useTransform(scrollYProgress, [0, 1], ["0%", "0%"]),
+          },
+        };
     }
-  }, [hijacking, index, setActiveIndex]);
+  };
 
   return (
     <motion.section
       ref={sectionRef}
-      className={sectionClass}
-      style={{
-        position: "sticky",
-        top: 0,
-        height: "100vh",
-        width: "100%",
-        y: translateY,
-        scale,
-        opacity,
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
+      className={`cd-section sticky top-0 h-screen ${className}`}
+      data-animation={animationType}
+      data-hijacking={hijacking}
+      {...getAnimationProps()}
     >
-      {children}
+      <div className="w-full h-full">{children}</div>
     </motion.section>
   );
 };
+
+// Scroll Stacking Cards Component
 
 const ScrollStackingCards = ({
   children,
@@ -108,77 +138,50 @@ const ScrollStackingCards = ({
   hijacking = "off",
   className = "",
 }: ScrollAnimationComponentProps) => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const sections = Array.isArray(children) ? children : [children];
-  const totalSections = sections.length;
-
-  const goToNext = useCallback(() => {
-    if (activeIndex < totalSections - 1) {
-      setActiveIndex(activeIndex + 1);
-      // Scroll to the next section
-      document.getElementById(`section-${activeIndex + 1}`)?.scrollIntoView({
-        behavior: 'smooth'
-      });
-    }
-  }, [activeIndex, totalSections]);
-
-  const goToPrev = useCallback(() => {
-    if (activeIndex > 0) {
-      setActiveIndex(activeIndex - 1);
-      // Scroll to the previous section
-      document.getElementById(`section-${activeIndex - 1}`)?.scrollIntoView({
-        behavior: 'smooth'
-      });
-    }
-  }, [activeIndex]);
+  const sections = React.Children.toArray(children);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "ArrowDown") goToNext();
-      else if (e.key === "ArrowUp") goToPrev();
+    const container = containerRef.current;
+    if (!container) return;
+
+    let ticking = false;
+    const handleWheel = (e: WheelEvent) => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const scrollTop = container.scrollTop;
+        const sectionHeight = window.innerHeight;
+        const index = Math.round(scrollTop / sectionHeight);
+        const nextSectionTop = (index + (e.deltaY > 0 ? 1 : -1)) * sectionHeight;
+        container.scrollTo({ top: nextSectionTop, behavior: "smooth" });
+        ticking = false;
+      });
     };
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [goToNext, goToPrev]);
+
+    container.addEventListener("wheel", handleWheel, { passive: false });
+    return () => container.removeEventListener("wheel", handleWheel);
+  }, []);
 
   return (
-    <div className={`scroll-stack-container ${className}`}>
-      {hijacking === "on" ? (
-        <AnimatePresence mode="wait" initial={false} custom={activeIndex}>
-          {React.Children.map(
-            sections,
-            (child, index) =>
-              index === activeIndex && (
-                <ScrollAnimationSection
-                  key={index}
-                  animationType={animationType}
-                  hijacking={hijacking}
-                  index={index}
-                  totalSections={totalSections}
-                  activeIndex={activeIndex}
-                  setActiveIndex={setActiveIndex}
-                >
-                  {child}
-                </ScrollAnimationSection>
-              )
-          )}
-        </AnimatePresence>
-      ) : (
-        React.Children.map(sections, (child, index) => (
+    <div
+      ref={containerRef}
+      className={`scroll-stack-container relative h-screen overflow-y-scroll snap-y snap-mandatory ${className}`}
+    >
+      <AnimatePresence mode="wait">
+        {sections.map((child, i) => (
           <ScrollAnimationSection
-            key={index}
-            // id={`section-${index}`}
+            key={i}
             animationType={animationType}
             hijacking={hijacking}
-            index={index}
-            totalSections={totalSections}
-            activeIndex={activeIndex}
-            setActiveIndex={setActiveIndex}
+            index={i}
+            totalSections={sections.length}
+            className="snap-start"
           >
             {child}
           </ScrollAnimationSection>
-        ))
-      )}
+        ))}
+      </AnimatePresence>
     </div>
   );
 };
