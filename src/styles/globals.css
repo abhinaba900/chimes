@@ -1938,6 +1938,22 @@ body {
   overflow: hidden;
 }
 
+.slider-image-and-text-section{
+  position: relative;
+
+}
+
+.slider-image-and-text-section p{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.slider-image-and-text-section:hover .slider-image-and-text-section-text{
+  display: none;
+}
+
 @media (max-width: 600px) {
   .natureinspiredvilla-sub-container-content-holder {
     grid-template-columns: repeat(1, 1fr);

@@ -158,7 +158,10 @@ function Natureinspiredvilla() {
                       >
                         {images.map((image) => (
                           <SwiperSlide key={image.id}>
-                            <img src={image.img} alt={`Image ${image.id}`} />
+                            <div className="slider-image-and-text-section">
+                              <img src={image.img} alt={`Image ${image.id}`} />
+                              <p className="slider-image-and-text-section-text">Slide To See More</p>
+                            </div>
                           </SwiperSlide>
                         ))}
                       </Swiper>
