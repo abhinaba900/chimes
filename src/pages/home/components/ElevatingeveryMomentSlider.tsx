@@ -75,7 +75,7 @@ function ElevatingEveryMomentSlider() {
   };
 
   return (
-    <div className="relative px-4 md:px-10 lg:px-20 overflow-hidden py-10">
+    <div className="relative px-4 md:px-10 lg:px-20 overflow-hidden py-10" id="gallery">
       <Slider ref={sliderRef} {...settings}>
         {slides.map((slide, index) => (
           <div key={index} className="mx-4">
@@ -162,7 +162,7 @@ function ElevatingEveryMomentSlider() {
         ))}
       </Slider>
 
-      <div className="elevating-every-moment-slider-text-button-and-text-holder">
+      <div className="elevating-every-moment-slider-text-button-and-text-holder" id="amenities">
         <h3>
           Elevating every <span>Moment</span>
         </h3>

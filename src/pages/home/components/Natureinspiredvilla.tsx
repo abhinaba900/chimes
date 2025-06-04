@@ -29,7 +29,7 @@ function Natureinspiredvilla() {
     },
   ];
   return (
-    <div className="natureinspiredvilla">
+    <div className="natureinspiredvilla" id="highlights">
       <img
         className="background-image"
         src="/assets/nature inspired villa background image.png"
@@ -143,13 +143,6 @@ function Natureinspiredvilla() {
 
                   <section className="natureinspiredvilla-content-holder-text-inner-image relative">
                     {images && images.length > 0 ? (
-                      // <Stack
-                      //   randomRotation={true}
-                      //   sensitivity={5}
-                      //   sendToBackOnClick={false}
-                      //   cardDimensions={{ width: 450, height: 267 }}
-                      //   cardsData={images}
-                      // />
                       <Swiper
                         effect={"cards"}
                         grabCursor={true}
@@ -160,7 +153,9 @@ function Natureinspiredvilla() {
                           <SwiperSlide key={image.id}>
                             <div className="slider-image-and-text-section">
                               <img src={image.img} alt={`Image ${image.id}`} />
-                              <p className="slider-image-and-text-section-text">Slide To See More</p>
+                              <p className="slider-image-and-text-section-text">
+                                Slide To See More
+                              </p>
                             </div>
                           </SwiperSlide>
                         ))}

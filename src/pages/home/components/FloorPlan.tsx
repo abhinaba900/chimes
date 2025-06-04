@@ -98,6 +98,7 @@ function FloorPlan({
   return (
     <div
       className={`relative w-fit h-full flex justify-center items-center  ${containerClassName} full-container-holder-floor-plan`}
+      id="floor-plans"
     >
       {/* Use either the passed backgroundImage or the active floor's background */}
       {(backgroundImage || activeFloor.backgroundImage) && (

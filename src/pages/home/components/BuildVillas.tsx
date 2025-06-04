@@ -3,9 +3,9 @@ import React from "react";
 
 function BuildVillas() {
   return (
-    <div className="build-villas-content-holder">
-      <img src="/assets/build-villas-image1.svg" alt="build-villas" />
-      <div className="build-villas-text-holder">
+    <div className="build-villas-content-holder" >
+      <img src="/assets/build-villas-image1.svg" id="about-us" alt="build-villas" />
+      <div className="build-villas-text-holder" >
         <div className="coma-icon">
           <img src="/assets/build-villas-image3.svg" alt="coma icon" />
         </div>

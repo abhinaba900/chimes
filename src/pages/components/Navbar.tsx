@@ -14,20 +14,11 @@ export default function Navbar() {
   // Check if mobile and handle scroll/resize events
   useEffect(() => {
     const checkIfMobile = () => {
-      if (window.innerWidth <= 1025) {
-        setIsMobile(true); // Adjust breakpoint as needed
-        console.log("tregger in true");
-      } else {
-        closeMenu();
-        console.log("tregger in false");
-      }
+      setIsMobile(window.innerWidth <= 1025);
     };
 
     const handleClickOutside = (event: MouseEvent) => {
-      if (
-        navbarRef.current &&
-        !navbarRef.current.contains(event.target as Node)
-      ) {
+      if (navbarRef.current && !navbarRef.current.contains(event.target as Node)) {
         closeMenu();
       }
     };
@@ -35,15 +26,12 @@ export default function Navbar() {
     const handleResize = () => {
       checkIfMobile();
       if (window.innerWidth > 1025) {
-        console.log("tregger in false in resize");
-
         closeMenu();
       }
     };
 
     const handleScroll = () => {
       if (!isMobile && window.scrollY > 10) {
-        // Only apply scroll effect if not mobile
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -63,7 +51,7 @@ export default function Navbar() {
       window.removeEventListener("resize", handleResize);
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [isMobile]); // Add isMobile to dependency array
+  }, [isMobile]);
 
   const closeMenu = () => {
     setIsActive(false);
@@ -75,7 +63,16 @@ export default function Navbar() {
     document.body.style.overflow = isActive ? "" : "hidden";
   };
 
-  console.log("isActive", isActive);
+  const scrollToSection = (id: string) => {
+    closeMenu();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  };
 
   // Animation variants
   const navVariants = {
@@ -121,8 +118,18 @@ export default function Navbar() {
     },
   };
 
+  // Navigation items with their corresponding IDs
+  const navItems = [
+    { name: "About Us", id: "about-us" },
+    { name: "Highlights", id: "highlights" },
+    { name: "Gallery", id: "gallery" },
+    { name: "Amenities", id: "amenities" },
+    { name: "Floor Plans", id: "floor-plans" },
+    { name: "Nearby", id: "nearby" },
+  ];
+
   return (
-    <header className="header " ref={navbarRef}>
+    <header className="header" ref={navbarRef}>
       <motion.nav
         className="navbar"
         initial="hidden"
@@ -135,7 +142,7 @@ export default function Navbar() {
           animate={{ opacity: isMobile ? 1 : isScrolled ? 0 : 1 }}
           transition={{ duration: 0.3 }}
         >
-          <Link href="/">
+          <Link href="/" onClick={closeMenu}>
             <Image
               src="assets\The Chimes Logo.svg"
               alt="Logo"
@@ -156,27 +163,19 @@ export default function Navbar() {
             initial="closed"
             animate={isActive ? "open" : "closed"}
           >
-            {[
-              "About Us",
-              "Highlights",
-              "Gallery",
-              "Amenities",
-              "Floor Plans",
-              "Nearby",
-            ].map((item, i) => (
+            {navItems.map((item, i) => (
               <motion.li
-                key={item}
+                key={item.id}
                 className="nav-item"
                 variants={menuItemVariants}
                 custom={i}
               >
-                <Link
-                  href={`/${item.toLowerCase()}`}
-                  className="nav-link"
-                  onClick={closeMenu}
+                <button
+                  className="nav-link cursor-pointer"
+                  onClick={() => scrollToSection(item.id)}
                 >
-                  {item}
-                </Link>
+                  {item.name}
+                </button>
               </motion.li>
             ))}
             <motion.li className="nav-item mobile-button">
