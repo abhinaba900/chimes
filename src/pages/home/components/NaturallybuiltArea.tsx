@@ -1,5 +1,6 @@
 ﻿import React from "react";
 import ScrollStackingCards from "@/pages/home/hooks/ScrollStackingCards";
+import ScaleDownScroll from "../hooks/ScrollEffects";
 
 function NaturallybuiltArea() {
   return (
@@ -11,7 +12,7 @@ function NaturallybuiltArea() {
         </h5>
       </div>
       <div>
-        <ScrollStackingCards animationType="parallax">
+        <ScaleDownScroll>
           <div className="cd-section-content">
             <div className="naturallybuiltarea-card-content-holder">
               <img
@@ -87,7 +88,7 @@ function NaturallybuiltArea() {
               </section>
             </div>
           </div>
-        </ScrollStackingCards>
+        </ScaleDownScroll>
       </div>
 
       <div className="naturallybuiltarea-text-holder-bottom">

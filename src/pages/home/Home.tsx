@@ -11,6 +11,7 @@ import FloorPlan from "./components/FloorPlan";
 import WhatMatters from "./components/WhatMatters";
 import NearbyHighlights from "./components/NearbyHighlights";
 import ConnectedtoWhatMatters from "./components/ConnectedtoWhatMatters";
+import ScrollEffects from "./hooks/ScrollEffects";
 
 function HomeSection() {
   return (
@@ -19,6 +20,7 @@ function HomeSection() {
       <BuildVillas />
       <Natureinspiredvilla />
       <Infiniteslider />
+      {/* <ScrollEffects  /> */}
       <NaturallybuiltArea />
       <ElevatingeveryMomentSlider />
       <AcreofTheChimes />
