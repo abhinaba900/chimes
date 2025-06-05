@@ -13,7 +13,7 @@ function NaturallybuiltArea() {
       </div>
       <div>
         <ScaleDownScroll>
-          <div className="cd-section-content">
+          <div className="">
             <div className="naturallybuiltarea-card-content-holder">
               <img
                 src="assets/Eco-friendly villa.png"
@@ -31,7 +31,7 @@ function NaturallybuiltArea() {
               </section>
             </div>
           </div>
-          <div className="cd-section-content">
+          <div className="">
             <div className="naturallybuiltarea-card-content-holder">
               <img
                 src="assets/A modern eco-friendly villa.jpg"
@@ -49,7 +49,7 @@ function NaturallybuiltArea() {
               </section>
             </div>
           </div>
-          <div className="cd-section-content">
+          <div className="">
             <div className="naturallybuiltarea-card-content-holder">
               <img
                 src="assets/Modern eco-friendly villa.png"
@@ -70,7 +70,7 @@ function NaturallybuiltArea() {
               </section>
             </div>
           </div>
-          <div className="cd-section-content">
+          <div className="">
             <div className="naturallybuiltarea-card-content-holder">
               <img
                 src="assets/Eco-friendly home with a modern sewage.png"
