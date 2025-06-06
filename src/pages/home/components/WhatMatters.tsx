@@ -63,7 +63,7 @@ export default function WhatMatters() {
   return (
     <div className="what-matters-content-holder-parent">
       <h3>
-        Connected to What <span>Matters</span>
+        Connected to What <br /> <span>Matters</span>
       </h3>
       <p>
         Discover a location that balances convenience with calm — close to top

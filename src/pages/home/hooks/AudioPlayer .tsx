@@ -20,7 +20,7 @@ const AudioPlayer = () => {
   };
 
   return (
-    <div>
+    <>
       <button onClick={togglePlayPause} className="cursor-pointer relative z-2">
         <Image
           onClick={togglePlayPause}
@@ -34,7 +34,7 @@ const AudioPlayer = () => {
 
       {/* Hidden audio element with autoPlay */}
       <audio className="hidden" ref={audioRef} src={audioSrc} loop />
-    </div>
+    </>
   );
 };
 

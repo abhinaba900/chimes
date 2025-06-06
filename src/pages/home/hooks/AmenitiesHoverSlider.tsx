@@ -42,7 +42,7 @@ const AmenitiesHoverSlider = () => {
               src={hoveredItem?.image}
               alt="Amenity"
               className="h-full max-w-[500px] object-cover object-center transition-opacity duration-500 ease-in-out rounded-[32px]"
-              style={{ opacity: 0.8 }}
+              style={{ opacity: 1 }}
             />
           </div>
         )}

@@ -29,6 +29,7 @@
                   viewBox="0 0 23 57"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  className="icon-1"
                 >
                   <g clipPath="url(#clip0_130_9449)">
                     <path
@@ -56,6 +57,7 @@
                   viewBox="0 0 19 41"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  className="icon-2"
                 >
                   <g clipPath="url(#clip0_130_9445)">
                     <path
@@ -77,7 +79,7 @@
                   </defs>
                 </svg>
               </span>
-              Download Brochure{" "}
+              Explore The Chimes{" "}
               <span>
                 <svg
                   width="37"
@@ -85,6 +87,7 @@
                   viewBox="0 0 37 66"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  className="icon-3"
                 >
                   <g clipPath="url(#clip0_130_9441)">
                     <path

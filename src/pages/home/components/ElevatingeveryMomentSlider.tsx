@@ -75,94 +75,103 @@ function ElevatingEveryMomentSlider() {
   };
 
   return (
-    <div className="relative px-4 md:px-10 lg:px-20 overflow-hidden py-10" id="gallery">
-      <Slider ref={sliderRef} {...settings}>
-        {slides.map((slide, index) => (
-          <div key={index} className="mx-4">
-            <div className="relative bg-white rounded-[32px] overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 group">
-              <img
-                src={slide.image}
-                alt={slide.title}
-                className="w-full h-[500px] md:h-[600px] object-cover transform transition-transform duration-500 group-hover:scale-105"
-                loading="lazy"
-              />
-              <div className="absolute bottom-5 left-5 right-5 text-white rounded-xl px-6 py-4 elevating-every-moment-slider-image-text">
-                <div className="flex items-center space-x-4">
-                  <div>
-                    <h3 className="font-semibold text-xl">{slide.title}</h3>
-                    <p className="text-sm opacity-90">{slide.subtitle}</p>
+    <div
+      className="relative px-4 md:px-10 lg:px-20 overflow-hidden  py-10"
+      id="gallery"
+    >
+      <div className="relative">
+        <Slider ref={sliderRef} {...settings}>
+          {slides.map((slide, index) => (
+            <div key={index} className="mx-4">
+              <div className="relative rounded-[32px] overflow-hidden  ">
+                <img
+                  src={slide.image}
+                  alt={slide.title}
+                  className="w-full h-[300px] sm:h-[400px] md:h-[600px] lg:h-[600px] xl:h-[600px] object-cover transform transition-transform duration-500 group-hover:scale-105 custom-image-large"
+                  loading="lazy"
+                />
+
+                <div className="absolute bottom-5 left-5 right-5 text-white rounded-xl px-4 py-4 elevating-every-moment-slider-image-text slider-content-holder-in-gallery">
+                  <div className="flex items-center space-x-4">
+                    <div>
+                      <h3 className="font-semibold text-xl">{slide.title}</h3>
+                      <p className="text-sm opacity-90">{slide.subtitle}</p>
+                    </div>
                   </div>
                 </div>
               </div>
-
-              {/* Navigation Buttons */}
-
-              <div className="absolute bottom-10 right-10 z-10 flex gap-2 space-x-3 elevating-every-moment-slider-button">
-                <button
-                  onClick={() => sliderRef.current?.slickPrev()}
-                  className="w-10 h-10 cursor-pointer rounded-full bg-white/90 hover:bg-white text-gray-800 shadow-lg flex items-center justify-center transition"
-                >
-                  <svg
-                    width="26"
-                    height="26"
-                    viewBox="0 0 26 26"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g clipPath="url(#clip0_130_9432)">
-                      <path
-                        d="M8.54974 11.933L14.2713 6.21139L12.7631 4.70312L4.46654 12.9997L12.7631 21.2962L14.2713 19.7879L8.54974 14.0663H21.5332V11.933H8.54974Z"
-                        fill="black"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_130_9432">
-                        <rect
-                          width="25.6"
-                          height="25.6"
-                          fill="white"
-                          transform="matrix(-1 0 0 1 25.8008 0.200195)"
-                        />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </button>
-                <button
-                  onClick={() => sliderRef.current?.slickNext()}
-                  className="w-10 h-10 rounded-full cursor-pointer bg-white/90 hover:bg-white text-gray-800 shadow-lg flex items-center justify-center transition"
-                >
-                  <svg
-                    width="26"
-                    height="26"
-                    viewBox="0 0 26 26"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g clipPath="url(#clip0_233_29)">
-                      <path
-                        d="M17.4503 11.933L11.7287 6.21139L13.2369 4.70312L21.5335 12.9997L13.2369 21.2962L11.7287 19.7879L17.4503 14.0663H4.4668V11.933H17.4503Z"
-                        fill="black"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_233_29">
-                        <rect
-                          width="25.6"
-                          height="25.6"
-                          fill="white"
-                          transform="translate(0.199219 0.200195)"
-                        />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </button>
-              </div>
             </div>
-          </div>
-        ))}
-      </Slider>
+          ))}
+        </Slider>
 
-      <div className="elevating-every-moment-slider-text-button-and-text-holder" id="amenities">
+        {/* Navigation Buttons */}
+        {/* Navigation Buttons */}
+        <div className="absolute bottom-[15%]  right-[15%] z-10 flex justify-center gap-2 space-x-3">
+          <button
+            onClick={() => sliderRef.current?.slickPrev()}
+            className="w-10 h-10 cursor-pointer rounded-full bg-white/90 hover:bg-white text-gray-800 shadow-lg flex items-center justify-center transition"
+          >
+            <svg
+              width="26"
+              height="26"
+              viewBox="0 0 26 26"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clipPath="url(#clip0_130_9432)">
+                <path
+                  d="M8.54974 11.933L14.2713 6.21139L12.7631 4.70312L4.46654 12.9997L12.7631 21.2962L14.2713 19.7879L8.54974 14.0663H21.5332V11.933H8.54974Z"
+                  fill="black"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_130_9432">
+                  <rect
+                    width="25.6"
+                    height="25.6"
+                    fill="white"
+                    transform="matrix(-1 0 0 1 25.8008 0.200195)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+          <button
+            onClick={() => sliderRef.current?.slickNext()}
+            className="w-10 h-10 rounded-full cursor-pointer bg-white/90 hover:bg-white text-gray-800 shadow-lg flex items-center justify-center transition"
+          >
+            <svg
+              width="26"
+              height="26"
+              viewBox="0 0 26 26"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clipPath="url(#clip0_233_29)">
+                <path
+                  d="M17.4503 11.933L11.7287 6.21139L13.2369 4.70312L21.5335 12.9997L13.2369 21.2962L11.7287 19.7879L17.4503 14.0663H4.4668V11.933H17.4503Z"
+                  fill="black"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_233_29">
+                  <rect
+                    width="25.6"
+                    height="25.6"
+                    fill="white"
+                    transform="translate(0.199219 0.200195)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div
+        className="elevating-every-moment-slider-text-button-and-text-holder"
+        id="amenities"
+      >
         <h3>
           Elevating every <span>Moment</span>
         </h3>
@@ -179,6 +188,7 @@ function ElevatingEveryMomentSlider() {
               viewBox="0 0 23 57"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              className="icon-1"
             >
               <g clipPath="url(#clip0_130_9449)">
                 <path
@@ -206,6 +216,7 @@ function ElevatingEveryMomentSlider() {
               viewBox="0 0 19 41"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              className="icon-2"
             >
               <g clipPath="url(#clip0_130_9445)">
                 <path
@@ -235,6 +246,7 @@ function ElevatingEveryMomentSlider() {
               viewBox="0 0 37 66"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              className="icon-3"
             >
               <g clipPath="url(#clip0_130_9441)">
                 <path

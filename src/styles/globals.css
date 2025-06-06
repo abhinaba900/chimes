@@ -449,7 +449,7 @@ body {
   border: none;
   cursor: pointer;
   font-family: var(--font-family);
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1rem;
   line-height: 100%;
 }
@@ -472,16 +472,23 @@ body {
 
 .hero-section {
   position: relative;
-  height: 130vh;
+  width: 100%;
+  height: 100%;
+  /* aspect-ratio: 3 / 2; */
+  /* overflow: hidden;  */
+  display: flex;
+  flex-direction: column;
 }
 
 .hero-section img {
-  width: 100%;
+  /* width: 100%; */
   height: 100%;
-  object-fit: cover;
+  /* object-fit: fill; */
   object-position: center;
-
-  margin-bottom: -11rem;
+  display: block;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
 }
 
 .hero-section .text-section {
@@ -497,9 +504,13 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: fit-content;
-  /* Add these to ensure it stays on top of content when sticky */
-  z-index: 10;
+  z-index: 1;
+  padding: 1rem 0;
+  max-height: 100%; /* prevent overflow */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
 }
 
 /* Rest of your existing styles */
@@ -521,7 +532,8 @@ body {
   font-size: clamp(5rem, 15vw, 15.625rem);
   text-align: center;
   color: #f1ebe3;
-  line-height: 0.63;
+  line-height: 0.49;
+  margin-top: 1rem;
 }
 
 /* hero section responsive */
@@ -533,11 +545,9 @@ body {
 
   .hero-section {
     position: relative;
-    height: 60vh;
   }
   .hero-section .text-section p {
     font-size: 20px;
-    line-height: 24px;
     padding-right: 5%;
   }
 
@@ -547,7 +557,7 @@ body {
 
   .hero-section img {
     object-fit: contain;
-    margin-bottom: -6em;
+    top: 20%;
   }
 }
 
@@ -557,7 +567,7 @@ body {
   } */
 
   .hero-section img {
-    margin-bottom: -10rem;
+    top: 15%;
   }
 }
 
@@ -568,12 +578,13 @@ body {
 
   .hero-section {
     position: relative;
-    height: 70vh;
+    height: 100vh;
   }
 
   .hero-section img {
     object-fit: cover;
-    /* margin-bottom: -10rem; */
+    top: 10%; /* Stick to the middle */
+    height: 100vh;
   }
 
   /* .hero-section .text-section h2 {
@@ -622,7 +633,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  padding: 5rem 0;
+  padding: 8.75rem 0 10rem 0;
 }
 
 .build-villas-text-holder {
@@ -636,11 +647,12 @@ body {
   text-align: center;
   font-weight: 400;
   font-family: var(--font-family-2);
+  color: #15420e;
 }
 
 .build-villas-text-holder h4 span {
   font-family: var(--font-family);
-  font-weight: 400;
+  font-weight: 600;
   font-style: italic;
   font-size: 64px;
   line-height: 72px;
@@ -669,6 +681,7 @@ body {
   letter-spacing: 0%;
   text-align: center;
   padding: 0 1rem;
+  color: #000100;
 }
 
 .build-villas-line-content-holder {
@@ -697,7 +710,7 @@ body {
 
 .build-villas-line-holder h5 {
   font-family: var(--font-family);
-  font-weight: 400;
+  font-weight: 600;
   font-size: 24px;
   line-height: 32px;
   letter-spacing: 0%;
@@ -711,6 +724,7 @@ body {
   line-height: 150%;
   letter-spacing: 0px;
   text-align: center;
+  color: #4f584f;
 }
 
 @media (max-width: 600px) {
@@ -801,7 +815,7 @@ body {
   width: 100%;
   height: auto;
   display: block;
-  aspect-ratio: 1.2;
+  /* aspect-ratio: 1.2; */
   object-fit: cover;
   position: absolute;
   top: 0;
@@ -827,8 +841,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  padding: 1rem;
-  padding-top: 15%;
+  padding: 6.25rem 0 10rem 0;
   z-index: 1;
 }
 
@@ -873,6 +886,32 @@ body {
   box-shadow: 610px 753px 250px 0px #00000000;
 }
 
+.natureinspiredvilla-content-holder-image-2 .slider-image-and-text-section img {
+  border: 5px solid #ffffff;
+  margin-bottom: 1rem;
+  max-height: 267px;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+  display: block;
+  overflow: hidden;
+  border-radius: 32px;
+}
+
+.swiper-cards .swiper-slide {
+  border-radius: 32px;
+  height: 100% !important;
+}
+
+.brand-logo {
+  position: absolute;
+  max-width: 83px;
+  max-height: 83px;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
 .natureinspiredvilla-content-holder-text {
   position: absolute;
   top: 0;
@@ -908,12 +947,7 @@ body {
   letter-spacing: 0%;
   color: white;
   padding: 0.2rem 1rem;
-  border: 1px solid
-    linear-gradient(
-      90.72deg,
-      rgba(255, 255, 255, 0.7) 3.25%,
-      rgba(255, 255, 255, 0) 116.03%
-    );
+  border: 0.2px solid #ffffffb2;
   border-radius: 40px;
   box-shadow: 0px 4px 30px 0px #00000036;
 }
@@ -967,7 +1001,7 @@ body {
   align-items: start;
   justify-content: space-between;
   gap: 1rem;
-  height: 80%;
+  height: 100%;
   border-radius: 32px;
 }
 
@@ -986,7 +1020,7 @@ body {
   align-items: start;
   justify-content: space-between;
   gap: 1rem;
-  height: 53%;
+  height: 40%;
 }
 
 .section-overlay {
@@ -1063,7 +1097,6 @@ body {
   width: 100%;
   position: relative;
   overflow: hidden;
-  padding: 2rem 0;
 }
 
 .scroll-section img:first-child {
@@ -1077,7 +1110,7 @@ body {
 
 .slide-content h3 {
   font-family: var(--font-family);
-  font-weight: 400;
+  font-weight: 600;
   font-size: 3.75rem;
   line-height: 140%;
   letter-spacing: -2%;
@@ -1102,8 +1135,12 @@ body {
   width: 100%;
   position: relative;
   overflow: hidden;
-  padding: 3rem 0;
+  padding: 10rem 0 5rem 0;
   margin: auto;
+}
+
+.slider-content-holder-in-gallery {
+  padding: 3rem;
 }
 
 .naturallybuiltarea-text-holder-top,
@@ -1126,7 +1163,7 @@ body {
 .naturallybuiltarea-text-holder-top h5 span,
 .naturallybuiltarea-text-holder-bottom h5 span {
   font-family: var(--font-family);
-  font-weight: 400;
+  font-weight: 600;
   font-style: italic;
   font-size: 64px;
   line-height: 72px;
@@ -1153,14 +1190,12 @@ body {
   max-width: 525px;
 }
 
-
-
 /* Remove parallax-container class as it's no longer needed */
 
 .naturallybuiltarea-card-content-holder {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  gap: 6rem;
   margin: auto;
   padding: 2rem 0;
   width: 100%;
@@ -1232,7 +1267,7 @@ body {
 
 .elevating-every-moment-slider-image-text h3 {
   font-family: var(--font-family);
-  font-weight: 400;
+  font-weight: 500;
   font-size: 32px;
   line-height: 40px;
   letter-spacing: 0%;
@@ -1243,8 +1278,8 @@ body {
   font-family: var(--font-family-sequel-random);
   font-weight: 405;
   font-size: 16px;
-  letter-spacing: 0%;
-  color: #f1ebe3;
+  letter-spacing: 1px;
+  color: #ffffff;
   max-width: 525px;
 }
 
@@ -1300,6 +1335,78 @@ body {
   gap: 0.5rem;
   max-height: 48px;
   overflow-wrap: break-word;
+  font-family: var(--font-family-sequel-random);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.elevating-every-moment-slider-text-button-and-text-holder button:hover .icon-1,
+.connected-to-what-matters-text-button-and-text-holder
+  .elevating-every-moment-slider-text-button-and-text-holder
+  button:hover
+  .icon-1 {
+  animation: slay-1 3s cubic-bezier(0.52, 0, 0.58, 1) infinite;
+  transform: rotate(10deg);
+}
+
+@keyframes slay-1 {
+  0% {
+    transform: rotate(10deg);
+  }
+
+  50% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(10deg);
+  }
+}
+
+.elevating-every-moment-slider-text-button-and-text-holder button:hover .icon-2,
+.connected-to-what-matters-text-button-and-text-holder
+  .elevating-every-moment-slider-text-button-and-text-holder
+  button:hover
+  .icon-2 {
+  animation: slay-2 3s cubic-bezier(0.52, 0, 0.58, 1) 1s infinite;
+  transform: rotate(0);
+}
+
+@keyframes slay-2 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(15deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.elevating-every-moment-slider-text-button-and-text-holder button:hover .icon-3,
+.connected-to-what-matters-text-button-and-text-holder
+  .elevating-every-moment-slider-text-button-and-text-holder
+  button:hover
+  .icon-3 {
+  animation: slay-3 2s cubic-bezier(0.52, 0, 0.58, 1) 1s infinite;
+  transform: rotate(0);
+}
+
+@keyframes slay-3 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
 }
 
 .elevating-every-moment-slider-text-button-and-text-holder button span {
@@ -1312,7 +1419,7 @@ body {
 .acreo-of-the-chimes-section {
   max-width: 1339px;
   margin: auto;
-  padding: 15% 0;
+  padding: 12.5rem 0 10rem 0;
   width: 100%;
   position: relative;
 }
@@ -1320,6 +1427,7 @@ body {
 .acreo-of-the-chimes-section #acreo-of-the-chimes-tree-logo-image {
   display: block;
   margin: auto;
+  margin-bottom: 1.5rem;
 }
 
 .acreo-of-the-chimes-section p {
@@ -1349,7 +1457,7 @@ body {
   gap: 1rem;
   align-items: center;
   justify-content: center;
-  padding-top: 3%;
+  padding-top: 9.375rem;
 }
 
 .acreo-of-the-chimes-text-and-image-container
@@ -1422,7 +1530,7 @@ body {
   gap: 1rem;
   align-items: center;
   justify-content: center;
-  padding-top: 3%;
+  padding: 8.75rem 0;
   position: absolute;
   top: 0;
   left: 0;
@@ -1482,7 +1590,7 @@ body {
 }
 .right-side-section-inFloor-plan h3 span {
   font-family: var(--font-family-2);
-  font-weight: 400;
+  font-weight: 600;
   font-size: 48px;
   line-height: 105%;
   letter-spacing: 0%;
@@ -1511,6 +1619,19 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
+.clickid-item-holder-in-floor-plan > * {
+    border-right: 1px solid white;
+    height: 60%; /* Adjust height to control divider length */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Remove divider from the last item in each row */
+.clickid-item-holder-in-floor-plan > *:nth-child(5n) {
+    border-right: none;
+}
+
 .clickid-item-holder-in-floor-plan .floor-item {
   padding: 0.2rem 0.5rem;
   border-radius: 1rem;
@@ -1531,6 +1652,12 @@ body {
   color: #000100;
 }
 
+.floor-item .dropdonw-icon {
+  width: 10px;
+  height: 10px;
+  margin-bottom: -3px;
+}
+
 .full-container-holder-floor-plan::after {
   content: "";
   position: absolute;
@@ -1538,6 +1665,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
+  font-size: 12px;
   width: 100vw;
   height: 100vh;
   background: linear-gradient(
@@ -1547,6 +1675,13 @@ body {
     rgba(0, 0, 0, 0) 100%
   );
   z-index: 1;
+}
+
+.floor-plan-background-image {
+  max-height: 733px;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
 }
 
 /* Connected to What Matters */
@@ -1562,7 +1697,6 @@ body {
   line-height: 88px;
   letter-spacing: -4%;
   text-align: center;
-  max-width: 613px;
   margin: auto;
   color: #15420e;
 }
@@ -1573,6 +1707,7 @@ body {
   line-height: 88px;
   letter-spacing: -4%;
   text-align: center;
+  font-style: italic;
 }
 .what-matters-content-holder-parent p {
   font-family: var(--font-family-sequel-random);
@@ -1594,7 +1729,7 @@ body {
 
 .popup-content-holder h3 {
   font-family: var(--font-family-sequel-book);
-  font-weight: 425;
+  font-weight: 600;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0%;
@@ -1626,8 +1761,8 @@ body {
 
 .nearby-highlights h3 {
   font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 36px;
+  font-weight: 600;
+  font-size: 30px;
   line-height: 44px;
   letter-spacing: 0%;
   text-align: center;
@@ -1635,8 +1770,8 @@ body {
 }
 .nearby-highlights h4 {
   font-family: var(--font-family);
-  font-weight: 600;
-  font-size: 16px;
+  font-weight: bold;
+  font-size: 18px;
   line-height: 24px;
   letter-spacing: 0%;
   text-align: center;
@@ -1675,7 +1810,7 @@ body {
 }
 
 .connected-to-what-matters {
-  padding: 4rem 0;
+  padding: 10rem 0;
   max-width: 1339px;
   margin: auto;
   position: relative;
@@ -1692,6 +1827,7 @@ body {
   margin: auto;
   background-color: #ffffff;
   border-radius: 1rem;
+  overflow: hidden;
 }
 
 .connected-to-what-matters-text-button-and-text-holder {
@@ -1764,7 +1900,6 @@ body {
   background-repeat: no-repeat;
   padding: 4rem 0;
   position: relative;
-  max-height: 707px;
   height: 100%;
 }
 
@@ -1850,15 +1985,9 @@ body {
 
 .footer-brand-name {
   width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: right;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  position: relative;
+  z-index: 1;
+
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 200px;
@@ -1866,10 +1995,9 @@ body {
   letter-spacing: 0%;
   color: #ffffff;
   max-width: 1339px;
+  text-align: right;
   margin: auto;
-  z-index: 2;
 
-  /* padding-right: 2rem; */
 }
 
 .swiper {
@@ -2277,6 +2405,10 @@ body {
     grid-template-columns: 1fr;
   }
 
+  .swiper-cards .swiper-slide {
+    height: fit-content !important;
+  }
+
   .elevating-every-moment-slider-text-button-and-text-holder h3,
   .elevating-every-moment-slider-text-button-and-text-holder span {
     font-size: 30px;
@@ -2454,6 +2586,10 @@ body {
     grid-template-columns: repeat(1, 1fr);
   }
 
+  .swiper-cards .swiper-slide {
+    height: fit-content !important;
+  }
+
   .swiper {
     width: 100% !important;
     max-width: 400px !important;
@@ -2522,5 +2658,11 @@ body {
   .elevating-every-moment-slider-text-button-and-text-holder button,
   .elevatingeverymomentslider-text-holder-bottom-area {
     margin-left: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .custom-image-large {
+    height: 100vh; /* or a specific value like 900px */
   }
 }

@@ -133,6 +133,7 @@ function Natureinspiredvilla() {
             displayOverlayContent={true}
             overlayContent={
               <section className="natureinspiredvilla-content-holder-text ">
+                <img className="brand-logo" src="/assets/Brand Logo.png" alt="brand logo" />
                 <section className="natureinspiredvilla-content-holder-text-inner">
                   <div>
                     <h4>
@@ -142,6 +143,7 @@ function Natureinspiredvilla() {
                   </div>
 
                   <section className="natureinspiredvilla-content-holder-text-inner-image relative">
+
                     {images && images.length > 0 ? (
                       <Swiper
                         effect={"cards"}

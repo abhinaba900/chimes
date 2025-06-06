@@ -6,7 +6,7 @@
         <img
           className="max-w-[100px] max-h-[100px] mx-auto block"
           style={{ display: "block", margin: "auto" }}
-          src="assets/nearby-highlights-image-1.png"
+          src="assets/nearby-highlights-image-1.gif"
           alt=""
         />
         <p>
@@ -25,7 +25,7 @@
         <img
           className="max-w-[100px] max-h-[100px] mx-auto block"
           style={{ display: "block", margin: "auto" }}
-          src="assets/nearby-highlights-image-2.png"
+          src="assets/nearby-highlights-image-2.gif"
           alt=""
         />
         <p>
@@ -39,7 +39,7 @@
         <img
           className="max-w-[100px] max-h-[100px] mx-auto block"
           style={{ display: "block", margin: "auto" }}
-          src="assets/nearby-highlights-image-3.png"
+          src="assets/nearby-highlights-image-3.gif"
           alt=""
         />
         <p>

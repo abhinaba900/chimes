@@ -15,53 +15,61 @@ const defaultFloors = [
     backgroundImage: "assets/floor-plan-background-image.png",
     sliderContent: [
       {
-        image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+        image:
+          "assets/Dummy floor plan.jpg",
         alt: "Contemporary house layout",
-        caption: "Second Floor - 1,050 sq.ft"
+        caption: "Second Floor - 1,050 sq.ft",
       },
       {
-        image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+        image:
+          "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
         alt: "Open concept design",
-        caption: "Main Floor - 1,800 sq.ft"
-      }
-    ]
+        caption: "Main Floor - 1,800 sq.ft",
+      },
+    ],
   },
   {
     id: "first-floor",
     name: "First Floor",
-    backgroundImage: "assets/floor-plan-background-image.png",
+    backgroundImage:
+      "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
     sliderContent: [
       {
-        image: "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+        image:
+          "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
         alt: "Luxury penthouse layout",
-        caption: "Penthouse - 2,400 sq.ft"
-      }
-    ]
+        caption: "Penthouse - 2,400 sq.ft",
+      },
+    ],
   },
   {
     id: "second-floor",
     name: "Second Floor",
-    backgroundImage: "assets/floor-plan-background-image.png",
+    backgroundImage:
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
     sliderContent: [
       {
-        image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+        image:
+          "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
         alt: "Contemporary house layout",
-        caption: "Second Floor - 1,050 sq.ft"
-      }
-    ]
+        caption: "Second Floor - 1,050 sq.ft",
+      },
+    ],
   },
   {
     id: "third-floor",
     name: "Third Floor",
-    backgroundImage: "assets/floor-plan-background-image.png",
+    backgroundImage:
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
     sliderContent: [
       {
-        image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+        image:
+          "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
         alt: "Open concept design",
-        caption: "Main Floor - 1,800 sq.ft"
-      }
-    ]
-  }
+        caption: "Main Floor - 1,800 sq.ft",
+      },
+    ],
+  },
 ];
 
 function FloorPlan({
@@ -75,15 +83,17 @@ function FloorPlan({
   showDownloadButton = true,
   // New prop for dynamic floors
   floors = defaultFloors,
-  defaultActiveFloor = "ground-floor"
+  defaultActiveFloor = "ground-floor",
 }) {
   const [clickedValue, setClickedValue] = React.useState(defaultActiveFloor);
-  
+
   // Find the active floor data
-  const activeFloor = floors.find(floor => floor.id === clickedValue) || floors[0];
-  
+  const activeFloor =
+    floors.find((floor) => floor.id === clickedValue) || floors[0];
+
   // Use either the passed floorPlans or the active floor's slider content
-  const plansToShow = floorPlans.length > 0 ? floorPlans : activeFloor.sliderContent;
+  const plansToShow =
+    floorPlans.length > 0 ? floorPlans : activeFloor.sliderContent;
 
   // Default slider settings
   const defaultSettings = {
@@ -97,13 +107,13 @@ function FloorPlan({
 
   return (
     <div
-      className={`relative w-fit h-full flex justify-center items-center  ${containerClassName} full-container-holder-floor-plan`}
+      className={`relative w-full h-full flex justify-center items-center  ${containerClassName} full-container-holder-floor-plan`}
       id="floor-plans"
     >
       {/* Use either the passed backgroundImage or the active floor's background */}
       {(backgroundImage || activeFloor.backgroundImage) && (
         <img
-          src={backgroundImage || activeFloor.backgroundImage}
+          src={activeFloor.backgroundImage}
           alt="floor plan background"
           className="w-full h-full object-cover floor-plan-background-image"
         />
@@ -140,7 +150,9 @@ function FloorPlan({
 
             {showDownloadButton && (
               <div className="text-center mt-4">
-                <button className="download-button" onClick={onDownloadClick}>{buttonText}</button>
+                <button className="download-button" onClick={onDownloadClick}>
+                  {buttonText}
+                </button>
               </div>
             )}
           </div>
