@@ -2169,7 +2169,7 @@ body {
 
   .floor-plan-background-image {
     width: 100vh;
-    height: 100vh;
+    height: 110vh;
   }
 
   .right-side-section-inFloor-plan h3,
@@ -2339,6 +2339,10 @@ body {
   .naturallybuiltarea-card-content-holder img {
     max-height: 400px;
   }
+
+  .floor-plan-background-image{
+    max-height: 100%;
+  }
 }
 
 @media (min-width: 600px) and (max-width: 999px) {
@@ -2506,6 +2510,10 @@ body {
     bottom: 10%;
   }
 
+  .floor-plan-background-image{
+    max-height: 100%;
+  }
+
   .natureinspiredvilla-content-holder-image {
     height: fit-content !important;
   }
@@ -2596,6 +2604,10 @@ body {
     margin: 1rem;
     justify-content: center;
     gap: 4rem;
+  }
+
+  .floor-plan-background-image{
+    max-height: 100%;
   }
 
   .natureinspiredvilla-content-holder-image-2 {
