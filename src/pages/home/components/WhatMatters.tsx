@@ -42,7 +42,10 @@ export default function WhatMatters() {
             `<div class="popup-content-holder">
                <h3>SWIFT CITY</h3>
                <p>${address}</p>
-             </div>`
+             </div>`,
+            {
+              closeButton: false,
+            }
           )
           .openPopup();
       } catch (error) {

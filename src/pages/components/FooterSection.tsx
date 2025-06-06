@@ -120,9 +120,9 @@ function FooterSection() {
             </svg>
           </Link>
         </div>
-      </div>
-      <div className="footer-brand-name">
-        <h3>THE CHIMES</h3>
+        <div className="footer-brand-name">
+          <h3>THE CHIMES</h3>
+        </div>
       </div>
 
       <div className="footer-section-text-holder">
