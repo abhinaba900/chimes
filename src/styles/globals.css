@@ -2229,6 +2229,8 @@ body {
   }
   .footer-brand-name {
     justify-content: center;
+    bottom: 20%;
+    text-align: center;
   }
 
   .connected-to-what-matters-text-button-and-text-holder h3,
@@ -2245,6 +2247,7 @@ body {
   .footer-brand-name {
     font-size: 50px;
     line-height: 100px;
+    
   }
 
   .natureinspiredvilla-content-holder-image {
@@ -2499,8 +2502,8 @@ body {
   .footer-brand-name {
     font-size: 50px;
     line-height: 100px;
-    justify-content: center;
-    margin-top: 3rem;
+    text-align: center;
+    bottom: 10%;
   }
 
   .natureinspiredvilla-content-holder-image {
