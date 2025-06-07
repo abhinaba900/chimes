@@ -5,19 +5,19 @@
 
 @font-face {
   font-family: "Sequel Sans Book";
-  src: url("../../public/assets/font/Sequel\ Sans\ OTF/Sequel Sans Book Body.otf")
-    format("opentype");
+  src: url("../../public/assets/font/Sequel\ Sans\ OTF/Sequel Sans Book Body.otf") format("opentype");
 }
+
 @font-face {
   font-family: "Sequel Sans Medium";
-  src: url("../../public/assets/font/Sequel\ Sans\ OTF/Sequel Sans Medium Disp.otf")
-    format("opentype");
+  src: url("../../public/assets/font/Sequel\ Sans\ OTF/Sequel Sans Medium Disp.otf") format("opentype");
 }
+
 @font-face {
   font-family: "Sequel Sans Random Display";
-  src: url("../../public/assets/font/Sequel\ Sans\ OTF/Sequel Sans Roman Disp.otf")
-    format("opentype");
+  src: url("../../public/assets/font/Sequel\ Sans\ OTF/Sequel Sans Roman Disp.otf") format("opentype");
 }
+
 :root {
   --primary-color: #1976d2;
   --primary-glow: rgba(25, 118, 210, 0.1);
@@ -353,6 +353,7 @@ body {
 
 /* Responsive styles */
 @media (max-width: 1025px) {
+
   .sidebar-image-2,
   .sidebar-image {
     display: none !important;
@@ -492,21 +493,20 @@ body {
 }
 
 .hero-section .text-section {
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(0, 0, 0, 0.185) 19.94%,
-    rgba(0, 0, 0, 0.39) 39.06%,
-    rgba(0, 0, 0, 0.47) 65.28%,
-    rgba(0, 0, 0, 0.5) 88.54%
-  );
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 0.185) 19.94%,
+      rgba(0, 0, 0, 0.39) 39.06%,
+      rgba(0, 0, 0, 0.47) 65.28%,
+      rgba(0, 0, 0, 0.5) 88.54%);
   position: sticky;
   bottom: 0;
   left: 0;
   width: 100%;
   z-index: 1;
   padding: 1rem 0;
-  max-height: 100%; /* prevent overflow */
+  max-height: 100%;
+  /* prevent overflow */
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -546,6 +546,7 @@ body {
   .hero-section {
     position: relative;
   }
+
   .hero-section .text-section p {
     font-size: 20px;
     padding-right: 5%;
@@ -583,7 +584,8 @@ body {
 
   .hero-section img {
     object-fit: cover;
-    top: 10%; /* Stick to the middle */
+    top: 10%;
+    /* Stick to the middle */
     height: 100vh;
   }
 
@@ -596,6 +598,7 @@ body {
   .content-holder {
     max-width: 100vw;
   }
+
   .hero-section {
     height: 130vh;
   }
@@ -608,10 +611,12 @@ body {
     /* margin-bottom: -13rem; */
   }
 }
+
 @media (min-width: 1281px) and (max-width: 1399px) {
   .content-holder {
     max-width: 100vw;
   }
+
   .hero-section {
     height: 130vh;
   }
@@ -823,12 +828,10 @@ body {
 }
 
 .natureinspiredvilla-text-holder-and-content-holder {
-  background: linear-gradient(
-    180deg,
-    rgba(230, 230, 230, 0.164) 0%,
-    rgba(0, 0, 0, 0.22) 65%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(230, 230, 230, 0.164) 0%,
+      rgba(0, 0, 0, 0.22) 65%,
+      rgba(0, 0, 0, 0) 100%);
 
   position: relative;
   bottom: 0;
@@ -964,8 +967,7 @@ body {
   border-radius: 32px 32px 32px 32px;
 }
 
-.natureinspiredvilla-sub-container-content-holder
-  .natureinspiredvilla-sub-container-content {
+.natureinspiredvilla-sub-container-content-holder .natureinspiredvilla-sub-container-content {
   max-height: 365px;
 
   box-shadow: 366px 452px 163px 0px #00000000;
@@ -973,8 +975,8 @@ body {
   border-radius: 32px;
   overflow: hidden;
 }
-.natureinspiredvilla-sub-container-content-holder
-  .natureinspiredvilla-sub-container {
+
+.natureinspiredvilla-sub-container-content-holder .natureinspiredvilla-sub-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1024,12 +1026,10 @@ body {
 }
 
 .section-overlay {
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.48) 0%,
-    rgba(0, 0, 0, 0.24) 65%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(0, 0, 0, 0.48) 0%,
+      rgba(0, 0, 0, 0.24) 65%,
+      rgba(0, 0, 0, 0) 100%);
   border-radius: 32px;
 }
 
@@ -1134,7 +1134,7 @@ body {
   gap: 2rem;
   width: 100%;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
   padding: 10rem 0 5rem 0;
   margin: auto;
 }
@@ -1341,10 +1341,7 @@ body {
 }
 
 .elevating-every-moment-slider-text-button-and-text-holder button:hover .icon-1,
-.connected-to-what-matters-text-button-and-text-holder
-  .elevating-every-moment-slider-text-button-and-text-holder
-  button:hover
-  .icon-1 {
+.connected-to-what-matters-text-button-and-text-holder .elevating-every-moment-slider-text-button-and-text-holder button:hover .icon-1 {
   animation: slay-1 3s cubic-bezier(0.52, 0, 0.58, 1) infinite;
   transform: rotate(10deg);
 }
@@ -1364,10 +1361,7 @@ body {
 }
 
 .elevating-every-moment-slider-text-button-and-text-holder button:hover .icon-2,
-.connected-to-what-matters-text-button-and-text-holder
-  .elevating-every-moment-slider-text-button-and-text-holder
-  button:hover
-  .icon-2 {
+.connected-to-what-matters-text-button-and-text-holder .elevating-every-moment-slider-text-button-and-text-holder button:hover .icon-2 {
   animation: slay-2 3s cubic-bezier(0.52, 0, 0.58, 1) 1s infinite;
   transform: rotate(0);
 }
@@ -1387,10 +1381,7 @@ body {
 }
 
 .elevating-every-moment-slider-text-button-and-text-holder button:hover .icon-3,
-.connected-to-what-matters-text-button-and-text-holder
-  .elevating-every-moment-slider-text-button-and-text-holder
-  button:hover
-  .icon-3 {
+.connected-to-what-matters-text-button-and-text-holder .elevating-every-moment-slider-text-button-and-text-holder button:hover .icon-3 {
   animation: slay-3 2s cubic-bezier(0.52, 0, 0.58, 1) 1s infinite;
   transform: rotate(0);
 }
@@ -1441,6 +1432,7 @@ body {
   margin: auto;
   color: #15420e;
 }
+
 .acreo-of-the-chimes-section p span {
   font-family: var(--font-family);
   font-weight: 600;
@@ -1460,8 +1452,7 @@ body {
   padding-top: 9.375rem;
 }
 
-.acreo-of-the-chimes-text-and-image-container
-  .text-area-inside-text-and-image-container {
+.acreo-of-the-chimes-text-and-image-container .text-area-inside-text-and-image-container {
   width: 80%;
   padding: 1rem 0.5rem;
   font-family: var(--font-family-sequel-random);
@@ -1473,55 +1464,53 @@ body {
   border-bottom: 1px solid #01070126;
   align-items: center;
 }
-.acreo-of-the-chimes-text-and-image-container
-  .text-area-inside-text-and-image-container:hover
-  svg {
+
+.acreo-of-the-chimes-text-and-image-container .text-area-inside-text-and-image-container:hover svg {
   fill: white;
 }
-.acreo-of-the-chimes-text-and-image-container
-  .text-area-inside-text-and-image-container:first-child:hover {
+
+.acreo-of-the-chimes-text-and-image-container .text-area-inside-text-and-image-container:first-child:hover {
   background-color: #789479;
   color: white;
   border-radius: 10px;
 }
-.acreo-of-the-chimes-text-and-image-container
-  .text-area-inside-text-and-image-container:nth-child(2):hover {
-  background-color: #8e7e94;
-  color: white;
-  border-radius: 10px;
-}
-.acreo-of-the-chimes-text-and-image-container
-  .text-area-inside-text-and-image-container:nth-child(3):hover {
-  background-color: #d17934;
-  color: white;
-  border-radius: 10px;
-}
-.acreo-of-the-chimes-text-and-image-container
-  .text-area-inside-text-and-image-container:nth-child(4):hover {
+
+.acreo-of-the-chimes-text-and-image-container .text-area-inside-text-and-image-container:nth-child(2):hover {
   background-color: #8e7e94;
   color: white;
   border-radius: 10px;
 }
 
-.acreo-of-the-chimes-text-and-image-container
-  .text-area-inside-text-and-image-container:nth-child(5):hover {
+.acreo-of-the-chimes-text-and-image-container .text-area-inside-text-and-image-container:nth-child(3):hover {
   background-color: #d17934;
   color: white;
   border-radius: 10px;
 }
 
-.acreo-of-the-chimes-text-and-image-container
-  .text-area-inside-text-and-image-container:nth-child(6):hover {
+.acreo-of-the-chimes-text-and-image-container .text-area-inside-text-and-image-container:nth-child(4):hover {
+  background-color: #8e7e94;
+  color: white;
+  border-radius: 10px;
+}
+
+.acreo-of-the-chimes-text-and-image-container .text-area-inside-text-and-image-container:nth-child(5):hover {
+  background-color: #d17934;
+  color: white;
+  border-radius: 10px;
+}
+
+.acreo-of-the-chimes-text-and-image-container .text-area-inside-text-and-image-container:nth-child(6):hover {
   background-color: #4c5ba9;
   color: white;
   border-radius: 10px;
 }
-.acreo-of-the-chimes-text-and-image-container
-  .text-area-inside-text-and-image-container:nth-child(7):hover {
+
+.acreo-of-the-chimes-text-and-image-container .text-area-inside-text-and-image-container:nth-child(7):hover {
   background-color: #4c5ba9;
   color: white;
   border-radius: 10px;
 }
+
 /* floor plan */
 
 .floor-plan-container-holder {
@@ -1561,6 +1550,7 @@ body {
   display: block;
   margin: 2rem auto;
 }
+
 .floor-plan-container-holder .download-button:hover {
   background: #c5d92f;
 }
@@ -1588,6 +1578,7 @@ body {
   letter-spacing: 0%;
   color: #ffffff;
 }
+
 .right-side-section-inFloor-plan h3 span {
   font-family: var(--font-family-2);
   font-weight: 600;
@@ -1606,13 +1597,13 @@ body {
   padding: 0 0.5rem;
   border-radius: 1rem;
   margin: 1rem 0;
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.119
-  ); /* Semi-transparent white background */
-  backdrop-filter: blur(8px); /* Reduced blur effect */
+  background-color: rgba(255,
+      255,
+      255,
+      0.119);
+  /* Semi-transparent white background */
+  backdrop-filter: blur(8px);
+  /* Reduced blur effect */
   -webkit-backdrop-filter: blur(8px);
   box-shadow: 0px 4px 30px 0px #76686836;
   cursor: pointer;
@@ -1655,12 +1646,10 @@ body {
   font-size: 12px;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.48) 0%,
-    rgba(0, 0, 0, 0.24) 65%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(0, 0, 0, 0.48) 0%,
+      rgba(0, 0, 0, 0.24) 65%,
+      rgba(0, 0, 0, 0) 100%);
   z-index: 1;
 }
 
@@ -1687,6 +1676,7 @@ body {
   margin: auto;
   color: #15420e;
 }
+
 .what-matters-content-holder-parent h3 span {
   font-family: var(--font-family);
   font-weight: 600;
@@ -1696,6 +1686,7 @@ body {
   text-align: center;
   font-style: italic;
 }
+
 .what-matters-content-holder-parent p {
   font-family: var(--font-family-sequel-random);
   font-weight: 410;
@@ -1724,6 +1715,7 @@ body {
   vertical-align: middle;
   color: #15420e;
 }
+
 .popup-content-holder p {
   font-family: var(--font-family-sequel-book);
   font-weight: 405;
@@ -1755,6 +1747,7 @@ body {
   text-align: center;
   color: #000100;
 }
+
 .nearby-highlights h4 {
   font-family: var(--font-family);
   font-weight: bold;
@@ -1763,6 +1756,7 @@ body {
   letter-spacing: 0%;
   text-align: center;
 }
+
 .nearby-highlights p {
   font-family: var(--font-family-sequel-random);
   font-weight: 410;
@@ -1832,8 +1826,7 @@ body {
   gap: 1rem;
 }
 
-.connected-to-what-matters-text-button-and-text-holder
-  .elevating-every-moment-slider-text-button-and-text-holder {
+.connected-to-what-matters-text-button-and-text-holder .elevating-every-moment-slider-text-button-and-text-holder {
   padding: 0;
   margin: 0 auto;
 }
@@ -1847,6 +1840,7 @@ body {
   text-align: center;
   color: #15420e;
 }
+
 .connected-to-what-matters-text-button-and-text-holder h3 span {
   font-weight: 600;
   font-style: italic;
@@ -1856,9 +1850,7 @@ body {
   text-align: center;
 }
 
-.elevating-every-moment-slider-text-button-and-text-holder
-  button
-  span:last-child {
+.elevating-every-moment-slider-text-button-and-text-holder button span:last-child {
   padding-top: 1rem;
 }
 
@@ -1871,12 +1863,10 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.48) 0%,
-    rgba(0, 0, 0, 0.24) 65%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(0, 0, 0, 0.48) 0%,
+      rgba(0, 0, 0, 0.24) 65%,
+      rgba(0, 0, 0, 0) 100%);
 }
 
 .footer-section {
@@ -1918,6 +1908,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .social-media-icons a:hover {
   width: 52px;
   height: 52px;
@@ -2132,8 +2123,7 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .acreo-of-the-chimes-text-and-image-container
-    .text-area-inside-text-and-image-container {
+  .acreo-of-the-chimes-text-and-image-container .text-area-inside-text-and-image-container {
     width: 100%;
     font-size: 25px;
     line-height: 25px;
@@ -2164,8 +2154,7 @@ body {
     height: 100%;
   }
 
-  .floor-plan-container-holder .download-button {
-  }
+  .floor-plan-container-holder .download-button {}
 
   .floor-plan-background-image {
     width: 100vh;
@@ -2219,6 +2208,7 @@ body {
     align-items: center;
     gap: 0.5rem;
   }
+
   .footer-copyright-section {
     flex-direction: column;
     justify-content: center;
@@ -2227,6 +2217,7 @@ body {
     font-size: 0.8rem;
     line-height: 15px;
   }
+
   .footer-brand-name {
     justify-content: center;
     bottom: 20%;
@@ -2247,7 +2238,7 @@ body {
   .footer-brand-name {
     font-size: 50px;
     line-height: 100px;
-    
+
   }
 
   .natureinspiredvilla-content-holder-image {
@@ -2279,10 +2270,12 @@ body {
     font-size: 0.7rem;
     line-height: 15px;
   }
+
   .sidebar-image,
   .sidebar-image-2 {
     display: none;
   }
+
   .popup-content-holder h3 {
     font-size: 0.7rem;
     line-height: 15px;
@@ -2340,7 +2333,7 @@ body {
     max-height: 400px;
   }
 
-  .floor-plan-background-image{
+  .floor-plan-background-image {
     max-height: 100%;
   }
 }
@@ -2349,6 +2342,7 @@ body {
   .natureinspiredvilla-sub-container-content-holder {
     grid-template-columns: repeat(1, 1fr);
   }
+
   .mobile-section-dropdown {
     position: fixed;
     background: rgba(65, 56, 56, 0.366);
@@ -2421,8 +2415,7 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .acreo-of-the-chimes-text-and-image-container
-    .text-area-inside-text-and-image-container {
+  .acreo-of-the-chimes-text-and-image-container .text-area-inside-text-and-image-container {
     width: 100%;
   }
 
@@ -2445,8 +2438,7 @@ body {
     height: 100%;
   }
 
-  .floor-plan-container-holder .download-button {
-  }
+  .floor-plan-container-holder .download-button {}
 
   .floor-plan-background-image {
     width: 100vh;
@@ -2490,6 +2482,7 @@ body {
     align-items: center;
     gap: 0.5rem;
   }
+
   .footer-copyright-section {
     flex-direction: column;
     justify-content: center;
@@ -2510,7 +2503,7 @@ body {
     bottom: 10%;
   }
 
-  .floor-plan-background-image{
+  .floor-plan-background-image {
     max-height: 100%;
   }
 
@@ -2523,6 +2516,7 @@ body {
     font-size: 50px;
     line-height: 50px;
   }
+
   .popup-content-holder h3 {
     font-size: 15px;
     line-height: 15px;
@@ -2537,6 +2531,7 @@ body {
     line-height: 35px;
     text-align: center;
   }
+
   .naturallybuiltarea-card-content-holder p {
     text-align: center;
     margin: auto;
@@ -2558,6 +2553,7 @@ body {
   .navbar {
     background: #f1ebe3;
   }
+
   .natureinspiredvilla-sub-container-content-holder {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -2567,6 +2563,7 @@ body {
     height: 100%;
     width: 100%;
   }
+
   .slider-content-holder {
     margin: auto;
     width: 100%;
@@ -2606,7 +2603,7 @@ body {
     gap: 4rem;
   }
 
-  .floor-plan-background-image{
+  .floor-plan-background-image {
     max-height: 100%;
   }
 
@@ -2648,6 +2645,7 @@ body {
   .slider-content-holder {
     margin: auto;
   }
+
   .footer-section-text-holder,
   .footer-copyright-section {
     padding: 2rem 0.5rem;
@@ -2667,6 +2665,25 @@ body {
 
 @media screen and (min-width: 1920px) {
   .custom-image-large {
-    height: 100vh; /* or a specific value like 900px */
+    height: 100vh;
+    /* or a specific value like 900px */
   }
+}
+
+
+/* ----souvik---- */
+.s-cardContainer {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0px;
+}
+.s-card{
+  /* height: 500px; */
+  width:100%;
+  border-radius: 25px;
+  padding: 15px;
+  position: relative;
 }
