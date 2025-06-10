@@ -3,12 +3,11 @@ import {
   Dialog,
   DialogBackdrop,
   DialogPanel,
-  DialogTitle,
 } from "@headlessui/react";
 
 function SendEnquiryPopup({
-  open,
-  setOpen,
+  open=false,
+  setOpen = () => {},
 }: {
   open: boolean;
   setOpen: (open: boolean) => void;
