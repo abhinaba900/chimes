@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import AudioPlayer from "../home/hooks/AudioPlayer ";
+import SendEnquiryPopup from "./SendEnquiryPopup";
 
 export default function Navbar() {
   const [isActive, setIsActive] = useState(false);
@@ -18,7 +19,10 @@ export default function Navbar() {
     };
 
     const handleClickOutside = (event: MouseEvent) => {
-      if (navbarRef.current && !navbarRef.current.contains(event.target as Node)) {
+      if (
+        navbarRef.current &&
+        !navbarRef.current.contains(event.target as Node)
+      ) {
         closeMenu();
       }
     };
@@ -68,8 +72,8 @@ export default function Navbar() {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
+        behavior: "smooth",
+        block: "start",
       });
     }
   };
@@ -128,6 +132,8 @@ export default function Navbar() {
     { name: "Nearby", id: "nearby" },
   ];
 
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <header className="header" ref={navbarRef}>
       <motion.nav
@@ -136,12 +142,7 @@ export default function Navbar() {
         animate="visible"
         variants={navVariants}
       >
-        <motion.div
-          className="nav-brand"
-          initial={{ opacity: 1 }}
-          animate={{ opacity: isMobile ? 1 : isScrolled ? 0 : 1 }}
-          transition={{ duration: 0.3 }}
-        >
+        <motion.div className="nav-brand" initial={{ opacity: 1 }}>
           <Link href="/" onClick={closeMenu}>
             <Image
               src="assets\The Chimes Logo.svg"
@@ -179,23 +180,29 @@ export default function Navbar() {
               </motion.li>
             ))}
             <motion.li className="nav-item mobile-button">
-              <Link href="/login" className="nav-link">
-                <button className="enquiry-button">Send Enquiry</button>
+              <Link href="#" className="nav-link">
+                <button
+                  className="enquiry-button"
+                  onClick={() => {
+                    setIsOpen(true);
+                    closeMenu();
+                  }}
+                >
+                  Send Enquiry
+                </button>
               </Link>
             </motion.li>
           </motion.ul>
         </motion.div>
 
         <div className="nav-actions">
-          <motion.div
-            initial={{ opacity: 1 }}
-            animate={{ opacity: isMobile ? 1 : isScrolled ? 0 : 1 }}
-            transition={{ duration: 0.3 }}
-            className="nav-action"
-          >
+          <motion.div initial={{ opacity: 1 }} className="nav-action">
             <AudioPlayer />
-            <Link href="/login" className="nav-link">
-              <button className="enquiry-button not-in-mobile">
+            <Link href="#" className="nav-link">
+              <button
+                className="enquiry-button not-in-mobile"
+                onClick={() => setIsOpen(true)}
+              >
                 Send Enquiry
               </button>
             </Link>
@@ -215,6 +222,8 @@ export default function Navbar() {
           </motion.div>
         </div>
       </motion.nav>
+
+      <SendEnquiryPopup open={isOpen} setOpen={setIsOpen} />
     </header>
   );
 }
