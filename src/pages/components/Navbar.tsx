@@ -132,7 +132,7 @@ export default function Navbar() {
     { name: "Nearby", id: "nearby" },
   ];
 
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
     <header className="header" ref={navbarRef}>
