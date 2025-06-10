@@ -2917,7 +2917,7 @@ input:-moz-autofill:active {
   -moz-text-fill-color: #333 !important;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1000px) {
   .popup-dilog-holder {
     width: 100%;
     grid-template-columns: 1fr;
