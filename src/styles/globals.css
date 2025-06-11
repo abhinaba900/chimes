@@ -2701,7 +2701,7 @@ body {
 
 @media screen and (min-width: 1920px) {
   .custom-image-large {
-    height: 100vh;
+    height: 80vh;
     /* or a specific value like 900px */
   }
 }

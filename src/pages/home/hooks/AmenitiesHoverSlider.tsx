@@ -28,9 +28,10 @@ const AmenitiesHoverSlider = () => {
     },
   ];
 
-  const [hoveredItem, setHoveredItem] = useState<AmenitiesItemProps | null>(
-    null
-  );
+  const [hoveredItem, setHoveredItem] = useState<AmenitiesItemProps | null>({
+    text: "",
+    image: "https://picsum.photos/id/274/1200/800",
+  });
 
   return (
     <div className="flex justify-center w-full min-h-[500px]">
@@ -75,7 +76,7 @@ const AmenitiesHoverSlider = () => {
                       cursor-pointer
                       text-[#010701]
                       ${
-                        hoveredItem && hoveredItem.text !== amenity.text
+                        hoveredItem?.text && hoveredItem.text !== amenity.text
                           ? "opacity-50"
                           : "opacity-100"
                       }
@@ -95,7 +96,7 @@ const AmenitiesHoverSlider = () => {
                         xl:text-[52px]
                         mx-1 
                         text-[#010701]
-                        ${hoveredItem ? "opacity-50" : "opacity-100"}
+                        ${hoveredItem?.text ? "opacity-50" : "opacity-100"}
                         transition-opacity 
                         duration-300
                       `}
