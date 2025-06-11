@@ -45,20 +45,38 @@ function SendEnquiryPopup({
     return () => clearInterval(intervalId);
   }, [timeLeft, otpSent]);
 
-  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value;
-    setFormData({ ...formData, phone: value });
-    // Simple email validation to show/hide send OTP button
-    const showSendOtp = /^\d{10}$/.test(value);
+ 
+const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const rawValue = e.target.value;
+  let normalizedPhone = rawValue.trim();
 
-    if (showSendOtp) {
-      setShowSendOtp(showSendOtp);
-      setError({ ...error, phone: "" });
-    } else {
-      setError({ ...error, phone: "Invalid phone number" });
-    }
-    setOtpSent(false);
-  };
+  // Remove country code if present
+  if (normalizedPhone.startsWith("+91")) {
+    normalizedPhone = normalizedPhone.slice(3);
+  } else if (normalizedPhone.startsWith("91") && normalizedPhone.length > 10) {
+    normalizedPhone = normalizedPhone.slice(2);
+  }
+
+  // Remove spaces and hyphens
+  normalizedPhone = normalizedPhone.replace(/[\s-]/g, '');
+
+  setFormData({ ...formData, phone: rawValue });
+
+  // Validate normalized number: should be 10 digits starting with [6-9]
+  const isValidPhone = /^[6-9][0-9]{9}$/.test(normalizedPhone);
+
+  if (isValidPhone) {
+    setShowSendOtp(true);
+    setError({ ...error, phone: "" });
+  } else {
+    setShowSendOtp(false);
+    setError({ ...error, phone: "Invalid Indian phone number" });
+  }
+
+  setOtpSent(false);
+};
+
+
 
   const handleSendOtp = () => {
     setOtpSent(true);
