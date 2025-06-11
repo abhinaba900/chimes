@@ -5,12 +5,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import AudioPlayer from "../home/hooks/AudioPlayer ";
 import SendEnquiryPopup from "./SendEnquiryPopup";
+import { useAuthContext } from "../AuthContext/AuthContext";
 
 export default function Navbar() {
   const [isActive, setIsActive] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const navbarRef = useRef<HTMLDivElement>(null);
+  const {selectedNav, setSelectedNav }= useAuthContext();
+
 
   // Check if mobile and handle scroll/resize events
   useEffect(() => {
@@ -68,6 +71,7 @@ export default function Navbar() {
   };
 
   const scrollToSection = (id: string) => {
+    setSelectedNav(id);
     closeMenu();
     const element = document.getElementById(id);
     if (element) {
@@ -134,6 +138,7 @@ export default function Navbar() {
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
+
   return (
     <header className="header" ref={navbarRef}>
       <motion.nav
@@ -167,12 +172,12 @@ export default function Navbar() {
             {navItems.map((item, i) => (
               <motion.li
                 key={item.id}
-                className="nav-item"
+                className={`nav-item `}
                 variants={menuItemVariants}
                 custom={i}
               >
                 <button
-                  className="nav-link cursor-pointer"
+                  className={`nav-link cursor-pointer ${selectedNav === item.id ? "active-link" : ""}`}
                   onClick={() => scrollToSection(item.id)}
                 >
                   {item.name}

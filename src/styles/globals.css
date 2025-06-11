@@ -2818,7 +2818,7 @@ body {
   opacity: 0.5;
 }
 
-.popup-dilog-form div .error{
+.popup-dilog-form div .error {
   color: red;
   text-align: left;
   font-family: var(--font-family);
@@ -2923,8 +2923,15 @@ input:-moz-autofill:active {
     grid-template-columns: 1fr;
   }
 
-  .popup-dilog-left-image{
+  .popup-dilog-left-image {
     height: 200px;
     display: none;
   }
+}
+
+.nav-link.active-link {
+  color: #c5d92f;
+  background: #15420e;
+  transform: translateY(-2px);
+  background-color: #15420e;
 }
