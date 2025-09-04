@@ -1,17 +1,20 @@
 ﻿import React, { useState } from "react";
-import { FaArrowRight } from "react-icons/fa";
 
 const sections = [
-  { name: "PREMIUM", image: "https://picsum.photos/id/1011/600/400" },
-  { name: "UBER EAST", image: "https://picsum.photos/id/1012/600/400" },
-  { name: "ULTRA EAST", image: "https://picsum.photos/id/1013/600/400" },
-  { name: "UBER WEST", image: "https://picsum.photos/id/1014/600/400" },
-  { name: "ULTRA WEST", image: "https://picsum.photos/id/1015/600/400" },
-  { name: "BUNGALOW EAST", image: "https://picsum.photos/id/1016/600/400" },
-  { name: "BUNGALOW WEST", image: "https://picsum.photos/id/1018/600/400" },
+  { name: "ENTRANCE & SCHOOL BUS PICKUP POINT", image: "assets/Master Plan.png" },
+  { name: "PLAZA", image: "https://picsum.photos/id/1012/600/400" },
+  { name: "WATER FEATURE", image: "https://picsum.photos/id/1013/600/400" },
+  { name: "SWIMMING POOL", image: "https://picsum.photos/id/1014/600/400" },
+  { name: "BADMINTON/ PICKLEBALL", image: "https://picsum.photos/id/1015/600/400" },
+  { name: "PRIVATE  SCREEN", image: "https://picsum.photos/id/1016/600/400" },
+  { name: "REFLEXOLOGY PATHWAY", image: "https://picsum.photos/id/1018/600/400" },
+  { name: "PARTY LAWN", image: "https://picsum.photos/id/1018/600/400" },
+  { name: "AMPHITHEATER", image: "https://picsum.photos/id/1018/600/400" },
+  { name: "EARTHMOUND", image: "https://picsum.photos/id/1018/600/400" },
+  { name: "KIDS PLAY AREA", image: "https://picsum.photos/id/1018/600/400" },
 ];
 
-const defaultImage = "https://picsum.photos/id/1005/600/400";
+const defaultImage = "assets/Master Plan.png";
 
 function AcreofTheChimes() {
   const [activeImage, setActiveImage] = useState(defaultImage);

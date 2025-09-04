@@ -47,6 +47,23 @@
   --font-family-sequel-random: "Sequel Sans Random Display", sans-serif;
 }
 
+/* In your global CSS file */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto; /* De-activate native smooth scroll */
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
 .dark-theme {
   --bg-color: #0a0a12;
   --text-color: #ffffff;
@@ -135,7 +152,11 @@ body {
   gap: 2rem;
   padding: 12px 20px;
   border-radius: var(--border-radius);
-  background-color: #d0e16b;
+  background-color: rgba(255, 255, 255, 0.12);
+  backdrop-filter: 16px;
+  -webkit-backdrop-filter: 16px;
+  /* background-opacity */
+
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 1rem;
@@ -168,10 +189,22 @@ body {
 .nav-item .nav-link:hover,
 .nav-item .nav-link.active,
 .enquiry-button:hover {
-  color: #c5d92f;
-  background: #15420e;
+  color: rgba(255, 255, 255, 1);
+  background: rgba(242, 238, 238, 0.12);
+
   transform: translateY(-2px);
-  background-color: #15420e;
+
+  box-shadow: 0px 4px 4px
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+
+  border-radius: 40px;
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .nav-item .nav-link.active::after {
@@ -939,7 +972,7 @@ body {
 
 .natureinspiredvilla-content-holder-text h4 {
   font-family: var(--font-family-sequel-book);
-  font-weight: 415;
+  font-weight: 500;
   font-size: 40px;
   line-height: 48px;
   letter-spacing: 0%;
@@ -1008,11 +1041,12 @@ body {
 .natureinspiredvilla-content-holder-text-inner {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
   justify-content: space-between;
   gap: 1rem;
   height: 100%;
   border-radius: 32px;
+  width: 100%;
 }
 
 .natureinspiredvilla-content-holder-text-inner a {
@@ -1464,7 +1498,7 @@ body {
 
 .acreo-of-the-chimes-text-and-image-container {
   display: grid;
-  grid-template-columns: 0.7fr 1.3fr;
+  grid-template-columns: 1fr 1fr;
   gap: 1rem;
   align-items: center;
   justify-content: center;
@@ -1473,16 +1507,18 @@ body {
 
 .acreo-of-the-chimes-text-and-image-container
   .text-area-inside-text-and-image-container {
-  width: 80%;
+  width: fit-content;
   padding: 1rem 0.5rem;
   font-family: var(--font-family-sequel-random);
   font-weight: 410;
-  font-size: 36px;
-  line-height: 44px;
+  font-size: 20px;
+  line-height: 28px;
   letter-spacing: 0px;
-  color: #4f584f;
-  border-bottom: 1px solid #01070126;
+
+  color: rgba(79, 88, 79, 1);
   align-items: center;
+  display: flex;
+  gap: 0.5rem;
 }
 
 .acreo-of-the-chimes-text-and-image-container
@@ -1535,7 +1571,32 @@ body {
 
 .acreo-of-the-chimes-text-and-image-container
   .text-area-inside-text-and-image-container:nth-child(7):hover {
+  background-color: #789479;
+  color: white;
+  border-radius: 10px;
+}
+
+.acreo-of-the-chimes-text-and-image-container
+  .text-area-inside-text-and-image-container:nth-child(8):hover {
+  background-color: #d17934;
+  color: white;
+  border-radius: 10px;
+}
+.acreo-of-the-chimes-text-and-image-container
+  .text-area-inside-text-and-image-container:nth-child(9):hover {
   background-color: #4c5ba9;
+  color: white;
+  border-radius: 10px;
+}
+.acreo-of-the-chimes-text-and-image-container
+  .text-area-inside-text-and-image-container:nth-child(10):hover {
+  background-color: #8e7e94;
+  color: white;
+  border-radius: 10px;
+}
+.acreo-of-the-chimes-text-and-image-container
+  .text-area-inside-text-and-image-container:nth-child(11):hover {
+  background-color: #789479;
   color: white;
   border-radius: 10px;
 }
@@ -2005,7 +2066,7 @@ body {
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 200px;
-  line-height: 208px;
+  line-height: 145px;
   letter-spacing: 0%;
   color: #ffffff;
   max-width: 1339px;
@@ -2930,8 +2991,20 @@ input:-moz-autofill:active {
 }
 
 .nav-link.active-link {
-  color: #c5d92f;
-  background: #15420e;
+  color: rgba(255, 255, 255, 1);
+  background: rgba(242, 238, 238, 0.12);
+
   transform: translateY(-2px);
-  background-color: #15420e;
+
+  box-shadow: 0px 4px 4px
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+
+  border-radius: 40px;
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }

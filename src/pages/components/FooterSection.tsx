@@ -12,7 +12,12 @@ function FooterSection() {
     <footer className="footer-section">
       <div className="social-media-icons-and-image-holder">
         <div>
-          <img src="assets/footer-happy-family.png" alt="" />
+          <img
+            src="assets/footer-happy-family.png"
+            width={545}
+            height={368}
+            alt=""
+          />
         </div>
         <div className="social-media-icons">
           <Link href="#">

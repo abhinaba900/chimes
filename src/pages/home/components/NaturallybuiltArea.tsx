@@ -1,6 +1,4 @@
-﻿import React, { useEffect, useRef } from "react";
-import ScrollStackingCards from "@/pages/home/hooks/ScrollStackingCards";
-import ScaleDownScroll from "../hooks/ScrollEffects";
+﻿import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 function NaturallybuiltArea() {
@@ -66,7 +64,7 @@ function NaturallybuiltArea() {
           >
             <div className="naturallybuiltarea-card-content-holder">
               <img
-                src="assets/Eco-friendly villa.png"
+                src="assets/Eco-friendly villa.jpeg"
                 alt="Eco-friendly villa"
               />
               <section className="">
@@ -96,7 +94,7 @@ function NaturallybuiltArea() {
           >
             <div className="naturallybuiltarea-card-content-holder">
               <img
-                src="assets/A modern eco-friendly villa.jpg"
+                src="assets/A modern eco-friendly villa.jpeg"
                 alt="Vastu-aligned villa"
               />
               <section>
@@ -125,7 +123,7 @@ function NaturallybuiltArea() {
           >
             <div className="naturallybuiltarea-card-content-holder">
               <img
-                src="assets/Modern eco-friendly villa.png"
+                src="assets/Modern eco-friendly villa.jpeg"
                 alt="Solar-powered villa"
               />
               <section>
@@ -148,7 +146,7 @@ function NaturallybuiltArea() {
           <motion.div style={{ top: "90px", zIndex: 1 }} className="s-card ">
             <div className="naturallybuiltarea-card-content-holder">
               <img
-                src="assets/Eco-friendly home with a modern sewage.png"
+                src="assets/Eco-friendly home with a modern sewage.jpeg"
                 alt="Water-efficient villa"
               />
               <section>

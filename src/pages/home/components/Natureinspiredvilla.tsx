@@ -41,30 +41,7 @@ function Natureinspiredvilla() {
           Where every Brick <br /> has a <span>Brain</span>
         </h3>
 
-        <TiltedCard
-          mainBodyClassName="natureinspiredvilla-content-holder-image"
-          imageSrc="assets/Powered by the Sun,Not the Grid.jpg"
-          altText="Powered by the Sun, Not the Grid"
-          captionText="Kendrick Lamar - GNX"
-          containerHeight="100%"
-          containerWidth="100%"
-          imageHeight="100%"
-          imageWidth="100%"
-          rotateAmplitude={13}
-          scaleOnHover={1}
-          showMobileWarning={false}
-          showTooltip={false}
-          displayOverlayContent={true}
-          overlayContent={
-            <section className="natureinspiredvilla-content-holder-text">
-              <h4>
-                Powered by the Sun, <br />
-                Not the Grid
-              </h4>
-              <p>Zero electricity bills. Pure solar living</p>
-            </section>
-          }
-        />
+        <div className="natureinspiredvilla-content-holder-image"></div>
 
         <div className="natureinspiredvilla-sub-container-content-holder">
           <div className="natureinspiredvilla-sub-container">
@@ -119,7 +96,7 @@ function Natureinspiredvilla() {
           <TiltedCard
             mainBodyClassName="natureinspiredvilla-content-holder-image-2"
             className="section-overlay "
-            imageSrc="assets/Modern eco-friendly villa.png"
+            imageSrc="assets/Modern eco-friendly villa.jpg"
             altText="Powered by the Sun, Not the Grid"
             captionText="Kendrick Lamar - GNX"
             containerHeight="100%"
@@ -133,44 +110,15 @@ function Natureinspiredvilla() {
             displayOverlayContent={true}
             overlayContent={
               <section className="natureinspiredvilla-content-holder-text ">
-                <img className="brand-logo" src="/assets/Brand Logo.png" alt="brand logo" />
                 <section className="natureinspiredvilla-content-holder-text-inner">
-                  <div>
-                    <h4>
+                  <div className="text-center">
+                    <h4 style={{ marginBottom: "1rem", margin: "0 auto" }}>
                       World Bank-Approved <br /> Sustainability
                     </h4>
-                    <p>IFC Green certified for eco-conscious living</p>
+                    <p style={{ margin: "0 auto", marginTop: "1rem" }}>
+                      IFC Green certified for eco-conscious living
+                    </p>
                   </div>
-
-                  <section className="natureinspiredvilla-content-holder-text-inner-image relative">
-
-                    {images && images.length > 0 ? (
-                      <Swiper
-                        effect={"cards"}
-                        grabCursor={true}
-                        modules={[EffectCards]}
-                        className="mySwiper"
-                      >
-                        {images.map((image) => (
-                          <SwiperSlide key={image.id}>
-                            <div className="slider-image-and-text-section">
-                              <img src={image.img} alt={`Image ${image.id}`} />
-                              <p className="slider-image-and-text-section-text">
-                                Slide To See More
-                              </p>
-                            </div>
-                          </SwiperSlide>
-                        ))}
-                      </Swiper>
-                    ) : (
-                      <div>No images available</div>
-                    )}
-
-                    <a>
-                      Mud interlocking bricks that keep your villa cooler in
-                      summer, warmer in winter.
-                    </a>
-                  </section>
                 </section>
               </section>
             }

@@ -7,16 +7,45 @@ interface AmenitiesItemProps {
 
 const AmenitiesHoverSlider = () => {
   const amenities = [
-    { text: "Clubhouse", image: "https://picsum.photos/id/318/1200/800" },
-    { text: "Gym", image: "https://picsum.photos/id/306/1200/800" },
-    { text: "Party Hall", image: "https://picsum.photos/id/325/1200/800" },
-    { text: "Indoor Games", image: "https://picsum.photos/id/247/1200/800" },
-    { text: "Badminton Court", image: "https://picsum.photos/id/192/1200/800" },
-    { text: "Swimming Pool", image: "https://picsum.photos/id/258/1200/800" },
-    { text: "Kids' Play Area", image: "https://picsum.photos/id/294/1200/800" },
+    {
+      text: "Indoor Badminton Court",
+      image:
+        "assets/freepik__candid-photography-with-natural-textures-and-highl__31606.jpeg",
+    },
+    {
+      text: "Gym",
+      image:
+        "assets/freepik__candid-photography-with-natural-textures-and-highl__31602.jpeg",
+    },
+    {
+      text: "Swimming Pool",
+      image:
+        "assets/freepik__candid-photography-with-natural-textures-and-highl__31601.jpeg",
+    },
+    {
+      text: "Party Hall",
+      image:
+        "assets/freepik__candid-photography-with-natural-textures-and-highl__31603.jpeg",
+    },
+    {
+      text: "Kids",
+      image:
+        "assets/freepik__candid-photography-with-natural-textures-and-highl__31601.jpeg",
+    },
+    {
+      text: "Play Area",
+      image:
+        "assets/freepik__candid-photography-with-natural-textures-and-highl__31600.jpeg",
+    },
+    {
+      text: "Clubhouse",
+      image:
+        "assets/freepik__candid-photography-with-natural-textures-and-highl__31605.jpeg",
+    },
     {
       text: "Half Basketball Court",
-      image: "https://picsum.photos/id/240/1200/800",
+      image:
+        "assets/freepik__candid-photography-with-natural-textures-and-highl__31604.jpeg",
     },
     {
       text: "Senior Citizen Park",
@@ -30,24 +59,13 @@ const AmenitiesHoverSlider = () => {
 
   const [hoveredItem, setHoveredItem] = useState<AmenitiesItemProps | null>({
     text: "",
-    image: "https://picsum.photos/id/274/1200/800",
+    image:
+      "assets/freepik__candid-photography-with-natural-textures-and-highl__31606.jpeg",
   });
 
   return (
     <div className="flex justify-center w-full min-h-[500px]">
-      <div className="relative w-full max-w-[1339px] min-h-[500px] overflow-hidden ">
-        {/* Background image - aligned to right */}
-        {hoveredItem && (
-          <div className="absolute inset-0 flex justify-end">
-            <img
-              src={hoveredItem?.image}
-              alt="Amenity"
-              className="h-full max-w-[500px] object-cover object-center transition-opacity duration-500 ease-in-out rounded-[32px]"
-              style={{ opacity: 1 }}
-            />
-          </div>
-        )}
-
+      <div className="relative w-full max-w-[1339px] min-h-[500px] overflow-hidden grid grid-cols-2  justify-between">
         {/* Text container - aligned bottom left */}
         <div className="relative z-10 h-full flex items-end pb-8">
           <div className="mx-auto px-4 w-full">
@@ -82,7 +100,13 @@ const AmenitiesHoverSlider = () => {
                       }
                     `}
                     onMouseEnter={() => setHoveredItem(amenity)}
-                    onMouseLeave={() => setHoveredItem(null)}
+                    onMouseLeave={() =>
+                      setHoveredItem({
+                        text: "",
+                        image:
+                          "assets/freepik__candid-photography-with-natural-textures-and-highl__31606.jpeg",
+                      })
+                    }
                   >
                     {amenity.text}
                   </span>
@@ -109,6 +133,17 @@ const AmenitiesHoverSlider = () => {
             </div>
           </div>
         </div>
+        {/* Background image - aligned to right */}
+        {hoveredItem && (
+          <div className="ml-auto mr-0 block relative right-0">
+            <img
+              src={hoveredItem?.image}
+              alt="Amenity"
+              className="h-full max-w-[500px] object-cover object-center transition-opacity duration-500 ease-in-out rounded-[32px]"
+              style={{ opacity: 1, marginLeft: "auto" }}
+            />
+          </div>
+        )}
 
         {/* CSS for font family */}
         <style jsx global>{`
