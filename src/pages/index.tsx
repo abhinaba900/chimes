@@ -1,5 +1,6 @@
 "use client";
 
+import GradualBlurMemo from "@/ReactBits/GradualBlur/GradualBlur";
 import AuthContextProvider from "./AuthContext/AuthContext";
 import FooterSection from "./components/FooterSection";
 import Navbar from "./components/Navbar";
@@ -9,6 +10,16 @@ export default function Home() {
   return (
     <div className="landing-page">
       <Navbar />
+      <GradualBlurMemo
+        target="page"
+        position="bottom"
+        height="6rem"
+        strength={2}
+        divCount={5}
+        curve="bezier"
+        exponential={true}
+        opacity={1}
+      />
       <HomeSection />
       <FooterSection />
     </div>

@@ -6,14 +6,14 @@ import Image from "next/image";
 import AudioPlayer from "../home/hooks/AudioPlayer ";
 import SendEnquiryPopup from "./SendEnquiryPopup";
 import { useAuthContext } from "../AuthContext/AuthContext";
+import GlassSurface from "@/ReactBits/GlassSurface/GlassSurface";
 
 export default function Navbar() {
   const [isActive, setIsActive] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const navbarRef = useRef<HTMLDivElement>(null);
-  const {selectedNav, setSelectedNav }= useAuthContext();
-
+  const { selectedNav, setSelectedNav } = useAuthContext();
 
   // Check if mobile and handle scroll/resize events
   useEffect(() => {
@@ -138,7 +138,6 @@ export default function Navbar() {
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-
   return (
     <header className="header" ref={navbarRef}>
       <motion.nav
@@ -159,47 +158,52 @@ export default function Navbar() {
           </Link>
         </motion.div>
 
-        <motion.div
+        <GlassSurface
+          width={"fit-content"}
+          height={"fit-content"}
+          borderRadius={40}
           className={`nav-menu ${isActive ? "active" : ""}`}
-          initial={false}
         >
-          <motion.ul
-            className="nav-list"
-            variants={menuContainerVariants}
-            initial="closed"
-            animate={isActive ? "open" : "closed"}
-          >
-            {navItems.map((item, i) => (
-              <motion.li
-                key={item.id}
-                className={`nav-item `}
-                variants={menuItemVariants}
-                custom={i}
-              >
-                <button
-                  className={`nav-link cursor-pointer ${selectedNav === item.id ? "active-link" : ""}`}
-                  onClick={() => scrollToSection(item.id)}
+          <motion.div initial={false}>
+            <motion.ul
+              className="nav-list"
+              variants={menuContainerVariants}
+              initial="closed"
+              animate={isActive ? "open" : "closed"}
+            >
+              {navItems.map((item, i) => (
+                <motion.li
+                  key={item.id}
+                  className={`nav-item `}
+                  variants={menuItemVariants}
+                  custom={i}
                 >
-                  {item.name}
-                </button>
+                  <button
+                    className={`nav-link cursor-pointer ${
+                      selectedNav === item.id ? "active-link" : ""
+                    }`}
+                    onClick={() => scrollToSection(item.id)}
+                  >
+                    {item.name}
+                  </button>
+                </motion.li>
+              ))}
+              <motion.li className="nav-item mobile-button">
+                <Link href="#" className="nav-link">
+                  <button
+                    className="enquiry-button"
+                    onClick={() => {
+                      setIsOpen(true);
+                      closeMenu();
+                    }}
+                  >
+                    Send Enquiry
+                  </button>
+                </Link>
               </motion.li>
-            ))}
-            <motion.li className="nav-item mobile-button">
-              <Link href="#" className="nav-link">
-                <button
-                  className="enquiry-button"
-                  onClick={() => {
-                    setIsOpen(true);
-                    closeMenu();
-                  }}
-                >
-                  Send Enquiry
-                </button>
-              </Link>
-            </motion.li>
-          </motion.ul>
-        </motion.div>
-
+            </motion.ul>
+          </motion.div>
+        </GlassSurface>
         <div className="nav-actions">
           <motion.div initial={{ opacity: 1 }} className="nav-action">
             <AudioPlayer />

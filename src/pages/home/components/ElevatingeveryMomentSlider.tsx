@@ -91,6 +91,37 @@ function ElevatingEveryMomentSlider() {
                   loading="lazy"
                 />
 
+                <svg
+                  width="1034"
+                  height="307"
+                  viewBox="0 0 1034 307"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="absolute bottom-0 left-0 w-full h-[50%] object-cover"
+                  preserveAspectRatio="none"
+                  style={{ transform: "translateY(0)" }}
+                >
+                  <path
+                    d="M1034 275C1034 292.673 1019.67 307 1002 307L32 307C14.3269 307 1.2525e-06 292.673 2.79753e-06 275L2.68388e-05 1.15758e-06L1034 9.15527e-05L1034 275Z"
+                    fill="url(#paint0_linear_194_106081)"
+                    fill-opacity="0.55"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="paint0_linear_194_106081"
+                      x1="517"
+                      y1="307"
+                      x2="517"
+                      y2="4.63552e-05"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-opacity="0.8" />
+                      <stop offset="0.65" stop-opacity="0.4" />
+                      <stop offset="1" stop-opacity="0" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+
                 <div className="absolute bottom-5 left-5 right-5 text-white rounded-xl px-4 py-4 elevating-every-moment-slider-image-text slider-content-holder-in-gallery">
                   <div className="flex items-center space-x-4">
                     <div>
