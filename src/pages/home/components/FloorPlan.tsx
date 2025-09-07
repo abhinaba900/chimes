@@ -15,7 +15,7 @@ const defaultFloors = [
     backgroundImage: "assets/floor-plan-background-image.png",
     sliderContent: [
       {
-        image: "assets/Dummy floor plan.jpg",
+        image: "assets/Dummy floor plan.png",
         alt: "Contemporary house layout",
         caption: "Second Floor - 1,050 sq.ft",
       },

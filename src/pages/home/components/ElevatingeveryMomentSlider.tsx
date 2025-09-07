@@ -99,7 +99,10 @@ function ElevatingEveryMomentSlider() {
                   xmlns="http://www.w3.org/2000/svg"
                   className="absolute bottom-0 left-0 w-full h-[50%] object-cover"
                   preserveAspectRatio="none"
-                  style={{ transform: "translateY(0)" }}
+                  style={{
+                    transform: "translateY(0)",
+                    borderRadius: "0 0 32px 32px",
+                  }}
                 >
                   <path
                     d="M1034 275C1034 292.673 1019.67 307 1002 307L32 307C14.3269 307 1.2525e-06 292.673 2.79753e-06 275L2.68388e-05 1.15758e-06L1034 9.15527e-05L1034 275Z"

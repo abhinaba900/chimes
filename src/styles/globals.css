@@ -199,7 +199,6 @@ body {
   backdrop-filter: blur(40px);
   -webkit-backdrop-filter: blur(40px);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  color: rgba(255, 255, 255, 1);
 }
 
 .nav-item .nav-link:hover,
@@ -1276,6 +1275,7 @@ body {
 .naturallybuiltarea-card-content-holder img {
   width: 100%;
   height: 100%;
+  min-height: 546px;
   max-height: 546px;
   object-fit: cover;
   border-radius: 32px;
@@ -1743,7 +1743,7 @@ body {
 .floor-item .dropdonw-icon {
   width: 10px;
   height: 10px;
-  margin-bottom: -3px;
+  margin-bottom: 0px;
 }
 
 .full-container-holder-floor-plan::after {
@@ -1846,7 +1846,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   padding: 4rem 0;
-  max-width: 1339px;
+  max-width: 1560px;
   margin: auto;
 }
 
@@ -2157,6 +2157,107 @@ body {
   display: none;
 }
 
+/* styles/Laptop.css */
+:root {
+  /* Define a variable for the laptop's body color */
+  --laptop-body-color: #2a2a2c;
+}
+
+.laptop-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90vh; /* Give it vertical space */
+  perspective: 1500px;
+  margin-bottom: 100px;
+}
+
+.laptop {
+  position: relative;
+  width: 900px;
+  height: 500px; /* Slightly taller for better proportions */
+  transform-style: preserve-3d;
+  transform: rotateX(-15deg) rotateY(0deg);
+}
+
+.laptop-lid {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--laptop-body-color); /* FIX: Use variable for back panel */
+  border-radius: 20px;
+  transform-origin: bottom center; /* This is the hinge */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.laptop-screen {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative; /* For positioning the overlay */
+}
+
+.video-content {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- Overlay Fixes --- */
+.play-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  cursor: pointer; /* Allow clicks */
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.play-overlay.hidden {
+  opacity: 0;
+  pointer-events: none; /* Hide and disable when video is playing */
+}
+
+.play-overlay svg {
+  width: 80px;
+  height: 80px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+  transition: transform 0.2s ease;
+}
+
+.play-overlay:hover svg {
+  transform: scale(1.1);
+}
+
+/* --- Laptop Base Fix (To Match Image) --- */
+.laptop-base {
+  position: absolute;
+
+  width: 100%;
+
+  height: 100%;
+
+
+  border-radius: 20px;
+
+
+  transform: rotateX(-65deg) translateZ(230px) translateY(10px) scale(1.02) translateX(-1px);
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
 @media (max-width: 600px) {
   .natureinspiredvilla-sub-container-content-holder {
     grid-template-columns: repeat(1, 1fr);
@@ -3030,4 +3131,10 @@ input:-moz-autofill:active {
   backdrop-filter: blur(40px);
   -webkit-backdrop-filter: blur(40px);
   border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@media (min-width: 1920px) and (max-width: 2560px) {
+  .floor-plan-container-holder {
+    max-width: 1560px;
+  }
 }

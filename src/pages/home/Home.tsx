@@ -12,6 +12,7 @@ import WhatMatters from "./components/WhatMatters";
 import NearbyHighlights from "./components/NearbyHighlights";
 import ConnectedtoWhatMatters from "./components/ConnectedtoWhatMatters";
 import ScrollEffects from "./hooks/ScrollEffects";
+import LaptopAnimation from "./components/LaptopAnimation";
 
 function HomeSection() {
   return (
@@ -27,7 +28,8 @@ function HomeSection() {
       <FloorPlan />
       <WhatMatters />
       <NearbyHighlights />
-      <ConnectedtoWhatMatters />
+      {/* <ConnectedtoWhatMatters /> */}
+      <LaptopAnimation />
     </div>
   );
 }
