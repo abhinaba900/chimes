@@ -62,7 +62,7 @@ const GlassDropdown = ({
       </span>
 
       {isOpen && (
-        <ul className="absolute left-0  backdrop-blur-3xl border-1 border-black  rounded-md top-7 mt-2  w-full backdrop:blur-sm z-1 mobile-section-dropdown">
+        <ul className="absolute left-0  backdrop-blur-3xl border-1 border-black  rounded-md top-7 mt-2  w-full backdrop:blur-sm z-5  mobile-section-dropdown">
           {options.map((option) => (
             <li
               key={option}

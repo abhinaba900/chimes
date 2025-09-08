@@ -181,7 +181,7 @@ function FloorPlan({
             width={"fit-content"}
             height={"fit-content"}
             borderRadius={16}
-            className="flex justify-center items-center"
+            className="flex justify-center items-center overflow-visible"
           >
             <div className="clickid-item-holder-in-floor-plan">
               <div className="floor-item">
