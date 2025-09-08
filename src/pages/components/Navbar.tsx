@@ -179,7 +179,7 @@ export default function Navbar() {
                   custom={i}
                 >
                   <button
-                    className={`nav-link cursor-pointer ${
+                    className={`nav-link cursor-pointer neu-button ${
                       selectedNav === item.id ? "active-link" : ""
                     }`}
                     onClick={() => scrollToSection(item.id)}
@@ -191,9 +191,8 @@ export default function Navbar() {
               <motion.li className="nav-item mobile-button">
                 <Link href="#" className="nav-link">
                   <button
-                    className="enquiry-button"
+                    className="button"
                     onClick={() => {
-                      setIsOpen(true);
                       closeMenu();
                     }}
                   >
@@ -209,8 +208,10 @@ export default function Navbar() {
             <AudioPlayer />
             <Link href="#" className="nav-link">
               <button
-                className="enquiry-button not-in-mobile"
-                onClick={() => setIsOpen(true)}
+                className="button"
+                onClick={() => {
+                  setIsOpen(true);
+                }}
               >
                 Send Enquiry
               </button>
