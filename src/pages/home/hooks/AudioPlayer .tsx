@@ -24,7 +24,7 @@ const AudioPlayer = () => {
       <button onClick={togglePlayPause} className="cursor-pointer relative z-2">
         <Image
           onClick={togglePlayPause}
-          src="assets/music-icon.svg"
+          src="/assets/music-icon.png"
           alt={isPlaying ? "Pause music" : "Play music"}
           width={44}
           height={44}
