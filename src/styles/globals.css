@@ -1708,16 +1708,9 @@ body {
   align-items: center;
   gap: 0.5rem;
   width: 100%;
-  height: 3.688rem;
-  padding: 0 0.5rem;
   border-radius: 1rem;
   margin: 1rem 0;
-  background-color: rgba(255, 255, 255, 0.119);
-  /* Semi-transparent white background */
-  backdrop-filter: blur(8px);
-  /* Reduced blur effect */
-  -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0px 4px 30px 0px #76686836;
+  padding-inline: 1rem;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
@@ -1729,15 +1722,18 @@ body {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   cursor: pointer;
-  font-weight: 410;
-  font-size: 16px;
+  font-weight: 500;
+  font-size: 1rem;
   line-height: 24px;
   letter-spacing: 0%;
   text-align: center;
   color: #ffffff;
+  border: 1px solid #ffffffb2;
+  background: rgba(242, 238, 238, 0.12);
 }
 
-.clickid-item-holder-in-floor-plan .floor-item.floor-active {
+.clickid-item-holder-in-floor-plan .floor-item.floor-active,
+.clickid-item-holder-in-floor-plan .floor-item:hover {
   background: #c5d92f;
   color: #000100;
 }
@@ -2288,7 +2284,7 @@ body {
   outline: none;
   overflow: hidden;
   font-family: var(--font-family);
-  font-weight: 400;
+  font-weight: 600;
   font-size: 16px;
   letter-spacing: 0%;
   text-align: center;
@@ -3242,5 +3238,9 @@ input:-moz-autofill:active {
 @media (min-width: 1920px) and (max-width: 2560px) {
   .floor-plan-container-holder {
     max-width: 1560px;
+  }
+
+  .clickid-item-holder-in-floor-plan {
+    width: 100%;
   }
 }
