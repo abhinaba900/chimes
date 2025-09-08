@@ -980,7 +980,7 @@ body {
   font-family: var(--font-family-sequel-book);
   font-weight: 600;
   font-size: 40px;
-  line-height: 48px;
+  line-height: 40px;
   letter-spacing: 0%;
   color: #ffffff;
 }
@@ -2229,7 +2229,7 @@ body {
 
 /* From Uiverse.io by adamgiebl */
 .neu-button {
-  background-color: #f1ebe3;
+  background-color: transparent;
   border-radius: 50px;
   box-shadow: inset 4px 4px 10px #bcbcbc, inset -4px -4px 10px #ffffff;
   color: #4d4d4d;
