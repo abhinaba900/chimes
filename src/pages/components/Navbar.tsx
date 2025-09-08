@@ -179,7 +179,7 @@ export default function Navbar() {
                   custom={i}
                 >
                   <button
-                    className={`nav-link cursor-pointer neu-button ${
+                    className={`nav-link cursor-pointer  ${
                       selectedNav === item.id ? "active-link" : ""
                     }`}
                     onClick={() => scrollToSection(item.id)}
@@ -193,6 +193,7 @@ export default function Navbar() {
                   <button
                     className="button"
                     onClick={() => {
+                      setIsOpen(true);
                       closeMenu();
                     }}
                   >
