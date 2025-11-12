@@ -157,7 +157,7 @@ body {
   backdrop-filter: blur(8px); /* ✅ Correct syntax */
   -webkit-backdrop-filter: blur(8px); /* ✅ Safari support */
 
-  font-family: var(--font-family);
+  font-family: var(--font-family-2);
   font-weight: 400;
   font-size: 1rem;
   line-height: 100%;
@@ -183,7 +183,7 @@ body {
   display: flex;
   align-items: center;
   gap: 5px;
-  font-family: var(--font-family);
+  font-family: var(--font-family-2);
   background: rgba(242, 238, 238, 0.12);
 
   transform: translateY(-2px);
@@ -505,7 +505,7 @@ body {
   padding: 1rem;
   border: none;
   cursor: pointer;
-  font-family: var(--font-family);
+  font-family: var(--font-family-2);
   font-weight: 600;
   font-size: 1rem;
   line-height: 100%;
@@ -573,7 +573,7 @@ body {
 
 /* Rest of your existing styles */
 .hero-section .text-section p {
-  font-family: var(--font-family);
+  font-family: var(--font-family-2);
   font-size: 40px;
   line-height: 48px;
   letter-spacing: 0%;
@@ -585,7 +585,7 @@ body {
 }
 
 .hero-section .text-section h2 {
-  font-family: var(--font-family);
+  font-family: var(--font-family-2);
   font-weight: 400;
   font-size: clamp(5rem, 15vw, 15.625rem);
   text-align: center;
@@ -714,7 +714,7 @@ body {
 }
 
 .build-villas-text-holder h4 span {
-  font-family: var(--font-family);
+  font-family: var(--font-family-2);
   font-weight: 600;
   font-style: italic;
   font-size: 64px;
@@ -772,7 +772,7 @@ body {
 }
 
 .build-villas-line-holder h5 {
-  font-family: var(--font-family);
+  font-family: var(--font-family-2);
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
@@ -909,7 +909,7 @@ body {
 }
 
 .natureinspiredvilla-text-holder-and-content-holder h3 {
-  font-family: var(--font-family);
+  font-family: var(--font-family-2);
   font-weight: 600;
   font-size: 80px;
   line-height: 88px;
@@ -1175,7 +1175,7 @@ body {
 }
 
 .slide-content h3 {
-  font-family: var(--font-family);
+  font-family: var(--font-family-2);
   font-weight: 600;
   font-size: 3.75rem;
   line-height: 140%;
@@ -1228,7 +1228,7 @@ body {
 
 .naturallybuiltarea-text-holder-top h5 span,
 .naturallybuiltarea-text-holder-bottom h5 span {
-  font-family: var(--font-family);
+  font-family: var(--font-family-2);
   font-weight: 600;
   font-style: italic;
   font-size: 64px;
@@ -1291,7 +1291,7 @@ body {
 } */
 
 .naturallybuiltarea-card-content-holder h3 {
-  font-family: var(--font-family);
+  font-family: var(--font-family-2);
   font-weight: 600;
   font-size: 44px;
   line-height: 50px;
@@ -1333,7 +1333,7 @@ body {
 /* elevating every moment slider */
 
 .elevating-every-moment-slider-image-text h3 {
-  font-family: var(--font-family);
+  font-family: var(--font-family-2);
   font-weight: 600;
   font-size: 32px;
   line-height: 40px;
@@ -1372,7 +1372,7 @@ body {
 }
 
 .elevating-every-moment-slider-text-button-and-text-holder h3 span {
-  font-family: var(--font-family);
+  font-family: var(--font-family-2);
   font-weight: 600;
   font-style: italic;
   font-size: 64px;
@@ -1510,7 +1510,7 @@ body {
 }
 
 .acreo-of-the-chimes-section p span {
-  font-family: var(--font-family);
+  font-family: var(--font-family-2);
   font-weight: 600;
   font-style: italic;
   font-size: 64px;
@@ -1646,7 +1646,7 @@ body {
 }
 
 .floor-plan-container-holder .download-button {
-  font-family: var(--font-family);
+  font-family: var(--font-family-2);
   height: 44px;
   font-weight: 600;
   font-size: 20px;
@@ -1686,7 +1686,7 @@ body {
 }
 
 .right-side-section-inFloor-plan h3 {
-  font-family: var(--font-family);
+  font-family: var(--font-family-2);
   font-weight: 400;
   font-size: 48px;
   line-height: 105%;
@@ -1789,7 +1789,7 @@ body {
 }
 
 .what-matters-content-holder-parent h3 span {
-  font-family: var(--font-family);
+  font-family: var(--font-family-2);
   font-weight: 600;
   font-size: 80px;
   line-height: 88px;
@@ -1850,7 +1850,7 @@ body {
 }
 
 .nearby-highlights h3 {
-  font-family: var(--font-family);
+  font-family: var(--font-family-2);
   font-weight: 600;
   font-size: 30px;
   line-height: 44px;
@@ -1860,7 +1860,7 @@ body {
 }
 
 .nearby-highlights h4 {
-  font-family: var(--font-family);
+  font-family: var(--font-family-2);
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
@@ -1944,7 +1944,7 @@ body {
 }
 
 .connected-to-what-matters-text-button-and-text-holder h3 {
-  font-family: var(--font-family);
+  font-family: var(--font-family-2);
   font-weight: 400;
   font-size: 46px;
   line-height: 54px;
@@ -2085,7 +2085,7 @@ body {
   z-index: 1;
   padding: 0;
 
-  font-family: var(--font-family);
+  font-family: var(--font-family-2);
   font-weight: 400;
   font-size: 200px;
   line-height: 145px;
@@ -2272,7 +2272,7 @@ body {
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
   padding-block: 0.5rem;
   padding-inline: 1.25rem;
-  background-color: #358927;
+  background-color: rgba(242, 238, 238, 0.12);
   border-radius: 9999px;
   display: flex;
   align-items: center;
@@ -2281,10 +2281,10 @@ body {
   color: rgba(255, 255, 255, 1);
   gap: 10px;
   font-weight: bold;
-  border: 3px solid rgba(197, 217, 47, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   outline: none;
   overflow: hidden;
-  font-family: var(--font-family);
+  font-family: var(--font-family-2);
   font-weight: 600;
   font-size: 16px;
   letter-spacing: 0%;
@@ -3046,7 +3046,7 @@ body {
 }
 
 .right-side-popup-content-holder h4 {
-  font-family: var(--font-family);
+  font-family: var(--font-family-2);
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
@@ -3080,7 +3080,7 @@ body {
 }
 
 .popup-dilog-form div label {
-  font-family: var(--font-family);
+  font-family: var(--font-family-2);
   font-weight: 600;
   font-size: 14px;
   line-height: 22px;
@@ -3109,7 +3109,7 @@ body {
 .popup-dilog-form div .error {
   color: red;
   text-align: left;
-  font-family: var(--font-family);
+  font-family: var(--font-family-2);
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
@@ -3164,7 +3164,7 @@ body {
   height: 44px;
   width: 100%;
   background: #d0e16b;
-  font-family: var(--font-family);
+  font-family: var(--font-family-2);
   font-weight: 600;
   font-size: 16px;
   line-height: 100%;

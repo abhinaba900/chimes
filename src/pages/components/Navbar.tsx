@@ -188,8 +188,15 @@ export default function Navbar() {
                   </button>
                 </motion.li>
               ))}
-              <motion.li className="nav-item mobile-button">
-                <Link href="#" className="nav-link">
+              <motion.li
+                className="nav-item mobile-button "
+                style={{ background: "rgba(242, 238, 238, 0.12)" }}
+              >
+                <Link
+                  href="#"
+                  className="nav-link"
+                  style={{ backgroundColor: "rgba(242, 238, 238, 0.12)" }}
+                >
                   <button
                     className="button"
                     onClick={() => {
