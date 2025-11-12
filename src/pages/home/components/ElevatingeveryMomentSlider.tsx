@@ -7,17 +7,17 @@ import AmenitiesHoverSlider from "../hooks/AmenitiesHoverSlider";
 
 const slides = [
   {
-    image: "assets/slider image 1.jpg",
+    image: "assets/slider image 1.webp",
     title: "Main Villa",
     subtitle: "Where elegance meets sustainability",
   },
   {
-    image: "assets/slider image 2.jpg",
+    image: "assets/slider image 2.webp",
     title: "Garden Escape",
     subtitle: "A tranquil garden retreat",
   },
   {
-    image: "assets/slider image 3.jpg",
+    image: "assets/slider image 3.webp",
     title: "Luxury Suite",
     subtitle: "Experience pure comfort",
   },

@@ -3,7 +3,7 @@
 function HeroSection() {
   return (
     <div className="hero-section">
-      <img src="/assets/Hero Section.jpg" alt="hero" />
+      <img src="/assets/Hero Section.webp" alt="hero" />
       
 
       <div className="text-section">

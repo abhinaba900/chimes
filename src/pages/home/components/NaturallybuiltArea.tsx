@@ -94,7 +94,7 @@ function NaturallybuiltArea() {
           >
             <div className="naturallybuiltarea-card-content-holder">
               <img
-                src="assets/A modern eco-friendly villa.jpeg"
+                src="assets/A modern eco-friendly villa.webp"
                 alt="Vastu-aligned villa"
               />
               <section>
@@ -123,7 +123,7 @@ function NaturallybuiltArea() {
           >
             <div className="naturallybuiltarea-card-content-holder">
               <img
-                src="assets/Modern eco-friendly villa.jpeg"
+                src="assets/Modern eco-friendly villa.webp"
                 alt="Solar-powered villa"
               />
               <section>
@@ -146,7 +146,7 @@ function NaturallybuiltArea() {
           <motion.div style={{ top: "90px", zIndex: 1 }} className="s-card ">
             <div className="naturallybuiltarea-card-content-holder">
               <img
-                src="assets/Eco-friendly home with a modern sewage.jpeg"
+                src="assets/Eco-friendly home with a modern sewage.webp"
                 alt="Water-efficient villa"
               />
               <section>

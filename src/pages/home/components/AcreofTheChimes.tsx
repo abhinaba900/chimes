@@ -1,7 +1,7 @@
 ﻿import React, { useState } from "react";
 
 const sections = [
-  { name: "ENTRANCE & SCHOOL BUS PICKUP POINT", image: "assets/Master Plan.png" },
+  { name: "ENTRANCE & SCHOOL BUS PICKUP POINT", image: "assets/Master Plan.webp" },
   { name: "PLAZA", image: "https://picsum.photos/id/1012/600/400" },
   { name: "WATER FEATURE", image: "https://picsum.photos/id/1013/600/400" },
   { name: "SWIMMING POOL", image: "https://picsum.photos/id/1014/600/400" },
@@ -14,7 +14,7 @@ const sections = [
   { name: "KIDS PLAY AREA", image: "https://picsum.photos/id/1018/600/400" },
 ];
 
-const defaultImage = "assets/Master Plan.png";
+const defaultImage = "assets/Master Plan.webp";
 
 function AcreofTheChimes() {
   const [activeImage, setActiveImage] = useState(defaultImage);

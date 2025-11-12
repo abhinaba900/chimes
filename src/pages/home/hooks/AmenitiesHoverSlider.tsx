@@ -10,42 +10,42 @@ const AmenitiesHoverSlider = () => {
     {
       text: "Indoor Badminton Court",
       image:
-        "assets/freepik__candid-photography-with-natural-textures-and-highl__31606.jpeg",
+        "assets/freepik__candid-photography-with-natural-textures-and-highl__31606.webp",
     },
     {
       text: "Gym",
       image:
-        "assets/freepik__candid-photography-with-natural-textures-and-highl__31602.jpeg",
+        "assets/freepik__candid-photography-with-natural-textures-and-highl__31602.webp",
     },
     {
       text: "Swimming Pool",
       image:
-        "assets/freepik__candid-photography-with-natural-textures-and-highl__31601.jpeg",
+        "assets/freepik__candid-photography-with-natural-textures-and-highl__31601.webp",
     },
     {
       text: "Party Hall",
       image:
-        "assets/freepik__candid-photography-with-natural-textures-and-highl__31603.jpeg",
+        "assets/freepik__candid-photography-with-natural-textures-and-highl__31603.webp",
     },
     {
       text: "Kids",
       image:
-        "assets/freepik__candid-photography-with-natural-textures-and-highl__31601.jpeg",
+        "assets/freepik__candid-photography-with-natural-textures-and-highl__31601.webp",
     },
     {
       text: "Play Area",
       image:
-        "assets/freepik__candid-photography-with-natural-textures-and-highl__31600.jpeg",
+        "assets/freepik__candid-photography-with-natural-textures-and-highl__31600.webp",
     },
     {
       text: "Clubhouse",
       image:
-        "assets/freepik__candid-photography-with-natural-textures-and-highl__31605.jpeg",
+        "assets/freepik__candid-photography-with-natural-textures-and-highl__31605.webp",
     },
     {
       text: "Half Basketball Court",
       image:
-        "assets/freepik__candid-photography-with-natural-textures-and-highl__31604.jpeg",
+        "assets/freepik__candid-photography-with-natural-textures-and-highl__31604.webp",
     },
     {
       text: "Senior Citizen Park",

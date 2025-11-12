@@ -32,7 +32,7 @@ function Natureinspiredvilla() {
     <div className="natureinspiredvilla" id="highlights">
       <img
         className="background-image"
-        src="/assets/nature inspired villa background image.png"
+        src="/assets/nature inspired villa background image.webp"
         alt="nature inspired villa background image"
       />
 
@@ -48,7 +48,7 @@ function Natureinspiredvilla() {
             <TiltedCard
               mainBodyClassName="natureinspiredvilla-content-holder-image-2"
               className="section-overlay border-r-2"
-              imageSrc="assets/Modern eco-luxury villa private lounge.png"
+              imageSrc="assets/Modern eco-luxury villa private lounge.webp"
               altText="Powered by the Sun, Not the Grid"
               containerHeight="100%"
               containerWidth="100%"
@@ -71,7 +71,7 @@ function Natureinspiredvilla() {
             <TiltedCard
               mainBodyClassName="natureinspiredvilla-content-holder-image-2"
               className="section-overlay"
-              imageSrc="assets/Modern servant’s quarter in a luxury eco-villa – clean, well-lit, living space with a bed, small kitchenette, private bathroom, functional and dignified design, neutral tones, warm ambience.png"
+              imageSrc="assets/Modern servant’s quarter in a luxury eco-villa – clean, well-lit, living space with a bed, small kitchenette, private bathroom, functional and dignified design, neutral tones, warm ambience.webp"
               altText="Powered by the Sun, Not the Grid"
               captionText="Kendrick Lamar - GNX"
               containerHeight="100%"
@@ -96,7 +96,7 @@ function Natureinspiredvilla() {
           <TiltedCard
             mainBodyClassName="natureinspiredvilla-content-holder-image-2"
             className="section-overlay "
-            imageSrc="assets/Modern eco-friendly villa.jpg"
+            imageSrc="assets/Modern eco-friendly villa 2.webp"
             altText="Powered by the Sun, Not the Grid"
             captionText="Kendrick Lamar - GNX"
             containerHeight="100%"

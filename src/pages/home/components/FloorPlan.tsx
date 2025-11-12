@@ -13,10 +13,10 @@ const defaultFloors = [
   {
     id: "ground-floor",
     name: "Ground Floor",
-    backgroundImage: "assets/floor-plan-background-image.png",
+    backgroundImage: "assets/floor-plan-background-image.webp",
     sliderContent: [
       {
-        image: "assets/Dummy floor plan.png",
+        image: "assets/Dummy floor plan.webp",
         alt: "Contemporary house layout",
         caption: "Second Floor - 1,050 sq.ft",
       },
@@ -73,7 +73,7 @@ const defaultFloors = [
 ];
 
 function FloorPlan({
-  backgroundImage = "assets/floor-plan-background-image.png",
+  backgroundImage = "assets/floor-plan-background-image.webp",
   floorPlans = [],
   sliderSettings = {},
   containerClassName = "",
