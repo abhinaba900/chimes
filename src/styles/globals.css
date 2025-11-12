@@ -1297,6 +1297,7 @@ body {
   line-height: 50px;
   letter-spacing: -4%;
   color: #000100;
+  margin-bottom: 1rem;
 }
 
 .naturallybuiltarea-card-content-holder p {
@@ -1713,6 +1714,8 @@ body {
   padding-inline: 0.5rem;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .clickid-item-holder-in-floor-plan .floor-item {
@@ -1730,7 +1733,7 @@ body {
   color: #ffffff;
   border: 1px solid #ffffffb2;
   background: rgba(242, 238, 238, 0.12);
-  padding: 0.75rem;
+  padding: 0.6rem;
 }
 
 .clickid-item-holder-in-floor-plan .floor-item.floor-active,
