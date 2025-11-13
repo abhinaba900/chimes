@@ -213,8 +213,8 @@ export default function Navbar() {
         </GlassSurface>
         <div className="nav-actions">
           <motion.div initial={{ opacity: 1 }} className="nav-action">
-            <AudioPlayer />
-            <Link href="#" className="nav-link">
+            <AudioPlayer  />
+            <Link href="#" className="nav-link mobile-will-hide">
               <button
                 className="button"
                 onClick={() => {

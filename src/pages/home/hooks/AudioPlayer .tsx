@@ -21,7 +21,7 @@ const AudioPlayer = () => {
 
   return (
     <>
-      <button onClick={togglePlayPause} className="cursor-pointer relative z-2 button button-padding-remove">
+      <button onClick={togglePlayPause} className="cursor-pointer mr-3 md:mr-0 relative z-2 button button-padding-remove">
         <Image
           onClick={togglePlayPause}
           src="/assets/music-icon.png"

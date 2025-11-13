@@ -65,11 +65,11 @@ const AmenitiesHoverSlider = () => {
 
   return (
     <div className="flex justify-center w-full min-h-[500px]">
-      <div className="relative w-full max-w-[1339px] min-h-[500px] overflow-hidden grid grid-cols-2  justify-between">
+      <div className="relative w-full max-w-[1339px] min-h-[500px] all-image-section-container-every-moment overflow-hidden grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-0  justify-between items-center">
         {/* Text container - aligned bottom left */}
         <div className="relative z-10 h-full flex items-end pb-8">
           <div className="mx-auto px-4 w-full">
-            <div className="flex flex-wrap">
+            <div className="flex flex-wrap ">
               {amenities.map((amenity, index) => (
                 <div key={index} className="flex items-center">
                   <span
@@ -139,7 +139,7 @@ const AmenitiesHoverSlider = () => {
             <img
               src={hoveredItem?.image}
               alt="Amenity"
-              className="h-full max-w-[500px] object-cover object-center transition-opacity duration-500 ease-in-out rounded-[32px]"
+              className="h-full max-w-[350px] md:max-w-[500px]  object-contain md:object-cover object-center transition-opacity duration-500 ease-in-out rounded-[32px]"
               style={{ opacity: 1, marginLeft: "auto" }}
             />
           </div>
