@@ -7,29 +7,56 @@ import AmenitiesHoverSlider from "../hooks/AmenitiesHoverSlider";
 
 const slides = [
   {
-    image: "assets/slider image 1.webp",
+    image: "assets/Ecumene_Chimes_(2773_N)_Cam 02_Aerial Day_Ver 02_05-07-2025.webp",
     title: "Main Villa",
     subtitle: "Where elegance meets sustainability",
   },
   {
-    image: "assets/slider image 2.webp",
+    image: "assets/Ecumene_Chimes_(2773_N)_Cam 03_East Villa Day_Ver 03_03-07-2025.webp",
     title: "Garden Escape",
     subtitle: "A tranquil garden retreat",
   },
   {
-    image: "assets/slider image 3.webp",
+    image: "assets/Ecumene_Chimes_(2773_N)_Cam 04_West Villa Day_Ver 04_03-07-2025.webp",
     title: "Luxury Suite",
     subtitle: "Experience pure comfort",
   },
   {
     image:
-      "https://images.unsplash.com/photo-1449844908441-8829872d2607?q=80&w=500&auto=format",
+      "assets/Ecumene_Chimes_(2773_N)_Cam 05_Entry_Ver 04_03-07-2025.webp",
     title: "Infinity Pool",
     subtitle: "Refresh in our crystal waters",
   },
   {
     image:
-      "https://images.unsplash.com/photo-1449844908441-8829872d2607?q=80&w=500&auto=format",
+      "assets/Ecumene_Chimes_(2773_N)_Cam 06_Street Day_Ver 03_03-07-2025.webp",
+    title: "Gourmet Dining",
+    subtitle: "Culinary excellence awaits",
+  },
+  {
+    image: "assets/Ecumene_Chimes_(2773_N)_Cam 07_Street Dusk_Ver 03_03-07-2025.webp",
+    title: "Main Villa",
+    subtitle: "Where elegance meets sustainability",
+  },
+  {
+    image: "assets/Ecumene_Chimes_(2773_N)_Cam 09_Park_Ver 02_03-07-2025.webp",
+    title: "Garden Escape",
+    subtitle: "A tranquil garden retreat",
+  },
+  {
+    image: "assets/Ecumene_Chimes_(2773_N)_Cam 10_Clubhouse Day_Ver 02_16-07-2025.webp",
+    title: "Luxury Suite",
+    subtitle: "Experience pure comfort",
+  },
+  {
+    image:
+      "assets/Ecumene_Chimes_(2773_N)_Cam 10_Pool Dusk_Ver 02_03-07-2025.webp",
+    title: "Infinity Pool",
+    subtitle: "Refresh in our crystal waters",
+  },
+  {
+    image:
+      "assets/Ecumene_Chimes_(2773_N)_Cam 13_Master Bedroom_Ver 01_25-07-2025.webp",
     title: "Gourmet Dining",
     subtitle: "Culinary excellence awaits",
   },
