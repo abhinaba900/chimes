@@ -1698,6 +1698,7 @@ body {
   width: 100%;
   height: fit-content;
   max-width: 1439px;
+  
   margin: auto;
   z-index: 2;
 }

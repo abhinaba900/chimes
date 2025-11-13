@@ -1,17 +1,17 @@
 ﻿import React, { useState } from "react";
 
 const sections = [
-  { name: "ENTRANCE & SCHOOL BUS PICKUP POINT", image: "assets/Master Plan.webp" },
-  { name: "PLAZA", image: "https://picsum.photos/id/1012/600/400" },
-  { name: "WATER FEATURE", image: "https://picsum.photos/id/1013/600/400" },
-  { name: "SWIMMING POOL", image: "https://picsum.photos/id/1014/600/400" },
-  { name: "BADMINTON/ PICKLEBALL", image: "https://picsum.photos/id/1015/600/400" },
-  { name: "PRIVATE  SCREEN", image: "https://picsum.photos/id/1016/600/400" },
-  { name: "REFLEXOLOGY PATHWAY", image: "https://picsum.photos/id/1018/600/400" },
-  { name: "PARTY LAWN", image: "https://picsum.photos/id/1018/600/400" },
-  { name: "AMPHITHEATER", image: "https://picsum.photos/id/1018/600/400" },
-  { name: "EARTHMOUND", image: "https://picsum.photos/id/1018/600/400" },
-  { name: "KIDS PLAY AREA", image: "https://picsum.photos/id/1018/600/400" },
+  { name: "ENTRANCE & SCHOOL BUS PICKUP POINT", image: "assets/A.webp" },
+  { name: "PLAZA", image: "assets/b.webp" },
+  { name: "WATER FEATURE", image: "assets/c.webp" },
+  { name: "SWIMMING POOL", image: "assets/d.webp" },
+  { name: "BADMINTON/ PICKLEBALL", image: "assets/e.webp" },
+  { name: "PRIVATE  SCREEN", image: "assets/f.webp" },
+  { name: "REFLEXOLOGY PATHWAY", image: "assets/g.webp" },
+  { name: "PARTY LAWN", image: "assets/h.webp" },
+  { name: "AMPHITHEATER", image: "assets/i.webp" },
+  { name: "EARTHMOUND", image: "assets/j.webp" },
+  { name: "KIDS PLAY AREA", image: "assets/k.webp" },
 ];
 
 const defaultImage = "assets/Master Plan.webp";
