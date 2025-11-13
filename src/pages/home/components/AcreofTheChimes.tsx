@@ -61,7 +61,7 @@ function AcreofTheChimes() {
           <img
             src={activeImage}
             alt="Map Section Preview"
-            className="w-full  rounded-xl "
+            className="w-full scale-100 md:scale-108  rounded-xl "
           />
         </div>
       </div>

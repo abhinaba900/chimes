@@ -1,4 +1,4 @@
-﻿import { TextSlider } from "@/ReactBits/ScrollVelocity/ScrollVelocity";
+﻿import HorizontalScroller from "@/ReactBits/ScrollVelocity/ScrollVelocity";
 import React from "react";
 
 function Infiniteslider() {
@@ -27,12 +27,26 @@ function Infiniteslider() {
         src="assets/left-flower-in-scroll.png"
         alt="infiniteslider"
       />
-      <TextSlider
-        texts={texts}
-        minWidth={350}
-        padding={10}
-        speed={15}
-        gradientWidth={300}
+
+      <HorizontalScroller
+        data={[texts]}
+        renderCard={(item:any, index) => (
+          <div
+            key={index + 1}
+            style={{ margin: "0 18px" }} // 8px horizontal margin (equivalent to mx-2)
+          >
+            <div className="slide-content">
+              <div>
+                <h3 >
+                  {item.title}
+                </h3>
+                <p >
+                  {item.description}
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
       />
       <img
         width={958}

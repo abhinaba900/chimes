@@ -117,7 +117,7 @@ const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         className="fixed inset-0 bg-gray-500/75 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"
       />
 
-      <div className="fixed inset-0 z-10 w-screen h-[100vh] overflow-y-auto gap-0">
+      <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
         <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
           <DialogPanel
             transition
@@ -141,7 +141,7 @@ const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                   className="popup-dilog-right-image"
                 />
 
-                <h4>Let's Begin Your Journey Home</h4>
+                <h4>Download brochure</h4>
                 <p>
                   Tell us a little about yourself, and we'll guide you to a home
                   that blends mindful design, natural comfort, and modern

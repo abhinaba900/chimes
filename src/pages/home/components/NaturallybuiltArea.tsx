@@ -98,13 +98,16 @@ function NaturallybuiltArea() {
                 alt="Vastu-aligned villa"
               />
               <section>
-                <h3>Space Aligned With Energy</h3>
+                <h3>
+                  Powered by the Sun, <br />
+                  Connected to the Grid
+                </h3>
                 <p>
-                  Designed to honour the principles of Vastu, every villa is
-                  aligned to maximize positivity and flow.Sunlight, airflow, and
-                  layout come together in harmony—offering spatial logic with
-                  spiritual rhythm. It&apos;s architecture that&apos;s as
-                  intuitive as it is intentional.
+                  With rooftop solar panels on every villa, you generate your
+                  own power and often send extra back to the grid. This
+                  isn&apos;t just green—it&apos;s smart, reducing energy costs
+                  while increasing independence. Live off the sun, stay
+                  connected to the city.
                 </p>
               </section>
             </div>
@@ -127,16 +130,12 @@ function NaturallybuiltArea() {
                 alt="Solar-powered villa"
               />
               <section>
-                <h3>
-                  Powered by the Sun,
-                  <br /> Connected to the Grid
-                </h3>
+                <h3>Waste Less, Water More</h3>
                 <p>
-                  With rooftop solar panels on every villa, you generate your
-                  own power and often send extra back to the grid. This
-                  isn&apos;t just green—it&apos;s smart, reducing energy costs
-                  while increasing independence. Live off the sun, stay
-                  connected to the city.
+                  Our Eco STP (Sewage Treatment Plant) and grey water filtration
+                  systems ensure nothing goes to waste. Used water gets a second
+                  life—flushing toilets, watering gardens, cooling landscapes.
+                  It&apos;s water wisdom, built into your everyday living.
                 </p>
               </section>
             </div>
@@ -150,13 +149,12 @@ function NaturallybuiltArea() {
                 alt="Water-efficient villa"
               />
               <section>
-                <h3>Waste Less, Water More</h3>
+                <h3>Flora Fauna Themed Roads</h3>
                 <p>
-                  Our Eco STP (Sewage Treatment Plant) and grey water filtration
-                  systems ensure nothing goes to waste. Used water gets a second
-                  life—flushing toilets, watering gardens, cooling
-                  landscapes.It&apos;s water wisdom, built into your everyday
-                  living.
+                  Every road within the community is thoughtfully themed around
+                  flora and fauna, weaving greenery and gentle symbolism into
+                  your everyday journey. It&apos;s not just a way forward, but a walk
+                  in harmony with the natural world.
                 </p>
               </section>
             </div>

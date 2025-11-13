@@ -10,7 +10,7 @@ function BuildVillas() {
           <img src="/assets/build-villas-image3.svg" alt="coma icon" />
         </div>
         <h4>
-          We Build Villas that Think <br /> and <span>Breathe</span>
+          We build Villas that think<br /> and <span>Breathe</span>
         </h4>
         <div className="coma-icon2">
           <img src="/assets/build-villas-image2.svg" alt="coma icon" />

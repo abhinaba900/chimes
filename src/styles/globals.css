@@ -20,6 +20,11 @@
   src: url("../../public/assets/font/Sequel\ Sans\ OTF/Sequel Sans Roman Disp.otf")
     format("opentype");
 }
+@font-face {
+  font-family: "Sequel Sans Bold Display";
+  src: url("../../public/assets/font/Sequel\ Sans\ OTF/Sequel Sans Bold Disp.otf")
+    format("opentype");
+}
 
 :root {
   --primary-color: #1976d2;
@@ -45,6 +50,7 @@
   --font-family-sequel-book: "Sequel Sans Book", sans-serif;
   --font-family-sequel-medium: "Sequel Sans Medium", sans-serif;
   --font-family-sequel-random: "Sequel Sans Random Display", sans-serif;
+  --font-family-sequel-bold-display: "Sequel Sans Bold Display", sans-serif;
 }
 
 /* In your global CSS file */
@@ -574,12 +580,12 @@ body {
 
 /* Rest of your existing styles */
 .hero-section .text-section p {
-  font-family: var(--font-family-2);
+  font-family: var(--font-family-sequel-bold-display);
   font-size: 40px;
   line-height: 48px;
   letter-spacing: 0%;
   text-align: right;
-  font-weight: 400;
+  font-weight: 425;
   color: #f1ebe3;
   padding-right: 10%;
   line-height: 2;
@@ -587,7 +593,8 @@ body {
 
 .hero-section .text-section h2 {
   font-family: var(--font-family-2);
-  font-weight: 400;
+  font-weight: 700;
+  font-style: medium;
   font-size: clamp(5rem, 15vw, 15.625rem);
   text-align: center;
   color: #f1ebe3;
@@ -823,7 +830,7 @@ body {
 }
 
 .build-villas-line-holder p {
-  font-family: var(--font-family-2);
+  font-family: var(--font-family-sequel-random);
   font-weight: 410;
   font-size: 16px;
   line-height: 150%;
@@ -1216,12 +1223,15 @@ body {
   margin-right: -25%;
 }
 
+
+
 .slide-content h3 {
-  font-family: var(--font-family-2);
+  font-family: var(--font-family);
   font-weight: 600;
   font-size: 3.75rem;
   line-height: 140%;
   letter-spacing: -2%;
+  white-space: nowrap;
 }
 
 .slide-content p {
@@ -1249,6 +1259,10 @@ body {
 
 .slider-content-holder-in-gallery {
   padding: 3rem;
+}
+
+.naturallybuiltarea-text-holder-top{
+  margin-bottom: -4rem;
 }
 
 .naturallybuiltarea-text-holder-top,
@@ -1564,7 +1578,7 @@ body {
 
 .acreo-of-the-chimes-text-and-image-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.8fr 1fr;
   gap: 1rem;
   align-items: center;
   justify-content: center;
@@ -1573,7 +1587,7 @@ body {
 
 .acreo-of-the-chimes-text-and-image-container
   .text-area-inside-text-and-image-container {
-  width: fit-content;
+  width: 100%;
   padding: 1rem 0.5rem;
   font-family: var(--font-family-sequel-random);
   font-weight: 410;
@@ -1831,6 +1845,7 @@ body {
   text-align: center;
   margin: auto;
   color: #15420e;
+  padding-bottom: 2rem;
 }
 
 .what-matters-content-holder-parent h3 span {
@@ -2159,7 +2174,7 @@ body {
 }
 
 .slick-slide {
-  padding: 50px 43px 50px 43px;
+  padding: 20px ;
 }
 
 .elevating-every-moment-slider-button {
@@ -2349,46 +2364,22 @@ body {
 }
 
 .button:hover {
-  transform: scale(1.05);
-  border-color: #fff9;
-}
+  color: rgba(0, 1, 0, 1);
+  background: rgba(197, 217, 47, 1);
 
-.button:hover .icon {
-  transform: translate(4px);
-}
+  transform: translateY(-2px);
 
-.button:hover::before {
-  animation: shine 1.5s ease-out infinite;
-}
+  box-shadow: 0px 4px 4px
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
 
-.button::before {
-  content: "";
-  position: absolute;
-  width: 100px;
-  height: 100%;
-  background-image: linear-gradient(
-    120deg,
-    rgba(255, 255, 255, 0) 30%,
-    rgba(255, 255, 255, 0.8),
-    rgba(255, 255, 255, 0) 70%
-  );
-  top: 0;
-  left: -100px;
-  opacity: 0.6;
-}
-
-@keyframes shine {
-  0% {
-    left: -100px;
-  }
-
-  60% {
-    left: 100%;
-  }
-
-  to {
-    left: 100%;
-  }
+  border-radius: 40px;
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 /* --- Laptop Base Fix (To Match Image) --- */
@@ -2405,6 +2396,10 @@ body {
     translateX(-1px);
 
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+.nav-list {
+  margin-bottom: -0.2rem;
 }
 @media (max-width: 600px) {
   .natureinspiredvilla-sub-container-content-holder {
@@ -2733,7 +2728,7 @@ body {
     height: 60vh;
   }
 
-  .laptop{
+  .laptop {
     height: 500px;
   }
 }
@@ -3092,7 +3087,7 @@ body {
 .popup-dilog-holder {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+  gap: 0rem;
 }
 
 .popup-dilog-left-image {
@@ -3318,6 +3313,16 @@ input:-moz-autofill:active {
   .floor-plan-container-holder {
     max-width: 1560px;
   }
+
+  .s-cardContainer{
+    height: 62vh;
+  }
+
+  .naturallybuiltarea{
+    padding-bottom: 3rem;
+  }
+
+  
 
   .clickid-item-holder-in-floor-plan {
     width: 100%;

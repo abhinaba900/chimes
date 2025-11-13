@@ -1,29 +1,32 @@
-﻿import React from "react";
+﻿import React, { useState } from "react";
 import Slider from "react-slick";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import AmenitiesHoverSlider from "../hooks/AmenitiesHoverSlider";
+import SendEnquiryPopup from "@/pages/components/SendEnquiryPopupcopy";
 
 const slides = [
   {
-    image: "assets/Ecumene_Chimes_(2773_N)_Cam 02_Aerial Day_Ver 02_05-07-2025.webp",
+    image:
+      "assets/Ecumene_Chimes_(2773_N)_Cam 02_Aerial Day_Ver 02_05-07-2025.webp",
     title: "Main Villa",
     subtitle: "Where elegance meets sustainability",
   },
   {
-    image: "assets/Ecumene_Chimes_(2773_N)_Cam 03_East Villa Day_Ver 03_03-07-2025.webp",
+    image:
+      "assets/Ecumene_Chimes_(2773_N)_Cam 03_East Villa Day_Ver 03_03-07-2025.webp",
     title: "Garden Escape",
     subtitle: "A tranquil garden retreat",
   },
   {
-    image: "assets/Ecumene_Chimes_(2773_N)_Cam 04_West Villa Day_Ver 04_03-07-2025.webp",
+    image:
+      "assets/Ecumene_Chimes_(2773_N)_Cam 04_West Villa Day_Ver 04_03-07-2025.webp",
     title: "Luxury Suite",
     subtitle: "Experience pure comfort",
   },
   {
-    image:
-      "assets/Ecumene_Chimes_(2773_N)_Cam 05_Entry_Ver 04_03-07-2025.webp",
+    image: "assets/Ecumene_Chimes_(2773_N)_Cam 05_Entry_Ver 04_03-07-2025.webp",
     title: "Infinity Pool",
     subtitle: "Refresh in our crystal waters",
   },
@@ -34,7 +37,8 @@ const slides = [
     subtitle: "Culinary excellence awaits",
   },
   {
-    image: "assets/Ecumene_Chimes_(2773_N)_Cam 07_Street Dusk_Ver 03_03-07-2025.webp",
+    image:
+      "assets/Ecumene_Chimes_(2773_N)_Cam 07_Street Dusk_Ver 03_03-07-2025.webp",
     title: "Main Villa",
     subtitle: "Where elegance meets sustainability",
   },
@@ -44,7 +48,8 @@ const slides = [
     subtitle: "A tranquil garden retreat",
   },
   {
-    image: "assets/Ecumene_Chimes_(2773_N)_Cam 10_Clubhouse Day_Ver 02_16-07-2025.webp",
+    image:
+      "assets/Ecumene_Chimes_(2773_N)_Cam 10_Clubhouse Day_Ver 02_16-07-2025.webp",
     title: "Luxury Suite",
     subtitle: "Experience pure comfort",
   },
@@ -100,6 +105,7 @@ function ElevatingEveryMomentSlider() {
       },
     ],
   };
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
     <div
@@ -241,7 +247,7 @@ function ElevatingEveryMomentSlider() {
           playful outdoor zones. Whether it’s wellness, celebration, or quiet
           retreat, every corner is designed to enrich your everyday living.
         </p>
-        <button>
+        <button onClick={() => setIsOpen(true)}>
           <span>
             <svg
               width="23"
@@ -331,6 +337,7 @@ function ElevatingEveryMomentSlider() {
           </span>
         </button>
       </div>
+      <SendEnquiryPopup open={isOpen} setOpen={setIsOpen} />
 
       <div className="elevatingeverymomentslider-text-holder-bottom-area">
         <AmenitiesHoverSlider />
