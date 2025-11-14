@@ -213,17 +213,24 @@ export default function Navbar() {
         </GlassSurface>
         <div className="nav-actions">
           <motion.div initial={{ opacity: 1 }} className="nav-action">
-            <AudioPlayer  />
-            <Link href="#" className="nav-link mobile-will-hide">
-              <button
-                className="button"
-                onClick={() => {
-                  setIsOpen(true);
-                }}
-              >
-                Send Enquiry
-              </button>
-            </Link>
+            <AudioPlayer />
+            <GlassSurface
+              width={"fit-content"}
+              height={"fit-content"}
+              borderRadius={40}
+              className="desktop-enquire-button"
+            >
+              <Link href="#" className="nav-link mobile-will-hide">
+                <button
+                  className="button"
+                  onClick={() => {
+                    setIsOpen(true);
+                  }}
+                >
+                  Send Enquiry
+                </button>
+              </Link>
+            </GlassSurface>
           </motion.div>
 
           <motion.div

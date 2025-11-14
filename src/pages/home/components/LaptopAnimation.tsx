@@ -70,7 +70,6 @@ const LaptopAnimation = () => {
                   src="/assets/youtube-play-icon.png"
                   width={80}
                   alt="Play"
-                  onClick={() => console.log("clicked")}
                   style={{
                     position: "absolute",
                     top: "50%",
@@ -87,8 +86,6 @@ const LaptopAnimation = () => {
               onPlay={() => {
                 setIsPlaying(true);
                 setPlayedOnce(true); // mark that video has been played
-                console.log("laptop clicked");
-                
               }}
               onPause={() => setIsPlaying(false)}
             />

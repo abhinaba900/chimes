@@ -1,5 +1,7 @@
 ﻿import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
+import GlassSurface from "@/ReactBits/GlassSurface/GlassSurface";
+
 
 const AudioPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(false); // Set initial state to true
@@ -21,17 +23,26 @@ const AudioPlayer = () => {
 
   return (
     <>
-      <button onClick={togglePlayPause} className="cursor-pointer mr-3 md:mr-0 relative z-2 button button-padding-remove">
-        <Image
+      <GlassSurface
+        width={"fit-content"}
+        height={"fit-content"}
+        borderRadius={40}
+        className="desktop-enquire-button"
+      >
+        <button
           onClick={togglePlayPause}
-          src="/assets/music-icon.png"
-          alt={isPlaying ? "Pause music" : "Play music"}
-          width={20}
-          height={20}
-          className="relative z-1"
-        />
-        
-      </button>
+          className="cursor-pointer mr-3 md:mr-0 relative z-2 button button-padding-remove"
+        >
+          <Image
+            onClick={togglePlayPause}
+            src="/assets/music-icon.png"
+            alt={isPlaying ? "Pause music" : "Play music"}
+            width={20}
+            height={20}
+            className="relative z-1"
+          />
+        </button>
+      </GlassSurface>
 
       {/* Hidden audio element with autoPlay */}
       <audio className="hidden" ref={audioRef} src={audioSrc} loop />
