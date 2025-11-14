@@ -39,7 +39,7 @@ export default function WhatMatters() {
         L.marker(position)
           .addTo(map)
           .bindPopup(
-            `<div class="popup-content-holder">
+            `<div class="popup-content-holder" style="max-width:250px; padding:6px;">
                <h3>SWIFT CITY</h3>
                <p>${address}</p>
              </div>`,

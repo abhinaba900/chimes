@@ -1,7 +1,7 @@
 ﻿import React, { useState } from "react";
 
 const sections = [
-  { name: "ENTRANCE & SCHOOL BUS PICKUP POINT", image: "assets/A.webp" },
+  { name: "ENTRANCE & BUS PICKUP POINT", image: "assets/A.webp" },
   { name: "PLAZA", image: "assets/b.webp" },
   { name: "WATER FEATURE", image: "assets/c.webp" },
   { name: "SWIMMING POOL", image: "assets/d.webp" },

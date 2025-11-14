@@ -114,10 +114,10 @@ function FloorPlan({
       <AnimatePresence mode="wait">
         {(backgroundImage || activeFloor.backgroundImage) && (
           <motion.img
-            key={activeFloor.id + activeFloor.backgroundImage}
-            initial={{ opacity: 0.9, filter: "blur(5px)" }}
-            animate={{ opacity: 1, filter: "blur(0px)" }}
-            exit={{ opacity: 0.9, filter: "blur(5px)" }}
+            key={activeFloor.id + activeFloor.backgroundImage + "bg"}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
             src={activeFloor.backgroundImage}
             alt="floor plan background"

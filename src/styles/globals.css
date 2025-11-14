@@ -1046,7 +1046,7 @@ body {
   font-weight: 600;
   font-size: 40px;
   line-height: 40px;
-  letter-spacing: 0%;
+  letter-spacing: -2px;
   color: #ffffff;
 }
 
@@ -1252,7 +1252,7 @@ body {
   width: 100%;
   position: relative;
   /* overflow: hidden; */
-  padding: 10rem 0 5rem 0;
+  padding: 6rem 0 5rem 0;
   margin: auto;
 }
 
@@ -1598,6 +1598,8 @@ body {
   align-items: center;
   display: flex;
   gap: 0.5rem;
+  padding-inline: 1rem;
+  border-radius: 10px;
 }
 
 .acreo-of-the-chimes-text-and-image-container
@@ -2381,19 +2383,9 @@ body {
 }
 
 .button:hover,
-.button:active,
-.button:focus {
+.active-link {
   color: rgba(0, 1, 0, 1);
   background: rgba(197, 217, 47, 1);
-
-  transform: translateY(-2px);
-
-  box-shadow: 0px 4px 4px
-    linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.5) 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
 
   border-radius: 40px;
   backdrop-filter: blur(40px);
@@ -2442,6 +2434,13 @@ body {
 .mobile-section-dropdown {
   max-width: 138.26px;
   width: 138.26px;
+}
+
+.mobile-section-dropdown{
+  background: #c5d92f;
+  color: black;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 @media (max-width: 600px) {
   .natureinspiredvilla-sub-container-content-holder {
@@ -3420,6 +3419,10 @@ input:-moz-autofill:active {
 
   .naturallybuiltarea-text-holder-top,
   .naturallybuiltarea-text-holder-bottom {
-    margin-top: 3vh;
+    margin-top: 5vh;
+  }
+
+  .laptop {
+    width: 1100px;
   }
 }

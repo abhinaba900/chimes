@@ -2,7 +2,6 @@
 import Image from "next/image";
 import GlassSurface from "@/ReactBits/GlassSurface/GlassSurface";
 
-
 const AudioPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(false); // Set initial state to true
   const audioRef = useRef<HTMLAudioElement>(null);
@@ -31,7 +30,9 @@ const AudioPlayer = () => {
       >
         <button
           onClick={togglePlayPause}
-          className="cursor-pointer mr-3 md:mr-0 relative z-2 button button-padding-remove"
+          className={`cursor-pointer mr-3 md:mr-0 relative z-2 button button-padding-remove ${
+            isPlaying ? "active-link" : ""
+          }`}
         >
           <Image
             onClick={togglePlayPause}
