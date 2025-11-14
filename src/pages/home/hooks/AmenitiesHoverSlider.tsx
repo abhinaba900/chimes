@@ -135,12 +135,11 @@ const AmenitiesHoverSlider = () => {
         </div>
         {/* Background image - aligned to right */}
         {hoveredItem && (
-          <div className="ml-auto mr-0 block relative right-0">
+          <div className="w-full flex justify-center lg:justify-end">
             <img
               src={hoveredItem?.image}
               alt="Amenity"
-              className="h-full max-w-[350px] md:max-w-[500px]  object-contain md:object-cover object-center transition-opacity duration-500 ease-in-out rounded-[32px]"
-              style={{ opacity: 1, marginLeft: "auto" }}
+              className="max-w-[350px] md:max-w-[500px] w-full h-full object-contain transition-opacity duration-500 ease-in-out rounded-[32px]"
             />
           </div>
         )}

@@ -652,13 +652,16 @@ body {
 
   .elevating-every-moment-slider-text-button-and-text-holder p,
   .all-image-section-container-every-moment {
-    padding-left: 0.5rem !important;
-    padding-right: 0.5rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
   }
 
   .floor-plan-container-holder {
     padding: 0 !important;
+    
   }
+
+  
 
   .slick-dots {
     bottom: 0 !important;
@@ -864,9 +867,9 @@ body {
   }
 
   .build-villas-content-holder p {
-    font-size: 0.8rem;
+    font-size: 1rem;
     line-height: 24px;
-    padding: 0.3rem;
+    padding: 1rem;
   }
 
   .build-villas-line-content-holder {
@@ -1223,8 +1226,6 @@ body {
   margin-right: -25%;
 }
 
-
-
 .slide-content h3 {
   font-family: var(--font-family);
   font-weight: 600;
@@ -1261,7 +1262,7 @@ body {
   padding: 3rem;
 }
 
-.naturallybuiltarea-text-holder-top{
+.naturallybuiltarea-text-holder-top {
   margin-bottom: -4rem;
 }
 
@@ -1698,7 +1699,7 @@ body {
   width: 100%;
   height: fit-content;
   max-width: 1439px;
-  
+
   margin: auto;
   z-index: 2;
 }
@@ -2175,7 +2176,7 @@ body {
 }
 
 .slick-slide {
-  padding: 20px ;
+  padding: 20px;
 }
 
 .elevating-every-moment-slider-button {
@@ -2466,8 +2467,8 @@ body {
   }
 
   .elevating-every-moment-slider-text-button-and-text-holder p {
-    font-size: 0.7rem;
-    line-height: 15px;
+    font-size: 1rem;
+    line-height: 20px;
     text-align: center;
   }
 
@@ -2488,9 +2489,9 @@ body {
   .acreo-of-the-chimes-text-and-image-container
     .text-area-inside-text-and-image-container {
     width: 100%;
-    font-size: 25px;
+    font-size: 18px;
     line-height: 25px;
-    text-align: center;
+    text-align: left;
   }
 
   .floor-plan-container-holder {
@@ -2554,6 +2555,7 @@ body {
   .mobile-section-dropdown .mobile-section-dropdown-item {
     position: relative;
     z-index: 999;
+    color: white;
   }
 
   .right-side-section-inFloor-plan {
@@ -2586,8 +2588,8 @@ body {
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
-    font-size: 0.8rem;
-    line-height: 15px;
+    font-size: 1rem;
+    line-height: 20px;
   }
 
   .footer-brand-name {
@@ -2637,13 +2639,13 @@ body {
   }
 
   .nearby-highlights p {
-    font-size: 0.7rem;
-    line-height: 15px;
+    font-size: 1rem;
+    line-height: 20px;
   }
 
   .nearby-highlights h4 {
-    font-size: 0.7rem;
-    line-height: 15px;
+    font-size: 1rem;
+    line-height: 20px;
   }
 
   .sidebar-image,
@@ -2668,9 +2670,11 @@ body {
   }
 
   .naturallybuiltarea-card-content-holder p {
-    font-size: 0.7rem;
-    line-height: 15px;
+    font-size: 1rem;
+    line-height: 1.5rem;
     text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .scroll-stack-card {
@@ -2683,9 +2687,11 @@ body {
   }
 
   .naturallybuiltarea-text-holder-bottom p {
-    font-size: 0.7rem;
-    line-height: 15px;
+    font-size: 1rem;
+    line-height: 1.5rem;
     text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .elevating-every-moment-slider-image-text h3 {
@@ -2718,6 +2724,8 @@ body {
   }
   .acreo-of-the-chimes-text-and-image-container {
     padding-top: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .nearby-highlights {
@@ -2727,10 +2735,53 @@ body {
 
   .laptop-container {
     height: 60vh;
+    width: 95%;
+    margin: auto;
   }
 
   .laptop {
-    height: 500px;
+    height: 300px;
+  }
+
+  .laptop-base{
+    top: -6rem;
+    width: 99%;
+    left: auto;
+    right: auto;
+  }
+
+  .laptop-base img{
+    height: 150px;
+  }
+
+  .button {
+    background: rgba(197, 217, 47, 1);
+  }
+
+  .natureinspiredvilla-content-holder-image-2 {
+    height: 300px !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .naturallybuiltarea {
+    gap: 0;
+  }
+
+  .s-cardContainer {
+    margin-top: 1rem;
+  }
+  .naturallybuiltarea-text-holder-bottom {
+    margin-top: 5rem;
+  }
+
+  .natureinspiredvilla-sub-container-content-holder
+    .natureinspiredvilla-sub-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    height: 100%;
   }
 }
 
@@ -3315,15 +3366,13 @@ input:-moz-autofill:active {
     max-width: 1560px;
   }
 
-  .s-cardContainer{
+  .s-cardContainer {
     height: 62vh;
   }
 
-  .naturallybuiltarea{
+  .naturallybuiltarea {
     padding-bottom: 3rem;
   }
-
-  
 
   .clickid-item-holder-in-floor-plan {
     width: 100%;

@@ -11,9 +11,10 @@ export default function Home() {
     <div className="landing-page">
       <Navbar />
       <GradualBlurMemo
+        className="gradualblurmemo-section"
         target="page"
         position="bottom"
-        height="6rem"
+        height="16rem"
         strength={2}
         divCount={5}
         curve="bezier"

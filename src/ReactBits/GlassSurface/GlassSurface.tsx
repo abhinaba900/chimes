@@ -352,7 +352,7 @@ const GlassSurface: React.FC<GlassSurfaceProps> = ({
           </filter>
         </defs>
       </svg>
-      <div className="w-full h-full flex items-center justify-center p-2 rounded-[inherit] relative z-10">
+      <div className="w-full h-full flex items-center justify-left lg:justify-center p-2 rounded-[inherit] relative z-10">
         {children}
       </div>
     </div>

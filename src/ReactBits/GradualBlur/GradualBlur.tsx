@@ -266,12 +266,13 @@ const GradualBlur: React.FC<GradualBlurProps> = props => {
   return (
     <div
       ref={containerRef}
-      className={`gradual-blur relative isolate ${config.target === 'page' ? 'gradual-blur-page' : 'gradual-blur-parent'} ${config.className}`}
+      className={`gradual-blur relative  isolate ${config.target === 'page' ? 'gradual-blur-page' : 'gradual-blur-parent'} ${config.className}`}
       style={containerStyle}
       onMouseEnter={hoverIntensity ? () => setIsHovered(true) : undefined}
       onMouseLeave={hoverIntensity ? () => setIsHovered(false) : undefined}
+      
     >
-      <div className="relative w-full h-full">{blurDivs}</div>
+      <div className="relative w-full h-full -bottom-[50%]">{blurDivs}</div>
       {props.children && <div className="relative">{props.children}</div>}
     </div>
   );
