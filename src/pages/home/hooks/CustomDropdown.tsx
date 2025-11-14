@@ -38,7 +38,7 @@ const GlassDropdown = ({
   };
 
   return (
-    <div ref={dropdownRef} className="relative">
+    <div ref={dropdownRef} className="relative max-w-[200px] w-full cursor-pointer">
       <span
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center gap-2 bg-transparent"
@@ -62,12 +62,12 @@ const GlassDropdown = ({
       </span>
 
       {isOpen && (
-        <ul className="absolute left-0  backdrop-blur-3xl border-1 border-black  rounded-md top-7 mt-2  w-full backdrop:blur-sm z-5  mobile-section-dropdown">
+        <ul className="absolute -left-2 flex flex-col gap-2 py-4  backdrop-blur-3xl border-1 border-black  rounded-md top-7 mt-4  w-full backdrop:blur-sm z-5  mobile-section-dropdown">
           {options.map((option) => (
             <li
               key={option}
               onClick={() => handleSelect(option)}
-              className="px-3 py-1 hover:bg-white/20 cursor-pointer transition-colors mobile-section-dropdown-item"
+              className="px-3 py-1 hover:text-white hover:bg-white/20 cursor-pointer transition-colors mobile-section-dropdown-item"
             >
               {option}
             </li>

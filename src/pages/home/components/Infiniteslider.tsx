@@ -33,7 +33,7 @@ function Infiniteslider() {
         renderCard={(item:any, index) => (
           <div
             key={index + 1}
-            style={{ margin: "0 18px" }} // 8px horizontal margin (equivalent to mx-2)
+            style={{ margin: "0 32px" }} // 8px horizontal margin (equivalent to mx-2)
           >
             <div className="slide-content">
               <div>

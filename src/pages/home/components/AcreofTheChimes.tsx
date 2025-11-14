@@ -6,8 +6,8 @@ const sections = [
   { name: "WATER FEATURE", image: "assets/c.webp" },
   { name: "SWIMMING POOL", image: "assets/d.webp" },
   { name: "BADMINTON/ PICKLEBALL", image: "assets/e.webp" },
-  { name: "PRIVATE  SCREEN", image: "assets/f.webp" },
-  { name: "REFLEXOLOGY PATHWAY", image: "assets/g.webp" },
+  { name: "PRIVATE  SCREEN", image: "assets/F.webp" },
+  { name: "REFLEXOLOGY PATHWAY", image: "assets/G.webp" },
   { name: "PARTY LAWN", image: "assets/h.webp" },
   { name: "AMPHITHEATER", image: "assets/i.webp" },
   { name: "EARTHMOUND", image: "assets/j.webp" },
@@ -32,11 +32,13 @@ function AcreofTheChimes() {
 
       <div className="acreo-of-the-chimes-text-and-image-container">
         {/* Sidebar */}
-        <div className="space-y-4 text-lg font-medium text-gray-800 ">
+        <div className="space-y-4 text-lg font-medium text-gray-800 lg:w-[80%] w-[100%]">
           {sections.map((section) => (
             <div
               key={section.name}
               onClick={() => setActiveImage(section.image)}
+              onMouseEnter={() => setActiveImage(section.image)}
+              onMouseLeave={() => setActiveImage(defaultImage)}
               className=" cursor-pointer flex align-middle justify-between hover:text-blue-600 transition-colors text-area-inside-text-and-image-container"
             >
               {section.name}

@@ -184,7 +184,7 @@ function FloorPlan({
             className="flex justify-center items-center overflow-visible px-2"
           >
             <div className="clickid-item-holder-in-floor-plan">
-              <div className="floor-item">
+              <div className="floor-item and-this-is-dropdown-floor-plan">
                 <GlassDropdown
                   options={directions}
                   defaultLabel="Choose facing"

@@ -131,12 +131,12 @@ function FooterSection() {
       </div>
 
       <div className="footer-section-text-holder">
-        <p className="cursor-pointer">
-          <a href={`tel:${phoneNumber}`} className="flex items-center gap-1">
+        <p className="cursor-pointer ">
+          <a href={`tel:${phoneNumber}`} className="flex items-center gap-2">
             <svg
-              width="22"
-              height="24"
-              viewBox="0 0 22 24"
+              width="16"
+              height="16"
+              viewBox="0 0 16 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -153,16 +153,16 @@ function FooterSection() {
                 fill="white"
               />
             </svg>
-            {phoneNumber} |
+            {phoneNumber}{" "} |{" "}
           </a>
           <a
             href={`mailto:${emailAddress}`}
-            className="flex items-center gap-1 ml-1"
+            className="flex items-center gap-2 ml-1"
           >
             <svg
-              width="22"
-              height="22"
-              viewBox="0 0 22 22"
+              width="18"
+              height="16"
+              viewBox="0 0 16 22"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -182,9 +182,9 @@ function FooterSection() {
             className="flex items-center gap-1"
           >
             <svg
-              width="22"
-              height="22"
-              viewBox="0 0 22 22"
+              width="16"
+              height="16"
+              viewBox="0 0 16 23"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >

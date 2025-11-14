@@ -171,7 +171,7 @@ body {
 
 .nav-list {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   list-style: none;
 }
 
@@ -658,10 +658,7 @@ body {
 
   .floor-plan-container-holder {
     padding: 0 !important;
-    
   }
-
-  
 
   .slick-dots {
     bottom: 0 !important;
@@ -1041,6 +1038,7 @@ body {
   gap: 1rem;
   padding: 3rem;
   z-index: 1;
+  letter-spacing: -1px;
 }
 
 .natureinspiredvilla-content-holder-text h4 {
@@ -1881,12 +1879,13 @@ body {
 .popup-content-holder h3 {
   font-family: var(--font-family-sequel-book);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 25px;
   line-height: 150%;
   letter-spacing: 0%;
   text-align: center;
   vertical-align: middle;
   color: #15420e;
+  padding-bottom: 8px;
 }
 
 .popup-content-holder p {
@@ -2240,10 +2239,16 @@ body {
   height: 500px; /* Slightly taller for better proportions */
   transform-style: preserve-3d;
   transform: rotateX(-15deg) rotateY(0deg);
+  z-index: 5;
+  pointer-events: none;
 }
 
 .laptop-lid {
-  position: absolute;
+  position: fixed;
+  inset: 0;
+  transform: translateZ(9999px); /* bring it above all 3D */
+  pointer-events: auto;
+  z-index: 99999;
   width: 100%;
   height: 100%;
   background: var(--laptop-body-color); /* FIX: Use variable for back panel */
@@ -2256,6 +2261,14 @@ body {
   box-sizing: border-box;
 }
 
+.react-player__preview {
+  position: fixed;
+  inset: 0;
+  transform: translateZ(9999px); /* bring it above all 3D */
+  pointer-events: auto;
+  z-index: 99999;
+}
+
 .laptop-screen {
   width: 100%;
   height: 100%;
@@ -2263,6 +2276,7 @@ body {
   border-radius: 12px;
   overflow: hidden;
   position: relative; /* For positioning the overlay */
+  z-index: 99;
 }
 
 .video-content {
@@ -2285,6 +2299,7 @@ body {
   cursor: pointer; /* Allow clicks */
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
+  border: 1px solid red;
 }
 
 .play-overlay.hidden {
@@ -2365,7 +2380,9 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.button:hover {
+.button:hover,
+.button:active,
+.button:focus {
   color: rgba(0, 1, 0, 1);
   background: rgba(197, 217, 47, 1);
 
@@ -2400,8 +2417,31 @@ body {
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
 }
 
+.button {
+  color: black;
+}
+
+.button svg {
+  fill: black;
+}
+
 .nav-list {
   margin-bottom: -0.2rem;
+}
+
+.leaflet-popup-content p {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.leaflet-popup-content-wrapper {
+  width: fit-content !important;
+}
+
+.and-this-is-dropdown-floor-plan,
+.mobile-section-dropdown {
+  max-width: 138.26px;
+  width: 138.26px;
 }
 @media (max-width: 600px) {
   .natureinspiredvilla-sub-container-content-holder {
@@ -2743,14 +2783,14 @@ body {
     height: 300px;
   }
 
-  .laptop-base{
+  .laptop-base {
     top: -6rem;
     width: 99%;
     left: auto;
     right: auto;
   }
 
-  .laptop-base img{
+  .laptop-base img {
     height: 150px;
   }
 
@@ -3376,5 +3416,10 @@ input:-moz-autofill:active {
 
   .clickid-item-holder-in-floor-plan {
     width: 100%;
+  }
+
+  .naturallybuiltarea-text-holder-top,
+  .naturallybuiltarea-text-holder-bottom {
+    margin-top: 3vh;
   }
 }
