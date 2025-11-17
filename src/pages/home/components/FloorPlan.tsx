@@ -125,10 +125,10 @@ function FloorPlan({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
             src={activeFloor.backgroundImage}
             alt="floor plan background"
-            className="w-full h-screen object-cover floor-plan-background-image"
+            className="w-full h-screen object-cover floor-plan-background-image will-change-transform"
           />
         )}
       </AnimatePresence>
