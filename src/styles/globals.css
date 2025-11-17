@@ -2351,7 +2351,7 @@ body {
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
   padding-block: 0.5rem;
   padding-inline: 1.25rem;
-  background-color: rgba(242, 238, 238, 0.12);
+  background-color: rgba(197, 217, 47, 1);
   border-radius: 9999px;
   display: flex;
   align-items: center;
@@ -2371,6 +2371,10 @@ body {
   vertical-align: middle;
 }
 
+.music-icon-in-nav {
+  background-color: green;
+}
+
 .button-padding-remove {
   padding-block: 0.7rem;
   padding-inline: 0.7rem;
@@ -2385,12 +2389,11 @@ body {
 .button:hover,
 .active-link {
   color: rgba(0, 1, 0, 1);
-  background: rgba(197, 217, 47, 1);
+  background: transparent;
 
   border-radius: 40px;
   backdrop-filter: blur(40px);
   -webkit-backdrop-filter: blur(40px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 /* --- Laptop Base Fix (To Match Image) --- */
@@ -2436,7 +2439,7 @@ body {
   width: 138.26px;
 }
 
-.mobile-section-dropdown{
+.mobile-section-dropdown {
   background: #c5d92f;
   color: black;
   padding-top: 0.5rem;
@@ -3419,10 +3422,10 @@ input:-moz-autofill:active {
 
   .naturallybuiltarea-text-holder-top,
   .naturallybuiltarea-text-holder-bottom {
-    margin-top: 5vh;
+    margin-top: 8rem;
   }
 
   .laptop {
-    width: 1100px;
+    width: 1000px;
   }
 }

@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 import GlassDropdown from "../hooks/CustomDropdown";
 import { AnimatePresence, motion } from "framer-motion";
 import GlassSurface from "@/ReactBits/GlassSurface/GlassSurface";
-const directions = ["North", "South", "East", "West"];
+const directions = ["East", "West"];
 
 // Default floor data that matches your existing structure
 const defaultFloors = [
@@ -104,6 +104,13 @@ function FloorPlan({
     slidesToScroll: 1,
     arrows: false,
   };
+
+  React.useEffect(() => {
+    floors.forEach((floor) => {
+      const img = new Image();
+      img.src = floor.backgroundImage;
+    });
+  }, [floors]);
 
   return (
     <div
