@@ -1806,24 +1806,7 @@ body {
   margin-bottom: 0px;
 }
 
-.full-container-holder-floor-plan::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  font-size: 12px;
-  width: 100vw;
-  height: 100vh;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.48) 0%,
-    rgba(0, 0, 0, 0.24) 65%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  z-index: 1;
-}
+
 
 .floor-plan-background-image {
   max-height: 733px;

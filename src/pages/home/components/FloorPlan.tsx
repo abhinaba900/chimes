@@ -114,7 +114,7 @@ function FloorPlan({
 
   return (
     <div
-      className={`relative w-full h-full flex justify-center items-center  ${containerClassName} full-container-holder-floor-plan`}
+      className={`relative w-screen h-[733px] flex justify-center items-center  ${containerClassName} `}
       id="floor-plans"
     >
       {/* Use either the passed backgroundImage or the active floor's background */}
