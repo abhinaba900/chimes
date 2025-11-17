@@ -598,7 +598,7 @@ body {
   font-size: clamp(5rem, 15vw, 15.625rem);
   text-align: center;
   color: #f1ebe3;
-  line-height: 0.49;
+  line-height: 0.46;
   margin-top: 1rem;
 }
 
@@ -760,6 +760,8 @@ body {
   font-weight: 400;
   font-family: var(--font-family-2);
   color: #15420e;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .build-villas-text-holder h4 span {

@@ -72,7 +72,13 @@ export default function WhatMatters() {
         Discover a location that balances convenience with calm — close to top
         schools, malls, and city hubs, yet wrapped in nature's quiet
       </p>
-      <div ref={mapRef} id="nearby" className="map-container" />
+      <div className="left-and-right-padding-in-content">
+        <div
+          ref={mapRef}
+          id="nearby"
+          className="map-container "
+        />
+      </div>
     </div>
   );
 }
