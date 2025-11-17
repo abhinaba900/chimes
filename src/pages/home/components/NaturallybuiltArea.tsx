@@ -153,8 +153,8 @@ function NaturallybuiltArea() {
                 <p>
                   Every road within the community is thoughtfully themed around
                   flora and fauna, weaving greenery and gentle symbolism into
-                  your everyday journey. It&apos;s not just a way forward, but a walk
-                  in harmony with the natural world.
+                  your everyday journey. It&apos;s not just a way forward, but a
+                  walk in harmony with the natural world.
                 </p>
               </section>
             </div>
@@ -165,10 +165,10 @@ function NaturallybuiltArea() {
       {/* </ScaleDownScroll> */}
 
       <div className="naturallybuiltarea-text-holder-bottom">
-        <h5>
+        <h5 className="mb-4">
           See It, Feel It, <span>Live it</span>
         </h5>
-        <p>
+        <p className="" style={{ marginTop: "1rem" }}>
           Step inside a world where nature meets design. Explore every corner,
           from sunlit rooms to green pathways — and discover what makes The
           Chimes a villa unlike any other
