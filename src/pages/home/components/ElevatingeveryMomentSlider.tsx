@@ -173,7 +173,7 @@ function ElevatingEveryMomentSlider() {
 
         {/* Navigation Buttons */}
         {/* Navigation Buttons */}
-        <div className="absolute bottom-[15%]  right-[15%] z-10 flex justify-center gap-2 space-x-3">
+        <div className="absolute bottom-[15%]  right-[15%] z-10 flex justify-center gap-2 space-x-3 button-in-slider-element-holder">
           <button
             onClick={() => sliderRef.current?.slickPrev()}
             className="w-10 h-10 cursor-pointer rounded-full bg-white/90 hover:bg-white text-gray-800 shadow-lg flex items-center justify-center transition"
@@ -236,7 +236,7 @@ function ElevatingEveryMomentSlider() {
       </div>
 
       <div
-        className="elevating-every-moment-slider-text-button-and-text-holder"
+        className="elevating-every-moment-slider-text-button-and-text-holder left-and-right-padding-in-content"
         id="amenities"
       >
         <h3>

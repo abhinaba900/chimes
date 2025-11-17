@@ -43,7 +43,7 @@ function NaturallybuiltArea() {
 
   return (
     <div ref={containerRef} className="naturallybuiltarea">
-      <div className="naturallybuiltarea-text-holder-top">
+      <div className="naturallybuiltarea-text-holder-top left-and-right-padding-in-content">
         <p>SMART DESIGN, NATURAL SOUL</p>
         <h5>
           Vastu-aligned, Solar-powered, <br /> <span>Naturally built</span>
@@ -62,7 +62,7 @@ function NaturallybuiltArea() {
             }}
             className="s-card "
           >
-            <div className="naturallybuiltarea-card-content-holder">
+            <div className="naturallybuiltarea-card-content-holder left-and-right-padding-in-content">
               <img
                 src="assets/Eco-friendly villa.jpeg"
                 alt="Eco-friendly villa"
@@ -92,7 +92,7 @@ function NaturallybuiltArea() {
             }}
             className="s-card "
           >
-            <div className="naturallybuiltarea-card-content-holder">
+            <div className="naturallybuiltarea-card-content-holder left-and-right-padding-in-content">
               <img
                 src="assets/A modern eco-friendly villa.webp"
                 alt="Vastu-aligned villa"
@@ -124,7 +124,7 @@ function NaturallybuiltArea() {
             }}
             className="s-card "
           >
-            <div className="naturallybuiltarea-card-content-holder">
+            <div className="naturallybuiltarea-card-content-holder left-and-right-padding-in-content">
               <img
                 src="assets/Modern eco-friendly villa.webp"
                 alt="Solar-powered villa"
@@ -143,7 +143,7 @@ function NaturallybuiltArea() {
         </div>
         <div className="s-cardContainer">
           <motion.div style={{ top: "90px", zIndex: 1 }} className="s-card ">
-            <div className="naturallybuiltarea-card-content-holder">
+            <div className="naturallybuiltarea-card-content-holder left-and-right-padding-in-content">
               <img
                 src="assets/Eco-friendly home with a modern sewage.webp"
                 alt="Water-efficient villa"
@@ -164,7 +164,7 @@ function NaturallybuiltArea() {
 
       {/* </ScaleDownScroll> */}
 
-      <div className="naturallybuiltarea-text-holder-bottom">
+      <div className="naturallybuiltarea-text-holder-bottom left-and-right-padding-in-content">
         <h5 className="mb-4">
           See It, Feel It, <span>Live it</span>
         </h5>

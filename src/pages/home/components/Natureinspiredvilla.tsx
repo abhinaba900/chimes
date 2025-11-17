@@ -43,7 +43,7 @@ function Natureinspiredvilla() {
 
         <div className="natureinspiredvilla-content-holder-image"></div>
 
-        <div className="natureinspiredvilla-sub-container-content-holder">
+        <div className="natureinspiredvilla-sub-container-content-holder left-and-right-padding-in-content">
           <div className="natureinspiredvilla-sub-container">
             <TiltedCard
               mainBodyClassName="natureinspiredvilla-content-holder-image-2"

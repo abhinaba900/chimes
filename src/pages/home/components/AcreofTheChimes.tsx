@@ -19,7 +19,7 @@ const defaultImage = "assets/Master Plan.webp";
 function AcreofTheChimes() {
   const [activeImage, setActiveImage] = useState(defaultImage);
   return (
-    <div className="py-5 mx-auto acreo-of-the-chimes-section">
+    <div className="py-5 mx-auto acreo-of-the-chimes-section left-and-right-padding-in-content">
       <img
         src="assets/drawing-tree-with-green-yellow-leaves copy 1.svg"
         id="acreo-of-the-chimes-tree-logo-image"
@@ -32,7 +32,7 @@ function AcreofTheChimes() {
 
       <div className="acreo-of-the-chimes-text-and-image-container">
         {/* Sidebar */}
-        <div className="space-y-4 text-lg font-medium text-gray-800 lg:w-[80%] w-[100%]">
+        <div className="space-y-4 text-lg font-medium text-gray-800 lg:w-[90%] w-[100%]">
           {sections.map((section) => (
             <div
               key={section.name}
@@ -63,7 +63,7 @@ function AcreofTheChimes() {
           <img
             src={activeImage}
             alt="Map Section Preview"
-            className="w-full scale-100 md:scale-108  rounded-xl "
+            className="w-full scale-100 md:scale-100  rounded-xl "
           />
         </div>
       </div>

@@ -124,7 +124,7 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
 
   return (
     <h2 ref={containerRef} className={`${styles['scroll-reveal']} ${containerClassName}`}>
-      <p className={`${styles['scroll-reveal-text']} ${textClassName}`}>{splitText}</p>
+      <p className={`${styles['scroll-reveal-text left-and-right-padding-in-content']} ${textClassName}`}>{splitText}</p>
     </h2>
   );
 };

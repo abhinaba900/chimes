@@ -64,8 +64,8 @@ const AmenitiesHoverSlider = () => {
   });
 
   return (
-    <div className="flex justify-center w-full min-h-[500px]">
-      <div className="relative w-full max-w-[1339px] min-h-[500px] all-image-section-container-every-moment overflow-hidden grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-0  justify-between items-center">
+    <div className="flex justify-center w-full min-h-[500px] ">
+      <div className="relative w-full max-w-[1339px] min-h-[500px] left-and-right-padding-in-content all-image-section-container-every-moment overflow-hidden grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-0  justify-between items-center">
         {/* Text container - aligned bottom left */}
         <div className="relative z-10 h-full flex items-end pb-8">
           <div className="mx-auto px-4 w-full">

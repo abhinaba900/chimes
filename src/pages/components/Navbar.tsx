@@ -139,7 +139,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
-    <header className="header" ref={navbarRef}>
+    <header className="header left-and-right-padding-add" ref={navbarRef}>
       <motion.nav
         className="navbar"
         initial="hidden"

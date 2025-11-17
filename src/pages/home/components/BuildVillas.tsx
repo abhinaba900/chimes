@@ -3,7 +3,7 @@ import React from "react";
 
 function BuildVillas() {
   return (
-    <div className="build-villas-content-holder" >
+    <div className="build-villas-content-holder " >
       <img src="/assets/build-villas-image1.png" id="about-us" width={140} height={140} alt="build-villas" />
       <div className="build-villas-text-holder" >
         <div className="coma-icon">

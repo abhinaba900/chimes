@@ -133,7 +133,7 @@ function FloorPlan({
         )}
       </AnimatePresence>
 
-      <div className="floor-plan-container-holder">
+      <div className="floor-plan-container-holder left-and-right-padding-in-content">
         <div className="bottom-8 left-0 right-0 mx-auto w-full h-full max-w-[569px] px-4 slider-content-holder">
           <div className="bg-white bg-opacity-90 p-4 rounded-[16px] shadow-lg h-full">
             {plansToShow.length > 0 ? (

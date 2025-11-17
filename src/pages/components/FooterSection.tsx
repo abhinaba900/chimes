@@ -9,7 +9,7 @@ function FooterSection() {
   )}`;
 
   return (
-    <footer className="footer-section">
+    <footer className="footer-section left-and-right-padding-in-content">
       <div className="social-media-icons-and-image-holder">
         <div>
           <img
