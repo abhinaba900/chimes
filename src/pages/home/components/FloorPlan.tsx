@@ -157,15 +157,13 @@ function FloorPlan({
       ></div>
 
       <div className="floor-plan-container-holder left-and-right-padding-in-content ">
-       
-
         <div className="bottom-8 left-0 right-0 mx-auto w-full h-full max-w-[569px] flex flex-col gap-5 md:gap-0 px-4 slider-content-holder">
           <h3 className="mobile-text-top-designed-for-life">
             Designed for Life,
             <br />
             <span> Measured in Space</span>
           </h3>
-          <div className="bg-white bg-opacity-90 p-4 rounded-[16px] shadow-lg h-full">
+          <div className="bg-white bg-opacity-90 p-4 rounded-[16px] shadow-lg  w-full h-full slider-contener-parent">
             {plansToShow.length > 0 ? (
               <Slider {...defaultSettings} className={sliderClassName}>
                 {plansToShow.map(

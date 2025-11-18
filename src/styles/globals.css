@@ -2922,6 +2922,11 @@ body {
     font-size: 28px;
     line-height: 28px;
     text-align: left;
+    letter-spacing: -1px;
+  }
+
+  .slider-contener-parent {
+    min-height: 350px;
   }
 
   .naturallybuiltarea-card-content-holder p {

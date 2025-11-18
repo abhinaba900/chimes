@@ -153,7 +153,7 @@ export default function Navbar() {
         <motion.div className="nav-brand" initial={{ opacity: 1 }}>
           <Link href="/" onClick={closeMenu}>
             <Image
-              src="assets\The Chimes Logo.svg"
+              src="/assets/The Chimes Logo.svg"
               alt="Logo"
               width={150}
               height={100}
@@ -271,7 +271,10 @@ export default function Navbar() {
             borderRadius={40}
             className={`nav-toggle ${isActive ? "nav-active" : ""}`}
           >
-            <motion.div onClick={toggleMenu} className="flex justify-center items-center w-100 h-100">
+            <motion.div
+              onClick={toggleMenu}
+              className="flex justify-center items-center w-100 h-100"
+            >
               <svg
                 width="16"
                 height="16"

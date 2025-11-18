@@ -68,7 +68,10 @@ function NaturallybuiltArea() {
                 alt="Eco-friendly villa"
               />
               <section className="">
-                <h3>Cooler Summers, Warmer Winters</h3>
+                <h3>
+                  Cooler Summers, <br className="block md:hidden" />
+                  Warmer Winters
+                </h3>
                 <p>
                   These villas breathe with nature, thanks to mud interlocking
                   bricks made with 85% natural earth.This passive design keeps
@@ -130,7 +133,10 @@ function NaturallybuiltArea() {
                 alt="Solar-powered villa"
               />
               <section>
-                <h3>Waste Less, Water More</h3>
+                <h3>
+                  Waste Less, <br className="block md:hidden" />
+                  Water More
+                </h3>
                 <p>
                   Our Eco STP (Sewage Treatment Plant) and grey water filtration
                   systems ensure nothing goes to waste. Used water gets a second
@@ -149,7 +155,10 @@ function NaturallybuiltArea() {
                 alt="Water-efficient villa"
               />
               <section>
-                <h3>Flora Fauna Themed Roads</h3>
+                <h3>
+                  Flora Fauna <br className="block md:hidden" />
+                  Themed Roads
+                </h3>
                 <p>
                   Every road within the community is thoughtfully themed around
                   flora and fauna, weaving greenery and gentle symbolism into
