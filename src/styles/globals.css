@@ -2536,6 +2536,10 @@ body {
     grid-area: grid1;
   }
 
+  .natureinspiredvilla-sub-container-content-holder{
+    padding-top: 4rem;
+  }
+
   .grid2 {
     grid-area: grid2;
   }

@@ -28,11 +28,21 @@ function Natureinspiredvilla() {
       img: "https://images.unsplash.com/photo-1572120360610-d971b9d7767c?q=80&w=500&auto=format",
     },
   ];
+
+  const [ismobile, setIsmobile] = React.useState(false);
+  React.useEffect(() => {
+    const handleResize = () => {
+      setIsmobile(window.innerWidth <= 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <div className="natureinspiredvilla" id="highlights">
       <img
         className="background-image"
-        src="/assets/nature inspired villa background image.webp"
+        src={ismobile ? "/assets/Frame_1618874524[1].png" : "/assets/nature inspired villa background image.webp"}
         alt="nature inspired villa background image"
       />
 
