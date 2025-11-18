@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <AuthContextProvider>
       <Analytics />
-      <SmoothScroller />
+      {/* <SmoothScroller /> */}
       <Component {...pageProps} />
     </AuthContextProvider>
   );

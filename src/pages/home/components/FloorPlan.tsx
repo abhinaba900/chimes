@@ -19,7 +19,7 @@ const defaultFloors = [
   {
     numberId: 1,
     id: "ground-floor",
-    name: isInMobileView() ? "Ground" : "Ground Floor",
+    name: isInMobileView() ? "Ground" : "Ground",
     backgroundImage: "assets/floor-plan-background-image.webp",
     sliderContent: [
       {
@@ -38,7 +38,7 @@ const defaultFloors = [
   {
     numberId: 2,
     id: "first-floor",
-    name: isInMobileView() ? "First" : "First Floor",
+    name: isInMobileView() ? "First" : "First",
     backgroundImage:
       "assets/ECUMENE_CHIMES(2773-V)DINING_V2_25-07-2025-1st-flore.webp",
     sliderContent: [
@@ -53,7 +53,7 @@ const defaultFloors = [
   {
     numberId: 3,
     id: "second-floor",
-    name: isInMobileView() ? "Second" : "Second Floor",
+    name: isInMobileView() ? "Second" : "Second",
     backgroundImage:
       "assets/ECUMENE_CHIMES(2773-V)LIVING_V2_25-07-2025-2nd-flore.webp",
     sliderContent: [
@@ -68,7 +68,7 @@ const defaultFloors = [
   {
     numberId: 4,
     id: "third-floor",
-    name: isInMobileView() ? "Third" : "Third Floor",
+    name: isInMobileView() ? "Third" : "Third",
     backgroundImage:
       "assets/Ecumene_Chimes_(2773_N)_Cam 13_Master Bedroom_Ver 01_25-07-2025-3rd-flore.webp",
     sliderContent: [

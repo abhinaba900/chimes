@@ -189,6 +189,7 @@ const GradualBlur: React.FC<GradualBlurProps> = props => {
   /* -------------- Container style -------------------- */
 
   const containerStyle: CSSProperties = {
+    pointerEvents: "none",
     position: config.target === "page" ? "fixed" : "absolute",
     opacity: isPageBottom ? 0 : 1, // 👈 HIDE when at page bottom
     transition: "opacity 0.4s ease-out",
@@ -219,7 +220,7 @@ const GradualBlur: React.FC<GradualBlurProps> = props => {
   return (
     <div
       ref={containerRef}
-      className={`gradual-blur relative isolate ${config.className}`}
+      className={`gradual-blur relative isolate  ${config.className}`}
       style={containerStyle}
     >
       <div className="relative w-full h-full -bottom-[50%]">{blurDivs}</div>
