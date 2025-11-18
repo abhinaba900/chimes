@@ -41,7 +41,7 @@ const LaptopAnimation = dynamic(() => import("./components/LaptopAnimation"), {
 
 function HomeSection() {
   return (
-    <div>
+    <div className="overflow-hidden md:overflow-visible">
       <HeroSection />
       <BuildVillas />
       <Natureinspiredvilla />

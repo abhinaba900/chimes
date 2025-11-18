@@ -118,7 +118,7 @@ function ElevatingEveryMomentSlider() {
         <Slider ref={sliderRef} {...settings}>
           {slides.map((slide, index) => (
             <div key={index} className="mx-4">
-              <div className="relative rounded-[32px] overflow-hidden  ">
+              <div className="relative rounded-[0] md:rounded-[32px] overflow-hidden  ">
                 <img
                   src={slide.image}
                   alt={slide.title}
@@ -141,12 +141,12 @@ function ElevatingEveryMomentSlider() {
                 >
                   <path
                     d="M1034 275C1034 292.673 1019.67 307 1002 307L32 307C14.3269 307 1.2525e-06 292.673 2.79753e-06 275L2.68388e-05 1.15758e-06L1034 9.15527e-05L1034 275Z"
-                    fill="url(#paint0_linear_194_106081)"
-                    fill-opacity="0.55"
+                    fill="url(#paint0_linear_448_9500)"
+                    fill-opacity="0.85"
                   />
                   <defs>
                     <linearGradient
-                      id="paint0_linear_194_106081"
+                      id="paint0_linear_448_9500"
                       x1="517"
                       y1="307"
                       x2="517"
@@ -159,6 +159,8 @@ function ElevatingEveryMomentSlider() {
                     </linearGradient>
                   </defs>
                 </svg>
+
+                
 
                 <div className="absolute bottom-5 left-5 right-5 text-white rounded-xl px-4 py-4 elevating-every-moment-slider-image-text slider-content-holder-in-gallery">
                   <div className="flex items-center space-x-4">
@@ -250,7 +252,8 @@ function ElevatingEveryMomentSlider() {
           retreat, every corner is designed to enrich your everyday living.
         </p>
         <p className="mobile-view-text">
-          “The Chimes” offers thoughtful amenities, from serene club spaces to playful outdoor zones
+          “The Chimes” offers thoughtful amenities, from serene club spaces to
+          playful outdoor zones
         </p>
         <button onClick={() => setIsOpen(true)}>
           <span>

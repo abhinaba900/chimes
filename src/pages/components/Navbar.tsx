@@ -271,13 +271,14 @@ export default function Navbar() {
             borderRadius={40}
             className={`nav-toggle ${isActive ? "nav-active" : ""}`}
           >
-            <motion.div onClick={toggleMenu}>
+            <motion.div onClick={toggleMenu} className="flex justify-center items-center w-100 h-100">
               <svg
-                width="22"
+                width="16"
                 height="16"
                 viewBox="0 0 16 12"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                className="mx-auto block"
               >
                 <path
                   d="M1.2 2.4H14.8C15.4629 2.4 16 1.86289 16 1.2C16 0.537109 15.4629 0 14.8 0H1.2C0.537109 0 0 0.537109 0 1.2C0 1.86289 0.537109 2.4 1.2 2.4Z"

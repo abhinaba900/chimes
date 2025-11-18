@@ -12,7 +12,7 @@ const isInMobileView = () => {
     return window.innerWidth <= 768; // Example breakpoint for mobile
   }
   return false;
-}
+};
 
 // Default floor data that matches your existing structure
 const defaultFloors = [
@@ -82,8 +82,6 @@ const defaultFloors = [
   },
 ];
 
-
-
 function FloorPlan({
   backgroundImage = "assets/floor-plan-background-image.webp",
   floorPlans = [],
@@ -126,7 +124,7 @@ function FloorPlan({
 
   return (
     <div
-      className={`relative w-full h-[733px] flex justify-center items-center  ${containerClassName} `}
+      className={`relative w-full h-[733px] flex justify-center items-center overflow-hidden  ${containerClassName} `}
       id="floor-plans"
     >
       {/* Use either the passed backgroundImage or the active floor's background */}
@@ -144,8 +142,23 @@ function FloorPlan({
           />
         )}
       </AnimatePresence>
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          background:
+            "linear-gradient(180deg, rgba(0,0,0,0.44) 0%, rgba(0,0,0,0.22) 65%, rgba(0,0,0,0) 100%)",
+          pointerEvents: "none", // allows click-through
+          zIndex: 1,
+        }}
+      ></div>
 
-      <div className="floor-plan-container-holder left-and-right-padding-in-content">
+      <div className="floor-plan-container-holder left-and-right-padding-in-content ">
+       
+
         <div className="bottom-8 left-0 right-0 mx-auto w-full h-full max-w-[569px] flex flex-col gap-5 md:gap-0 px-4 slider-content-holder">
           <h3 className="mobile-text-top-designed-for-life">
             Designed for Life,
