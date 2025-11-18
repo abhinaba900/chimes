@@ -359,7 +359,6 @@ body {
   margin-left: 1rem;
   width: 36px !important;
   height: 36px !important;
-  
 }
 
 .nav-toggle:hover {
@@ -2520,7 +2519,11 @@ body {
   display: none;
 }
 
-@media (max-height: 680px) {
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  .naturallybuiltarea-text-holder-top {
+    padding-bottom: 3rem !important;
+  }
+
   .naturallybuiltarea-text-holder-bottom {
     padding-top: 3rem !important;
   }
@@ -2532,10 +2535,12 @@ body {
   .mobile-view-text {
     display: block;
   }
+
   .s-cardContainer {
-    margin-top: -1rem !important;
+    margin-top: -4rem !important;
   }
 }
+
 @media (max-width: 600px) {
   .natureinspiredvilla-sub-container-content-holder {
     grid-template-columns: repeat(1, 1fr);
@@ -2654,7 +2659,7 @@ body {
     padding-left: 0 !important;
     letter-spacing: -2px;
   }
-  .mobile-view-text{
+  .mobile-view-text {
     display: block;
   }
 
@@ -3086,8 +3091,6 @@ body {
   .naturallybuiltarea-card-content-holder {
     gap: 2rem;
   }
-
-  
 
   .naturallybuiltarea-text-holder-bottom h5 {
     text-align: left;
