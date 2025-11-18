@@ -139,7 +139,7 @@ const AmenitiesHoverSlider = () => {
             <img
               src={hoveredItem?.image}
               alt="Amenity"
-              className="max-w-[350px] md:max-w-[500px] w-full h-full object-contain transition-opacity duration-500 ease-in-out rounded-[32px]"
+              className="max-w-[450px] md:max-w-[500px] w-full h-full object-contain transition-opacity duration-500 ease-in-out rounded-[32px]"
             />
           </div>
         )}

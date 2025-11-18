@@ -424,7 +424,23 @@ body {
 
   .navbar {
     padding: 1rem;
-    background: #f1ebe3;
+  }
+
+  .nav-toggle {
+    border-radius: 40px;
+    background: rgba(242, 238, 238, 0.12) !important;
+  }
+
+  /* Mobile: top (transparent) */
+  .mobile-bg-top {
+    background: transparent !important;
+    transition: background 0.3s ease;
+  }
+
+  /* Mobile: after scrolling */
+  .mobile-bg {
+    background: #f1ebe3 !important;
+    transition: background 0.3s ease;
   }
 
   .nav-actions {
@@ -478,6 +494,11 @@ body {
     justify-content: center;
     border-radius: var(--border-radius);
     background: rgba(255, 255, 255, 0.1);
+    width: 100%;
+  }
+
+  .nav-item .nav-link-mobile {
+    padding: 0 !important;
   }
 
   .nav-toggle {
@@ -614,8 +635,8 @@ body {
   }
 
   .hero-section .text-section p {
-    font-size: 20px;
-    padding-right: 5%;
+    font-size: 1rem;
+    padding-right: 1%;
   }
 
   .hero-section .text-section h2 {
@@ -623,12 +644,16 @@ body {
   }
 
   .hero-section img {
-    object-fit: contain;
-    top: 20%;
+    object-fit: cover;
+    height: 60vh;
+  }
+
+  .hero-section .text-section {
+    position: absolute;
   }
 
   .build-villas-content-holder {
-    padding: 5rem 0 5rem 0 !important;
+    padding: 1.75rem 0 1.75rem 0 !important;
   }
 
   .natureinspiredvilla-text-holder-and-content-holder {
@@ -643,7 +668,10 @@ body {
   }
 
   .slick-slide {
-    padding: 1rem !important;
+    padding: 0.8rem !important;
+  }
+
+  .bouttom-h3-in-designed-for-life {
   }
 
   .naturallybuiltarea-card-content-holder img {
@@ -844,7 +872,7 @@ body {
 @media (max-width: 600px) {
   .build-villas-text-holder h4 {
     font-size: 28px;
-    line-height: 40px;
+    line-height: 120%;
     padding: 0 0.3rem;
   }
 
@@ -867,8 +895,9 @@ body {
 
   .build-villas-content-holder p {
     font-size: 1rem;
-    line-height: 24px;
+    line-height: 140%;
     padding: 1rem;
+    text-align: justify;
   }
 
   .build-villas-line-content-holder {
@@ -1059,7 +1088,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   color: white;
   padding: 0.2rem 1rem;
   border: 0.2px solid #ffffffb2;
@@ -1750,7 +1779,10 @@ body {
   margin-top: -1.5rem;
 }
 
-.right-side-section-inFloor-plan h3 {
+.right-side-section-inFloor-plan h3,
+.mobile-text-top-designed-for-life,
+.mobile-text-top-designed-for-life,
+.mobile-text-top-designed-for-life {
   font-family: var(--font-family-2);
   font-weight: 400;
   font-size: 48px;
@@ -1759,7 +1791,10 @@ body {
   color: #ffffff;
 }
 
-.right-side-section-inFloor-plan h3 span {
+.right-side-section-inFloor-plan h3 span,
+.mobile-text-top-designed-for-life span,
+.mobile-text-top-designed-for-life,
+.mobile-text-top-designed-for-life span {
   font-family: var(--font-family-2);
   font-weight: 600;
   font-size: 48px;
@@ -2297,6 +2332,10 @@ body {
   pointer-events: none; /* Hide and disable when video is playing */
 }
 
+.mobile-text-top-designed-for-life {
+  display: none;
+}
+
 .play-overlay svg {
   width: 80px;
   height: 80px;
@@ -2440,6 +2479,22 @@ body {
   padding-left: 4rem !important;
   padding-right: 4rem !important;
 }
+
+.cross-icons {
+  display: none;
+}
+.mobile-view {
+  display: none;
+}
+
+@media (max-height: 680px) {
+  .naturallybuiltarea-text-holder-bottom {
+    padding-top: 5rem !important;
+  }
+  .s-cardContainer {
+    margin-top: -1rem !important;
+  }
+}
 @media (max-width: 600px) {
   .natureinspiredvilla-sub-container-content-holder {
     grid-template-columns: repeat(1, 1fr);
@@ -2451,10 +2506,76 @@ body {
     line-height: 28px;
   }
 
+  .desktop-view {
+    display: none;
+  }
+
+  .mobile-view {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr !important;
+    grid-template-rows: 1fr 1.2fr;
+    gap: 0.3rem;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "grid1 grid2 grid3"
+      "grid1 grid4 grid5";
+  }
+
+  .grid1 {
+    grid-area: grid1;
+  }
+
+  .grid2 {
+    grid-area: grid2;
+  }
+
+  .grid3 {
+    grid-area: grid3;
+  }
+  .grid4 {
+    grid-area: grid4;
+  }
+
+  .grid5 {
+    grid-area: grid5;
+  }
+
   .natureinspiredvilla-content-holder-text h4 {
     font-size: 1.125rem;
     line-height: 25px;
     margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+  }
+
+  .natureinspiredvilla-text-holder-and-content-holder {
+    padding-top: 1.5rem;
+    gap: 5rem;
+    padding-bottom: 3.938rem !important;
+  }
+
+  .natureinspiredvilla-content-holder-text-inner h4 {
+    text-align: left;
+  }
+
+  .natureinspiredvilla-content-holder-text-inner {
+    justify-content: start;
+    align-items: flex-start;
+  }
+
+  .scroll-section img:first-child {
+    margin-left: -50%;
+  }
+
+  .scroll-section img:last-child {
+    margin-right: -50%;
+  }
+
+  .slide-content h3 {
+    font-size: 45px;
+  }
+
+  .natureinspiredvilla-text-holder-and-content-holder h3 {
+    max-width: 80%;
   }
 
   .natureinspiredvilla-content-holder-text p {
@@ -2468,7 +2589,12 @@ body {
 
   .naturallybuiltarea-text-holder-top p {
     font-size: 1rem;
-    text-align: center;
+    text-align: left;
+  }
+
+  .naturallybuiltarea-text-holder-top h5 {
+    text-align: left !important;
+    padding-left: 0 !important;
   }
 
   .swiper {
@@ -2500,17 +2626,15 @@ body {
   .elevating-every-moment-slider-text-button-and-text-holder h3 span {
     font-size: 28px;
     line-height: 28px;
-    text-align: center;
+    text-align: left;
   }
 
   .elevating-every-moment-slider-text-button-and-text-holder p {
     font-size: 1rem;
     line-height: 20px;
-    text-align: center;
-  }
-
-  .elevating-every-moment-slider-text-button-and-text-holder button {
-    margin: auto;
+    text-align: left;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 
   .acreo-of-the-chimes-section p,
@@ -2555,7 +2679,22 @@ body {
     height: 100vh !important;
     background-color: #f1ebe3 !important;
     border-radius: 0 !important;
-    top: 5rem !important;
+    top: 0rem !important;
+  }
+
+  .cross-icons {
+    position: absolute;
+    right: 1.6rem;
+    top: 1rem;
+  }
+
+  .nav-active {
+    opacity: 0;
+  }
+
+  .active-cross-icon {
+    display: block;
+    z-index: 1001;
   }
 
   .slider-content-holder .slick-slide img {
@@ -2563,40 +2702,51 @@ body {
     height: 100%;
   }
 
+  .nav-list {
+    position: absolute;
+    top: 6%;
+  }
+
   .floor-plan-container-holder .download-button {
   }
 
   .floor-plan-background-image {
     width: 100vh;
-    height: 110vh;
+    height: 700px;
+  }
+
+  .right-side-section-inFloor-plan {
+    justify-content: center;
+    align-items: center;
+    padding: 0;
   }
 
   .right-side-section-inFloor-plan h3,
+  .mobile-text-top-designed-for-life,
+  .mobile-text-top-designed-for-life span,
   .right-side-section-inFloor-plan h3 span {
+    display: block;
     font-size: 28px;
     line-height: 28px;
   }
 
-  .clickid-item-holder-in-floor-plan {
-    grid-template-columns: repeat(2, 1fr);
-    height: fit-content;
-    padding: 0.5rem;
+  .bouttom-h3-in-designed-for-life {
+    display: none !important;
   }
 
-  .mobile-section-dropdown {
-    position: fixed;
-    background: rgba(65, 56, 56, 0.366);
-    top: -320%;
+  .clickid-item-holder-in-floor-plan {
+    grid-template-columns: repeat(3, 1fr);
+    height: fit-content;
+    padding: 0;
+    margin: 0;
   }
+
+  
 
   .mobile-section-dropdown .mobile-section-dropdown-item {
     position: relative;
     z-index: 999;
     color: white;
-  }
-
-  .right-side-section-inFloor-plan {
-    padding: 0.3rem;
   }
 
   .map-container {
@@ -2631,7 +2781,7 @@ body {
 
   .footer-brand-name {
     justify-content: center;
-    bottom: 20%;
+    bottom: 5.3rem;
     text-align: center;
   }
 
@@ -2673,11 +2823,15 @@ body {
     font-size: 1rem;
     line-height: 1.5rem;
     text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .nearby-highlights p {
     font-size: 1rem;
     line-height: 20px;
+    max-width: 100%;
+    padding-inline: 1rem;
   }
 
   .nearby-highlights h4 {
@@ -2703,15 +2857,13 @@ body {
   .naturallybuiltarea-card-content-holder h3 {
     font-size: 28px;
     line-height: 28px;
-    text-align: center;
+    text-align: left;
   }
 
   .naturallybuiltarea-card-content-holder p {
     font-size: 1rem;
     line-height: 1.5rem;
-    text-align: center;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    text-align: justify;
   }
 
   .scroll-stack-card {
@@ -2771,31 +2923,58 @@ body {
     padding-block: 5rem;
   }
   .acreo-of-the-chimes-text-and-image-container {
-    padding-top: 5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-top: 1.75rem;
+  }
+
+  .acreo-of-the-chimes-text-and-image-container
+    .text-area-inside-text-and-image-container {
+    padding-inline: 0;
+  }
+
+  .acreo-of-the-chimes-text-and-image-container
+    .text-area-inside-text-and-image-container
+    svg
+    path {
+    fill: #4f584f;
+  }
+  .acreo-of-the-chimes-text-and-image-container
+    .text-area-inside-text-and-image-container:hover
+    svg
+    path {
+    fill: white;
+  }
+  .acreo-of-the-chimes-text-and-image-container
+    .text-area-inside-text-and-image-container:hover {
+    padding-inline: 1rem;
+  }
+
+  .acreo-of-the-chimes-text-and-image-container {
+    display: flex;
+    flex-direction: column-reverse;
   }
 
   .nearby-highlights {
     padding-top: 0;
-    padding-bottom: 5rem;
+    padding-bottom: 0rem;
   }
 
   .laptop-container {
-    height: 60vh;
-    width: 95%;
+    height: 50vh;
+    width: 85%;
     margin: auto;
   }
 
   .laptop {
-    height: 300px;
+    height: 250px;
   }
 
   .laptop-base {
     top: -6rem;
-    width: 99%;
-    left: auto;
+    width: 90%;
+    left: 5%;
     right: auto;
+    transform: rotateX(-65deg) translateZ(210px) translateY(10px) scale(1.02)
+      translateX(-1px);
   }
 
   .laptop-base img {
@@ -2804,12 +2983,15 @@ body {
 
   .button {
     background: rgba(197, 217, 47, 1);
+    width: 100%;
+  }
+
+  .button-link-mobile {
+    padding-block: 1rem;
   }
 
   .natureinspiredvilla-content-holder-image-2 {
     height: 300px !important;
-    padding-left: 1rem;
-    padding-right: 1rem;
   }
 
   .naturallybuiltarea {
@@ -2817,7 +2999,7 @@ body {
   }
 
   .s-cardContainer {
-    margin-top: 1rem;
+    margin-top: -6rem;
   }
   .naturallybuiltarea-text-holder-bottom {
     margin-top: 5rem;
@@ -2830,6 +3012,72 @@ body {
     justify-content: center;
     gap: 1rem;
     height: 100%;
+  }
+
+  .naturallybuiltarea-card-content-holder {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .naturallybuiltarea-card-content-holder {
+    gap: 2rem;
+  }
+
+  .naturallybuiltarea-text-holder-bottom {
+    margin-top: -2rem;
+  }
+
+  .naturallybuiltarea-text-holder-bottom h5 {
+    text-align: left;
+    padding-left: 0;
+  }
+
+  .naturallybuiltarea-text-holder-bottom p {
+    text-align: justify;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .slider-content-holder-in-gallery {
+    position: relative;
+    background: transparent;
+    left: 0;
+    top: 0;
+    padding: 0;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .elevating-every-moment-slider-image-text h3,
+  .elevating-every-moment-slider-image-text p {
+    color: #000100;
+  }
+
+  .slider-background-svg {
+    display: none;
+  }
+
+  .elevating-every-moment-slider-image-text h3 {
+    font-size: 1.25rem !important;
+  }
+
+  .elevating-every-moment-slider-image-text p {
+    font-size: 0.875rem !important;
+    color: #4f584f;
+  }
+
+  .button-in-slider-element-holder {
+    position: relative;
+    bottom: 0;
+    right: 0;
+  }
+
+  .acreo-of-the-chimes-section #acreo-of-the-chimes-tree-logo-image {
+    margin-left: 0;
+  }
+
+  .acreo-of-the-chimes-section p {
+    text-align: left;
   }
 }
 
@@ -2943,6 +3191,8 @@ body {
   }
 
   .right-side-section-inFloor-plan h3,
+  .mobile-text-top-designed-for-life,
+  .mobile-text-top-designed-for-life span,
   .right-side-section-inFloor-plan h3 span {
     font-size: 40px;
     line-height: 40px;

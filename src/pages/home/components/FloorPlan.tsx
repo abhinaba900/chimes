@@ -11,6 +11,7 @@ const directions = ["East", "West"];
 // Default floor data that matches your existing structure
 const defaultFloors = [
   {
+    numberId: 1,
     id: "ground-floor",
     name: "Ground Floor",
     backgroundImage: "assets/floor-plan-background-image.webp",
@@ -29,6 +30,7 @@ const defaultFloors = [
     ],
   },
   {
+    numberId: 2,
     id: "first-floor",
     name: "First Floor",
     backgroundImage:
@@ -43,6 +45,7 @@ const defaultFloors = [
     ],
   },
   {
+    numberId: 3,
     id: "second-floor",
     name: "Second Floor",
     backgroundImage:
@@ -57,6 +60,7 @@ const defaultFloors = [
     ],
   },
   {
+    numberId: 4,
     id: "third-floor",
     name: "Third Floor",
     backgroundImage:
@@ -134,7 +138,12 @@ function FloorPlan({
       </AnimatePresence>
 
       <div className="floor-plan-container-holder left-and-right-padding-in-content">
-        <div className="bottom-8 left-0 right-0 mx-auto w-full h-full max-w-[569px] px-4 slider-content-holder">
+        <div className="bottom-8 left-0 right-0 mx-auto w-full h-full max-w-[569px] flex flex-col gap-5 md:gap-0 px-4 slider-content-holder">
+          <h3 className="mobile-text-top-designed-for-life">
+            Designed for Life,
+            <br />
+            <span> Measured in Space</span>
+          </h3>
           <div className="bg-white bg-opacity-90 p-4 rounded-[16px] shadow-lg h-full">
             {plansToShow.length > 0 ? (
               <Slider {...defaultSettings} className={sliderClassName}>
@@ -179,7 +188,7 @@ function FloorPlan({
           </div>
         </div>
         <section className="right-side-section-inFloor-plan">
-          <h3>
+          <h3 className="bouttom-h3-in-designed-for-life">
             Designed for Life,
             <br />
             <span> Measured in Space</span>
@@ -188,7 +197,7 @@ function FloorPlan({
             width={"fit-content"}
             height={"fit-content"}
             borderRadius={16}
-            className="flex justify-center items-center overflow-visible px-2"
+            className="flex justify-center items-center overflow-visible px-2 desktop-view"
           >
             <div className="clickid-item-holder-in-floor-plan">
               <div className="floor-item and-this-is-dropdown-floor-plan">
@@ -213,6 +222,30 @@ function FloorPlan({
               ))}
             </div>
           </GlassSurface>
+
+          <div className="mobile-view clickid-item-holder-in-floor-plan flex justify-center items-center overflow-visible px-2">
+            <div className="floor-item and-this-is-dropdown-floor-plan">
+              <GlassDropdown
+                options={directions}
+                defaultLabel="Choose facing"
+              />
+            </div>
+            {/* Dynamically render floor items while preserving your exact styling */}
+            {floors.map((floor, index) => (
+              <div
+                key={floor.id}
+                className={
+                  "floor-item " +
+                  `grid${floor.numberId + 1}` +
+                  " " +
+                  (clickedValue === floor.id ? " floor-active" : "")
+                }
+                onClick={() => setClickedValue(floor.id)}
+              >
+                {floor.name}
+              </div>
+            ))}
+          </div>
         </section>
       </div>
     </div>

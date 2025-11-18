@@ -93,6 +93,7 @@ function ElevatingEveryMomentSlider() {
           slidesToShow: 1,
           slidesToScroll: 1,
           centerPadding: "20px",
+          centerMode: false,
         },
       },
       {
@@ -101,6 +102,7 @@ function ElevatingEveryMomentSlider() {
           slidesToShow: 1,
           slidesToScroll: 1,
           centerPadding: "10px",
+          centerMode: false,
         },
       },
     ],
@@ -120,7 +122,7 @@ function ElevatingEveryMomentSlider() {
                 <img
                   src={slide.image}
                   alt={slide.title}
-                  className="w-full h-[300px] sm:h-[400px] md:h-[600px] lg:h-[600px] xl:h-[600px] object-cover transform transition-transform duration-500 group-hover:scale-105 custom-image-large"
+                  className="w-full h-[300px] sm:h-[400px] rounded-[32px] md:h-[600px] lg:h-[600px] xl:h-[600px] object-cover transform transition-transform duration-500 group-hover:scale-105 custom-image-large"
                   loading="lazy"
                 />
 
@@ -130,7 +132,7 @@ function ElevatingEveryMomentSlider() {
                   viewBox="0 0 1034 307"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="absolute bottom-0 left-0 w-full h-[50%] object-cover"
+                  className="absolute bottom-0 left-0 w-full h-[50%] object-cover slider-background-svg"
                   preserveAspectRatio="none"
                   style={{
                     transform: "translateY(0)",

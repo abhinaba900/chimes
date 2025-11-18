@@ -38,7 +38,7 @@ export default function Navbar() {
     };
 
     const handleScroll = () => {
-      if (!isMobile && window.scrollY > 10) {
+      if (isMobile && window.scrollY > 10) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -139,7 +139,11 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
-    <header className="header left-and-right-padding-add" ref={navbarRef}>
+    <header
+      className={`header left-and-right-padding-add 
+    ${isMobile ? (isScrolled ? "mobile-bg" : "mobile-bg-top") : ""}`}
+      ref={navbarRef}
+    >
       <motion.nav
         className="navbar"
         initial="hidden"
@@ -194,11 +198,11 @@ export default function Navbar() {
               >
                 <Link
                   href="#"
-                  className="nav-link"
+                  className="nav-link nav-link-mobile"
                   style={{ backgroundColor: "rgba(242, 238, 238, 0.12)" }}
                 >
                   <button
-                    className="button"
+                    className="button button-link-mobile"
                     onClick={() => {
                       setIsOpen(true);
                       closeMenu();
@@ -220,7 +224,7 @@ export default function Navbar() {
               borderRadius={40}
               className="desktop-enquire-button"
             >
-              <Link href="#" className="nav-link mobile-will-hide">
+              <Link href="#" className="nav-link  mobile-will-hide">
                 <button
                   className="button"
                   onClick={() => {
@@ -233,18 +237,63 @@ export default function Navbar() {
             </GlassSurface>
           </motion.div>
 
-          <motion.div
-            className={`nav-toggle ${isActive ? "nav-active" : ""}`}
-            onClick={toggleMenu}
-            whileTap={{ scale: 0.95 }}
-            transition={{ type: "spring", stiffness: 400, damping: 20 }}
+          <GlassSurface
+            width={"fit-content"}
+            height={"fit-content"}
+            borderRadius={40}
+            className={`cross-icons ${isActive ? "active-cross-icon" : ""}`}
           >
-            <div className="hamburger">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </motion.div>
+            <svg
+              width="38"
+              height="38"
+              viewBox="0 0 38 38"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              onClick={closeMenu}
+            >
+              <rect
+                width="38"
+                height="38"
+                rx="19"
+                fill="#F2EEEE"
+                fill-opacity="0.12"
+              />
+              <path
+                d="M20.2826 19.0001L25.7339 13.5485C26.0887 13.1939 26.0887 12.6206 25.7339 12.266C25.3793 11.9113 24.806 11.9113 24.4514 12.266L18.9999 17.7176L13.5486 12.266C13.1938 11.9113 12.6207 11.9113 12.2661 12.266C11.9113 12.6206 11.9113 13.1939 12.2661 13.5485L17.7174 19.0001L12.2661 24.4517C11.9113 24.8063 11.9113 25.3797 12.2661 25.7343C12.4428 25.9111 12.6751 26 12.9073 26C13.1395 26 13.3717 25.9111 13.5486 25.7343L18.9999 20.2827L24.4514 25.7343C24.6283 25.9111 24.8605 26 25.0927 26C25.3249 26 25.557 25.9111 25.7339 25.7343C26.0887 25.3797 26.0887 24.8063 25.7339 24.4517L20.2826 19.0001Z"
+                fill="#15420E"
+              />
+            </svg>
+          </GlassSurface>
+
+          <GlassSurface
+            width={"fit-content"}
+            height={"fit-content"}
+            borderRadius={40}
+            className={`nav-toggle ${isActive ? "nav-active" : ""}`}
+          >
+            <motion.div onClick={toggleMenu}>
+              <svg
+                width="22"
+                height="16"
+                viewBox="0 0 16 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.2 2.4H14.8C15.4629 2.4 16 1.86289 16 1.2C16 0.537109 15.4629 0 14.8 0H1.2C0.537109 0 0 0.537109 0 1.2C0 1.86289 0.537109 2.4 1.2 2.4Z"
+                  fill="#15420E"
+                />
+                <path
+                  d="M14.8 4.8H1.2C0.537109 4.8 0 5.33711 0 6C0 6.66289 0.537109 7.2 1.2 7.2H14.8C15.4629 7.2 16 6.66289 16 6C16 5.33711 15.4629 4.8 14.8 4.8Z"
+                  fill="#15420E"
+                />
+                <path
+                  d="M14.8 9.6H1.2C0.537109 9.6 0 10.1371 0 10.8C0 11.4629 0.537109 12 1.2 12H14.8C15.4629 12 16 11.4629 16 10.8C16 10.1371 15.4629 9.6 14.8 9.6Z"
+                  fill="#15420E"
+                />
+              </svg>
+            </motion.div>
+          </GlassSurface>
         </div>
       </motion.nav>
 
