@@ -642,7 +642,7 @@ body {
   }
 
   .hero-section .text-section h2 {
-    font-size: clamp(3.5rem, 10vw, 4.625rem);
+    font-size: clamp(3rem, 10vw, 4.625rem);
     line-height: 0.46;
     margin-bottom: -0.8rem;
     margin-top: 0.4rem;
