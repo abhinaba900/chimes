@@ -244,10 +244,13 @@ function ElevatingEveryMomentSlider() {
         <h3>
           Elevating every <span>Moment</span>
         </h3>
-        <p>
+        <p className="desktop-view">
           The Chimes offers thoughtful amenities — from serene club spaces to
           playful outdoor zones. Whether it’s wellness, celebration, or quiet
           retreat, every corner is designed to enrich your everyday living.
+        </p>
+        <p className="mobile-view-text">
+          “The Chimes” offers thoughtful amenities, from serene club spaces to playful outdoor zones
         </p>
         <button onClick={() => setIsOpen(true)}>
           <span>

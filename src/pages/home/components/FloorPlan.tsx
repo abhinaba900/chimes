@@ -7,13 +7,19 @@ import GlassDropdown from "../hooks/CustomDropdown";
 import { AnimatePresence, motion } from "framer-motion";
 import GlassSurface from "@/ReactBits/GlassSurface/GlassSurface";
 const directions = ["East", "West"];
+const isInMobileView = () => {
+  if (typeof window !== "undefined") {
+    return window.innerWidth <= 768; // Example breakpoint for mobile
+  }
+  return false;
+}
 
 // Default floor data that matches your existing structure
 const defaultFloors = [
   {
     numberId: 1,
     id: "ground-floor",
-    name: "Ground Floor",
+    name: isInMobileView() ? "Ground" : "Ground Floor",
     backgroundImage: "assets/floor-plan-background-image.webp",
     sliderContent: [
       {
@@ -32,7 +38,7 @@ const defaultFloors = [
   {
     numberId: 2,
     id: "first-floor",
-    name: "First Floor",
+    name: isInMobileView() ? "First" : "First Floor",
     backgroundImage:
       "assets/ECUMENE_CHIMES(2773-V)DINING_V2_25-07-2025-1st-flore.webp",
     sliderContent: [
@@ -47,7 +53,7 @@ const defaultFloors = [
   {
     numberId: 3,
     id: "second-floor",
-    name: "Second Floor",
+    name: isInMobileView() ? "Second" : "Second Floor",
     backgroundImage:
       "assets/ECUMENE_CHIMES(2773-V)LIVING_V2_25-07-2025-2nd-flore.webp",
     sliderContent: [
@@ -62,7 +68,7 @@ const defaultFloors = [
   {
     numberId: 4,
     id: "third-floor",
-    name: "Third Floor",
+    name: isInMobileView() ? "Third" : "Third Floor",
     backgroundImage:
       "assets/Ecumene_Chimes_(2773_N)_Cam 13_Master Bedroom_Ver 01_25-07-2025-3rd-flore.webp",
     sliderContent: [
@@ -75,6 +81,8 @@ const defaultFloors = [
     ],
   },
 ];
+
+
 
 function FloorPlan({
   backgroundImage = "assets/floor-plan-background-image.webp",
@@ -223,22 +231,20 @@ function FloorPlan({
             </div>
           </GlassSurface>
 
-          <div className="mobile-view clickid-item-holder-in-floor-plan flex justify-center items-center overflow-visible px-2">
-            <div className="floor-item and-this-is-dropdown-floor-plan">
+          <div className="mobile-view clickid-item-holder-in-floor-plan grid grid-cols-3 grid-rows-2 gap-4 items-stretch  overflow-visible px-2">
+            <div className="floor-item and-this-is-dropdown-floor-plan row-span-2 flex justify-start items-start">
               <GlassDropdown
                 options={directions}
                 defaultLabel="Choose facing"
               />
             </div>
             {/* Dynamically render floor items while preserving your exact styling */}
-            {floors.map((floor, index) => (
+            {floors.slice(0, 4).map((floor, index) => (
               <div
                 key={floor.id}
                 className={
-                  "floor-item " +
-                  `grid${floor.numberId + 1}` +
-                  " " +
-                  (clickedValue === floor.id ? " floor-active" : "")
+                  "floor-item flex justify-center items-center " +
+                  (clickedValue === floor.id ? "floor-active" : "")
                 }
                 onClick={() => setClickedValue(floor.id)}
               >

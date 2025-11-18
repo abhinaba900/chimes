@@ -68,16 +68,16 @@ export default function WhatMatters() {
       <h3>
         Connected to What <br /> <span>Matters</span>
       </h3>
-      <p>
+      <p className="desktop-view">
         Discover a location that balances convenience with calm — close to top
         schools, malls, and city hubs, yet wrapped in nature's quiet
       </p>
+      <p className="mobile-view-text">
+        A location that balances convenience with calm, close to top schools,
+        malls and city hubs
+      </p>
       <div className="left-and-right-padding-in-content">
-        <div
-          ref={mapRef}
-          id="nearby"
-          className="map-container "
-        />
+        <div ref={mapRef} id="nearby" className="map-container " />
       </div>
     </div>
   );

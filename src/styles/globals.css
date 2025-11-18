@@ -619,7 +619,7 @@ body {
   font-size: clamp(5rem, 15vw, 15.625rem);
   text-align: center;
   color: #f1ebe3;
-  line-height: 0.46;
+  line-height: 0.42;
   margin-top: 1rem;
 }
 
@@ -2133,11 +2133,6 @@ body {
 }
 
 .footer-section-text-holder p {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.3rem;
-
   font-family: var(--font-family-sequel-random);
   font-weight: 410;
   font-size: 16px;
@@ -2174,12 +2169,13 @@ body {
   font-family: var(--font-family-2);
   font-weight: 400;
   font-size: 180px;
-  line-height: 145px;
+  line-height: 100%;
   letter-spacing: 0%;
   color: #ffffff;
   max-width: 1339px;
   text-align: right;
   margin: auto;
+  margin-bottom: -1.563rem;
 }
 
 .swiper {
@@ -2487,9 +2483,26 @@ body {
   display: none;
 }
 
+.desktop-view{
+  display: block;
+}
+
+.mobile-view-text{
+  display: none;
+}
+
+
 @media (max-height: 680px) {
   .naturallybuiltarea-text-holder-bottom {
     padding-top: 5rem !important;
+  }
+
+  .desktop-view{
+    display: none;
+  }
+
+  .mobile-view-text{
+    display: block;
   }
   .s-cardContainer {
     margin-top: -1rem !important;
@@ -2512,13 +2525,11 @@ body {
 
   .mobile-view {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr !important;
-    grid-template-rows: 1fr 1.2fr;
-    gap: 0.3rem;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "grid1 grid2 grid3"
-      "grid1 grid4 grid5";
+  }
+
+  .and-this-is-dropdown-floor-plan{
+    height: 100%;
+    align-items: center;
   }
 
   .grid1 {
@@ -2740,8 +2751,6 @@ body {
     padding: 0;
     margin: 0;
   }
-
-  
 
   .mobile-section-dropdown .mobile-section-dropdown-item {
     position: relative;
@@ -3079,6 +3088,10 @@ body {
   .acreo-of-the-chimes-section p {
     text-align: left;
   }
+
+  .map-container{
+    height: 250px;
+  }
 }
 
 @media (min-width: 600px) and (max-width: 999px) {
@@ -3245,9 +3258,7 @@ body {
 
   .footer-brand-name {
     font-size: 50px;
-    line-height: 100px;
     text-align: center;
-    bottom: 10%;
   }
 
   .floor-plan-background-image {
@@ -3388,7 +3399,7 @@ body {
   }
 }
 
-@media (min-width: 1200px) and (max-width: 1360px) {
+@media (min-width: 1200px) and (max-width: 1340px) {
   .slider-content-holder {
     margin: auto;
   }
@@ -3443,11 +3454,27 @@ body {
   }
 }
 
-@media (min-width: 1360px) and (max-width: 1390px) {
+@media (min-width: 1341px) and (max-width: 1390px) {
   /* your styles here */
   .nav-action,
   .nav-list {
     gap: 0.5rem;
+  }
+
+  .floor-plan-container-holder {
+    margin-top: 0 !important;
+    padding: 6rem 0;
+    margin-bottom: 0 !important;
+    gap: 2rem;
+  }
+
+  .nearby-highlights h3 {
+    font-size: 28px;
+    letter-spacing: -2px;
+  }
+
+  .footer-brand-name {
+    font-size: 10rem;
   }
 
   .navbar {
@@ -3456,6 +3483,25 @@ body {
 
   .logo {
     margin-top: -1.5rem;
+  }
+
+  .s-cardContainer {
+    margin-top: -6rem !important;
+  }
+
+  .left-and-right-padding-in-content {
+    margin-top: 2rem;
+  }
+  .elevating-every-moment-slider-text-button-and-text-holder h3 {
+    letter-spacing: -2px;
+  }
+
+  .acreo-of-the-chimes-section {
+    padding-top: 10rem;
+  }
+
+  .slick-dots {
+    bottom: -15px !important;
   }
 
   .left-and-right-padding-in-content,
@@ -3476,6 +3522,19 @@ body {
     position: fixed;
     top: -65px;
     left: 0px;
+  }
+
+  .natureinspiredvilla-text-holder-and-content-holder {
+    gap: 0;
+    padding-bottom: 6rem;
+  }
+
+  .scroll-section img:first-child {
+    margin-left: -25%;
+  }
+
+  .natureinspiredvilla-sub-container-content-holder {
+    margin-top: 0;
   }
 }
 

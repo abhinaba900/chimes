@@ -168,10 +168,13 @@ function NaturallybuiltArea() {
         <h5 className="mb-4">
           See It, Feel It, <span>Live it</span>
         </h5>
-        <p className="" style={{ marginTop: "1rem" }}>
+        <p className="desktop-view" style={{ marginTop: "1rem" }}>
           Step inside a world where nature meets design. Explore every corner,
           from sunlit rooms to green pathways — and discover what makes The
           Chimes a villa unlike any other
+        </p>
+        <p className="mobile-view-text" style={{ marginTop: "1rem" }}>
+          Step inside a world where nature meets design
         </p>
       </div>
     </div>
