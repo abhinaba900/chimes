@@ -155,7 +155,7 @@ export default function Navbar() {
             <Image
               src="/assets/The Chimes Logo.svg"
               alt="Logo"
-              width={150}
+              width={200}
               height={100}
               className="logo"
             />

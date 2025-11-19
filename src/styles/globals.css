@@ -220,6 +220,10 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+.nav-item .nav-link:hover {
+  color: white !important;
+}
+
 .nav-item .nav-link:hover,
 .nav-item .nav-link.active,
 .enquiry-button:hover {
@@ -633,7 +637,7 @@ body {
   font-size: clamp(5rem, 15vw, 15.625rem);
   text-align: center;
   color: #f1ebe3;
-  line-height: 0.42;
+  line-height: 0.48;
   margin-top: 1rem;
 }
 
@@ -845,7 +849,7 @@ body {
   font-weight: 405;
   font-size: 32px;
   line-height: 48px;
-  letter-spacing: 0%;
+  letter-spacing: -1px;
   text-align: center;
   padding: 0 1rem;
   color: #000100;
@@ -1531,6 +1535,7 @@ body {
   border: 2px solid #2c6c22;
   transition: all 0.3s ease-in-out;
   color: #2c6c22;
+  letter-spacing: 1px;
 }
 
 .elevating-every-moment-slider-text-button-and-text-holder button:hover {
@@ -1675,8 +1680,10 @@ body {
 }
 .video-showcase-title span {
   font-family: var(--font-family-sequel-semi-bold-obl-display);
-  font-weight: 400;
+  font-weight: 600;
+  font-style: normal; /* forces it to not be italic */
 }
+
 .video-showcase-button {
   padding: 1.25rem 2rem;
   font-family: var(--font-family-2);

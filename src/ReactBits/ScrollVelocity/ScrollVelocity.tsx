@@ -44,6 +44,13 @@ const VelocityScroller: React.FC<{
   scrollerStyle,
 }) => {
   /* ------------------------------------------------------------
+     1. ADD HOVER REF
+     We use a Ref instead of State to avoid re-rendering the component
+     every time the mouse enters/leaves, keeping animation smooth.
+  ------------------------------------------------------------ */
+  const isHovered = useRef(false);
+
+  /* ------------------------------------------------------------
      CONSTANT RIGHT → LEFT MOVEMENT
   ------------------------------------------------------------ */
   const baseX = useMotionValue(0);
@@ -72,6 +79,13 @@ const VelocityScroller: React.FC<{
   ------------------------------------------------------------ */
   useAnimationFrame((t, delta) => {
     if (!measured || !copyWidth) return;
+
+    /* ------------------------------------------------------------
+       2. CHECK HOVER STATUS
+       If hovered, we simply return early, effectively pausing
+       the calculation of the new position.
+    ------------------------------------------------------------ */
+    if (isHovered.current) return;
 
     const moveBy = -baseVelocity * (delta / 1000); // Always RIGHT → LEFT
     baseX.set(baseX.get() + moveBy);
@@ -102,6 +116,12 @@ const VelocityScroller: React.FC<{
   return (
     <div
       className={parallaxClassName}
+      /* ------------------------------------------------------------
+         3. ATTACH EVENT HANDLERS
+         Update the ref immediately on interaction.
+      ------------------------------------------------------------ */
+      onMouseEnter={() => { isHovered.current = true; }}
+      onMouseLeave={() => { isHovered.current = false; }}
       style={{
         overflow: "hidden",
         width: "100%",

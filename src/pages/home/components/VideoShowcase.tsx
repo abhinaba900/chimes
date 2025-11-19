@@ -19,7 +19,7 @@ const VideoShowcase: React.FC<VideoShowcaseProps> = ({
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <div className="relative w-full  h-[400px] md:h-[700px] video-showcase-container  bg-black" >
+    <div className="relative w-full  h-[400px] md:h-[700px] 2xl:h-[900px] video-showcase-container  bg-black" >
       
       {/* 2. The Video Player Layer */}
       {/* We keep it mounted but hidden until playing to ensure smooth playback start */}
