@@ -2845,6 +2845,11 @@ body {
     line-height: 20px;
   }
 
+  .video-showcase-title{
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+
   .footer-brand-name {
     justify-content: center;
     bottom: 5.3rem;
@@ -3019,9 +3024,17 @@ body {
     path {
     fill: white;
   }
+
+  .acreo-of-the-chimes-text-and-image-container
+    .text-area-inside-text-and-image-container{
+      border-bottom: 1px solid #4f584f;
+      border-radius: 0;
+    }
   .acreo-of-the-chimes-text-and-image-container
     .text-area-inside-text-and-image-container:hover {
-    padding-inline: 1rem;
+    padding-inline: 0.5rem;
+    border-radius: 10px;
+    border-bottom: none;
   }
 
   .acreo-of-the-chimes-text-and-image-container {
