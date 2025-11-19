@@ -67,7 +67,7 @@ const GlassDropdown = ({
             <li
               key={option}
               onClick={() => handleSelect(option)}
-              className="px-3 py-1 hover:text-white hover:bg-white/20 cursor-pointer transition-colors mobile-section-dropdown-item"
+              className="px-3 py-1 text-white hover:text-white hover:bg-white/20 cursor-pointer transition-colors mobile-section-dropdown-item"
             >
               {option}
             </li>

@@ -1,106 +1,81 @@
 ﻿"use client";
 
-import React, { useRef, useEffect, useState } from "react";
-import { motion, useAnimation } from "framer-motion";
+import React, { useState } from "react";
 import ReactPlayer from "react-player";
 
 const LaptopAnimation = () => {
-  const controls = useAnimation();
-  const ref = useRef<HTMLDivElement>(null);
-  const [isInView, setIsInView] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(false);
-  // New state to track if video has been played once
   const [playedOnce, setPlayedOnce] = useState(false);
-
-  // Laptop lid open/close animation variants
-  const laptopVariants = {
-    closed: { rotateX: -66, transition: { duration: 0.8, ease: "easeInOut" } },
-    open: { rotateX: 15, transition: { duration: 0.8, ease: "easeInOut" } },
-  };
-
-  // IntersectionObserver to toggle isInView when ~50% visible
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => setIsInView(entry.isIntersecting),
-      { threshold: 0.5 } // 50% visibility triggers
-    );
-    const current = ref.current;
-    if (current) observer.observe(current);
-    return () => {
-      if (current) observer.unobserve(current);
-    };
-  }, []);
-
-  // Animate lid and pause video on close
-  useEffect(() => {
-    if (isInView) {
-      controls.start("open");
-    } else {
-      controls.start("closed");
-      setIsPlaying(false); // pause video when out of view
-    }
-  }, [isInView, controls]);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <motion.div
-      ref={ref}
-      className="laptop-container"
-      initial={{ scale: 0.5 }}
-      animate={{ scale: isInView ? 1 : 0.5 }}
-      transition={{ duration: 1, ease: "easeInOut" }}
-    >
-      <div className="laptop">
-        <motion.div
-          className="laptop-lid"
-          initial="closed"
-          animate={controls}
-          variants={laptopVariants}
+    <div className="w-full h-[500px] flex justify-center items-center laptop-section-container">
+      {/* Laptop Wrapper */}
+      <div className="relative w-[900px] max-w-[90vw]">
+        
+        {/* Laptop Frame Image */}
+        <img
+          src="/assets/laptop.webp" // Ensure this path is correct
+          className="relative  w-full h-auto pointer-events-none select-none block"
+          alt="Laptop Frame"
+        />
+
+        {/* SCREEN AREA (Overlay) */}
+        <div
+          className="absolute z-0 bg-black"
+          style={{
+            // 1. Center horizontally relative to the parent
+            left: "50%",
+            transform: "translateX(-50%)",
+            
+            // 2. Adjust these slightly based on your specific laptop.webp image bezel thickness
+            top: "6.5%",   // Top bezel offset
+            width: "76.5%", // Screen width relative to laptop image width
+            height: "88%",  // Screen height relative to laptop image height
+            
+            // 3. Visual fixes
+            overflow: "hidden",
+            borderTopLeftRadius: "8px",
+            borderTopRightRadius: "8px",
+            borderBottomLeftRadius: "4px", // Bottom corners are usually sharper on laptops
+            borderBottomRightRadius: "4px",
+            zIndex: 1,
+          }}
         >
-          <div className="laptop-screen">
-            <ReactPlayer
-              className="react-player-wrapper relative z-99"
-              src="/assets/placeholder.mp4"
-              width="100%"
-              height="100%"
-              // Show thumbnail only before first play; then load actual player
-              light={playedOnce ? false : "/assets/video-poster.jpg"}
-              // Custom play icon centered on thumbnail
-              playIcon={
+          <ReactPlayer
+            src="/assets/placeholder.mp4" // changed 'src' to 'url' for ReactPlayer standard
+            playing={isPlaying}
+            light={playedOnce ? false : "/assets/video-poster.jpg"}
+            width="100%"
+            height="100%"
+            controls={true}
+            // This ensures the video covers the whole area without black bars
+            style={{ objectFit: "cover" }} 
+            playIcon={
+              <div
+                className="relative group cursor-pointer transition-transform duration-300 hover:scale-110"
+                onClick={() => {
+                  setPlayedOnce(true);
+                  setIsPlaying(true);
+                }}
+              >
+                 {/* YouTube Style Button */}
                 <img
                   src="/assets/youtube-play-icon.png"
                   width={80}
                   alt="Play"
-                  style={{
-                    position: "absolute",
-                    top: "50%",
-                    left: "50%",
-                    transform: "translate(-50%, -50%)",
-                    cursor: "pointer",
-                  }}
+                  className="drop-shadow-2xl opacity-90 group-hover:opacity-100"
                 />
-              }
-              playing={isPlaying}
-              controls
-              loop
-              playsInline
-              onPlay={() => {
-                setIsPlaying(true);
-                setPlayedOnce(true); // mark that video has been played
-              }}
-              onPause={() => setIsPlaying(false)}
-            />
-          </div>
-        </motion.div>
-
-        <div className="laptop-base">
-          <img
-            src="/assets/laptop-base.png"
-            alt="Laptop Base"
-            className="w-full h-[700px] object-cover"
+              </div>
+            }
+            onPlay={() => {
+              setPlayedOnce(true);
+              setIsPlaying(true);
+            }}
+            onPause={() => setIsPlaying(false)}
           />
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
