@@ -19,6 +19,11 @@
           src="assets/nearby-highlights-image-sidebar.png"
           alt=""
         />
+        <img
+          className="mobile-sidebar-image"
+          src="assets/buttom-baar-in-mobile.svg"
+          alt=""
+        />
       </div>
       <div className="nearby-highlights-card">
         <h3>GREENWOOD INTL SCHOOL</h3>
@@ -33,6 +38,11 @@
           academics and a nurturing environment
         </p>
         <h4>20 minutes away</h4>
+        <img
+          className="mobile-sidebar-image"
+          src="assets/buttom-baar-in-mobile.svg"
+          alt=""
+        />
       </div>
       <div className="nearby-highlights-card">
         <h3>WIPRO</h3>
