@@ -25,6 +25,16 @@
   src: url("../../public/assets/font/Sequel\ Sans\ OTF/Sequel Sans Bold Disp.otf")
     format("opentype");
 }
+@font-face {
+  font-family: "Sequel Sans Light Display";
+  src: url("../../public/assets/font/Sequel\ Sans\ OTF/Sequel Sans Light Disp.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "Sequel Sans Semi Bold Obl Display";
+  src: url("../../public/assets/font/Sequel\ Sans\ OTF/Sequel Sans Semi Bold Obl Disp.otf")
+    format("opentype");
+}
 
 :root {
   --primary-color: #1976d2;
@@ -51,6 +61,9 @@
   --font-family-sequel-medium: "Sequel Sans Medium", sans-serif;
   --font-family-sequel-random: "Sequel Sans Random Display", sans-serif;
   --font-family-sequel-bold-display: "Sequel Sans Bold Display", sans-serif;
+  --font-family-sequel-light-display: "Sequel Sans Light Display", sans-serif;
+  --font-family-sequel-semi-bold-obl-display: "Sequel Sans Semi Bold Obl Display",
+    sans-serif;
 }
 
 /* In your global CSS file */
@@ -211,7 +224,7 @@ body {
 .nav-item .nav-link.active,
 .enquiry-button:hover {
   color: rgba(0, 1, 0, 1);
-  background: rgba(197, 217, 47, 1);
+  background: #2c6c22;
 
   transform: translateY(-2px);
 
@@ -529,7 +542,7 @@ body {
 /* enquary button section  */
 
 .enquiry-button {
-  background-color: rgba(197, 217, 47, 1);
+  background-color: #2c6c22;
   border-radius: 40px;
   padding: 1rem;
   border: none;
@@ -811,6 +824,7 @@ body {
   line-height: 72px;
   letter-spacing: -4%;
   text-align: center;
+  color: #2b851d;
 }
 
 .coma-icon {
@@ -1028,7 +1042,7 @@ body {
   line-height: 88px;
   letter-spacing: -4%;
   text-align: center;
-  color: #c5d92f;
+  color: white;
 }
 
 .natureinspiredvilla-content-holder-image {
@@ -1341,7 +1355,7 @@ body {
   font-size: 64px;
   line-height: 72px;
   letter-spacing: -4%;
-  color: #15420e;
+  color: #2b851d;
 }
 
 .naturallybuiltarea-text-holder-top p {
@@ -1486,6 +1500,7 @@ body {
   font-size: 64px;
   line-height: 72px;
   letter-spacing: -4%;
+  color: #2b851d;
 }
 
 .elevating-every-moment-slider-text-button-and-text-holder p {
@@ -1503,7 +1518,7 @@ body {
   max-width: 243px;
   width: 100%;
   height: 48px;
-  background-color: #c5d92f;
+  background-color: transparent;
   border-radius: 24px;
   justify-content: center;
   align-items: center;
@@ -1513,6 +1528,14 @@ body {
   font-family: var(--font-family-sequel-random);
   font-weight: bold;
   cursor: pointer;
+  border: 2px solid #2c6c22;
+  transition: all 0.3s ease-in-out;
+  color: #2c6c22;
+}
+
+.elevating-every-moment-slider-text-button-and-text-holder button:hover {
+  background-color: #2c6c22;
+  color: #fff;
 }
 
 .elevating-every-moment-slider-text-button-and-text-holder button:hover .icon-1,
@@ -1592,7 +1615,6 @@ body {
 /* acre of the chimes */
 
 .acreo-of-the-chimes-section {
-  max-width: 1339px;
   margin: auto;
   padding: 12.5rem 0 10rem 0;
   width: 100%;
@@ -1625,6 +1647,7 @@ body {
   line-height: 72px;
   letter-spacing: -2%;
   text-align: center;
+  color: #2b851d;
 }
 
 .acreo-of-the-chimes-text-and-image-container {
@@ -1634,6 +1657,35 @@ body {
   align-items: center;
   justify-content: center;
   padding-top: 9.375rem;
+  margin: auto;
+}
+
+.video-showcase-container {
+  margin-top: 5rem;
+}
+
+.video-showcase-title {
+  font-family: var(--font-family-sequel-light-display);
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 4.5rem;
+  letter-spacing: -1px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.video-showcase-title span {
+  font-family: var(--font-family-sequel-semi-bold-obl-display);
+  font-weight: 400;
+}
+.video-showcase-button {
+  padding: 1.25rem 2rem;
+  font-family: var(--font-family-2);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -2%;
+  text-align: center;
+  cursor: pointer;
 }
 
 .acreo-of-the-chimes-text-and-image-container
@@ -1783,7 +1835,7 @@ body {
 }
 
 .floor-plan-container-holder .download-button:hover {
-  background: #c5d92f;
+  background: #2c6c22;
 }
 
 /* .floor-plan-container-holder button:hover {
@@ -1865,8 +1917,8 @@ body {
 
 .clickid-item-holder-in-floor-plan .floor-item.floor-active,
 .clickid-item-holder-in-floor-plan .floor-item:hover {
-  background: #c5d92f;
-  color: #000100;
+  background: #2c6c22;
+  color: white;
 }
 
 .floor-item .dropdonw-icon {
@@ -1908,6 +1960,7 @@ body {
   letter-spacing: -4%;
   text-align: center;
   font-style: italic;
+  color: #2c6c22;
 }
 
 .what-matters-content-holder-parent p {
@@ -2142,11 +2195,15 @@ body {
 .social-media-icons a:hover {
   width: 52px;
   height: 52px;
-  background-color: #c5d92f;
+  background-color: #2c6c22;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.social-media-icons a:hover svg path {
+  fill: #ffffff;
 }
 
 .footer-section-text-holder {
@@ -2402,7 +2459,7 @@ body {
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
   padding-block: 0.5rem;
   padding-inline: 1.25rem;
-  background-color: rgba(197, 217, 47, 1);
+  background-color: #2c6c22;
   border-radius: 9999px;
   display: flex;
   align-items: center;
@@ -2459,10 +2516,6 @@ body {
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
 }
 
-.button {
-  color: black;
-}
-
 .button svg {
   fill: black;
 }
@@ -2487,7 +2540,7 @@ body {
 }
 
 .mobile-section-dropdown {
-  background: #c5d92f;
+  background: #2c6c22;
   color: black;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -3056,7 +3109,7 @@ body {
   }
 
   .button {
-    background: rgba(197, 217, 47, 1);
+    background: #2c6c22;
     width: 100%;
   }
 
@@ -3831,7 +3884,7 @@ input:-moz-autofill:active {
 
 .nav-link.active-link {
   color: rgba(0, 1, 0, 1);
-  background: rgba(197, 217, 47, 1);
+  background: #2c6c22;
 
   transform: translateY(-2px);
 

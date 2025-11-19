@@ -1,17 +1,18 @@
 ﻿import React, { useState } from "react";
+import VideoShowcase from "./VideoShowcase";
 
 const sections = [
-  { name: "ENTRANCE & BUS PICKUP POINT", image: "assets/A.webp" },
-  { name: "PLAZA", image: "assets/b.webp" },
-  { name: "WATER FEATURE", image: "assets/c.webp" },
-  { name: "SWIMMING POOL", image: "assets/d.webp" },
-  { name: "BADMINTON/ PICKLEBALL", image: "assets/e.webp" },
-  { name: "PRIVATE  SCREEN", image: "assets/F.webp" },
-  { name: "REFLEXOLOGY PATHWAY", image: "assets/G.webp" },
-  { name: "PARTY LAWN", image: "assets/h.webp" },
-  { name: "AMPHITHEATER", image: "assets/i.webp" },
-  { name: "EARTHMOUND", image: "assets/j.webp" },
-  { name: "KIDS PLAY AREA", image: "assets/k.webp" },
+  { name: "ENTRANCE & BUS PICKUP POINT", image: "assets/Entrance.webp" },
+  { name: "PLAZA", image: "assets/Plaza.webp" },
+  { name: "WATER FEATURE", image: "assets/Water Feature.webp" },
+  { name: "SWIMMING POOL", image: "assets/Swimming Pool.webp" },
+  { name: "BADMINTON/ PICKLEBALL", image: "assets/Badminton.webp" },
+  { name: "PRIVATE  SCREEN", image: "assets/Private Screen.webp" },
+  { name: "REFLEXOLOGY PATHWAY", image: "assets/Reflexology Pathway.webp" },
+  { name: "PARTY LAWN", image: "assets/Party Lawn.webp" },
+  { name: "AMPHITHEATER", image: "assets/Amphitheater.webp" },
+  { name: "EARTHMOUND", image: "assets/Earth Mound.webp" },
+  { name: "KIDS PLAY AREA", image: "assets/Kids Play Area.webp" },
 ];
 
 const defaultImage = "assets/Master Plan.webp";
@@ -19,18 +20,23 @@ const defaultImage = "assets/Master Plan.webp";
 function AcreofTheChimes() {
   const [activeImage, setActiveImage] = useState(defaultImage);
   return (
-    <div className="py-5 mx-auto acreo-of-the-chimes-section left-and-right-padding-in-content">
+    <div className=" acreo-of-the-chimes-section ">
       <img
         src="assets/drawing-tree-with-green-yellow-leaves copy 1.svg"
         id="acreo-of-the-chimes-tree-logo-image"
         alt=""
       />
-      <p>
+      <p className="mb-[2rem] md:mb-[5rem]">
         Experience <span>thoughtful design</span> and natural serenity woven
         into every acre of The Chimes
       </p>
 
-      <div className="acreo-of-the-chimes-text-and-image-container">
+      <VideoShowcase
+        videoUrl="assets/acreo-of-the-chimes-video.mp4"
+        thumbnailUrl="assets/overlay-thumpnail.webp"
+      />
+
+      <div className="acreo-of-the-chimes-text-and-image-container left-and-right-padding-in-content max-w-[1339px] mx-auto">
         {/* Sidebar */}
         <div className="space-y-4 text-lg font-medium text-gray-800 lg:w-[90%] w-[100%]">
           {sections.map((section) => (
