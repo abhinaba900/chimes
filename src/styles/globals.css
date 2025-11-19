@@ -2845,7 +2845,7 @@ body {
     line-height: 20px;
   }
 
-  .video-showcase-title{
+  .video-showcase-title {
     font-size: 3rem;
     line-height: 3.5rem;
   }
@@ -3026,15 +3026,19 @@ body {
   }
 
   .acreo-of-the-chimes-text-and-image-container
-    .text-area-inside-text-and-image-container{
-      border-bottom: 1px solid #4f584f;
-      border-radius: 0;
-    }
+    .text-area-inside-text-and-image-container {
+    border-bottom: 1px solid #4f584f;
+    border-radius: 0;
+  }
   .acreo-of-the-chimes-text-and-image-container
     .text-area-inside-text-and-image-container:hover {
     padding-inline: 0.5rem;
     border-radius: 10px;
     border-bottom: none;
+  }
+
+  .acreo-of-the-chimes-section p {
+    padding-inline: 1rem;
   }
 
   .acreo-of-the-chimes-text-and-image-container {
@@ -3158,7 +3162,7 @@ body {
   }
 
   .acreo-of-the-chimes-section #acreo-of-the-chimes-tree-logo-image {
-    margin-left: 0;
+    margin-left: 1rem;
   }
 
   .acreo-of-the-chimes-section p {

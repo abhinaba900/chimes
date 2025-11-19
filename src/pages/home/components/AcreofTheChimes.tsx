@@ -1,4 +1,4 @@
-﻿import React, { useState } from "react";
+﻿import React, { useRef, useState } from "react";
 import VideoShowcase from "./VideoShowcase";
 
 const sections = [
@@ -19,8 +19,10 @@ const defaultImage = "assets/Master Plan.webp";
 
 function AcreofTheChimes() {
   const [activeImage, setActiveImage] = useState(defaultImage);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+
   return (
-    <div className=" acreo-of-the-chimes-section ">
+    <div  className=" acreo-of-the-chimes-section ">
       <img
         src="assets/drawing-tree-with-green-yellow-leaves copy 1.svg"
         id="acreo-of-the-chimes-tree-logo-image"
@@ -36,13 +38,19 @@ function AcreofTheChimes() {
         thumbnailUrl="assets/overlay-thumpnail.webp"
       />
 
-      <div className="acreo-of-the-chimes-text-and-image-container left-and-right-padding-in-content max-w-[1339px] mx-auto">
+      <div ref={containerRef} className="acreo-of-the-chimes-text-and-image-container left-and-right-padding-in-content max-w-[1339px] mx-auto">
         {/* Sidebar */}
         <div className="space-y-4 text-lg font-medium text-gray-800 lg:w-[90%] w-[100%]">
           {sections.map((section) => (
             <div
               key={section.name}
-              onClick={() => setActiveImage(section.image)}
+              onClick={() => {
+                setActiveImage(section.image);
+                containerRef.current?.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }}
               onMouseEnter={() => setActiveImage(section.image)}
               onMouseLeave={() => setActiveImage(defaultImage)}
               className=" cursor-pointer flex align-middle justify-between hover:text-blue-600 transition-colors text-area-inside-text-and-image-container"
