@@ -3124,6 +3124,7 @@ body {
 
   .naturallybuiltarea {
     gap: 0;
+    display: none;
   }
 
   .s-cardContainer {
