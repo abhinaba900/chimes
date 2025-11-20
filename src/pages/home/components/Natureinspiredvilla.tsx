@@ -1,14 +1,6 @@
 ﻿"use client";
-import Stack from "@/ReactBits/Stack/Stack";
 import TiltedCard from "@/ReactBits/TiltedCard/TiltedCard";
 import React from "react";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCards } from "swiper/modules";
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/effect-cards";
-
 function Natureinspiredvilla() {
   const images = [
     {
@@ -42,7 +34,11 @@ function Natureinspiredvilla() {
     <div className="natureinspiredvilla" id="highlights">
       <img
         className="background-image"
-        src={ismobile ? "/assets/Frame_1618874524[1].png" : "/assets/nature inspired villa background image.webp"}
+        src={
+          ismobile
+            ? "/assets/Frame_1618874524[1].png"
+            : "/assets/nature inspired villa background image.webp"
+        }
         alt="nature inspired villa background image"
       />
 

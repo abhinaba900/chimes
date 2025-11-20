@@ -12,7 +12,7 @@ const nextConfig: NextConfig = {
   /* 2. Transpilation */
   // Only transpile what is strictly necessary.
   // Removed 'react-icons' etc. as they are better handled by modularizeImports below.
-  transpilePackages: ["gsap", "react-leaflet", "leaflet", "swiper"],
+  transpilePackages: ["gsap", "react-leaflet", "leaflet", "swiper", "react-slick", "react-player", ],
 
   /* 3. Experimental & Performance Features */
   experimental: {
