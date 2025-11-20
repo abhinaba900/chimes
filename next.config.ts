@@ -12,7 +12,18 @@ const nextConfig: NextConfig = {
   /* 2. Transpilation */
   // Only transpile what is strictly necessary.
   // Removed 'react-icons' etc. as they are better handled by modularizeImports below.
-  transpilePackages: ["gsap", "react-leaflet", "leaflet", "swiper", "react-slick", "react-player", ],
+  transpilePackages: [
+    "gsap",
+    "react-leaflet",
+    "leaflet",
+    "react-slick",
+    "react-player",
+    "date-fns",
+    "lodash",
+    "react-use",
+    "react-intersection-observer",
+    "react-icons",
+  ],
 
   /* 3. Experimental & Performance Features */
   experimental: {
@@ -23,7 +34,19 @@ const nextConfig: NextConfig = {
     forceSwcTransforms: true,
 
     // ✅ Optimization: Automatically tree-shakes these libraries
-    optimizePackageImports: ["lucide-react", "date-fns", "lodash", "react-use"],
+    optimizePackageImports: [
+      "lucide-react",
+      "date-fns",
+      "lodash",
+      "react-use",
+      "react-intersection-observer",
+      "react-icons",
+      "react-leaflet",
+      "react-slick",
+      "react-player",
+      "gsap",
+      "leaflet",
+    ],
 
     // ❌ REMOVED: urlImports (This was incorrect usage for local node_modules)
   },
