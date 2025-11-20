@@ -370,7 +370,7 @@ body {
   display: none;
   cursor: pointer;
   background: rgba(0, 0, 0, 0.05);
-  border: 1px solid var(--border-color);
+  border: 1px solid white;
   border-radius: var(--border-radius);
   transition: var(--transition-medium);
   margin-left: 1rem;
@@ -650,6 +650,7 @@ body {
 
   .hero-section {
     position: relative;
+    height: 236px;
   }
 
   .hero-section .text-section p {
@@ -698,12 +699,8 @@ body {
   }
 
   .naturallybuiltarea-card-content-holder img {
-    min-height: 360px !important;
-    height: 360px !important;
-  }
-
-  .s-cardContainer:nth-of-type(2) {
-    margin-top: 2rem !important;
+    min-height: 333px !important;
+    height: 333px !important;
   }
 
   .elevating-every-moment-slider-text-button-and-text-holder p,
@@ -900,10 +897,10 @@ body {
 
 @media (max-width: 600px) {
   .build-villas-text-holder h4 {
-    font-weight: 400;
+    font-weight: 600;
     font-size: 28px;
     line-height: 120%;
-    letter-spacing: -1px;
+    letter-spacing: -2px;
     text-align: center;
   }
 
@@ -929,13 +926,24 @@ body {
   .coma-icon {
     position: absolute;
     top: -1rem;
-    left: -8%;
+    right: 96%;
   }
 
   .coma-icon2 {
     position: absolute;
     top: -1rem;
-    right: -8%;
+    left: 96%;
+  }
+
+  #about-us {
+    width: 60px;
+    height: 60px;
+  }
+
+  .coma-icon img,
+  .coma-icon2 img {
+    width: 24px;
+    height: 20px;
   }
 
   .build-villas-content-holder p {
@@ -2527,11 +2535,11 @@ body {
 
 @media screen and (max-width: 768px) and (orientation: portrait) {
   .naturallybuiltarea-text-holder-top {
-    padding-bottom: 3rem !important;
+    padding-bottom: 0rem !important;
   }
 
   .naturallybuiltarea-text-holder-bottom {
-    padding-top: 3rem !important;
+    padding-top: 8rem !important;
   }
 
   .desktop-view {
@@ -2547,8 +2555,9 @@ body {
   }
 }
 
-.mobile-sidebar-image {
-  display: none;
+.mobile-sidebar-image,
+.video-showcase-button2 {
+  display: none !important;
 }
 
 @media (max-width: 600px) {
@@ -2556,6 +2565,21 @@ body {
     display: block;
     width: 70%;
     margin-block: 2rem;
+  }
+
+  .s-card {
+    height: fit-content;
+    transform: none !important;
+    box-shadow: none !important;
+    top: 0 !important;
+
+    padding-block: 0 !important;
+
+    padding-top: 32px !important;
+  }
+
+  .s-cardContainer:first-child .s-card {
+    padding-top: 28px !important;
   }
 
   .footer-section {
@@ -2608,11 +2632,12 @@ body {
   }
 
   .natureinspiredvilla-content-holder-text h4 {
-    font-size: 1.125rem;
-    line-height: 25px;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 415;
+    line-height: 120%; /* 28.8px */
+    letter-spacing: -2px;
     margin-bottom: 0.5rem;
-    letter-spacing: -0.5px;
-    font-weight: 700;
   }
 
   .natureinspiredvilla-text-holder-and-content-holder {
@@ -2647,8 +2672,17 @@ body {
   }
 
   .natureinspiredvilla-content-holder-text p {
-    font-size: 0.7rem;
+    font-size: 12px;
     line-height: 20px;
+    margin-top: 0 !important;
+  }
+
+  .natureinspiredvilla-content-holder-text-inner div h4 {
+    margin-bottom: 12px !important;
+  }
+
+  .slide-content {
+    width: 250px;
   }
 
   .build-villas-line-holder h5 {
@@ -2660,12 +2694,31 @@ body {
   }
 
   .natureinspiredvilla-content-holder-text {
-    padding: 2rem;
+    padding: 20px;
+    gap: 12px;
+  }
+
+  .video-showcase-container {
+    margin-top: 28px;
+    margin-bottom: 28px;
+  }
+
+  .natureinspiredvilla-content-holder-text h4 {
+    margin-bottom: 0;
   }
 
   .naturallybuiltarea-text-holder-top p {
     font-size: 1rem;
     text-align: left;
+  }
+
+  .section-overlay {
+    border-radius: 1rem;
+  }
+
+  .natureinspiredvilla-content-holder-image img,
+  .natureinspiredvilla-content-holder-image-2 img {
+    border-radius: 1rem;
   }
 
   .naturallybuiltarea-text-holder-top h5 {
@@ -2689,10 +2742,16 @@ body {
     height: 100%;
   }
 
+  .naturallybuiltarea-text-holder-top h5 {
+    font-weight: 500;
+    line-height: 120% !important;
+    padding-left: 0 !important;
+  }
+
   .naturallybuiltarea-text-holder-top h5,
   .naturallybuiltarea-text-holder-bottom h5 {
     font-size: 28px;
-    line-height: 28px;
+    line-height: 120%;
     padding-left: 0.5rem;
     text-align: center;
   }
@@ -2707,12 +2766,20 @@ body {
     grid-template-columns: 1fr;
   }
 
+  .elevating-every-moment-slider-text-button-and-text-holder {
+    gap: 0;
+  }
+
   .elevating-every-moment-slider-text-button-and-text-holder h3,
   .elevating-every-moment-slider-text-button-and-text-holder h3 span {
     font-size: 28px;
-    line-height: 28px;
+    line-height: 140%;
     text-align: left;
     letter-spacing: -1px;
+  }
+
+  .elevating-every-moment-slider-text-button-and-text-holder h3 span {
+    color: #15420e;
   }
 
   .elevating-every-moment-slider-text-button-and-text-holder p {
@@ -2721,6 +2788,13 @@ body {
     text-align: left;
     padding-left: 0 !important;
     padding-right: 0 !important;
+    margin-top: 4px;
+    margin-bottom: 1rem;
+  }
+
+  .elevating-every-moment-slider-text-button-and-text-holder button {
+    background-color: #15420e;
+    color: white;
   }
 
   .acreo-of-the-chimes-section p,
@@ -2728,6 +2802,9 @@ body {
     font-size: 25px;
     line-height: 25px;
     letter-spacing: -1px;
+  }
+  .acreo-of-the-chimes-section {
+    padding-top: 64px !important;
   }
 
   .acreo-of-the-chimes-text-and-image-container {
@@ -2773,10 +2850,18 @@ body {
     position: absolute;
     right: 1.6rem;
     top: 1rem;
+    border: 1px solid white;
+    border-radius: 40px;
+    cursor: pointer;
+    background: rgba(242, 238, 238, 0.12);
   }
 
   .nav-active {
     opacity: 0;
+  }
+
+  .nav-action {
+    display: block;
   }
 
   .active-cross-icon {
@@ -2872,14 +2957,40 @@ body {
   }
 
   .video-showcase-title {
-    font-size: 3rem;
-    line-height: 3.5rem;
+    display: none;
+  }
+
+  .video-showcase-button1 {
+    display: none;
+  }
+
+  .video-showcase-button2 {
+    display: flex !important;
+  }
+
+  .video-showcase-button {
+    position: relative !important;
+    bottom: -9rem !important;
+    right: -6.5rem !important;
+  }
+
+  .overlay-in-video-show-case {
+    display: none;
   }
 
   .footer-brand-name {
     justify-content: center;
     bottom: 5.3rem;
     text-align: center;
+  }
+
+  .logo {
+    width: 150px;
+    height: 36.274px;
+  }
+
+  .nav-toggle {
+    margin-left: 12px;
   }
 
   .connected-to-what-matters-text-button-and-text-holder h3,
@@ -2965,6 +3076,7 @@ body {
     line-height: 28px;
     text-align: left;
     letter-spacing: -1px;
+    margin-bottom: 8px;
   }
 
   .slider-contener-parent {
@@ -2983,7 +3095,8 @@ body {
   }
 
   .naturallybuiltarea-card-content-holder {
-    padding: 1rem 0;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .button-padding-remove {
@@ -2997,11 +3110,12 @@ body {
     text-align: center;
     padding-left: 1rem;
     padding-right: 1rem;
+    margin-top: 4px !important;
   }
 
   .elevating-every-moment-slider-image-text h3 {
     font-size: 25px;
-    line-height: 25px;
+    line-height: 140%;
   }
 
   .elevating-every-moment-slider-image-text p {
@@ -3017,6 +3131,7 @@ body {
 
   .naturallybuiltarea-card-content-holder img {
     max-height: 400px;
+    border-radius: 16px;
   }
 
   .left-and-right-padding-add {
@@ -3119,18 +3234,20 @@ body {
   }
 
   .natureinspiredvilla-content-holder-image-2 {
-    height: 300px !important;
+    height: 212.195px !important;
   }
 
   .naturallybuiltarea {
     gap: 0;
+    padding-bottom: 28px;
   }
 
   .s-cardContainer {
-    margin-top: -6rem;
+    margin-top: 0rem !important;
+    height: fit-content !important;
   }
   .naturallybuiltarea-text-holder-bottom {
-    margin-top: 5rem;
+    padding-top: 64px !important;
   }
 
   .natureinspiredvilla-sub-container-content-holder
@@ -3148,7 +3265,7 @@ body {
   }
 
   .naturallybuiltarea-card-content-holder {
-    gap: 2rem;
+    gap: 1rem;
   }
 
   .naturallybuiltarea-text-holder-bottom h5 {
@@ -3170,7 +3287,7 @@ body {
     top: 0;
     padding: 0;
     padding-top: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 8px;
   }
 
   .elevating-every-moment-slider-image-text h3,
@@ -3183,8 +3300,14 @@ body {
   }
 
   .elevating-every-moment-slider-image-text h3 {
-    font-size: 1.25rem !important;
+    font-size: 26px !important;
     letter-spacing: -1px;
+    margin-bottom: 6px;
+  }
+
+  .elevating-every-moment-slider-text-button-and-text-holder {
+    padding-top: 64px;
+    padding-bottom: 45px;
   }
 
   .elevating-every-moment-slider-image-text p {
@@ -3199,7 +3322,11 @@ body {
   }
 
   .acreo-of-the-chimes-section #acreo-of-the-chimes-tree-logo-image {
+    width: 90px;
+    height: 90px;
+    margin: 0;
     margin-left: 1rem;
+    margin-bottom: 1rem;
   }
 
   .acreo-of-the-chimes-section p {

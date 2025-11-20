@@ -122,7 +122,7 @@ function ElevatingEveryMomentSlider() {
                 <img
                   src={slide.image}
                   alt={slide.title}
-                  className="w-full h-[300px] sm:h-[400px] rounded-[32px] md:h-[600px] lg:h-[600px] xl:h-[600px] object-cover transform transition-transform duration-500 group-hover:scale-105 custom-image-large"
+                  className="w-full h-[248px] sm:h-[400px] rounded-[16px] md:rounded-[32px] md:h-[600px] lg:h-[600px] xl:h-[600px] object-cover transform transition-transform duration-500 group-hover:scale-105 custom-image-large"
                   loading="lazy"
                 />
 
@@ -178,7 +178,7 @@ function ElevatingEveryMomentSlider() {
         <div className="absolute bottom-[15%]  right-[15%] z-10 flex justify-center gap-2 space-x-3 button-in-slider-element-holder">
           <button
             onClick={() => sliderRef.current?.slickPrev()}
-            className="w-10 h-10 cursor-pointer rounded-full bg-white/90 hover:bg-white text-gray-800 shadow-lg flex items-center justify-center transition"
+            className="w-[50px] h-[50px] cursor-pointer rounded-full bg-white/90 hover:bg-white text-gray-800 shadow-lg flex items-center justify-center transition"
           >
             <svg
               width="26"
@@ -207,7 +207,7 @@ function ElevatingEveryMomentSlider() {
           </button>
           <button
             onClick={() => sliderRef.current?.slickNext()}
-            className="w-10 h-10 rounded-full cursor-pointer bg-white/90 hover:bg-white text-gray-800 shadow-lg flex items-center justify-center transition"
+            className="w-[50px] h-[50px] rounded-full cursor-pointer bg-white/90 hover:bg-white text-gray-800 shadow-lg flex items-center justify-center transition"
           >
             <svg
               width="26"

@@ -1,7 +1,6 @@
 "use client";
 
 import GradualBlurMemo from "@/ReactBits/GradualBlur/GradualBlur";
-import AuthContextProvider from "./AuthContext/AuthContext";
 import FooterSection from "./components/FooterSection";
 import Navbar from "./components/Navbar";
 import HomeSection from "@/pages/home/Home";

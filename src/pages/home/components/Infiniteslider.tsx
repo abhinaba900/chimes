@@ -35,7 +35,7 @@ function Infiniteslider() {
             key={index + 1}
             style={{ margin: "0 32px" }} // 8px horizontal margin (equivalent to mx-2)
           >
-            <div className="slide-content">
+            <div className="slide-content w-[100%]">
               <div>
                 <h3 >
                   {item.title}

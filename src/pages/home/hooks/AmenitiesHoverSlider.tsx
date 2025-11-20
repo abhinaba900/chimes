@@ -58,14 +58,14 @@ const AmenitiesHoverSlider = () => {
   ];
 
   const [hoveredItem, setHoveredItem] = useState<AmenitiesItemProps | null>({
-    text: "",
+    text: "Indoor Badminton Court",
     image:
       "assets/freepik__candid-photography-with-natural-textures-and-highl__31606.jpeg",
   });
 
   return (
     <div className="flex justify-center w-full min-h-[500px] ">
-      <div className="relative w-full max-w-[1339px] min-h-[500px] left-and-right-padding-in-content all-image-section-container-every-moment overflow-hidden grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-0  justify-between items-center">
+      <div className="relative w-full max-w-[1339px] min-h-[500px] left-and-right-padding-in-content all-image-section-container-every-moment overflow-hidden grid grid-cols-1 md:grid-cols-2 gap-[24px] md:gap-0  justify-between items-center">
         {/* Text container - aligned bottom left */}
         <div className="relative z-10 h-full flex items-end pb-8">
           <div className="mx-auto px-4 w-full">
@@ -78,12 +78,12 @@ const AmenitiesHoverSlider = () => {
                       font-family-2 
                       font-normal 
                       text-left 
-                      text-[20px]
+                      text-[24px]
                         sm:text-[24px]
                         md:text-[32px]
                         lg:text-[40px]
                         xl:text-[52px]
-                      leading-[24px]
+                      leading-[140%]
                       sm:leading-[30px]
                       md:leading-[40px]
                       lg:leading-[48px]
@@ -102,7 +102,7 @@ const AmenitiesHoverSlider = () => {
                     onMouseEnter={() => setHoveredItem(amenity)}
                     onMouseLeave={() =>
                       setHoveredItem({
-                        text: "",
+                        text: "Indoor Badminton Court",
                         image:
                           "assets/freepik__candid-photography-with-natural-textures-and-highl__31606.jpeg",
                       })
@@ -113,7 +113,7 @@ const AmenitiesHoverSlider = () => {
                   {index < amenities.length - 1 && (
                     <span
                       className={`
-                        text-[20px]
+                        text-[24px]
                         sm:text-[24px]
                         md:text-[32px]
                         lg:text-[40px]

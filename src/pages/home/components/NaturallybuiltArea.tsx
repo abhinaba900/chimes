@@ -41,12 +41,36 @@ function NaturallybuiltArea() {
     ["0px 0px 0px rgba(0,0,0,0)", "0px 10px 30px rgba(0,0,0,0.2)"]
   );
 
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 768px)");
+    setIsMobile(mediaQuery.matches);
+
+    const handleResize = () => {
+      setIsMobile(mediaQuery.matches);
+    };
+
+    mediaQuery.addEventListener("change", handleResize);
+    return () => {
+      mediaQuery.removeEventListener("change", handleResize);
+    };
+  }, []);
+
   return (
     <div ref={containerRef} className="naturallybuiltarea">
       <div className="naturallybuiltarea-text-holder-top left-and-right-padding-in-content">
         <p>SMART DESIGN, NATURAL SOUL</p>
         <h5>
-          Vastu-aligned, Solar-powered, <br /> <span>Naturally built</span>
+          {isMobile ? (
+            <h5>
+              Vastu-aligned, Solar<br /> powered,  <span>Naturally built</span>
+            </h5>
+          ) : (
+            <h5>
+              Vastu-aligned, Solar-powered, <br /> <span>Naturally built</span>
+            </h5>
+          )}
         </h5>
       </div>
       {/* <ScaleDownScroll> */}

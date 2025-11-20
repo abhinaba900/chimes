@@ -20,17 +20,39 @@ const defaultImage = "assets/Master Plan.webp";
 function AcreofTheChimes() {
   const [activeImage, setActiveImage] = useState(defaultImage);
   const containerRef = useRef<HTMLDivElement | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 700);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
-    <div  className=" acreo-of-the-chimes-section ">
+    <div className=" acreo-of-the-chimes-section ">
       <img
         src="assets/drawing-tree-with-green-yellow-leaves copy 1.svg"
         id="acreo-of-the-chimes-tree-logo-image"
         alt=""
       />
       <p className="mb-[2rem] md:mb-[5rem]">
-        Experience <span>thoughtful design</span> and natural serenity woven
-        into every acre of The Chimes
+        {isMobile ? (
+          <>
+            Experience <span>thoughtful design</span> <br /> and natural
+            serenity woven <br /> into every acre of <br /> "The Chimes"
+          </>
+        ) : (
+          <>
+            Experience <span>thoughtful design</span> and natural serenity woven
+            into every acre of The Chimes
+          </>
+        )}
       </p>
 
       <VideoShowcase
@@ -38,7 +60,10 @@ function AcreofTheChimes() {
         thumbnailUrl="assets/overlay-thumpnail.webp"
       />
 
-      <div ref={containerRef} className="acreo-of-the-chimes-text-and-image-container left-and-right-padding-in-content max-w-[1339px] mx-auto">
+      <div
+        ref={containerRef}
+        className="acreo-of-the-chimes-text-and-image-container left-and-right-padding-in-content max-w-[1339px] mx-auto"
+      >
         {/* Sidebar */}
         <div className="space-y-4 text-lg font-medium text-gray-800 lg:w-[90%] w-[100%]">
           {sections.map((section) => (

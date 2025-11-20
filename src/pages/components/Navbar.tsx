@@ -237,12 +237,7 @@ export default function Navbar() {
             </GlassSurface>
           </motion.div>
 
-          <GlassSurface
-            width={"fit-content"}
-            height={"fit-content"}
-            borderRadius={40}
-            className={`cross-icons ${isActive ? "active-cross-icon" : ""}`}
-          >
+          <div className={`cross-icons ${isActive ? "active-cross-icon" : ""}`}>
             <svg
               width="38"
               height="38"
@@ -263,41 +258,34 @@ export default function Navbar() {
                 fill="#15420E"
               />
             </svg>
-          </GlassSurface>
+          </div>
 
-          <GlassSurface
-            width={"fit-content"}
-            height={"fit-content"}
-            borderRadius={40}
+          <motion.div
+            onClick={toggleMenu}
             className={`nav-toggle ${isActive ? "nav-active" : ""}`}
           >
-            <motion.div
-              onClick={toggleMenu}
-              className="flex justify-center items-center w-100 h-100"
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="mx-auto block"
             >
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="mx-auto block"
-              >
-                <path
-                  d="M1.2 2.4H14.8C15.4629 2.4 16 1.86289 16 1.2C16 0.537109 15.4629 0 14.8 0H1.2C0.537109 0 0 0.537109 0 1.2C0 1.86289 0.537109 2.4 1.2 2.4Z"
-                  fill="#15420E"
-                />
-                <path
-                  d="M14.8 4.8H1.2C0.537109 4.8 0 5.33711 0 6C0 6.66289 0.537109 7.2 1.2 7.2H14.8C15.4629 7.2 16 6.66289 16 6C16 5.33711 15.4629 4.8 14.8 4.8Z"
-                  fill="#15420E"
-                />
-                <path
-                  d="M14.8 9.6H1.2C0.537109 9.6 0 10.1371 0 10.8C0 11.4629 0.537109 12 1.2 12H14.8C15.4629 12 16 11.4629 16 10.8C16 10.1371 15.4629 9.6 14.8 9.6Z"
-                  fill="#15420E"
-                />
-              </svg>
-            </motion.div>
-          </GlassSurface>
+              <path
+                d="M1.2 2.4H14.8C15.4629 2.4 16 1.86289 16 1.2C16 0.537109 15.4629 0 14.8 0H1.2C0.537109 0 0 0.537109 0 1.2C0 1.86289 0.537109 2.4 1.2 2.4Z"
+                fill="#15420E"
+              />
+              <path
+                d="M14.8 4.8H1.2C0.537109 4.8 0 5.33711 0 6C0 6.66289 0.537109 7.2 1.2 7.2H14.8C15.4629 7.2 16 6.66289 16 6C16 5.33711 15.4629 4.8 14.8 4.8Z"
+                fill="#15420E"
+              />
+              <path
+                d="M14.8 9.6H1.2C0.537109 9.6 0 10.1371 0 10.8C0 11.4629 0.537109 12 1.2 12H14.8C15.4629 12 16 11.4629 16 10.8C16 10.1371 15.4629 9.6 14.8 9.6Z"
+                fill="#15420E"
+              />
+            </svg>
+          </motion.div>
         </div>
       </motion.nav>
 
