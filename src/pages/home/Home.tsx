@@ -51,7 +51,7 @@ function HomeSection() {
       <ElevatingeveryMomentSlider />
       <AcreofTheChimes />
       <FloorPlan />
-      {/* <WhatMatters /> */}
+      <WhatMatters />
       <NearbyHighlights />
       {/* <ConnectedtoWhatMatters /> */}
       <LaptopAnimation />
