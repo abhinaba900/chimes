@@ -49,11 +49,11 @@ const AmenitiesHoverSlider = () => {
     },
     {
       text: "Senior Citizen Park",
-      image: "https://picsum.photos/id/212/1200/800",
+      image: "assets/freepik__candid-photography-with-natural-textures-and-highl__31601.webp",
     },
     {
       text: "Multipurpose Court",
-      image: "https://picsum.photos/id/274/1200/800",
+      image: "assets/freepik__candid-photography-with-natural-textures-and-highl__31605.webp",
     },
   ];
 

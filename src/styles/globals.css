@@ -3917,6 +3917,18 @@ input:-moz-autofill:active {
     padding-bottom: 3rem;
   }
 
+  .hero-section .text-section h2 {
+    font-family: var(--font-family-2);
+    font-weight: 700;
+    font-style: medium;
+    font-size: clamp(5rem, 15vw, 15.625rem);
+    text-align: center;
+    color: #f1ebe3;
+    line-height: 0.49;
+    padding-top: 1rem;
+    margin-top: 0rem;
+  }
+
   .clickid-item-holder-in-floor-plan {
     width: 100%;
   }
