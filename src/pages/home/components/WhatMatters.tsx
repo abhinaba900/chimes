@@ -8,26 +8,30 @@ export default function WhatMatters() {
   const position: [number, number] = [12.9012, 77.7529];
   const address = "Chikkatirupati Rd, Sarjapura, Bengaluru, Karnataka 562125";
 
-  // Detect mobile screen
-  const [popupMaxWidth, setPopupMaxWidth] = useState<number>(80);
+  // 1. Initialize as NULL so we know we haven't checked the screen size yet
+  const [popupMaxWidth, setPopupMaxWidth] = useState<number | null>(null);
 
   useEffect(() => {
     const updateWidth = () => {
+      // Standard logic
       if (window.innerWidth <= 768) {
-        setPopupMaxWidth(80); // Mobile value
+        setPopupMaxWidth(80);
       } else {
-        setPopupMaxWidth(250); // Desktop value
+        setPopupMaxWidth(250);
       }
     };
 
+    // Run immediately on mount
     updateWidth();
-    window.addEventListener("resize", updateWidth);
 
+    window.addEventListener("resize", updateWidth);
     return () => window.removeEventListener("resize", updateWidth);
   }, []);
 
   useEffect(() => {
-    if (!mapRef.current) return;
+    // 2. STOP: If popupMaxWidth is null, the screen size hasn't been checked yet.
+    // Don't load the map yet.
+    if (popupMaxWidth === null || !mapRef.current) return;
 
     let map: L.Map | null = null;
 
@@ -59,15 +63,13 @@ export default function WhatMatters() {
             `
               <div 
                 class="popup-content-holder"
-                style="
-                  
-                  padding:6px;
-                "
+                style="padding:6px;"
               >
                 <h3>SWIFT CITY</h3>
                 <p>${address}</p>
               </div>
             `,
+            // 3. Pass the correctly calculated width
             { closeButton: false, maxWidth: popupMaxWidth }
           )
           .openPopup();
@@ -84,7 +86,7 @@ export default function WhatMatters() {
         map = null;
       }
     };
-  }, [position, address, popupMaxWidth]);
+  }, [position, address, popupMaxWidth]); // Re-runs if width changes
 
   return (
     <div className="what-matters-content-holder-parent">
