@@ -2803,9 +2803,6 @@ body {
     line-height: 25px;
     letter-spacing: -1px;
   }
-  .acreo-of-the-chimes-section {
-    padding-top: 64px !important;
-  }
 
   .acreo-of-the-chimes-text-and-image-container {
     grid-template-columns: 1fr;
@@ -2814,8 +2811,8 @@ body {
   .acreo-of-the-chimes-text-and-image-container
     .text-area-inside-text-and-image-container {
     width: 100%;
-    font-size: 18px;
-    line-height: 25px;
+    font-size: 1rem;
+    line-height: 140%;
     text-align: left;
   }
 
@@ -2880,7 +2877,7 @@ body {
   }
 
   .laptop-section-container {
-    margin-block: 5rem;
+    margin-block: 64px;
     height: 200px;
   }
 
@@ -2891,6 +2888,30 @@ body {
     width: 100vh;
     height: 700px;
   }
+
+  
+
+  .leaflet-popup-content p{
+    font-size: 7px !important;
+    line-height: 10px !important;
+    padding: 0 !important;
+  }
+
+  .popup-content-holder{
+    padding: 0 !important;
+  }
+
+  .leaflet-popup-content{
+    margin: 0;
+  }
+
+  .leaflet-popup-content{
+    margin: 5px 24px 5px 24px !important;
+  }
+
+  
+
+  
 
   .right-side-section-inFloor-plan {
     justify-content: center;
@@ -2904,8 +2925,18 @@ body {
   .right-side-section-inFloor-plan h3 span {
     display: block;
     font-size: 28px;
-    line-height: 28px;
-    letter-spacing: -1px;
+    line-height: 140%;
+    letter-spacing: -1.12px;
+  }
+
+  .slick-dots li button:before {
+    transform: scale(1.2);
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  .floor-plan-section-optimization-image {
+    height: 256.56px !important;
   }
 
   .bouttom-h3-in-designed-for-life {
@@ -2966,12 +2997,19 @@ body {
 
   .video-showcase-button2 {
     display: flex !important;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .video-showcase-container {
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .video-showcase-button {
-    position: relative !important;
-    bottom: -9rem !important;
-    right: -6.5rem !important;
+    padding: 12px 24px;
   }
 
   .overlay-in-video-show-case {
@@ -3058,8 +3096,9 @@ body {
   }
 
   .popup-content-holder h3 {
-    font-size: 0.7rem;
-    line-height: 15px;
+    font-size: 9px;
+    line-height: 150%;
+    padding-bottom: 3px;
   }
 
   .nearby-highlights h3 {
@@ -3151,10 +3190,13 @@ body {
 
   .acreo-of-the-chimes-section,
   .what-matters-content-holder-parent {
-    padding-block: 5rem;
+    padding-block: 64px;
+  }
+
+  .what-matters-content-holder-parent {
   }
   .acreo-of-the-chimes-text-and-image-container {
-    padding-top: 1.75rem;
+    padding-top: 1rem;
   }
 
   .acreo-of-the-chimes-text-and-image-container
@@ -3169,6 +3211,13 @@ body {
     fill: #4f584f;
   }
   .acreo-of-the-chimes-text-and-image-container
+    .text-area-inside-text-and-image-container
+    svg {
+    fill: #4f584f;
+    width: 24px;
+    height: 17px;
+  }
+  .acreo-of-the-chimes-text-and-image-container
     .text-area-inside-text-and-image-container:hover
     svg
     path {
@@ -3177,7 +3226,12 @@ body {
 
   .acreo-of-the-chimes-text-and-image-container
     .text-area-inside-text-and-image-container {
-    border-bottom: 1px solid #4f584f;
+    border-bottom: 1px solid rgba(0, 1, 0, 0.1);
+    border-radius: 0;
+  }
+  .acreo-of-the-chimes-text-and-image-container
+    .text-area-inside-text-and-image-container:last-child {
+    border-bottom: none;
     border-radius: 0;
   }
   .acreo-of-the-chimes-text-and-image-container
@@ -3189,6 +3243,11 @@ body {
 
   .acreo-of-the-chimes-section p {
     padding-inline: 1rem;
+  }
+
+  .acreo-of-the-chimes-section {
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
   }
 
   .acreo-of-the-chimes-text-and-image-container {

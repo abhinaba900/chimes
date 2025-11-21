@@ -181,7 +181,7 @@ function FloorPlan({
                           transition={{ duration: 0.2 }}
                           src={plan.image}
                           alt={plan.alt || `Floor plan ${index + 1}`}
-                          className="w-full h-100 max-h-[461.4649658203125px] object-contain mx-auto object-fit-cover mb-4 "
+                          className="w-full h-100 max-h-[461.4649658203125px] object-cover mx-auto mb-4  floor-plan-section-optimization-image"
                         />
                       </AnimatePresence>
                       {/* {plan.caption && (

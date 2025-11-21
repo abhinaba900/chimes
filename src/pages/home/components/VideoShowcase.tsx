@@ -1,10 +1,10 @@
 ﻿"use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import dynamic from "next/dynamic";
 import { Play } from "lucide-react";
 
-// Dynamically import ReactPlayer to avoid SSR errors
+// SSR-safe import
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 interface VideoShowcaseProps {
@@ -19,7 +19,7 @@ const VideoShowcase: React.FC<VideoShowcaseProps> = ({
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <div className="relative w-full h-[400px] md:h-[700px] 2xl:h-[900px] video-showcase-container bg-black">
+    <div className="relative w-[95%]  md:w-full h-[220px] md:h-[700px] 2xl:h-[900px] video-showcase-container bg-black mt-[28px] md:mt-[5rem]">
       {/* Video Layer */}
       <div
         className={`absolute inset-0 w-full h-full transition-opacity duration-500 ${
@@ -38,7 +38,7 @@ const VideoShowcase: React.FC<VideoShowcaseProps> = ({
 
       {/* Thumbnail Layer */}
       <div
-        className={`absolute inset-0 z-20 flex flex-col items-center justify-center transition-all duration-500 ease-in-out ${
+        className={`absolute inset-0 z-20 flex flex-col items-center justify-center transition-all duration-500 ${
           isPlaying ? "opacity-0 pointer-events-none" : "opacity-100"
         }`}
       >
@@ -46,39 +46,38 @@ const VideoShowcase: React.FC<VideoShowcaseProps> = ({
 
         <img
           src={thumbnailUrl}
-          alt="The Chimes Thumbnail"
+          alt="Video thumbnail"
           className="absolute inset-0 w-full h-full object-cover -z-10"
         />
 
-        <div className="relative z-10 text-center text-white space-y-6">
-          <h2 className="text-4xl md:text-6xl tracking-tight font-light drop-shadow-lg video-showcase-title">
-            See <span className="font-bold italic font-serif">The Chimes</span>
-            <br />
-            come alive
-          </h2>
+        {/* Title */}
+        <h2 className="relative z-10 text-white text-4xl md:text-6xl font-light text-center video-showcase-title drop-shadow-lg">
+          See <span className="font-bold italic font-serif">The Chimes</span>
+          <br />
+          come alive
+        </h2>
 
-          {/* Play Button */}
+        {/* Desktop: Center button */}
+        <button
+          onClick={() => setIsPlaying(true)}
+          className="hidden md:inline-flex mt-6 group relative video-showcase-button items-center gap-3 px-8 py-3 bg-white/20 hover:bg-[#2B851D] backdrop-blur-md border border-white/30 rounded-full transition-all duration-300 hover:scale-105 active:scale-95"
+        >
+          <Play className="w-5 h-5 text-white" />
+          <span className="text-lg text-white font-medium tracking-wide">
+            Play Walkthrough
+          </span>
+        </button>
+
+        {/* Mobile + Desktop bottom-right button */}
+        <div className="absolute bottom-5 right-5 md:right-10 md:bottom-10">
           <button
             onClick={() => setIsPlaying(true)}
-            className="group/btn video-showcase-button video-showcase-button1 relative inline-flex items-center gap-3 px-8 py-3 bg-white/20 hover:bg-[#2B851D] backdrop-blur-md border border-white/30 rounded-full transition-all duration-300 hover:scale-105 active:scale-95"
+            className="group inline-flex items-center video-showcase-button gap-3 px-6 py-2 md:px-8 md:py-3 bg-white/20 hover:bg-[#2B851D] backdrop-blur-md border border-white/30 rounded-full transition-all duration-300 hover:scale-105 active:scale-95"
           >
-            <div className="flex items-center justify-center w-6 h-6 bg-transparent text-white fill-white">
-              <Play className="w-5 h-5 fill-current" />
-            </div>
-
-            <span className="text-lg font-medium tracking-wide">
-              Play Walkthrough
+            <Play className="w-4 h-4 md:w-5 md:h-5 text-white" />
+            <span className="text-base md:text-lg text-white font-medium tracking-wide">
+              Play
             </span>
-          </button>
-          <button
-            onClick={() => setIsPlaying(true)}
-            className="group/btn video-showcase-button video-showcase-button2 relative inline-flex items-center gap-3 px-8 py-3 bg-white/20 hover:bg-[#2B851D] backdrop-blur-md border border-white/30 rounded-full transition-all duration-300 hover:scale-105 active:scale-95"
-          >
-            <div className="flex items-center justify-center w-6 h-6 bg-transparent text-white fill-white">
-              <Play className="w-5 h-5 fill-current" />
-            </div>
-
-            <span className="text-lg font-medium tracking-wide">Play</span>
           </button>
         </div>
       </div>

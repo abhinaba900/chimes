@@ -17,6 +17,7 @@ const sections = [
 
 const defaultImage = "assets/Master Plan.webp";
 
+
 function AcreofTheChimes() {
   const [activeImage, setActiveImage] = useState(defaultImage);
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -57,7 +58,7 @@ function AcreofTheChimes() {
 
       <VideoShowcase
         videoUrl="assets/acreo-of-the-chimes-video.mp4"
-        thumbnailUrl="assets/overlay-thumpnail.webp"
+        thumbnailUrl={isMobile? "assets/overlay-thumpnail-mobile.webp": "assets/overlay-thumpnail.webp"}
       />
 
       <div
