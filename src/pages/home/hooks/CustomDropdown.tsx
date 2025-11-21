@@ -42,7 +42,6 @@ const GlassDropdown = ({
       <span
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center justify-center gap-2 bg-transparent"
-        aria-expanded={isOpen}
       >
         {selectedOption}
         <svg
