@@ -1792,6 +1792,7 @@ body {
 
 .floor-plan-container-holder .download-button:hover {
   background: #2c6c22;
+  color: white;
 }
 
 /* .floor-plan-container-holder button:hover {
