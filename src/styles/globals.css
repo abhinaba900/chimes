@@ -1790,12 +1790,39 @@ body {
   margin-bottom: 24.5px;
 }
 
-.music-icon-in-nav{
+@media (hover: hover) {
+  .button:hover,
+  .active-link {
+    background: #2c6c22 !important;
+  }
+
+  .button:hover,
+  .active-link {
+    color: rgba(0, 1, 0, 1);
+    background: transparent;
+
+    border-radius: 40px;
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+  }
+}
+
+.button:hover,
+.audio-button-pause {
   background: transparent !important;
 }
 
-.button:hover, .active-link{
+.button:hover svg path,
+.audio-button-pause svg path {
+  fill: #2c6c22 !important;
+}
+
+.default-audio-button {
   background: #2c6c22 !important;
+}
+
+.default-audio-button svg path {
+  fill: white !important;
 }
 
 .floor-plan-container-holder .download-button:hover {
@@ -2461,16 +2488,6 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.button:hover,
-.active-link {
-  color: rgba(0, 1, 0, 1);
-  background: transparent;
-
-  border-radius: 40px;
-  backdrop-filter: blur(40px);
-  -webkit-backdrop-filter: blur(40px);
-}
-
 /* --- Laptop Base Fix (To Match Image) --- */
 .laptop-base {
   position: absolute;
@@ -2648,17 +2665,16 @@ body {
     transform: translate(-50%, -50%);
   }
 
-  .right-side-popup-content-holder h4{
+  .right-side-popup-content-holder h4 {
     font-size: 18px !important;
   }
 
-  .right-side-popup-content-holder p{
+  .right-side-popup-content-holder p {
     font-size: 14px !important;
     line-height: 140% !important;
   }
 
-
-  .right-side-popup-content-holder{
+  .right-side-popup-content-holder {
     height: 100vh;
   }
 
@@ -3080,6 +3096,10 @@ body {
 
   .mobile-will-hide {
     display: none;
+  }
+
+  .button:focus .active-link {
+    background: #2c6c22 !important;
   }
 
   /* .hero-section .text-section h2 {
@@ -4062,6 +4082,7 @@ body {
   vertical-align: middle;
   border-radius: 40px;
   cursor: pointer;
+  margin-top: 1rem;
 }
 
 .popup-dilog-form button[type="submit"]:disabled {

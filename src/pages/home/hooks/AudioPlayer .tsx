@@ -1,18 +1,15 @@
 ﻿import { useState, useRef, useEffect } from "react";
-import Image from "next/image";
 import GlassSurface from "@/ReactBits/GlassSurface/GlassSurface";
 
 const AudioPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [hasInteracted, setHasInteracted] = useState(false); // New state to handle "Default Black"
   const audioRef = useRef<HTMLAudioElement>(null);
 
-  // Replace with your actual audio file path
   const audioSrc = "assets/Healing Chimes (mp3cut.net).mp3";
 
-  // 1. Add this useEffect to handle the "Global Click"
   useEffect(() => {
     const handleGlobalClick = async () => {
-      // Only play if it's not already playing
       if (!isPlaying && audioRef.current) {
         try {
           await audioRef.current.play();
@@ -21,33 +18,32 @@ const AudioPlayer = () => {
           console.log("Audio play failed due to browser restriction:", error);
         }
       }
-
-      // Remove the listener immediately so it only happens on the FIRST click
       document.removeEventListener("click", handleGlobalClick);
     };
 
-    // Add the listener when component mounts
     document.addEventListener("click", handleGlobalClick);
-
-    // Cleanup listener on unmount
     return () => {
       document.removeEventListener("click", handleGlobalClick);
     };
-  }, []); // Empty dependency array ensures this runs once on mount
+  }, []);
 
   const togglePlayPause = async (e: any) => {
-    // Prevent the global click listener from firing if the button is clicked directly
-    // (though the listener removes itself, this is good practice)
-    e.stopPropagation(); 
+    e.stopPropagation();
+    
+    // Mark that the user has manually clicked the button
+    setHasInteracted(true);
 
     if (isPlaying) {
       audioRef.current?.pause();
     } else {
-      console.log("playing");
       await audioRef.current?.play();
     }
     setIsPlaying(!isPlaying);
   };
+
+  // Logic: If playing OR if we haven't touched it yet (default) -> Black.
+  // Otherwise (Paused and interacted) -> Transparent.
+  const backgroundClass = (isPlaying || !hasInteracted) ? "active-link" : "audio-button-pause";
 
   return (
     <>
@@ -59,9 +55,11 @@ const AudioPlayer = () => {
       >
         <button
           onClick={togglePlayPause}
-          className={`cursor-pointer mr-3 md:mr-0 relative z-2 button button-padding-remove music-icon-in-nav ${
-            isPlaying ? "active-link" : ""
-          }`}
+          className={`
+            cursor-pointer mr-3 md:mr-0 relative z-2 button button-padding-remove music-icon-in-nav 
+            transition-colors duration-300 ease-in-out
+            ${backgroundClass}
+          `}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
