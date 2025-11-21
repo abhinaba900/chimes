@@ -2565,6 +2565,10 @@ body {
   display: none;
 }
 
+#gallery .slick-slide{
+  padding: 1rem !important;
+}
+
 @media screen and (max-width: 768px) and (orientation: portrait) {
   .naturallybuiltarea-text-holder-top {
     padding-bottom: 0rem !important;
