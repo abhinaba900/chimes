@@ -13,7 +13,7 @@ function FooterSection() {
       <div className="social-media-icons-and-image-holder">
         <div>
           <img
-            src="assets/footer-happy-family.png"
+            src="assets/footer-happy-family.webp"
             width={545}
             height={368}
             alt=""
