@@ -64,7 +64,8 @@ function NaturallybuiltArea() {
         <h5>
           {isMobile ? (
             <h5>
-              Vastu-aligned, Solar<br /> powered,  <span>Naturally built</span>
+              Vastu-aligned, Solar
+              <br /> powered, <span>Naturally built</span>
             </h5>
           ) : (
             <h5>
@@ -74,7 +75,7 @@ function NaturallybuiltArea() {
         </h5>
       </div>
       {/* <ScaleDownScroll> */}
-      <div className="">
+      <div className="" style={{height: "auto"}}>
         <div className="s-cardContainer">
           <motion.div
             style={{
