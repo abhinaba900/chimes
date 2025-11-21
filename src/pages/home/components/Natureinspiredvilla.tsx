@@ -37,7 +37,7 @@ function Natureinspiredvilla() {
         src={
           ismobile
             ? "/assets/Frame_1618874524[1].png"
-            : "/assets/nature inspired villa background image.webp"
+            : "/assets/nature inspired villa background image (2).webp"
         }
         alt="nature inspired villa background image"
       />

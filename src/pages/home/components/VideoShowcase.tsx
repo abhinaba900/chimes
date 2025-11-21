@@ -63,9 +63,7 @@ const VideoShowcase: React.FC<VideoShowcaseProps> = ({
           className="hidden md:inline-flex mt-6 group relative video-showcase-button items-center gap-3 px-8 py-3 bg-white/20 hover:bg-[#2B851D] backdrop-blur-md border border-white/30 rounded-full transition-all duration-300 hover:scale-105 active:scale-95"
         >
           <Play className="w-5 h-5 text-white" />
-          <span className="text-lg text-white font-medium tracking-wide">
-            Play Walkthrough
-          </span>
+          <span className=" text-white">Play Walkthrough</span>
         </button>
 
         {/* Mobile + Desktop bottom-right button */}
@@ -75,9 +73,7 @@ const VideoShowcase: React.FC<VideoShowcaseProps> = ({
             className="group inline-flex items-center video-showcase-button gap-3 px-6 py-2 md:px-8 md:py-3 bg-white/20 hover:bg-[#2B851D] backdrop-blur-md border border-white/30 rounded-full transition-all duration-300 hover:scale-105 active:scale-95"
           >
             <Play className="w-4 h-4 md:w-5 md:h-5 text-white" />
-            <span className="text-base md:text-lg text-white font-medium tracking-wide">
-              Play
-            </span>
+            <span className=" text-white">Play</span>
           </button>
         </div>
       </div>

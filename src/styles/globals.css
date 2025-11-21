@@ -3871,7 +3871,42 @@ body {
   }
 
   .clickid-item-holder-in-floor-plan {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+
+  }
+  
+  .and-this-is-dropdown-floor-plan{
+    grid-row: span 2 / span 2;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+  }
+
+  .grid1 {
+    grid-area: grid1;
+  }
+
+  .natureinspiredvilla-sub-container-content-holder {
+    padding-top: 4rem;
+  }
+
+  .grid2 {
+    grid-area: grid2;
+  }
+
+  .grid3 {
+    grid-area: grid3;
+  }
+  .grid4 {
+    grid-area: grid4;
+  }
+
+  .grid5 {
+    grid-area: grid5;
   }
 
   .mobile-section-dropdown {
@@ -4128,7 +4163,7 @@ input:-moz-autofill:active {
 }
 
 .nav-link.active-link {
-  color: rgba(0, 1, 0, 1);
+  color: white;
   background: #2c6c22;
 
   transform: translateY(-2px);
@@ -4193,5 +4228,9 @@ input:-moz-autofill:active {
   .build-villas-content-holder p {
     padding-left: 0rem !important;
     padding-right: 0rem !important;
+  }
+
+  .natureinspiredvilla-text-holder-and-content-holder {
+    gap: 5rem;
   }
 }
