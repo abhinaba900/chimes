@@ -41,7 +41,7 @@ const GlassDropdown = ({
     <div ref={dropdownRef} className="relative max-w-[200px] w-full cursor-pointer row-span-2">
       <span
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 bg-transparent"
+        className="flex items-center justify-center gap-2 bg-transparent"
         aria-expanded={isOpen}
       >
         {selectedOption}
