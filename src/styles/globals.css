@@ -2646,6 +2646,10 @@ body {
   display: none;
 }
 
+#gallery .slick-slide{
+  padding: 1rem !important;
+}
+
 @media screen and (max-width: 768px) and (orientation: portrait) {
   .naturallybuiltarea-text-holder-top {
     padding-bottom: 0rem !important;
@@ -3847,6 +3851,11 @@ body {
 @media (min-width: 1200px) and (max-width: 1340px) {
   .slider-content-holder {
     margin: auto;
+  }
+
+  .left-and-right-padding-add{
+    padding-left: 5rem !important;
+    padding-right: 5rem !important;
   }
 
   .footer-section-text-holder,
