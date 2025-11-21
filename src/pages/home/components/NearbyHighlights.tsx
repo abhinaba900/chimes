@@ -1,68 +1,89 @@
 ﻿function NearbyHighlights() {
   return (
     <section className="nearby-highlights">
+      
+      {/* CARD 1 */}
       <div className="nearby-highlights-card">
-        <h3>PRESTIGE CITY</h3>
+        {/* Mobile Image */}
         <img
-          className="max-w-[100px] max-h-[100px] mx-auto block"
-          style={{ display: "block", margin: "auto" }}
+          className="max-w-[100px] max-h-[100px] m-auto block md:hidden"
           src="assets/nearby-highlights-image-1.gif"
           alt=""
         />
+
+        <h3>PRESTIGE CITY</h3>
+
+        {/* Desktop Image */}
+        <img
+          className="max-w-[100px] max-h-[100px] m-auto hidden md:block"
+          src="assets/nearby-highlights-image-1.gif"
+          alt=""
+        />
+
         <p>
           A landmark township offering luxury residences, retail, and leisure
           spaces, bringing urban convenience to your doorstep
         </p>
         <h4>9 Minutes Away</h4>
-        <img
-          className="sidebar-image  h-70"
-          src="assets/nearby-highlights-image-sidebar.png"
-          alt=""
-        />
-        <img
-          className="mobile-sidebar-image"
-          src="assets/buttom-baar-in-mobile.svg"
-          alt=""
-        />
+
+        <img className="sidebar-image h-70" src="assets/nearby-highlights-image-sidebar.png" alt="" />
+        <img className="mobile-sidebar-image" src="assets/buttom-baar-in-mobile.svg" alt="" />
       </div>
+
+      {/* CARD 2 */}
       <div className="nearby-highlights-card">
-        <h3>GREENWOOD INTL SCHOOL</h3>
+        {/* Mobile Image */}
         <img
-          className="max-w-[100px] max-h-[100px] mx-auto block"
-          style={{ display: "block", margin: "auto" }}
+          className="max-w-[100px] max-h-[100px] m-auto block md:hidden"
           src="assets/nearby-highlights-image-2.gif"
           alt=""
         />
+
+        <h3>GREENWOOD INTL SCHOOL</h3>
+
+        {/* Desktop Image */}
+        <img
+          className="max-w-[100px] max-h-[100px] m-auto hidden md:block"
+          src="assets/nearby-highlights-image-2.gif"
+          alt=""
+        />
+
         <p>
           One of the city’s premier international schools, known for world-class
           academics and a nurturing environment
         </p>
-        <h4>20 minutes away</h4>
-        <img
-          className="mobile-sidebar-image"
-          src="assets/buttom-baar-in-mobile.svg"
-          alt=""
-        />
+        <h4>20 Minutes Away</h4>
+
+        <img className="mobile-sidebar-image" src="assets/buttom-baar-in-mobile.svg" alt="" />
       </div>
+
+      {/* CARD 3 */}
       <div className="nearby-highlights-card">
-        <h3>WIPRO</h3>
+        {/* Mobile Image */}
         <img
-          className="max-w-[100px] max-h-[100px] mx-auto block"
-          style={{ display: "block", margin: "auto" }}
+          className="max-w-[100px] max-h-[100px] m-auto block md:hidden"
           src="assets/nearby-highlights-image-3.gif"
           alt=""
         />
+
+        <h3>WIPRO</h3>
+
+        {/* Desktop Image */}
+        <img
+          className="max-w-[100px] max-h-[100px] m-auto hidden md:block"
+          src="assets/nearby-highlights-image-3.gif"
+          alt=""
+        />
+
         <p>
           A global tech powerhouse and innovation hub, keeping you connected to
           Bengaluru’s thriving IT ecosystem
         </p>
-        <h4>15 minutes away</h4>
-        <img
-          className="sidebar-image-2  h-70"
-          src="assets/nearby-highlights-image-sidebar.png"
-          alt=""
-        />
+        <h4>15 Minutes Away</h4>
+
+        <img className="sidebar-image-2 h-70" src="assets/nearby-highlights-image-sidebar.png" alt="" />
       </div>
+
     </section>
   );
 }

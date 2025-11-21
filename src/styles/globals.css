@@ -2562,7 +2562,7 @@ body {
 
 @media (max-width: 600px) {
   .mobile-sidebar-image {
-    display: block;
+    display: block !important;
     width: 70%;
     margin-block: 2rem;
   }
@@ -2889,29 +2889,23 @@ body {
     height: 700px;
   }
 
-  
-
-  .leaflet-popup-content p{
+  .leaflet-popup-content p {
     font-size: 7px !important;
     line-height: 10px !important;
     padding: 0 !important;
   }
 
-  .popup-content-holder{
+  .popup-content-holder {
     padding: 0 !important;
   }
 
-  .leaflet-popup-content{
+  .leaflet-popup-content {
     margin: 0;
   }
 
-  .leaflet-popup-content{
+  .leaflet-popup-content {
     margin: 5px 24px 5px 24px !important;
   }
-
-  
-
-  
 
   .right-side-section-inFloor-plan {
     justify-content: center;
@@ -2979,12 +2973,14 @@ body {
   }
 
   .footer-copyright-section {
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     gap: 0.5rem;
-    font-size: 1rem;
-    line-height: 20px;
+    font-size: 10px;
+    line-height: 140%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .video-showcase-title {
@@ -3080,9 +3076,10 @@ body {
 
   .nearby-highlights p {
     font-size: 1rem;
-    line-height: 20px;
+    line-height: 140%;
     max-width: 100%;
     padding-inline: 1rem;
+    padding-bottom: 8px;
   }
 
   .nearby-highlights h4 {
@@ -3102,12 +3099,17 @@ body {
   }
 
   .nearby-highlights h3 {
-    font-size: 25px;
-    line-height: 15px;
-    letter-spacing: -1px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 140%; /* 28px */
+    letter-spacing: -0.8px;
+    margin-bottom: 10px;
   }
   .nearby-highlights-card {
-    gap: 0.5rem;
+    gap: 0rem;
+  }
+
+  .nearby-highlights-card {
   }
 
   .naturallybuiltarea-card-content-holder h3 {
