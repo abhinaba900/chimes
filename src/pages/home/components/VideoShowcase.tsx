@@ -69,7 +69,7 @@ const VideoShowcase: React.FC<VideoShowcaseProps> = ({
         </button>
 
         {/* Mobile + Desktop bottom-right button */}
-        <div className="absolute bottom-5 right-5 md:right-10 md:bottom-10">
+        <div className="absolute bottom-5 right-5 md:right-10 md:bottom-10 block md:hidden">
           <button
             onClick={() => setIsPlaying(true)}
             className="group inline-flex items-center video-showcase-button gap-3 px-6 py-2 md:px-8 md:py-3 bg-white/20 hover:bg-[#2B851D] backdrop-blur-md border border-white/30 rounded-full transition-all duration-300 hover:scale-105 active:scale-95"
