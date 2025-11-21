@@ -1790,6 +1790,14 @@ body {
   margin-bottom: 24.5px;
 }
 
+.music-icon-in-nav{
+  background: transparent !important;
+}
+
+.button:hover, .active-link{
+  background: #2c6c22 !important;
+}
+
 .floor-plan-container-holder .download-button:hover {
   background: #2c6c22;
   color: white;
