@@ -94,14 +94,14 @@ function NaturallybuiltArea() {
               />
               <section className="">
                 <h3>
-                  Cooler Summers, <br className="block md:hidden" />
+                  Cooler Summers, <br  />
                   Warmer Winters
                 </h3>
                 <p>
                   These villas breathe with nature, thanks to mud interlocking
-                  bricks made with 85% natural earth.This passive design keeps
-                  indoor temperatures regulated—cooler in summer, warmer in
-                  winter.The result? Lesser dependence on artificial cooling,
+                  bricks made with 85% natural earth. This passive design keeps
+                  indoor temperatures regulated cooler in summer, warmer in
+                  winter. The result? Lesser dependence on artificial cooling,
                   and a home that&apos;s always in sync with the seasons.
                 </p>
               </section>
@@ -159,7 +159,7 @@ function NaturallybuiltArea() {
               />
               <section>
                 <h3>
-                  Waste Less, <br className="block md:hidden" />
+                  Waste Less, <br  />
                   Water More
                 </h3>
                 <p>
@@ -181,7 +181,7 @@ function NaturallybuiltArea() {
               />
               <section>
                 <h3>
-                  Flora Fauna <br className="block md:hidden" />
+                  Flora Fauna <br  />
                   Themed Roads
                 </h3>
                 <p>

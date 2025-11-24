@@ -171,7 +171,7 @@ body {
   gap: 2rem;
   padding: 12px 20px;
   border-radius: var(--border-radius);
-  background-color: rgba(255, 255, 255, 0.12);
+  background-color: rgba(255, 255, 255, 0.12) !important;
 
   backdrop-filter: blur(8px); /* ✅ Correct syntax */
   -webkit-backdrop-filter: blur(8px); /* ✅ Safari support */
@@ -1161,7 +1161,7 @@ body {
   max-width: 1200px;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 1rem;
   margin: 2rem 0;
   align-items: center;
@@ -1856,7 +1856,7 @@ body {
 }
 
 .logo {
-  margin-top: -1.5rem;
+  margin-top: -0.8rem;
 }
 
 .right-side-section-inFloor-plan h3,
@@ -2246,6 +2246,23 @@ body {
   letter-spacing: 0%;
   position: relative;
   z-index: 3;
+}
+
+.footer-copyright-section p {
+  font-family: var(--font-family-sequel-light-display);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 28px;
+  letter-spacing: -3%;
+  color: #fff;
+  letter-spacing: -0.1px;
+}
+
+.floor-plan-text-container-parent{
+  background-color: rgba(0, 0, 0, 0.20) !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  border: 0.5px solid rgba(255, 255, 255, 0.2) !important;
 }
 
 .footer-brand-name {
@@ -2944,8 +2961,6 @@ body {
     margin-block: 64px;
     height: 200px;
   }
-
-  
 
   .floor-plan-background-image {
     width: 100vh;
@@ -3941,8 +3956,6 @@ body {
   .grid1 {
     grid-area: grid1;
   }
-
- 
 
   .grid2 {
     grid-area: grid2;

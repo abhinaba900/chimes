@@ -26,8 +26,7 @@
         </p>
         <h4>9 Minutes Away</h4>
 
-        <img className="sidebar-image h-70" src="assets/nearby-highlights-image-sidebar.png" alt="" />
-        <img className="mobile-sidebar-image" src="assets/buttom-baar-in-mobile.svg" alt="" />
+        
       </div>
 
       {/* CARD 2 */}
@@ -54,7 +53,6 @@
         </p>
         <h4>20 Minutes Away</h4>
 
-        <img className="mobile-sidebar-image" src="assets/buttom-baar-in-mobile.svg" alt="" />
       </div>
 
       {/* CARD 3 */}
@@ -81,7 +79,6 @@
         </p>
         <h4>15 Minutes Away</h4>
 
-        <img className="sidebar-image-2 h-70" src="assets/nearby-highlights-image-sidebar.png" alt="" />
       </div>
 
     </section>

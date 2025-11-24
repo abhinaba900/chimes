@@ -30,12 +30,12 @@ const slides = [
     title: "Infinity Pool",
     subtitle: "Refresh in our crystal waters",
   },
-  {
-    image:
-      "assets/Ecumene_Chimes_(2773_N)_Cam 06_Street Day_Ver 03_03-07-2025.webp",
-    title: "Gourmet Dining",
-    subtitle: "Culinary excellence awaits",
-  },
+  // {
+  //   image:
+  //     "assets/Ecumene_Chimes_(2773_N)_Cam 06_Street Day_Ver 03_03-07-2025.webp",
+  //   title: "Gourmet Dining",
+  //   subtitle: "Culinary excellence awaits",
+  // },
   {
     image:
       "assets/Ecumene_Chimes_(2773_N)_Cam 07_Street Dusk_Ver 03_03-07-2025.webp",
@@ -78,6 +78,8 @@ function ElevatingEveryMomentSlider() {
     centerPadding: "180px",
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true, // Enable auto scroll
+    autoplaySpeed: 3000,
     responsive: [
       {
         breakpoint: 1024,
@@ -142,7 +144,7 @@ function ElevatingEveryMomentSlider() {
                   <path
                     d="M1034 275C1034 292.673 1019.67 307 1002 307L32 307C14.3269 307 1.2525e-06 292.673 2.79753e-06 275L2.68388e-05 1.15758e-06L1034 9.15527e-05L1034 275Z"
                     fill="url(#paint0_linear_448_9500)"
-                    fill-opacity="0.85"
+                    fillOpacity="0.85"
                   />
                   <defs>
                     <linearGradient
@@ -153,9 +155,9 @@ function ElevatingEveryMomentSlider() {
                       y2="4.63552e-05"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop stop-opacity="0.8" />
-                      <stop offset="0.65" stop-opacity="0.4" />
-                      <stop offset="1" stop-opacity="0" />
+                      <stop stopOpacity="0.8" />
+                      <stop offset="0.65" stopOpacity="0.4" />
+                      <stop offset="1" stopOpacity="0" />
                     </linearGradient>
                   </defs>
                 </svg>

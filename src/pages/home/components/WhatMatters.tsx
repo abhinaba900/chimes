@@ -62,12 +62,14 @@ export default function WhatMatters() {
           .bindPopup(
             `
               <div 
-                class="popup-content-holder"
-                style="padding:6px;"
-              >
-                <h3>SWIFT CITY</h3>
-                <p>${address}</p>
-              </div>
+        class="popup-content-holder"
+        style="padding:6px; cursor:pointer;"
+        onclick="window.open('https://www.google.com/maps?q=${position[0]},${position[1]}', '_blank')"
+      >
+        <h3>SWIFT CITY</h3>
+        <p>${address}</p>
+        
+      </div>
             `,
             // 3. Pass the correctly calculated width
             { closeButton: false, maxWidth: popupMaxWidth }

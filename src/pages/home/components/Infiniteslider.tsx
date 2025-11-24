@@ -8,7 +8,7 @@ function Infiniteslider() {
       description: "Sq.Ft Villas Starting",
     },
     {
-      title: "6.5 Acres",
+      title: "6.4 Acres",
       description: "Of Green Living",
     },
     {
@@ -22,11 +22,11 @@ function Infiniteslider() {
   ];
   return (
     <div className="scroll-section">
-      <img
+      {/* <img
         width={958}
         src="assets/left-flower-in-scroll.png"
         alt="infiniteslider"
-      />
+      /> */}
 
       <HorizontalScroller
         data={[texts]}
@@ -48,12 +48,12 @@ function Infiniteslider() {
           </div>
         )}
       />
-      <img
+      {/* <img
         width={958}
         style={{ position: "relative", right: "0px" }}
         src="assets/right-flower-in-scroll.png"
         alt="infiniteslider"
-      />
+      /> */}
     </div>
   );
 }

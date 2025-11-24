@@ -154,7 +154,7 @@ export default function Navbar() {
         <motion.div className="nav-brand" initial={{ opacity: 1 }}>
           <Link href="/" onClick={closeMenu}>
             <Image
-              src="/assets/The Chimes Logo.svg"
+              src="/assets/The Chimes Logo.webp"
               alt="Logo"
               width={200}
               height={100}
@@ -163,10 +163,7 @@ export default function Navbar() {
           </Link>
         </motion.div>
 
-        <GlassSurface
-          width={"fit-content"}
-          height={"fit-content"}
-          borderRadius={40}
+        <div
           className={`nav-menu ${isActive ? "active" : ""}`}
         >
           <motion.div initial={false}>
@@ -215,7 +212,7 @@ export default function Navbar() {
               </motion.li>
             </motion.ul>
           </motion.div>
-        </GlassSurface>
+        </div>
         <div className="nav-actions">
           <motion.div initial={{ opacity: 1 }} className="nav-action">
             <AudioPlayer />
@@ -252,7 +249,7 @@ export default function Navbar() {
                 height="38"
                 rx="19"
                 fill="#F2EEEE"
-                fill-opacity="0.12"
+                fillOpacity="0.12"
               />
               <path
                 d="M20.2826 19.0001L25.7339 13.5485C26.0887 13.1939 26.0887 12.6206 25.7339 12.266C25.3793 11.9113 24.806 11.9113 24.4514 12.266L18.9999 17.7176L13.5486 12.266C13.1938 11.9113 12.6207 11.9113 12.2661 12.266C11.9113 12.6206 11.9113 13.1939 12.2661 13.5485L17.7174 19.0001L12.2661 24.4517C11.9113 24.8063 11.9113 25.3797 12.2661 25.7343C12.4428 25.9111 12.6751 26 12.9073 26C13.1395 26 13.3717 25.9111 13.5486 25.7343L18.9999 20.2827L24.4514 25.7343C24.6283 25.9111 24.8605 26 25.0927 26C25.3249 26 25.557 25.9111 25.7339 25.7343C26.0887 25.3797 26.0887 24.8063 25.7339 24.4517L20.2826 19.0001Z"

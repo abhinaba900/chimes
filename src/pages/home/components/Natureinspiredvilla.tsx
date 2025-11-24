@@ -99,36 +99,7 @@ function Natureinspiredvilla() {
               }
             />
           </div>
-          <TiltedCard
-            mainBodyClassName="natureinspiredvilla-content-holder-image-2"
-            className="section-overlay "
-            imageSrc="assets/Modern eco-friendly villa 2.webp"
-            altText="Powered by the Sun, Not the Grid"
-            captionText="Kendrick Lamar - GNX"
-            containerHeight="100%"
-            containerWidth="100%"
-            imageHeight="100%"
-            imageWidth="100%"
-            rotateAmplitude={0}
-            scaleOnHover={1}
-            showMobileWarning={false}
-            showTooltip={false}
-            displayOverlayContent={true}
-            overlayContent={
-              <section className="natureinspiredvilla-content-holder-text ">
-                <section className="natureinspiredvilla-content-holder-text-inner">
-                  <div className="text-center">
-                    <h4 style={{ marginBottom: "1rem", margin: "0 auto" }}>
-                      World Bank-Approved <br /> Sustainability
-                    </h4>
-                    <p style={{ margin: "0 auto", marginTop: "1rem" }}>
-                      IFC Green certified for eco-conscious living
-                    </p>
-                  </div>
-                </section>
-              </section>
-            }
-          />
+         
         </div>
       </div>
     </div>

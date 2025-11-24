@@ -216,7 +216,7 @@ function FloorPlan({
             width={"fit-content"}
             height={"fit-content"}
             borderRadius={16}
-            className="flex justify-center items-center overflow-visible px-2 desktop-view"
+            className="flex justify-center items-center overflow-visible px-2 desktop-view floor-plan-text-container-parent"
           >
             <div className="clickid-item-holder-in-floor-plan">
               <div className="floor-item and-this-is-dropdown-floor-plan">

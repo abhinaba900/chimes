@@ -224,7 +224,7 @@ function FooterSection() {
       />
 
       <div className="footer-copyright-section">
-        <p>© 2025 All Right Reserved by The Chimes</p>
+        <p>© 2025 All Right Reserved by Raise Infra</p>
         <p>Terms and conditions</p>
       </div>
     </footer>
