@@ -959,7 +959,11 @@ body {
   .build-villas-line-content-holder {
     padding: 0.3rem;
     grid-template-columns: repeat(1, 1fr);
-    gap: 1rem;
+    gap: 1.5rem;
+  }
+
+  .build-villas-line-holder .precision-in-every-brick {
+    max-width: 60px;
   }
 }
 
@@ -3938,9 +3942,7 @@ body {
     grid-area: grid1;
   }
 
-  .natureinspiredvilla-sub-container-content-holder {
-    padding-top: 4rem;
-  }
+ 
 
   .grid2 {
     grid-area: grid2;
@@ -3973,7 +3975,7 @@ body {
   }
 
   .natureinspiredvilla-sub-container-content-holder {
-    margin-top: 0;
+    margin-top: -4rem;
   }
 }
 

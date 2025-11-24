@@ -38,7 +38,7 @@ function BuildVillas() {
           </p>
         </div>
         <div className="build-villas-line-holder">
-          <img src="/assets/Precision in Every Brick.gif" alt="" />
+          <img src="/assets/Precision in Every Brick.gif" alt="" className="precision-in-every-brick" />
           <h5>Precision in Every Brick</h5>
           <p>
             ISO 9001:2015 Certified for <br /> Uncompromised Quality
