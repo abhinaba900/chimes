@@ -110,7 +110,7 @@ body {
 
 /* Header and Navbar */
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -2962,7 +2962,7 @@ body {
 
   .nav-list {
     position: absolute;
-    top: 6%;
+    top: 10%;
   }
 
   .laptop-section-container {
@@ -3108,6 +3108,7 @@ body {
   .logo {
     width: 150px;
     height: 36.274px;
+    object-fit: contain;
   }
 
   .nav-toggle {
