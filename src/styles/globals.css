@@ -4694,7 +4694,7 @@ input:-moz-autofill:active {
 
   /* 3. Choose Facing buttons white */
   .clickid-item-holder-in-floor-plan .floor-item {
-    color: black !important;
+    color: white !important;
     backdrop-filter: blur(5px) !important;
   }
 
@@ -4709,7 +4709,7 @@ input:-moz-autofill:active {
   }
 
   .clickid-item-holder-in-floor-plan .floor-item .dropdonw-icon path {
-    fill: black !important;
+    fill: white !important;
   }
 
   /* 4. Play button white */
