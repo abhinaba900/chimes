@@ -167,7 +167,7 @@ export default function Navbar() {
   return (
     <header
       className={`header left-and-right-padding-add 
-    ${isMobile ? (isScrolled ? "mobile-bg" : "mobile-bg-top") : ""}`}
+    ${isMobile ? (isScrolled && !isScrolled ? "mobile-bg" : "mobile-bg-top") : ""}`}
       style={{
         position: isScrollingDown ? "absolute" : "fixed",
         top: isScrollingDown ? "-100%" : "0px",
