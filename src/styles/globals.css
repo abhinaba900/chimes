@@ -119,10 +119,7 @@ body {
   z-index: 50;
   height: auto;
   margin: auto;
-  
 }
-
-
 
 .navbar {
   display: flex;
@@ -2262,8 +2259,8 @@ body {
   letter-spacing: -0.1px;
 }
 
-.floor-plan-text-container-parent{
-  background-color: rgba(0, 0, 0, 0.20) !important;
+.floor-plan-text-container-parent {
+  background-color: rgba(0, 0, 0, 0.2) !important;
   box-shadow: none !important;
   backdrop-filter: none !important;
   border: 0.5px solid rgba(255, 255, 255, 0.2) !important;
@@ -2276,17 +2273,28 @@ body {
   right: 0;
   z-index: 1;
   padding: 0;
-
   font-family: var(--font-family-2);
   font-weight: 400;
-  font-size: 180px;
+  font-size: 100px;
   line-height: 100%;
   letter-spacing: 0%;
   color: #ffffff;
   max-width: 1339px;
   text-align: right;
   margin: auto;
-  margin-bottom: -1.563rem;
+  margin-bottom: -0.3rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+}
+
+.footer-brand-name span {
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  padding-left: 1rem;
+  padding-right: 9px;
 }
 
 .swiper {
@@ -2594,7 +2602,7 @@ body {
   padding: 1rem !important;
 }
 
-.selected-text-in-acreo-of-the-chimes{
+.selected-text-in-acreo-of-the-chimes {
   background-color: #2b851d;
   color: white !important;
 }
@@ -2819,6 +2827,9 @@ body {
   }
   .mobile-view-text {
     display: block;
+  }
+  .footer-copyright-section p{
+    font-size: 14px;
   }
 
   #gallery .slick-slide {
@@ -3132,7 +3143,7 @@ body {
 
   .footer-brand-name {
     font-size: 50px;
-    line-height: 151px;
+    line-height: 121px;
   }
 
   .natureinspiredvilla-content-holder-image {
@@ -3814,7 +3825,7 @@ body {
   }
 
   .footer-brand-name {
-    font-size: 150px;
+    font-size: 100px;
     line-height: 100px;
   }
 
@@ -3826,6 +3837,12 @@ body {
   .nearby-highlights {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .footer-brand-name span,.footer-brand-name img{
+    display: none;
+  }
+
+  
 }
 
 @media (min-width: 1200px) and (max-width: 1340px) {
@@ -3836,6 +3853,10 @@ body {
   .left-and-right-padding-add {
     padding-left: 5rem !important;
     padding-right: 5rem !important;
+  }
+
+  .footer-brand-name {
+    font-size: 80px;
   }
 
   .footer-section-text-holder,
@@ -3907,8 +3928,10 @@ body {
     letter-spacing: -2px;
   }
 
+  
+
   .footer-brand-name {
-    font-size: 10rem;
+    font-size: 5rem;
   }
 
   .navbar {

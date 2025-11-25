@@ -127,6 +127,8 @@ function FooterSection() {
         </div>
         <div className="footer-brand-name">
           <h3>THE CHIMES</h3>
+          <span className="hidden lg:block">BY</span>
+          <img src="assets/Raise infra logo in white.webp" className="h-[58px] hidden lg:block" alt="Raise infra logo in white" />
         </div>
       </div>
 
