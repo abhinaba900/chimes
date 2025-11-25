@@ -3857,11 +3857,6 @@ body {
   .nearby-highlights {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .footer-brand-name span,
-  .footer-brand-name img {
-    display: none;
-  }
 }
 
 @media (min-width: 1200px) and (max-width: 1340px) {
@@ -3928,6 +3923,165 @@ body {
   }
 }
 
+@media (min-width: 1000px) and (max-width: 1024px) {
+  /* your styles here */
+  .natureinspiredvilla-content-holder-image {
+    display: none !important;
+  }
+
+  .natureinspiredvilla-sub-container-content-holder
+    .natureinspiredvilla-sub-container {
+    margin-top: 12rem !important;
+  }
+
+  #floor-plans {
+    height: 960px !important;
+  }
+
+  .button-in-slider-element-holder {
+    display: none;
+  }
+
+  .footer-brand-name {
+    font-size: 80px;
+    line-height: 78px;
+  }
+
+  .footer-brand-name span {
+    font-size: 24px;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 5rem;
+    width: 95vw;
+  }
+
+  .button-link-mobile{
+    width: 100%;
+  }
+
+  .footer-brand-name img {
+    width: 300px !important;
+    height: 28px;
+  }
+
+  .footer-left-side-image {
+    width: 300px !important;
+    height: 200px !important;
+  }
+
+  .s-card {
+    height: fit-content;
+    transform: none !important;
+    box-shadow: none !important;
+    top: 0 !important;
+
+    padding-block: 0 !important;
+
+    padding-top: 32px !important;
+  }
+
+  .s-cardContainer:first-child .s-card {
+    padding-top: 0px !important;
+  }
+
+  .s-cardContainer {
+    position: relative !important;
+    height: fit-content !important;
+  }
+
+  .acreo-of-the-chimes-text-and-image-container {
+    grid-template-columns: 0.6fr 1.2fr;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .tab-section-width-in-acreo-of-the-chimes {
+    width: 100% !important;
+  }
+
+  .nearby-highlights {
+    grid-template-columns: repeat(1, 1fr);
+    padding-top: 1.5rem;
+  }
+
+  .nearby-highlights p {
+    max-width: 400px;
+  }
+
+  .natureinspiredvilla-text-holder-and-content-holder h3 {
+    font-size: 64px;
+    line-height: 64px;
+    max-width: 70%;
+  }
+
+  .natureinspiredvilla-content-holder-text h4 {
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  .natureinspiredvilla-content-holder-text p {
+    font-size: 16px;
+  }
+
+  .natureinspiredvilla-content-holder-text {
+    padding: 1.5rem;
+  }
+
+  .acreo-of-the-chimes-text-and-image-container
+    .text-area-inside-text-and-image-container {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+
+  .naturallybuiltarea-card-content-holder {
+    gap: 2rem;
+  }
+
+  .naturallybuiltarea-card-content-holder,
+  .s-card {
+    padding-block: 0 !important;
+  }
+
+  .right-side-section-inFloor-plan h3 {
+    margin-bottom: 1.5rem;
+  }
+
+  .floor-plan-container-holder {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .right-side-section-inFloor-plan {
+    margin-left: 0;
+  }
+  .floor-plan-text-container-parent {
+    margin: auto;
+  }
+
+  .mobile-text-top-designed-for-life {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .slider-content-holder {
+    max-height: 100%;
+  }
+
+  .slider-contener-parent {
+    margin-bottom: 2rem;
+  }
+
+  .bouttom-h3-in-designed-for-life {
+    display: none;
+  }
+}
+
 @media (min-width: 1341px) and (max-width: 1390px) {
   /* your styles here */
   .nav-action,
@@ -3956,7 +4110,7 @@ body {
   }
 
   .logo {
-    margin-top: -1.5rem;
+    margin-top: -0.5rem;
   }
 
   .s-cardContainer {

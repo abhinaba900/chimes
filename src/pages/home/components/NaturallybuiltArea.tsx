@@ -69,7 +69,7 @@ function NaturallybuiltArea() {
             </h5>
           ) : (
             <h5>
-              Vastu-aligned, Solar powered, <br /> <span>Naturally built</span>
+              Vastu aligned, Solar powered, <br /> <span>Naturally built</span>
             </h5>
           )}
         </h5>

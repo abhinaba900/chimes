@@ -17,6 +17,7 @@ function FooterSection() {
             width={545}
             height={368}
             alt=""
+            className="footer-left-side-image"
           />
         </div>
         <div className="content-holder-for-mobile">

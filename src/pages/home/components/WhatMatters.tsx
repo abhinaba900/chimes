@@ -51,6 +51,8 @@ export default function WhatMatters() {
         map = L.map(mapRef.current!, {
           zoomControl: false,
           scrollWheelZoom: false,
+          doubleClickZoom: false,
+          dragging: false,
         }).setView(position, 15);
 
         L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(

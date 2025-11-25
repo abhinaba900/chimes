@@ -69,7 +69,7 @@ function AcreofTheChimes() {
         className="acreo-of-the-chimes-text-and-image-container left-and-right-padding-in-content max-w-[1339px] mx-auto"
       >
         {/* Sidebar */}
-        <div className="space-y-4 text-lg font-medium text-gray-800 lg:w-[90%] w-[100%]">
+        <div className="space-y-4 text-lg font-medium text-gray-800 lg:w-[90%] tab-section-width-in-acreo-of-the-chimes w-[100%]">
           {sections.map((section, index) => (
             <div
               key={section.name}
