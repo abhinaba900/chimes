@@ -3522,6 +3522,10 @@ body {
   .map-container {
     height: 250px;
   }
+
+  .button-in-slider-element-holder {
+    right: 0 !important;
+  }
 }
 
 @media (min-width: 600px) and (max-width: 999px) {
@@ -3899,7 +3903,7 @@ body {
   }
 
   .button-in-slider-element-holder {
-    right: 20%;
+    right: 11rem !important;
   }
 
   .clickid-item-holder-in-floor-plan {
@@ -4110,6 +4114,14 @@ body {
     width: 100% !important;
   }
 
+  .button-padding-remove {
+    padding-inline: 0.8rem;
+  }
+
+  .nav-toggle {
+    width: 41px !important;
+    height: 41px !important;
+  }
   .mobile-text-top-designed-for-life {
     display: block;
     margin-bottom: 1rem;
@@ -4132,11 +4144,11 @@ body {
     display: none;
   }
 
-  .button-link-mobile{
+  .button-link-mobile {
     height: 49.6px;
   }
 
-  .header{
+  .header {
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
@@ -4195,7 +4207,7 @@ body {
   }
 
   .button-in-slider-element-holder {
-    right: 20%;
+    right: 12rem !important;
   }
 
   .clickid-item-holder-in-floor-plan {
@@ -4483,7 +4495,7 @@ input:-moz-autofill:active {
   -moz-text-fill-color: #333 !important;
 }
 
-.button-in-slider-element-holder{
+.button-in-slider-element-holder {
   right: 16rem;
 }
 
@@ -4532,7 +4544,7 @@ input:-moz-autofill:active {
     font-size: 14px;
   }
 
-  .natureinspiredvilla-content-holder-image{
+  .natureinspiredvilla-content-holder-image {
     height: 450px !important;
   }
 }
@@ -4672,33 +4684,32 @@ input:-moz-autofill:active {
 
   .nav-item .nav-link {
     background: white !important;
-    color: #15420e !important;
     border: none !important;
   }
 
   /* Last menu item stays green */
   .nav-item:last-child .nav-link {
-    background: #2c6c22 !important;
     color: white !important;
   }
 
   /* 3. Choose Facing buttons white */
   .clickid-item-holder-in-floor-plan .floor-item {
-    background: white !important;
-    color: #15420e !important;
-    border: none !important;
-    backdrop-filter: none !important;
+    color: black !important;
+    backdrop-filter: blur(5px) !important;
+  }
+
+  .and-this-is-dropdown-floor-plan,
+  .mobile-section-dropdown {
+    width: 140px !important;
   }
 
   .clickid-item-holder-in-floor-plan .floor-item.floor-active {
-    background: #2c6c22 !important;
     color: white !important;
-    border: none !important;
     font-weight: 700;
   }
 
   .clickid-item-holder-in-floor-plan .floor-item .dropdonw-icon path {
-    fill: #15420e !important;
+    fill: black !important;
   }
 
   /* 4. Play button white */
