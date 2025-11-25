@@ -17,7 +17,6 @@ const sections = [
 
 const defaultImage = "assets/Master Plan.webp";
 
-
 function AcreofTheChimes() {
   const [activeImage, setActiveImage] = useState(defaultImage);
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -58,7 +57,11 @@ function AcreofTheChimes() {
 
       <VideoShowcase
         videoUrl="assets/acreo-of-the-chimes-video.mp4"
-        thumbnailUrl={isMobile? "assets/overlay-thumpnail-mobile.webp": "assets/overlay-thumpnail.webp"}
+        thumbnailUrl={
+          isMobile
+            ? "assets/overlay-thumpnail-mobile.webp"
+            : "assets/overlay-thumpnail.webp"
+        }
       />
 
       <div
@@ -67,7 +70,7 @@ function AcreofTheChimes() {
       >
         {/* Sidebar */}
         <div className="space-y-4 text-lg font-medium text-gray-800 lg:w-[90%] w-[100%]">
-          {sections.map((section) => (
+          {sections.map((section, index) => (
             <div
               key={section.name}
               onClick={() => {
@@ -79,7 +82,11 @@ function AcreofTheChimes() {
               }}
               onMouseEnter={() => setActiveImage(section.image)}
               onMouseLeave={() => setActiveImage(defaultImage)}
-              className=" cursor-pointer flex align-middle justify-between hover:text-blue-600 transition-colors text-area-inside-text-and-image-container"
+              className={`cursor-pointer flex align-middle justify-between hover:text-blue-600 transition-colors text-area-inside-text-and-image-container ${
+                activeImage == defaultImage &&
+                index == 0 &&
+                "selected-text-in-acreo-of-the-chimes"
+              }`}
             >
               {section.name}
               <svg
