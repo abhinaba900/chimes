@@ -69,7 +69,7 @@ function NaturallybuiltArea() {
             </h5>
           ) : (
             <h5>
-              Vastu-aligned, Solar-powered, <br /> <span>Naturally built</span>
+              Vastu-aligned, Solar powered, <br /> <span>Naturally built</span>
             </h5>
           )}
         </h5>
@@ -133,7 +133,7 @@ function NaturallybuiltArea() {
                 <p>
                   With rooftop solar panels on every villa, you generate your
                   own power and often send extra back to the grid. This
-                  isn&apos;t just green—it&apos;s smart, reducing energy costs
+                  isn&apos;t just green it&apos;s smart, reducing energy costs
                   while increasing independence. Live off the sun, stay
                   connected to the city.
                 </p>
@@ -165,7 +165,7 @@ function NaturallybuiltArea() {
                 <p>
                   Our Eco STP (Sewage Treatment Plant) and grey water filtration
                   systems ensure nothing goes to waste. Used water gets a second
-                  life—flushing toilets, watering gardens, cooling landscapes.
+                  life flushing toilets, watering gardens, cooling landscapes.
                   It&apos;s water wisdom, built into your everyday living.
                 </p>
               </section>
@@ -204,7 +204,7 @@ function NaturallybuiltArea() {
         </h5>
         <p className="desktop-view" style={{ marginTop: "1rem" }}>
           Step inside a world where nature meets design. Explore every corner,
-          from sunlit rooms to green pathways — and discover what makes The
+          from sunlit rooms to green pathways and discover what makes The
           Chimes a villa unlike any other
         </p>
         <p className="mobile-view-text" style={{ marginTop: "1rem" }}>

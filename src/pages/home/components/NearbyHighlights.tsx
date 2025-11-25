@@ -48,7 +48,7 @@
         />
 
         <p>
-          One of the city’s premier international schools, known for world-class
+          One of the city’s premier international schools, known for world class
           academics and a nurturing environment
         </p>
         <h4>20 Minutes Away</h4>

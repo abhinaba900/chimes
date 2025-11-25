@@ -138,11 +138,41 @@ export default function Navbar() {
   ];
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isScrollingDown, setIsScrollingDown] = useState(false);
+
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScrollDirection = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY) {
+        // User is scrolling DOWN
+        setIsScrollingDown(true);
+      } else {
+        // User is scrolling UP
+        setIsScrollingDown(false);
+      }
+
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScrollDirection);
+
+    return () => {
+      window.removeEventListener("scroll", handleScrollDirection);
+    };
+  }, []);
 
   return (
     <header
       className={`header left-and-right-padding-add 
     ${isMobile ? (isScrolled ? "mobile-bg" : "mobile-bg-top") : ""}`}
+      style={{
+        position: isScrollingDown ? "absolute" : "fixed",
+        top: isScrollingDown ? "-100%" : "0px",
+        transition: "top 0.4s ease",
+      }}
       ref={navbarRef}
     >
       <motion.nav
@@ -163,9 +193,7 @@ export default function Navbar() {
           </Link>
         </motion.div>
 
-        <div
-          className={`nav-menu ${isActive ? "active" : ""}`}
-        >
+        <div className={`nav-menu ${isActive ? "active" : ""}`}>
           <motion.div initial={false}>
             <motion.ul
               className="nav-list"

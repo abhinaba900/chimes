@@ -1170,6 +1170,7 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 32px 32px 32px 32px;
+  margin-bottom: 0;
 }
 
 .natureinspiredvilla-sub-container-content-holder
@@ -1185,8 +1186,8 @@ body {
 .natureinspiredvilla-sub-container-content-holder
   .natureinspiredvilla-sub-container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
   height: 100%;
 }

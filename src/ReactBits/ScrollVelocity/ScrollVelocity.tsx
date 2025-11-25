@@ -159,7 +159,7 @@ const HorizontalScroller: React.FC<{
 }> = ({
   data,
   renderCard,
-  velocity = 100,
+  velocity = 50,
   numCopies = 6,
   parallaxClassName,
   scrollerClassName,
