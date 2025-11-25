@@ -2963,6 +2963,9 @@ body {
   .nav-list {
     position: absolute;
     top: 10%;
+    left: 0;
+    right: 0;
+    padding-inline: 1rem;
   }
 
   .laptop-section-container {
