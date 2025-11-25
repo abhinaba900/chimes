@@ -2264,6 +2264,8 @@ body {
   box-shadow: none !important;
   backdrop-filter: none !important;
   border: 0.5px solid rgba(255, 255, 255, 0.2) !important;
+
+  width: 100% !important;
 }
 
 .footer-brand-name {
@@ -2557,8 +2559,8 @@ body {
 
 .and-this-is-dropdown-floor-plan,
 .mobile-section-dropdown {
-  max-width: 138.26px;
-  width: 138.26px;
+  max-width: 200.26px;
+  width: 200.26px;
 }
 
 .mobile-section-dropdown {
@@ -3864,6 +3866,16 @@ body {
     margin: auto;
   }
 
+  .nav-link {
+    font-size: 14px;
+  }
+  .button {
+    font-size: 14px;
+  }
+  .logo {
+    margin-top: -0.5rem !important;
+  }
+
   .left-and-right-padding-add {
     padding-left: 5rem !important;
     padding-right: 5rem !important;
@@ -3921,12 +3933,56 @@ body {
   .elevatingeverymomentslider-text-holder-bottom-area {
     margin-left: 0.5rem;
   }
+
+  .clickid-item-holder-in-floor-plan {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .and-this-is-dropdown-floor-plan {
+    grid-row: span 2 / span 2;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tab-section-width-in-acreo-of-the-chimes{
+    width: 100%;
+  }
+
+  .nearby-highlights{
+    gap: 0;
+  }
+
+  .natureinspiredvilla-text-holder-and-content-holder h3{
+    max-width: 70%;
+  }
+
+  .natureinspiredvilla-text-holder-and-content-holder{
+    gap: 5rem;
+  }
+
+  .social-media-icons{
+    align-self: center !important;
+    transform: none !important;
+    padding-top: 0;
+  }
+  .social-media-icons-and-image-holder{
+    flex-direction: row !important;
+  }
 }
 
 @media (min-width: 1000px) and (max-width: 1024px) {
   /* your styles here */
   .natureinspiredvilla-content-holder-image {
     display: none !important;
+  }
+
+  .and-this-is-dropdown-floor-plan,
+  .mobile-section-dropdown {
+    width: 150px !important;
   }
 
   .natureinspiredvilla-sub-container-content-holder
@@ -3958,7 +4014,7 @@ body {
     width: 95vw;
   }
 
-  .button-link-mobile{
+  .button-link-mobile {
     width: 100%;
   }
 
@@ -4005,6 +4061,7 @@ body {
   .nearby-highlights {
     grid-template-columns: repeat(1, 1fr);
     padding-top: 1.5rem;
+    gap: 4rem;
   }
 
   .nearby-highlights p {
@@ -4062,11 +4119,17 @@ body {
   }
   .floor-plan-text-container-parent {
     margin: auto;
+    width: 100% !important;
   }
 
   .mobile-text-top-designed-for-life {
     display: block;
     margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .build-villas-line-holder p{
+    font-size: 14px;
   }
 
   .slider-content-holder {
@@ -4194,6 +4257,13 @@ body {
     margin-left: -25%;
   }
 
+  .nav-link {
+    font-size: 14px;
+  }
+  .button {
+    font-size: 14px;
+  }
+
   .natureinspiredvilla-sub-container-content-holder {
     margin-top: -4rem;
   }
@@ -4205,7 +4275,7 @@ body {
     /* or a specific value like 900px */
   }
 
-  .nav-menu{
+  .nav-menu {
     background: rgba(255, 255, 255, 0.274) !important;
   }
 }
@@ -4455,6 +4525,17 @@ input:-moz-autofill:active {
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+@media (min-width: 1391px) and (max-width: 1500px) {
+  .and-this-is-dropdown-floor-plan,
+  .mobile-section-dropdown {
+    width: 150px !important;
+  }
+
+  .button-in-slider-element-holder{
+    right: 18%;
+  }
+}
+
 @media (min-width: 1920px) and (max-width: 2560px) {
   .floor-plan-container-holder {
     max-width: 1560px;
@@ -4488,6 +4569,10 @@ input:-moz-autofill:active {
   .naturallybuiltarea-text-holder-top,
   .naturallybuiltarea-text-holder-bottom {
     margin-top: 8rem;
+  }
+
+  .button-in-slider-element-holder{
+    right: 15%;
   }
 
   .laptop {
