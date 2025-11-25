@@ -26,7 +26,7 @@ function BuildVillas() {
         spaces that are kinder to the planet and smarter for you. Every villa is
         powered by the sun, cooled by interlocking mud bricks, and certified by
         the world’s most trusted green bodies. Less cement, less carbon, more
-        soul. It’s architecture with a conscience—and comfort that lasts for
+        soul. It’s architecture with a conscience and comfort that lasts for
         generations.
       </ScrollReveal>
       <div className="build-villas-line-content-holder">
@@ -48,7 +48,7 @@ function BuildVillas() {
           <img src="/assets/Zero Guilt. Pure Living..gif" alt="" />
           <h5>Zero Guilt. Pure Living.</h5>
           <p>
-            Carbon Neutral with an Ultra-Low <br /> Environmental Footprint
+            Carbon Neutral with an Ultra Low <br /> Environmental Footprint
           </p>
         </div>
       </div>
