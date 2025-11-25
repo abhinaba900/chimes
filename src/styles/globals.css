@@ -3054,7 +3054,7 @@ body {
 
   .nearby-highlights {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 28px;
   }
 
   .social-media-icons-and-image-holder {
