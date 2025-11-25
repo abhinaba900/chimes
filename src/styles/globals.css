@@ -1823,7 +1823,7 @@ body {
 
 .button:hover svg path,
 .audio-button-pause svg path {
-  fill: #2c6c22 !important;
+  fill: black !important;
 }
 
 .default-audio-button {
@@ -2542,10 +2542,6 @@ body {
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
 }
 
-.button svg {
-  fill: black;
-}
-
 .nav-list {
   margin-bottom: -0.2rem;
 }
@@ -2657,7 +2653,7 @@ body {
   }
 
   .footer-section {
-    height: 600px;
+    height: 700px;
   }
   .natureinspiredvilla-sub-container-content-holder {
     grid-template-columns: repeat(1, 1fr);
@@ -2828,7 +2824,7 @@ body {
   .mobile-view-text {
     display: block;
   }
-  .footer-copyright-section p{
+  .footer-copyright-section p {
     font-size: 14px;
   }
 
@@ -3058,7 +3054,7 @@ body {
 
   .nearby-highlights {
     grid-template-columns: 1fr;
-    gap: 0;
+    gap: 24px;
   }
 
   .social-media-icons-and-image-holder {
@@ -3115,9 +3111,34 @@ body {
   }
 
   .footer-brand-name {
-    justify-content: center;
-    bottom: 5.3rem;
+    flex-direction: column;
+    gap: 0;
+    position: inherit;
+    margin-top: -3.5rem;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .footer-brand-name h3 {
+    width: 100%;
+  }
+
+  .content-holder-for-mobile {
+    position: relative;
+    width: 100%;
+    height: 150%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-brand-name span {
+    font-size: 24px;
+    width: 100%;
+    margin-block: 6px;
   }
 
   .logo {
@@ -3142,8 +3163,8 @@ body {
   }
 
   .footer-brand-name {
-    font-size: 50px;
-    line-height: 121px;
+    font-size: 15vw;
+    line-height: 17vw;
   }
 
   .natureinspiredvilla-content-holder-image {
@@ -3214,9 +3235,6 @@ body {
   }
   .nearby-highlights-card {
     gap: 0rem;
-  }
-
-  .nearby-highlights-card {
   }
 
   .naturallybuiltarea-card-content-holder h3 {
@@ -3329,8 +3347,9 @@ body {
   .acreo-of-the-chimes-text-and-image-container
     .text-area-inside-text-and-image-container:hover
     svg
-    path {
-    fill: white;
+    path,
+  .selected-text-in-acreo-of-the-chimes svg path {
+    fill: white !important;
   }
 
   .acreo-of-the-chimes-text-and-image-container
@@ -3344,9 +3363,10 @@ body {
     border-radius: 0;
   }
   .acreo-of-the-chimes-text-and-image-container
-    .text-area-inside-text-and-image-container:hover {
-    padding-inline: 0.5rem;
-    border-radius: 10px;
+    .text-area-inside-text-and-image-container:hover,
+  .selected-text-in-acreo-of-the-chimes {
+    padding-inline: 0.5rem !important;
+    border-radius: 10px !important;
     border-bottom: none;
   }
 
@@ -3838,11 +3858,10 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .footer-brand-name span,.footer-brand-name img{
+  .footer-brand-name span,
+  .footer-brand-name img {
     display: none;
   }
-
-  
 }
 
 @media (min-width: 1200px) and (max-width: 1340px) {
@@ -3927,8 +3946,6 @@ body {
     font-size: 28px;
     letter-spacing: -2px;
   }
-
-  
 
   .footer-brand-name {
     font-size: 5rem;
