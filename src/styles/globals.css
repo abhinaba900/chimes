@@ -4634,6 +4634,12 @@ input:-moz-autofill:active {
   }
 }
 
+@media (min-width: 1740px) and (max-width: 1919px) {
+  .natureinspiredvilla-text-holder-and-content-holder {
+    gap: 5rem ;
+  }
+}
+
 /* Specific Laptop Resolution Fixes */
 @media (min-width: 1025px) and (max-width: 1400px) and (max-height: 800px) {
   .naturallybuiltarea-text-holder-bottom {
