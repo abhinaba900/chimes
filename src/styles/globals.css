@@ -4517,7 +4517,7 @@ input:-moz-autofill:active {
 }
 
 .button-in-slider-element-holder {
-  right: 16rem;
+  display: none !important;
 }
 
 @media (max-width: 1000px) {
