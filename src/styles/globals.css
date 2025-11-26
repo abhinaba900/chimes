@@ -3760,6 +3760,8 @@ body {
     width: 100%;
   }
 
+  
+
   .slider-content-holder {
     margin: auto;
     width: 100%;
@@ -3875,6 +3877,14 @@ body {
   }
   .button {
     font-size: 14px;
+  }
+
+  .and-this-is-dropdown-floor-plan{
+    grid-row: span 2 / span 2 !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
 
   .left-and-right-padding-add {
@@ -4215,9 +4225,16 @@ body {
   }
 
   .clickid-item-holder-in-floor-plan {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
+  .and-this-is-dropdown-floor-plan{
+    grid-row: span 2 / span 2 !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
   .and-this-is-dropdown-floor-plan,
   .mobile-section-dropdown {
     width: 160px !important;
