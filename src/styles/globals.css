@@ -172,8 +172,8 @@ body {
   padding: 12px 20px;
   border-radius: var(--border-radius);
   background: rgba(255, 255, 255, 0.12) !important;
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px); /* ✅ Safari support */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px); /* ✅ Safari support */
 
   font-family: var(--font-family-2);
   font-weight: 400;
@@ -2264,7 +2264,7 @@ body {
   box-shadow: none !important;
   backdrop-filter: none !important;
   border: 0.5px solid rgba(255, 255, 255, 0.2) !important;
-
+  backdrop-filter: blur(16px) !important;
   width: 100% !important;
 }
 
@@ -4281,7 +4281,7 @@ body {
 
   .nav-menu {
     background: rgba(255, 255, 255, 0.12) !important;
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(16px);
   }
 }
 
