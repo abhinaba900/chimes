@@ -2121,7 +2121,7 @@ body {
   color: #15420e;
 }
 
-.desktop-enquire-button{
+.desktop-enquire-button {
   backdrop-filter: blur(10px) !important;
 }
 
@@ -3760,8 +3760,6 @@ body {
     width: 100%;
   }
 
-  
-
   .slider-content-holder {
     margin: auto;
     width: 100%;
@@ -3879,7 +3877,7 @@ body {
     font-size: 14px;
   }
 
-  .and-this-is-dropdown-floor-plan{
+  .and-this-is-dropdown-floor-plan {
     grid-row: span 2 / span 2 !important;
     height: 100% !important;
     display: flex !important;
@@ -4228,7 +4226,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .and-this-is-dropdown-floor-plan{
+  .and-this-is-dropdown-floor-plan {
     grid-row: span 2 / span 2 !important;
     height: 100% !important;
     display: flex !important;
@@ -4626,7 +4624,13 @@ input:-moz-autofill:active {
   }
 
   .natureinspiredvilla-text-holder-and-content-holder {
-    gap: 15rem;
+    gap: 7rem;
+  }
+}
+
+@media (min-width: 2200px) {
+  .natureinspiredvilla-text-holder-and-content-holder {
+    gap: 16rem;
   }
 }
 
