@@ -2121,6 +2121,10 @@ body {
   color: #15420e;
 }
 
+.desktop-enquire-button{
+  backdrop-filter: blur(10px) !important;
+}
+
 .connected-to-what-matters-text-button-and-text-holder h3 span {
   font-weight: 600;
   font-style: italic;
