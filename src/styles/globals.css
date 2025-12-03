@@ -177,8 +177,8 @@ body {
   background: rgba(255, 255, 255, 0.18) !important;
 
   /* 🔥 Backdrop filter (single declaration, minifier-safe) */
-  backdrop-filter: blur(12px) saturate(120%) !important;
   -webkit-backdrop-filter: blur(12px) saturate(120%) !important;
+  backdrop-filter: blur(12px) !important;
 
   border: 1px solid rgba(255, 255, 255, 0.25);
 
