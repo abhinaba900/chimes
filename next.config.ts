@@ -32,10 +32,10 @@ const nextConfig: NextConfig = {
   /* 3. Experimental & Performance Features */
   experimental: {
     // ✅ Next.js 15: React Compiler reduces re-renders automatically (Huge speed boost)
-    reactCompiler: false,
+    reactCompiler: true,
 
     // ✅ Force SWC to handle heavy lifting faster than Babel
-    forceSwcTransforms: false,
+    forceSwcTransforms: true,
 
     // ✅ Optimization: Automatically tree-shakes these libraries
     optimizePackageImports: [
@@ -76,7 +76,6 @@ const nextConfig: NextConfig = {
 
   /* 6. Webpack Config */
   webpack: (config) => {
-    
     return config;
   },
 };
