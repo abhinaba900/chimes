@@ -174,6 +174,10 @@ body {
   background: rgba(255, 255, 255, 0.12) !important;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px); /* ✅ Safari support */
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  box-shadow: none !important;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 
   font-family: var(--font-family-2);
   font-weight: 400;
@@ -1012,7 +1016,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
 }
 
 .natureinspiredvilla .background-image {
@@ -4268,7 +4271,7 @@ body {
     left: 0px;
   }
 
-  .natureinspiredvilla-content-holder-image{
+  .natureinspiredvilla-content-holder-image {
     height: 500px;
   }
 
@@ -4641,7 +4644,7 @@ input:-moz-autofill:active {
 
 @media (min-width: 1740px) and (max-width: 1919px) {
   .natureinspiredvilla-text-holder-and-content-holder {
-    gap: 5rem ;
+    gap: 5rem;
   }
 }
 
