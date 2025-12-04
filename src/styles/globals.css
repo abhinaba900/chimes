@@ -2581,8 +2581,7 @@ body {
   padding-right: 8rem;
 }
 
-.left-and-right-padding-in-content,
-.build-villas-content-holder p {
+.left-and-right-padding-in-content {
   padding-left: 4rem !important;
   padding-right: 4rem !important;
 }
@@ -4628,6 +4627,10 @@ input:-moz-autofill:active {
   }
 
   .left-and-right-padding-in-content,
+  .build-villas-content-holder p {
+    padding-left: 0rem !important;
+    padding-right: 0rem !important;
+  }
   .build-villas-content-holder p {
     padding-left: 0rem !important;
     padding-right: 0rem !important;
