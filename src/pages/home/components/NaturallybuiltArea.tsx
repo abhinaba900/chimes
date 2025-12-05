@@ -101,7 +101,7 @@ function NaturallybuiltArea() {
                   These villas breathe with nature, thanks to mud interlocking
                   bricks made with 85% natural earth. This passive design keeps
                   indoor temperatures regulated cooler in summer, warmer in
-                  winter. The result? Lesser dependence on artificial cooling,
+                  winter. Lesser dependence on artificial cooling,
                   and a home that&apos;s always in sync with the seasons.
                 </p>
               </section>

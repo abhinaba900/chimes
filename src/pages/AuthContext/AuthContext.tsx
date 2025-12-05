@@ -3,8 +3,10 @@
 const AuthContext = createContext<any>(null);
 function AuthContextProvider({ children }: any) {
   const [selectedNav, setSelectedNav] = useState<String>("");
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
   return (
-    <AuthContext.Provider value={{ selectedNav, setSelectedNav }}>
+    <AuthContext.Provider value={{ selectedNav, setSelectedNav , isOpen, setIsOpen }}>
       {children}
     </AuthContext.Provider>
   );

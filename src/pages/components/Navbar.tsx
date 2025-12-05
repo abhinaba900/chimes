@@ -137,7 +137,8 @@ export default function Navbar() {
     { name: "Nearby", id: "nearby" },
   ];
 
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const { isOpen, setIsOpen } = useAuthContext();
+
   const [isScrollingDown, setIsScrollingDown] = useState(false);
 
   useEffect(() => {

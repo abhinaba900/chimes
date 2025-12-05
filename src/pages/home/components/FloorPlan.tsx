@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 import GlassDropdown from "../hooks/CustomDropdown";
 import { AnimatePresence, motion } from "framer-motion";
 import GlassSurface from "@/ReactBits/GlassSurface/GlassSurface";
+import { useAuthContext } from "@/pages/AuthContext/AuthContext";
 const directions = ["East", "West"];
 const isInMobileView = () => {
   if (typeof window !== "undefined") {
@@ -96,6 +97,8 @@ function FloorPlan({
   defaultActiveFloor = "ground-floor",
 }) {
   const [clickedValue, setClickedValue] = React.useState(defaultActiveFloor);
+
+  const { isOpen, setIsOpen } = useAuthContext();
 
   // Find the active floor data
   const activeFloor =
@@ -199,7 +202,10 @@ function FloorPlan({
 
             {showDownloadButton && (
               <div className="text-center mt-4">
-                <button className="download-button" onClick={onDownloadClick}>
+                <button
+                  className="download-button"
+                  onClick={() => setIsOpen(true)}
+                >
                   {buttonText}
                 </button>
               </div>
