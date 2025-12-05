@@ -141,37 +141,32 @@ export default function Navbar() {
 
   const [isScrollingDown, setIsScrollingDown] = useState(false);
 
+  const [lastScrollY, setLastScrollY] = useState(0);
+
   useEffect(() => {
-    let lastScrollY = window.scrollY;
+    const handleScroll = () => {
+      const currentScroll = window.scrollY;
 
-    const handleScrollDirection = () => {
-      const currentScrollY = window.scrollY;
-
-      console.log(currentScrollY, "currentScrollY");
-      
-
-      if (lastScrollY === 0) {
-        setIsScrollingDown(true);
-
+      // 👉 If fully at top, always hide
+      if (currentScroll === 0) {
+        setIsScrollingDown(false); // nav-hide
+        setLastScrollY(0);
+        return;
       }
 
-      if (currentScrollY > lastScrollY) {
-        // User is scrolling DOWN
-        setIsScrollingDown(true);
+      // 👉 Detect scroll direction
+      if (currentScroll > lastScrollY) {
+        setIsScrollingDown(true); // scrolling UP → show
       } else {
-        // User is scrolling UP
-        setIsScrollingDown(false);
+        setIsScrollingDown(false); // scrolling DOWN → hide
       }
 
-      lastScrollY = currentScrollY;
+      setLastScrollY(currentScroll);
     };
 
-    window.addEventListener("scroll", handleScrollDirection);
-
-    return () => {
-      window.removeEventListener("scroll", handleScrollDirection);
-    };
-  }, []);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   return (
     <header
