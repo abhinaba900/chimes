@@ -185,7 +185,7 @@ export default function Navbar() {
       }}
       ref={navbarRef}
     >
-      <div className=" left-and-right-padding-add ">
+      <div className=" left-and-right-padding-add  max-w-[1536px] w-full mx-auto">
         <motion.nav
           className="navbar"
           initial="hidden"
