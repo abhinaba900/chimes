@@ -2525,6 +2525,11 @@ body {
   vertical-align: middle;
 }
 
+.button:hover{
+  background-color: transparent !important;
+
+}
+
 .button-padding-remove {
   padding-block: 0.7rem;
   padding-inline: 0.7rem;
@@ -2777,7 +2782,8 @@ body {
     max-width: 80%;
   }
 
-  .button {
+  .button ,
+  .button:hover {
     background: #2c6c22 !important;
   }
 
@@ -4220,7 +4226,7 @@ body {
     padding-right: 0 !important;
   }
 
-   .button {
+   .button ,.button:hover{
     background: #2c6c22 !important;
   }
 
