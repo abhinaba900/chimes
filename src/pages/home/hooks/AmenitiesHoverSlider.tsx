@@ -8,57 +8,67 @@ interface AmenitiesItemProps {
 const AmenitiesHoverSlider = () => {
   const amenities = [
     {
-      text: "Indoor Badminton Court",
+      text: "Squash Court",
       image:
         "assets/freepik__candid-photography-with-natural-textures-and-highl__31606.webp",
     },
     {
       text: "Gym",
-      image:
-        "assets/freepik__candid-photography-with-natural-textures-and-highl__31602.webp",
+      image: "assets/Gym.webp",
     },
     {
-      text: "Swimming Pool",
-      image:
-        "assets/freepik__candid-photography-with-natural-textures-and-highl__31601.webp",
-    },
-    {
-      text: "Party Hall",
-      image:
-        "assets/freepik__candid-photography-with-natural-textures-and-highl__31603.webp",
-    },
-    {
-      text: "Kids",
+      text: "kids pool",
       image:
         "assets/freepik__candid-photography-with-natural-textures-and-highl__31601.webp",
     },
     {
-      text: "Play Area",
+      text: "Multipurpose hall",
+      image: "assets/Multipurpose-hall.webp",
+    },
+    {
+      text: "Outdoor gym",
+      image: "assets/outdoor-gym.webp",
+    },
+    {
+      text: "Multipurpose court",
       image:
         "assets/freepik__candid-photography-with-natural-textures-and-highl__31600.webp",
     },
     {
-      text: "Clubhouse",
-      image:
-        "assets/freepik__candid-photography-with-natural-textures-and-highl__31605.webp",
-    },
-    {
-      text: "Half Basketball Court",
+      text: "Billiards",
       image:
         "assets/freepik__candid-photography-with-natural-textures-and-highl__31604.webp",
     },
     {
-      text: "Senior Citizen Park",
-      image: "assets/freepik__candid-photography-with-natural-textures-and-highl__31601.webp",
+      text: "Cafeteria",
+      image:
+        "assets/freepik__candid-photography-with-natural-textures-and-highl__31603.webp",
     },
     {
-      text: "Multipurpose Court",
-      image: "assets/freepik__candid-photography-with-natural-textures-and-highl__31605.webp",
+      text: "Table Tennis",
+      image:
+        "assets/freepik__candid-photography-with-natural-textures-and-highl__31605.webp",
+    },
+    {
+      text: "Foosball",
+      image: "assets/Foosball.webp",
+    },
+    {
+      text: "Steam & Sauna",
+      image: "assets/Steam & Sauna.webp",
+    },
+    {
+      text: "Walking track",
+      image: "assets/Walking track.webp",
+    },
+    {
+      text: "work pods",
+      image: "assets/work pods.webp",
     },
   ];
 
   const [hoveredItem, setHoveredItem] = useState<AmenitiesItemProps | null>({
-    text: "Indoor Badminton Court",
+    text: "Squash Court",
     image:
       "assets/freepik__candid-photography-with-natural-textures-and-highl__31606.jpeg",
   });
@@ -102,7 +112,7 @@ const AmenitiesHoverSlider = () => {
                     onMouseEnter={() => setHoveredItem(amenity)}
                     onMouseLeave={() =>
                       setHoveredItem({
-                        text: "Indoor Badminton Court",
+                        text: "Squash Court",
                         image:
                           "assets/freepik__candid-photography-with-natural-textures-and-highl__31606.jpeg",
                       })
@@ -139,7 +149,7 @@ const AmenitiesHoverSlider = () => {
             <img
               src={hoveredItem?.image}
               alt="Amenity"
-              className="max-w-[450px] md:max-w-[500px] w-full h-full object-contain transition-opacity duration-500 ease-in-out rounded-[32px]"
+              className="max-w-[450px] md:max-w-[500px] w-full h-[500px] object-cover transition-opacity duration-500 ease-in-out rounded-[32px]"
             />
           </div>
         )}

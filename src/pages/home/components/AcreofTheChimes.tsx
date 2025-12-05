@@ -37,9 +37,10 @@ function AcreofTheChimes() {
   return (
     <div className=" acreo-of-the-chimes-section ">
       <img
-        src="assets/drawing-tree-with-green-yellow-leaves copy 1.svg"
+        src="assets/drawing-tree-with-green-yellow-leaves copy 1.webp"
         id="acreo-of-the-chimes-tree-logo-image"
         alt=""
+        className="w-[8.125rem]"
       />
       <p className="mb-[2rem] md:mb-[5rem]">
         {isMobile ? (

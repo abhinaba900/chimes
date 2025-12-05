@@ -10,25 +10,21 @@ const slides = [
   {
     image:
       "assets/Ecumene_Chimes_(2773_N)_Cam 02_Aerial Day_Ver 02_05-07-2025.webp",
-    title: "Main Villa",
-    subtitle: "Where elegance meets sustainability",
+    title: "Rear Aerial Layout View",
   },
   {
     image:
       "assets/Ecumene_Chimes_(2773_N)_Cam 03_East Villa Day_Ver 03_03-07-2025.webp",
-    title: "Garden Escape",
-    subtitle: "A tranquil garden retreat",
+    title: "East-Facing Villa",
   },
   {
     image:
       "assets/Ecumene_Chimes_(2773_N)_Cam 04_West Villa Day_Ver 04_03-07-2025.webp",
-    title: "Luxury Suite",
-    subtitle: "Experience pure comfort",
+    title: "West-Facing Villa",
   },
   {
     image: "assets/Ecumene_Chimes_(2773_N)_Cam 05_Entry_Ver 04_03-07-2025.webp",
-    title: "Infinity Pool",
-    subtitle: "Refresh in our crystal waters",
+    title: "Main Entrance",
   },
   // {
   //   image:
@@ -39,31 +35,26 @@ const slides = [
   {
     image:
       "assets/Ecumene_Chimes_(2773_N)_Cam 07_Street Dusk_Ver 03_03-07-2025.webp",
-    title: "Main Villa",
-    subtitle: "Where elegance meets sustainability",
+    title: "12M Road Night View",
   },
   {
     image: "assets/Ecumene_Chimes_(2773_N)_Cam 09_Park_Ver 02_03-07-2025.webp",
-    title: "Garden Escape",
-    subtitle: "A tranquil garden retreat",
+    title: "East-Facing Villa",
   },
   {
     image:
       "assets/Ecumene_Chimes_(2773_N)_Cam 10_Clubhouse Day_Ver 02_16-07-2025.webp",
-    title: "Luxury Suite",
-    subtitle: "Experience pure comfort",
+    title: "Club House",
   },
   {
     image:
       "assets/Ecumene_Chimes_(2773_N)_Cam 10_Pool Dusk_Ver 02_03-07-2025.webp",
-    title: "Infinity Pool",
-    subtitle: "Refresh in our crystal waters",
+    title: "Swimming Pool",
   },
   {
     image:
       "assets/Ecumene_Chimes_(2773_N)_Cam 13_Master Bedroom_Ver 01_25-07-2025.webp",
-    title: "Gourmet Dining",
-    subtitle: "Culinary excellence awaits",
+    title: "Bedroom",
   },
 ];
 
@@ -166,7 +157,6 @@ function ElevatingEveryMomentSlider() {
                   <div className="flex items-center space-x-4">
                     <div>
                       <h3 className="font-semibold text-xl">{slide.title}</h3>
-                      <p className="text-sm opacity-90">{slide.subtitle}</p>
                     </div>
                   </div>
                 </div>

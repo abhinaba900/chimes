@@ -89,7 +89,7 @@ function NaturallybuiltArea() {
           >
             <div className="naturallybuiltarea-card-content-holder left-and-right-padding-in-content">
               <img
-                src="assets/Eco-friendly villa.jpeg"
+                src="assets/Eco-friendly villa.webp"
                 alt="Eco-friendly villa"
               />
               <section className="">

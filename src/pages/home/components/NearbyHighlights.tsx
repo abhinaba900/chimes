@@ -7,7 +7,7 @@
         {/* Mobile Image */}
         <img
           className="max-w-[100px] max-h-[100px] m-auto block md:hidden"
-          src="assets/nearby-highlights-image-1.gif"
+          src="assets/nearby-highlights-image-1.webp"
           alt=""
         />
 
@@ -16,7 +16,7 @@
         {/* Desktop Image */}
         <img
           className="max-w-[100px] max-h-[100px] m-auto hidden md:block"
-          src="assets/nearby-highlights-image-1.gif"
+          src="assets/nearby-highlights-image-1.webp"
           alt=""
         />
 
@@ -34,7 +34,7 @@
         {/* Mobile Image */}
         <img
           className="max-w-[100px] max-h-[100px] m-auto block md:hidden"
-          src="assets/nearby-highlights-image-2.gif"
+          src="assets/nearby-highlights-image-2.webp"
           alt=""
         />
 
@@ -43,7 +43,7 @@
         {/* Desktop Image */}
         <img
           className="max-w-[100px] max-h-[100px] m-auto hidden md:block"
-          src="assets/nearby-highlights-image-2.gif"
+          src="assets/nearby-highlights-image-2.webp"
           alt=""
         />
 
@@ -60,7 +60,7 @@
         {/* Mobile Image */}
         <img
           className="max-w-[100px] max-h-[100px] m-auto block md:hidden"
-          src="assets/nearby-highlights-image-3.gif"
+          src="assets/nearby-highlights-image-3.webp"
           alt=""
         />
 
@@ -69,7 +69,7 @@
         {/* Desktop Image */}
         <img
           className="max-w-[100px] max-h-[100px] m-auto hidden md:block"
-          src="assets/nearby-highlights-image-3.gif"
+          src="assets/nearby-highlights-image-3.webp"
           alt=""
         />
 
