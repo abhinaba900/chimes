@@ -129,7 +129,7 @@ const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
             <div className="popup-dilog-holder">
               <div>
                 <img
-                  src="assets/popup left image.png"
+                  src="assets/popup left image.webp"
                   alt="popup left image"
                   className="popup-dilog-left-image"
                 />
@@ -141,7 +141,7 @@ const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                   className="popup-dilog-right-image"
                 />
 
-                <h4>Let's Begin Your Journey Home</h4>
+                <h4>Start your journey to a <br /> thoughtful home</h4>
                 <p>
                   Tell us a little about yourself, and we'll guide you to a home
                   that blends mindful design, natural comfort, and modern

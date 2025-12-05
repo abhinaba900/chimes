@@ -129,7 +129,7 @@ const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
             <div className="popup-dilog-holder">
               <div>
                 <img
-                  src="assets/popup left image.png"
+                  src="assets/popup left image.webp"
                   alt="popup left image"
                   className="popup-dilog-left-image"
                 />

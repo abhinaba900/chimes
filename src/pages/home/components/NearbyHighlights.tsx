@@ -23,7 +23,7 @@
 
         <p>
           A global tech powerhouse and innovation hub, keeping you connected to
-          Bengaluru’s thriving IT ecosystem
+          Bengaluru’s <br /> thriving IT ecosystem
         </p>
 
         <h4>15 Minutes Away</h4>
