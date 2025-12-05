@@ -207,7 +207,7 @@ body {
   transition: all var(--transition-medium);
   display: flex;
   align-items: center;
-  gap: 5px; 
+  gap: 5px;
   font-family: var(--font-family-2);
   background: rgba(242, 238, 238, 0.12);
 
@@ -1986,6 +1986,13 @@ body {
   border: 1px solid #358927;
 }
 
+.popup-content-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
 .popup-content-holder h3 {
   font-family: var(--font-family-sequel-book);
   font-weight: 600;
@@ -1998,11 +2005,6 @@ body {
   padding-bottom: 8px;
 
   cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 0.5rem;
 }
 
 .popup-content-holder p {
