@@ -17,20 +17,20 @@ const AmenitiesHoverSlider = () => {
       image: "assets/Gym.webp",
     },
     {
-      text: "kids pool",
+      text: "Kids Pool",
       image:
         "assets/freepik__candid-photography-with-natural-textures-and-highl__31601.webp",
     },
     {
-      text: "Multipurpose hall",
+      text: "Multipurpose Hall",
       image: "assets/Multipurpose-hall.webp",
     },
     {
-      text: "Outdoor gym",
+      text: "Outdoor Gym",
       image: "assets/outdoor-gym.webp",
     },
     {
-      text: "Multipurpose court",
+      text: "Multipurpose Court",
       image:
         "assets/freepik__candid-photography-with-natural-textures-and-highl__31600.webp",
     },
@@ -58,11 +58,11 @@ const AmenitiesHoverSlider = () => {
       image: "assets/Steam & Sauna.webp",
     },
     {
-      text: "Walking track",
+      text: "Walking Track",
       image: "assets/Walking track.webp",
     },
     {
-      text: "Work pods",
+      text: "Work Pods",
       image: "assets/work pods.webp",
     },
   ];
