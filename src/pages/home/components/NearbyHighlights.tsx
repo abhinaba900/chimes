@@ -16,7 +16,7 @@
         {/* Desktop Image */}
 
         <img
-          className="max-w-[100px] max-h-[100px] m-auto hidden md:block"
+          className="max-w-[150px] max-h-[150px] m-auto hidden md:block"
           src="assets/nearby-highlights-image-3.webp"
           alt=""
         />
@@ -42,7 +42,7 @@
 
         {/* Desktop Image */}
         <img
-          className="max-w-[100px] max-h-[100px] m-auto hidden md:block"
+          className="max-w-[150px] max-h-[150px] m-auto hidden md:block"
           src="assets/nearby-highlights-image-2.webp"
           alt=""
         />
@@ -66,7 +66,7 @@
 
         {/* Desktop Image */}
         <img
-          className="max-w-[100px] max-h-[100px] m-auto hidden md:block"
+          className="max-w-[150px] max-h-[150px] m-auto hidden md:block"
           src="assets/nearby-highlights-image-1.webp"
           alt=""
         />

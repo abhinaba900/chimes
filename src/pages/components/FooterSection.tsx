@@ -4,9 +4,7 @@ function FooterSection() {
   const phoneNumber = "0802345558595";
   const emailAddress = "support@thechimes.in";
   const locationAddress = "Chikkatirupati Rd, Sarjapura, Bengaluru - 562125";
-  const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-    locationAddress
-  )}`;
+  const googleMapsUrl = `https://maps.app.goo.gl/UYCxebpZkefztAgLA`;
 
   return (
     <footer className="footer-section left-and-right-padding-in-content">
@@ -128,8 +126,12 @@ function FooterSection() {
             </Link>
           </div>
           <div className="footer-brand-name">
-            <h3>THE CHIMES</h3>
-            <span className="">BY</span>
+            <img
+              src="assets/Chimes-footer-logo-white.webp"
+              className="h-[108px] "
+              alt="Raise infra logo in white"
+            />
+            <span className="">by</span>
             <img
               src="assets/Raise infra logo in white.webp"
               className="h-[58px] "

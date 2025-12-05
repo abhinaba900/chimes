@@ -62,7 +62,7 @@ const AmenitiesHoverSlider = () => {
       image: "assets/Walking track.webp",
     },
     {
-      text: "work pods",
+      text: "Work pods",
       image: "assets/work pods.webp",
     },
   ];
