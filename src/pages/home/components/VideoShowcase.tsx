@@ -28,22 +28,12 @@ const VideoShowcase: React.FC<VideoShowcaseProps> = ({
       >
         <ReactPlayer
           src={videoUrl}
-          url={videoUrl}
           width="100%"
           height="100%"
-          playing={isPlaying}
-          playsInline
+          light={false}
           controls
+          playing={isPlaying}
           onEnded={() => setIsPlaying(false)}
-          config={{
-            file: {
-              attributes: {
-                controlsList: "nodownload",
-                preload: "metadata",
-                playsInline: true,
-              },
-            },
-          }}
         />
       </div>
 
