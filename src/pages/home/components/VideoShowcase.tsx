@@ -30,9 +30,10 @@ const VideoShowcase: React.FC<VideoShowcaseProps> = ({
           src={videoUrl}
           width="100%"
           height="100%"
-          light={false}
           controls
           playing={isPlaying}
+          muted={!isPlaying} // Required for Android autoplay
+          playsinline // Required for mobile inline playback
           onEnded={() => setIsPlaying(false)}
         />
       </div>
