@@ -42,7 +42,7 @@
 
         {/* Desktop Image */}
         <img
-          className="max-w-[150px] max-h-[150px] m-auto hidden md:block"
+          className="max-w-[150px] max-h-[150px] transform scale-150 m-auto hidden md:block"
           src="assets/nearby-highlights-image-2.webp"
           alt=""
         />
