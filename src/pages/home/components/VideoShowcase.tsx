@@ -35,6 +35,15 @@ const VideoShowcase: React.FC<VideoShowcaseProps> = ({
           playsInline
           controls
           onEnded={() => setIsPlaying(false)}
+          config={{
+            file: {
+              attributes: {
+                controlsList: "nodownload",
+                preload: "metadata",
+                playsInline: true,
+              },
+            },
+          }}
         />
       </div>
 
