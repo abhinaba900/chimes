@@ -43,8 +43,7 @@ const AudioPlayer = () => {
 
   // Logic: If playing OR if we haven't touched it yet (default) -> Black.
   // Otherwise (Paused and interacted) -> Transparent.
-  const backgroundClass =
-    isPlaying || !hasInteracted ? "active-link" : "audio-button-pause";
+ 
 
   return (
     <>
@@ -59,7 +58,9 @@ const AudioPlayer = () => {
           className={`
             cursor-pointer mr-3 md:mr-0 relative z-2 button button-padding-remove music-icon-in-nav 
             transition-colors duration-300 ease-in-out
-            ${backgroundClass}
+            ${
+              isPlaying || !hasInteracted ? "active-link" : "audio-button-pause"
+            }
           `}
         >
           {isPlaying || !hasInteracted ? (

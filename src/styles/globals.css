@@ -1822,7 +1822,9 @@ body {
   }
 }
 
-.button:hover,
+.button:hover {
+  background: transparent;
+}
 .audio-button-pause {
   background: transparent !important;
 }
@@ -2644,6 +2646,13 @@ body {
     margin-block: 2rem;
   }
 
+  .footer-brand-name img:first-child {
+    height: 60px;
+    display: block;
+    width: 100%;
+    margin-inline: auto;
+  }
+
   .s-card {
     height: fit-content;
     transform: none !important;
@@ -2766,6 +2775,44 @@ body {
 
   .natureinspiredvilla-text-holder-and-content-holder h3 {
     max-width: 80%;
+  }
+
+  .button {
+    background: #2c6c22 !important;
+  }
+
+  /* Remove the hover animation from the .button class */
+  .button:hover {
+    transform: none !important;
+    box-shadow: none !important;
+    transition: none !important;
+  }
+
+  /* Remove the icon animation inside button on hover */
+  .button:hover .icon {
+    transform: none !important;
+    transition: none !important;
+  }
+
+  /* Remove the hover animation from specific button states */
+  .button:hover .active-link {
+    background: #2c6c22 !important;
+  }
+  .button .active-link {
+    background: #2c6c22 !important;
+  }
+
+  /* Remove the hover animation for audio button pause state */
+  .button:hover .audio-button-pause {
+    background: transparent !important;
+  }
+  .button .audio-button-pause {
+    background: transparent !important;
+  }
+
+  .button:hover svg path,
+  .audio-button-pause svg path {
+    fill: white !important;
   }
 
   .natureinspiredvilla-content-holder-text p {
@@ -3420,7 +3467,6 @@ body {
   }
 
   .button {
-    background: #2c6c22;
     width: 100%;
   }
 
@@ -4027,9 +4073,13 @@ body {
     width: 100%;
   }
 
-  .footer-brand-name img {
+  .footer-brand-name img:last-child {
     width: 300px !important;
     height: 28px;
+  }
+  .footer-brand-name img:first-child {
+    width: 300px !important;
+    height: 50px;
   }
 
   .footer-left-side-image {
@@ -4169,6 +4219,46 @@ body {
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
+
+   .button {
+    background: #2c6c22 !important;
+  }
+
+  /* Remove the hover animation from the .button class */
+  .button:hover {
+    transform: none !important;
+    box-shadow: none !important;
+    transition: none !important;
+  }
+
+  /* Remove the icon animation inside button on hover */
+  .button:hover .icon {
+    transform: none !important;
+    transition: none !important;
+  }
+
+  /* Remove the hover animation from specific button states */
+  .button:hover .active-link {
+    background: #2c6c22 !important;
+  }
+  .button .active-link {
+    background: #2c6c22 !important;
+  }
+
+  /* Remove the hover animation for audio button pause state */
+  .button:hover .audio-button-pause {
+    background: transparent !important;
+  }
+  .button .audio-button-pause {
+    background: transparent !important;
+  }
+
+  .button:hover svg path,
+  .audio-button-pause svg path {
+    fill: white !important;
+  }
+
+  
 }
 
 @media (min-width: 1341px) and (max-width: 1390px) {
