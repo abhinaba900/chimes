@@ -28,9 +28,11 @@ const VideoShowcase: React.FC<VideoShowcaseProps> = ({
       >
         <ReactPlayer
           src={videoUrl}
+          url={videoUrl}
           width="100%"
           height="100%"
           playing={isPlaying}
+          playsInline
           controls
           onEnded={() => setIsPlaying(false)}
         />
