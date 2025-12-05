@@ -54,7 +54,7 @@ function HomeSection() {
       <WhatMatters />
       <NearbyHighlights />
       {/* <ConnectedtoWhatMatters /> */}
-      <LaptopAnimation />
+      {/* <LaptopAnimation /> */}
     </div>
   );
 }

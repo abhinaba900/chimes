@@ -1,8 +1,6 @@
 ﻿import React, { useState } from "react";
 import Slider from "react-slick";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import AmenitiesHoverSlider from "../hooks/AmenitiesHoverSlider";
 import SendEnquiryPopup from "@/pages/components/SendEnquiryPopupcopy";
 
@@ -115,7 +113,7 @@ function ElevatingEveryMomentSlider() {
                 <img
                   src={slide.image}
                   alt={slide.title}
-                  className="w-full h-[248px] sm:h-[400px] rounded-[16px] md:rounded-[32px] md:h-[600px] lg:h-[600px] xl:h-[600px] object-cover transform transition-transform duration-500 group-hover:scale-105 custom-image-large"
+                  className="w-full h-[248px] sm:h-[400px] rounded-[16px] md:rounded-[32px] overflow-hidden md:h-[600px] lg:h-[600px] xl:h-[600px] object-cover transform transition-transform duration-500 group-hover:scale-105 custom-image-large"
                   loading="lazy"
                 />
 
@@ -125,11 +123,10 @@ function ElevatingEveryMomentSlider() {
                   viewBox="0 0 1034 307"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="absolute bottom-0 left-0 w-full h-[50%] object-cover slider-background-svg"
+                  className="absolute -bottom-5 left-0 w-full h-[50%] object-cover slider-background-svg"
                   preserveAspectRatio="none"
                   style={{
                     transform: "translateY(0)",
-                    borderRadius: "0 0 32px 32px",
                   }}
                 >
                   <path
@@ -153,7 +150,7 @@ function ElevatingEveryMomentSlider() {
                   </defs>
                 </svg>
 
-                <div className="absolute bottom-5 left-5 right-5 text-white rounded-xl px-4 py-4 elevating-every-moment-slider-image-text slider-content-holder-in-gallery">
+                <div className="absolute bottom-10 left-5 right-5 text-white rounded-xl px-4 py-4 elevating-every-moment-slider-image-text slider-content-holder-in-gallery">
                   <div className="flex items-center space-x-4">
                     <div>
                       <h3 className="font-semibold text-xl">{slide.title}</h3>

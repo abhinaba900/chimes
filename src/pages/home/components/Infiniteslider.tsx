@@ -8,7 +8,7 @@ function Infiniteslider() {
       description: "Sq.Ft Villas Starting",
     },
     {
-      title: "6.4 Acres",
+      title: "6.04 Acres",
       description: "Of Green Living",
     },
     {

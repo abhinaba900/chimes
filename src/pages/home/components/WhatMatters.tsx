@@ -68,7 +68,7 @@ export default function WhatMatters() {
         style="padding:6px; cursor:pointer;"
         onclick="window.open('https://maps.app.goo.gl/UYCxebpZkefztAgLA', '_blank')"
       >
-        <h3>SWIFT CITY</h3>
+        <img src="/assets/Chimes green logo.webp"  height=40 class="h-[30px] w-fit  mx-auto block object-contain" alt="marker" />
         <p>${address}</p>
         
       </div>
