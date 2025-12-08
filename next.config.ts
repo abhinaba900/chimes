@@ -1,7 +1,3 @@
-
-
-
-
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
@@ -32,7 +28,6 @@ const nextConfig: NextConfig = {
   /* 3. Experimental & Performance Features */
   experimental: {
     // ✅ Next.js 15: React Compiler reduces re-renders automatically (Huge speed boost)
-    reactCompiler: false,
 
     // ✅ Force SWC to handle heavy lifting faster than Babel
     forceSwcTransforms: true,
@@ -67,9 +62,7 @@ const nextConfig: NextConfig = {
   },
 
   /* 5. Build Options (Your preferences) */
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+
   typescript: {
     ignoreBuildErrors: true,
   },
