@@ -1,12 +1,12 @@
 ﻿import Slider from "react-slick";
-import React from "react";
+import React, { useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import PropTypes from "prop-types";
 import GlassDropdown from "../hooks/CustomDropdown";
 import { AnimatePresence, motion } from "framer-motion";
 import GlassSurface from "@/ReactBits/GlassSurface/GlassSurface";
-import { useAuthContext } from "@/pages/AuthContext/AuthContext";
+import SendEnquiryPopup from "@/pages/components/SendEnquiryPopupcopy";
 const directions = ["East", "West"];
 const isInMobileView = () => {
   if (typeof window !== "undefined") {
@@ -98,7 +98,7 @@ function FloorPlan({
 }) {
   const [clickedValue, setClickedValue] = React.useState(defaultActiveFloor);
 
-  const { isOpen, setIsOpen } = useAuthContext();
+  const [isOpen, setIsOpen] = useState(false);
 
   // Find the active floor data
   const activeFloor =
@@ -270,6 +270,7 @@ function FloorPlan({
             ))}
           </div>
         </section>
+        <SendEnquiryPopup open={isOpen} setOpen={setIsOpen} />
       </div>
     </div>
   );

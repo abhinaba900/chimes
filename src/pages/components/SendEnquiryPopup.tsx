@@ -141,7 +141,9 @@ const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                   className="popup-dilog-right-image"
                 />
 
-                <h4>Start your journey to a <br /> thoughtful home</h4>
+                <h4>
+                  Start your journey to a <br /> thoughtful home
+                </h4>
                 <p>
                   Tell us a little about yourself, and we'll guide you to a home
                   that blends mindful design, natural comfort, and modern
@@ -221,6 +223,9 @@ const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 
                   <button type="submit" disabled={!otpSent}>
                     Send Enquiry
+                  </button>
+                  <button type="button" disabled={!otpSent} className="reach-us-in-popup-section">
+                    Or reach out to us at: <span>9731744266</span>
                   </button>
                 </form>
               </div>

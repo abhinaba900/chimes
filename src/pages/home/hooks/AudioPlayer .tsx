@@ -1,21 +1,42 @@
 ﻿import { useState, useRef, useEffect } from "react";
 import GlassSurface from "@/ReactBits/GlassSurface/GlassSurface";
+import { useAuthContext } from "@/pages/AuthContext/AuthContext";
 
 const AudioPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [hasInteracted, setHasInteracted] = useState(false); // New state to handle "Default Black"
-  const audioRef = useRef<HTMLAudioElement>(null);
+  const [hasInteracted, setHasInteracted] = useState(false);
+  const audioRef = useAuthContext().audioRef;
 
   const audioSrc = "assets/Healing Chimes (mp3cut.net).mp3";
 
+  // 1. ADD THIS EFFECT: Listen to the actual DOM element for state changes
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    const onPlay = () => setIsPlaying(true);
+    const onPause = () => setIsPlaying(false);
+
+    // Subscribe to native audio events
+    audio.addEventListener("play", onPlay);
+    audio.addEventListener("pause", onPause);
+
+    // Cleanup listeners on unmount
+    return () => {
+      audio.removeEventListener("play", onPlay);
+      audio.removeEventListener("pause", onPause);
+    };
+  }, [audioRef]);
+
+  // 2. KEEP GLOBAL CLICK HANDLER (Your existing logic for auto-play)
   useEffect(() => {
     const handleGlobalClick = async () => {
-      if (!isPlaying && audioRef.current) {
+      if (!isPlaying && audioRef.current && !hasInteracted) {
         try {
           await audioRef.current.play();
-          setIsPlaying(true);
+          // We don't need setIsPlaying(true) here anymore, the event listener handles it
         } catch (error) {
-          console.log("Audio play failed due to browser restriction:", error);
+          console.log("Audio play failed:", error);
         }
       }
       document.removeEventListener("click", handleGlobalClick);
@@ -25,25 +46,23 @@ const AudioPlayer = () => {
     return () => {
       document.removeEventListener("click", handleGlobalClick);
     };
-  }, []);
+  }, [hasInteracted]); // Added dependency to prevent re-triggering if user manually stopped it
 
+  // 3. UPDATE TOGGLE FUNCTION: Remove manual state setting
   const togglePlayPause = async (e: any) => {
     e.stopPropagation();
-
-    // Mark that the user has manually clicked the button
     setHasInteracted(true);
 
-    if (isPlaying) {
-      audioRef.current?.pause();
-    } else {
-      await audioRef.current?.play();
-    }
-    setIsPlaying(!isPlaying);
-  };
+    if (!audioRef.current) return;
 
-  // Logic: If playing OR if we haven't touched it yet (default) -> Black.
-  // Otherwise (Paused and interacted) -> Transparent.
- 
+    // Check the ACTUAL status of the audio element
+    if (audioRef.current.paused) {
+      await audioRef.current.play();
+    } else {
+      audioRef.current.pause();
+    }
+    // Removed setIsPlaying(!isPlaying); -> The event listener above will update the state automatically
+  };
 
   return (
     <>

@@ -37,7 +37,7 @@ const slides = [
   },
   {
     image: "assets/Ecumene_Chimes_(2773_N)_Cam 09_Park_Ver 02_03-07-2025.webp",
-    title: "East-Facing Villa",
+    title: "Garden Escapade",
   },
   {
     image:
@@ -161,8 +161,6 @@ function ElevatingEveryMomentSlider() {
             </div>
           ))}
         </Slider>
-
-        {/* Navigation Buttons */}
         {/* Navigation Buttons */}
         <div className="absolute bottom-[15%]  right-[18%] z-10 flex justify-center gap-2 space-x-3 button-in-slider-element-holder">
           <button
@@ -242,7 +240,7 @@ function ElevatingEveryMomentSlider() {
           “The Chimes” offers thoughtful amenities, from serene club spaces to
           playful outdoor zones
         </p>
-        <button onClick={() => setIsOpen(true)}>Download Brochure </button>
+        <button onClick={() => setIsOpen(true)}>Download Brochure</button>
       </div>
       <SendEnquiryPopup open={isOpen} setOpen={setIsOpen} />
 

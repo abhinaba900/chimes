@@ -1,7 +1,7 @@
 ﻿import Link from "next/link";
 
 function FooterSection() {
-  const phoneNumber = "0802345558595";
+  const phoneNumber = "9731744266";
   const emailAddress = "support@thechimes.in";
   const locationAddress = "Chikkatirupati Rd, Sarjapura, Bengaluru - 562125";
   const googleMapsUrl = `https://maps.app.goo.gl/UYCxebpZkefztAgLA`;

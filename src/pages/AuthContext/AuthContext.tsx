@@ -1,12 +1,15 @@
-﻿import { createContext, useContext, useState } from "react";
+﻿import { createContext, useContext, useRef, useState } from "react";
 
 const AuthContext = createContext<any>(null);
 function AuthContextProvider({ children }: any) {
   const [selectedNav, setSelectedNav] = useState<String>("");
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const audioRef = useRef<HTMLAudioElement>(null);
 
   return (
-    <AuthContext.Provider value={{ selectedNav, setSelectedNav , isOpen, setIsOpen }}>
+    <AuthContext.Provider
+      value={{ selectedNav, setSelectedNav, isOpen, setIsOpen, audioRef }}
+    >
       {children}
     </AuthContext.Provider>
   );

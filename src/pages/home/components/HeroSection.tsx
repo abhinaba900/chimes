@@ -2,14 +2,20 @@
 
 function HeroSection() {
   return (
-    <div className="hero-section">
-      <img src="/assets/Hero Section.webp" alt="hero" />
-      
+    <div className="hero-section ">
+      <img src="/assets/Hero Section.webp" alt="hero" className="hero-image-background" />
 
-      <div className="text-section">
-        <div className="w-fit " style={{ margin: "auto" }}>
+      <div className="text-section overflow-hidden ">
+        <div
+          className="w-fit"
+          style={{ margin: "auto" }}
+        >
           <p>Large on Life. Light on the Planet</p>
-          <h2>THE CHIMES</h2>
+          <img
+            src="assets/Chimes-footer-logo-white.webp"
+            alt="logo of chimes"
+            className="w-[92vw] mx-auto block hero-the-chimes-logo-white"
+          />
         </div>
       </div>
     </div>

@@ -38,7 +38,7 @@
           alt=""
         />
 
-        <h3>GREENWOOD INTL SCHOOL</h3>
+        <h3>The INTL School Bangalore</h3>
 
         {/* Desktop Image */}
         <img

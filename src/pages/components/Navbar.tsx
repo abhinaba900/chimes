@@ -139,34 +139,33 @@ export default function Navbar() {
 
   const { isOpen, setIsOpen } = useAuthContext();
 
- const [isNavbarVisible, setIsNavbarVisible] = useState(true);
- const [lastScrollY, setLastScrollY] = useState(0);
- const [isAtTop, setIsAtTop] = useState(true);
+  const [isNavbarVisible, setIsNavbarVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [isAtTop, setIsAtTop] = useState(true);
 
- useEffect(() => {
-   const handleScroll = () => {
-     const currentScroll = window.scrollY;
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScroll = window.scrollY;
 
-     // ✔ Detect if user is at top
-     setIsAtTop(currentScroll === 0);
+      // ✔ Detect if user is at top
+      setIsAtTop(currentScroll === 0);
 
-     // ✔ Hide when scrolling down
-     if (currentScroll > lastScrollY && currentScroll > 50) {
-       setIsNavbarVisible(false);
-     }
-     // ✔ Show when scrolling up
-     else {
-       setIsNavbarVisible(true);
-     }
+      // ✔ Hide when scrolling down
+      if (currentScroll > lastScrollY && currentScroll > 50) {
+        setIsNavbarVisible(false);
+      }
+      // ✔ Show when scrolling up
+      else {
+        setIsNavbarVisible(true);
+      }
 
-     setLastScrollY(currentScroll);
-   };
+      setLastScrollY(currentScroll);
+    };
 
-   window.addEventListener("scroll", handleScroll);
-   return () => window.removeEventListener("scroll", handleScroll);
- }, [lastScrollY]);
-  
-  
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
   return (
     <header
       className={`header z-1 bg-white w-full fixed top-0 left-0 right-0
@@ -245,7 +244,7 @@ export default function Navbar() {
                         closeMenu();
                       }}
                     >
-                      Send Enquiry
+                      Enquire Now
                     </button>
                   </Link>
                 </motion.li>
@@ -268,7 +267,7 @@ export default function Navbar() {
                       setIsOpen(true);
                     }}
                   >
-                    Send Enquiry
+                    Enquire Now
                   </button>
                 </Link>
               </GlassSurface>

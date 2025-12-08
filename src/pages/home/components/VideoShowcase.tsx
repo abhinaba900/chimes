@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import dynamic from "next/dynamic";
 import { Play } from "lucide-react";
+import { useAuthContext } from "@/pages/AuthContext/AuthContext";
 
 // SSR-safe import
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
@@ -17,6 +18,7 @@ const VideoShowcase: React.FC<VideoShowcaseProps> = ({
   thumbnailUrl,
 }) => {
   const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useAuthContext().audioRef;
 
   return (
     <div className="relative w-[95%]  md:w-full h-[220px] md:h-[700px] 2xl:h-[900px] video-showcase-container bg-black mt-[28px] md:mt-[5rem]">
@@ -33,7 +35,7 @@ const VideoShowcase: React.FC<VideoShowcaseProps> = ({
           controls
           playing={isPlaying}
           muted={!isPlaying} // Required for Android autoplay
-          playsinline // Required for mobile inline playback
+          onPlay={() => audioRef.current?.pause()}
           onEnded={() => setIsPlaying(false)}
         />
       </div>
@@ -61,7 +63,10 @@ const VideoShowcase: React.FC<VideoShowcaseProps> = ({
 
         {/* Desktop: Center button */}
         <button
-          onClick={() => setIsPlaying(true)}
+          onClick={() => {
+            setIsPlaying(true);
+            audioRef.current?.pause();
+          }}
           className="hidden md:inline-flex mt-6 group relative video-showcase-button items-center gap-3 px-8 py-3 bg-white/20 hover:bg-[#2B851D] backdrop-blur-md border border-white/30 rounded-full transition-all duration-300 hover:scale-105 active:scale-95"
         >
           <Play className="w-5 h-5 text-white" />
@@ -71,7 +76,10 @@ const VideoShowcase: React.FC<VideoShowcaseProps> = ({
         {/* Mobile + Desktop bottom-right button */}
         <div className="absolute bottom-5 right-5 md:right-10 md:bottom-10 block md:hidden">
           <button
-            onClick={() => setIsPlaying(true)}
+            onClick={() => {
+              setIsPlaying(true);
+              audioRef.current?.pause();
+            }}
             className="group inline-flex items-center video-showcase-button gap-3 px-6 py-2 md:px-8 md:py-3 bg-white/20 hover:bg-[#2B851D] backdrop-blur-md border border-white/30 rounded-full transition-all duration-300 hover:scale-105 active:scale-95"
           >
             <Play className="w-4 h-4 md:w-5 md:h-5 text-white" />

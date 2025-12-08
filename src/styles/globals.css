@@ -591,7 +591,7 @@ body {
   flex-direction: column;
 }
 
-.hero-section img {
+.hero-section .hero-image-background {
   /* width: 100%; */
   height: 100%;
   /* object-fit: fill; */
@@ -628,14 +628,39 @@ body {
 /* Rest of your existing styles */
 .hero-section .text-section p {
   font-family: var(--font-family-sequel-bold-display);
-  font-size: 40px;
-  line-height: 48px;
-  letter-spacing: 0%;
+
+  /* Use CLAMP for perfect scaling: Min 16px, Target 1.7vw, Max 30px */
+  font-size: clamp(16px, 1.85vw, 30px);
+
+  line-height: 1.2;
   text-align: right;
   font-weight: 425;
   color: #f1ebe3;
-  padding-right: 10%;
-  line-height: 2;
+
+  /* Text Shadow makes it readable over the tree leaves */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+  /* Layout positioning */
+  margin: 0;
+  margin-right: 1%; /* Aligns it visually with the design */
+  margin-bottom: -4.8%; /* Slight overlap with the big text below if desired */
+  position: relative;
+  padding-right: 2.5%;
+  z-index: 12;
+}
+
+/* 5. The Big Script Logo */
+.hero-the-chimes-logo-white {
+  display: block;
+  width: 95%; /* Covers most of the width */
+  max-width: 1535px; /* Cap it for ultra-wide screens */
+  height: auto;
+  margin: 0 auto; /* Center it */
+  position: relative;
+  z-index: 11;
+  pointer-events: none; /* Let clicks pass through if needed */
+
+  margin-bottom: -2.9%;
 }
 
 .hero-section .text-section h2 {
@@ -665,6 +690,19 @@ body {
     font-size: 1rem;
     padding-right: 1%;
     font-weight: 600;
+    margin-bottom: -1%;
+    padding-top: 1%;
+  }
+
+  .hero-the-chimes-logo-white {
+    width: 95vw;
+    height: 100px !important;
+    object-fit: contain !important;
+    margin-bottom: -40px;
+  }
+
+  .text-section div {
+    padding-inline: 1rem;
   }
 
   .hero-section .text-section h2 {
@@ -675,7 +713,7 @@ body {
     font-weight: 530;
   }
 
-  .hero-section img {
+  .hero-section .hero-image-background {
     object-fit: cover;
     height: 60vh;
   }
@@ -735,7 +773,7 @@ body {
     font-size: 8rem;
   } */
 
-  .hero-section img {
+  .hero-section .hero-image-background {
     top: 15%;
   }
 }
@@ -748,9 +786,10 @@ body {
   .hero-section {
     position: relative;
     height: 100vh;
+    margin-top: -6rem;
   }
 
-  .hero-section img {
+  .hero-section .hero-image-background {
     object-fit: cover;
     top: 10%;
     /* Stick to the middle */
@@ -771,13 +810,15 @@ body {
     height: 130vh;
   }
 
+  .hero-the-chimes-logo-white {
+    height: 300px !important;
+    object-fit: contain !important;
+    margin-bottom: -30px;
+  }
+
   /* .hero-section .text-section h2 {
     font-size: 11rem;
   } */
-
-  .hero-section img {
-    /* margin-bottom: -13rem; */
-  }
 }
 
 @media (min-width: 1281px) and (max-width: 1399px) {
@@ -789,13 +830,15 @@ body {
     height: 130vh;
   }
 
+  .hero-the-chimes-logo-white {
+    height: 300px !important;
+    object-fit: contain !important;
+    margin-bottom: -30px;
+  }
+
   /* .hero-section .text-section h2 {
     font-size: 14rem;
   } */
-
-  .hero-section img {
-    /* margin-bottom: -15rem; */
-  }
 }
 
 /* build villas section */
@@ -980,6 +1023,17 @@ body {
     font-size: 32px;
     line-height: 40px;
     padding: 0 0.3rem;
+  }
+
+  .hero-the-chimes-logo-white {
+    width: 98vw;
+    height: 100px !important;
+    object-fit: contain !important;
+    margin-bottom: -23px;
+  }
+
+  .hero-section .text-section p {
+    margin-bottom: -1%;
   }
 
   .build-villas-text-holder h4 span {
@@ -1493,8 +1547,8 @@ body {
 /* elevating every moment slider */
 
 .elevating-every-moment-slider-image-text h3 {
-  font-family: var(--font-family-2);
-  font-weight: 600;
+  font-family: var(--font-family);
+  font-weight: 500;
   font-size: 32px;
   line-height: 40px;
   letter-spacing: 0%;
@@ -1691,7 +1745,7 @@ body {
 
 .acreo-of-the-chimes-text-and-image-container {
   display: grid;
-  grid-template-columns: 0.5fr 1fr;
+  grid-template-columns: 0.41fr 1fr;
   gap: 1rem;
   align-items: center;
   justify-content: center;
@@ -1731,7 +1785,7 @@ body {
 
 .acreo-of-the-chimes-text-and-image-container
   .text-area-inside-text-and-image-container {
-  width: 100%;
+  width: 330px;
   padding: 1rem 0.5rem;
   font-family: var(--font-family-sequel-random);
   font-weight: 410;
@@ -4279,12 +4333,30 @@ body {
   .audio-button-pause svg path {
     fill: white !important;
   }
+
+  .hero-the-chimes-logo-white {
+    width: 98vw;
+    height: 200px !important;
+    object-fit: contain !important;
+    margin-bottom: -15px;
+  }
+
+  .hero-section .text-section p {
+    margin-bottom: -4%;
+    padding-right: 2rem;
+  }
 }
 
 @media only screen and (min-width: 1366px) and (max-height: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) and (pointer: coarse) {
   .button,
   .button:hover {
     background: #2c6c22 !important;
+  }
+
+  .hero-the-chimes-logo-white {
+    height: 300px !important;
+    object-fit: contain !important;
+    margin-bottom: -30px;
   }
 
   /* Remove the hover animation from the .button class */
@@ -4327,6 +4399,11 @@ body {
   .nav-action,
   .nav-list {
     gap: 0.5rem;
+  }
+  .hero-the-chimes-logo-white {
+    height: 300px !important;
+    object-fit: contain !important;
+    margin-bottom: -30px;
   }
 
   .floor-plan-container-holder {
@@ -4626,7 +4703,7 @@ body {
 .popup-dilog-form button[type="submit"] {
   height: 44px;
   width: 100%;
-  background: #d0e16b;
+  background: #2c6c22;
   font-family: var(--font-family-2);
   font-weight: 600;
   font-size: 16px;
@@ -4637,6 +4714,36 @@ body {
   border-radius: 40px;
   cursor: pointer;
   margin-top: 1rem;
+  color: #ffffff;
+}
+
+.popup-dilog-form .reach-us-in-popup-section {
+  font-family: var(--font-family-2);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: -2%;
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  color: #2c6c22;
+  cursor: pointer;
+  border: 1px solid #2C6C22
+  ;
+  height: 44px;
+  border-radius: 40px;
+}
+.popup-dilog-form .reach-us-in-popup-section span {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: -2%;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .popup-dilog-form button[type="submit"]:disabled {
@@ -4730,6 +4837,22 @@ input:-moz-autofill:active {
 
   .s-cardContainer {
     height: 62vh;
+  }
+
+  .hero-section .text-section p {
+    margin-bottom: -5%;
+    padding-top: 5%;
+    padding-right: 0;
+    max-width: 1536px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-the-chimes-logo-white {
+    width: 100vw;
+    height: 400px !important;
+    object-fit: contain !important;
+    margin-bottom: -100px;
   }
 
   .naturallybuiltarea {

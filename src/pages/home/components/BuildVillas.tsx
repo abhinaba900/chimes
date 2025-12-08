@@ -33,23 +33,23 @@ function BuildVillas() {
         <div className="build-villas-line-holder">
           <img src="/assets/Built for Green Greatness.gif" alt="" />
           <h5>Built for Green Greatness</h5>
-          <p>
+          {/* <p>
             LEED Platinum Certified for <br /> Sustainable Excellence
-          </p>
+          </p> */}
         </div>
         <div className="build-villas-line-holder">
           <img src="/assets/Precision in Every Brick.gif" alt="" className="precision-in-every-brick" />
           <h5>Precision in Every Brick</h5>
-          <p>
+          {/* <p>
             ISO 9001:2015 Certified for <br /> Uncompromised Quality
-          </p>
+          </p> */}
         </div>
         <div className="build-villas-line-holder">
           <img src="/assets/Zero Guilt. Pure Living..gif" alt="" />
           <h5>Zero Guilt. Pure Living.</h5>
-          <p>
+          {/* <p>
             Carbon Neutral with an Ultra Low <br /> Environmental Footprint
-          </p>
+          </p> */}
         </div>
       </div>
     </div>
