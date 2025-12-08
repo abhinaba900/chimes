@@ -32,7 +32,7 @@ const nextConfig: NextConfig = {
   /* 3. Experimental & Performance Features */
   experimental: {
     // ✅ Next.js 15: React Compiler reduces re-renders automatically (Huge speed boost)
-    reactCompiler: true,
+    reactCompiler: false,
 
     // ✅ Force SWC to handle heavy lifting faster than Babel
     forceSwcTransforms: true,

@@ -3,13 +3,14 @@
 function HeroSection() {
   return (
     <div className="hero-section ">
-      <img src="/assets/Hero Section.webp" alt="hero" className="hero-image-background" />
+      <img
+        src="/assets/Hero Section.webp"
+        alt="hero"
+        className="hero-image-background"
+      />
 
       <div className="text-section overflow-hidden ">
-        <div
-          className="w-fit"
-          style={{ margin: "auto" }}
-        >
+        <div className="w-full" style={{ margin: "auto" }}>
           <p>Large on Life. Light on the Planet</p>
           <img
             src="assets/Chimes-footer-logo-white.webp"
