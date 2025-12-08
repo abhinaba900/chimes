@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import AudioPlayer from "../home/hooks/AudioPlayer ";
+import AudioPlayer from "@/pages/home/hooks/AudioPlayer";
 import SendEnquiryPopup from "./SendEnquiryPopup";
 import { useAuthContext } from "../AuthContext/AuthContext";
 import GlassSurface from "@/ReactBits/GlassSurface/GlassSurface";

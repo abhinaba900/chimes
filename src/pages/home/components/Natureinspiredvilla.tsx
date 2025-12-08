@@ -77,7 +77,7 @@ function Natureinspiredvilla() {
             <TiltedCard
               mainBodyClassName="natureinspiredvilla-content-holder-image-2"
               className="section-overlay"
-              imageSrc="assets/Modern servant’s quarter in a luxury eco-villa – clean, well-lit, living space with a bed, small kitchenette, private bathroom, functional and dignified design, neutral tones, warm ambience.webp"
+              imageSrc="assets/Modern-servant’s-quarter-in-a-luxury eco-vill –clean.webp"
               altText="Powered by the Sun, Not the Grid"
               captionText="Kendrick Lamar - GNX"
               containerHeight="100%"
@@ -99,7 +99,6 @@ function Natureinspiredvilla() {
               }
             />
           </div>
-         
         </div>
       </div>
     </div>

@@ -2,16 +2,13 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* 1. React Settings */
-  reactStrictMode: false, // Kept false for GSAP stability
+  reactStrictMode: false,
 
-  // ✅ Performance: Removes console.logs in production to save mobile CPU
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
   },
 
   /* 2. Transpilation */
-  // Only transpile what is strictly necessary.
-  // Removed 'react-icons' etc. as they are better handled by modularizeImports below.
   transpilePackages: [
     "gsap",
     "react-leaflet",
@@ -27,10 +24,7 @@ const nextConfig: NextConfig = {
 
   /* 3. Experimental & Performance Features */
   experimental: {
-    // ✅ Next.js 15: React Compiler reduces re-renders automatically (Huge speed boost)
-
-    // ✅ Force SWC to handle heavy lifting faster than Babel
-    forceSwcTransforms: true,
+    // ❌ REMOVED: forceSwcTransforms (Not needed with Turbopack)
 
     // ✅ Optimization: Automatically tree-shakes these libraries
     optimizePackageImports: [
@@ -46,8 +40,6 @@ const nextConfig: NextConfig = {
       "gsap",
       "leaflet",
     ],
-
-    // ❌ REMOVED: urlImports (This was incorrect usage for local node_modules)
   },
 
   /* 4. Images */
@@ -61,15 +53,9 @@ const nextConfig: NextConfig = {
     ],
   },
 
-  /* 5. Build Options (Your preferences) */
-
+  /* 5. Build Options */
   typescript: {
     ignoreBuildErrors: true,
-  },
-
-  /* 6. Webpack Config */
-  webpack: (config) => {
-    return config;
   },
 };
 

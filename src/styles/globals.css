@@ -1,41 +1,51 @@
-@import "tailwindcss";
-
+/* 1. ALL Imports must go first */
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
+/* Tailwind v4 only needs this single line. 
+   It automatically includes base, components, and utilities. */
+@import "tailwindcss"; 
+
+/* 2. @font-face definitions go second */
 @font-face {
   font-family: "Sequel Sans Book";
-  src: url("../../public/assets/font/Sequel\ Sans\ OTF/Sequel Sans Book Body.otf")
-    format("opentype");
+  /* Note: In Next.js, referencing public folder usually works best with root paths like '/assets/...' */
+  src: url("/assets/font/Sequel Sans OTF/Sequel Sans Book Body.otf") format("opentype");
 }
 
 @font-face {
   font-family: "Sequel Sans Medium";
-  src: url("../../public/assets/font/Sequel\ Sans\ OTF/Sequel Sans Medium Disp.otf")
-    format("opentype");
+  src: url("/assets/font/Sequel Sans OTF/Sequel Sans Medium Disp.otf") format("opentype");
 }
 
 @font-face {
   font-family: "Sequel Sans Random Display";
-  src: url("../../public/assets/font/Sequel\ Sans\ OTF/Sequel Sans Roman Disp.otf")
-    format("opentype");
-}
-@font-face {
-  font-family: "Sequel Sans Bold Display";
-  src: url("../../public/assets/font/Sequel\ Sans\ OTF/Sequel Sans Bold Disp.otf")
-    format("opentype");
-}
-@font-face {
-  font-family: "Sequel Sans Light Display";
-  src: url("../../public/assets/font/Sequel\ Sans\ OTF/Sequel Sans Light Disp.otf")
-    format("opentype");
-}
-@font-face {
-  font-family: "Sequel Sans Semi Bold Obl Display";
-  src: url("../../public/assets/font/Sequel\ Sans\ OTF/Sequel Sans Semi Bold Obl Disp.otf")
-    format("opentype");
+  src: url("/assets/font/Sequel Sans OTF/Sequel Sans Roman Disp.otf") format("opentype");
 }
 
+@font-face {
+  font-family: "Sequel Sans Bold Display";
+  src: url("/assets/font/Sequel Sans OTF/Sequel Sans Bold Disp.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Sequel Sans Light Display";
+  src: url("/assets/font/Sequel Sans OTF/Sequel Sans Light Disp.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Sequel Sans Semi Bold Obl Display";
+  src: url("/assets/font/Sequel Sans OTF/Sequel Sans Semi Bold Obl Disp.otf") format("opentype");
+}
+
+/* 3. Your Custom Theme configuration (Tailwind v4 detects these variables) */
+@theme {
+  --color-primary: #1976d2;
+  --color-secondary: #9c27b0;
+  /* Add other theme overrides here if needed specifically for Tailwind classes */
+}
+
+/* 4. Standard CSS Variables */
 :root {
   --primary-color: #1976d2;
   --primary-glow: rgba(25, 118, 210, 0.1);
@@ -48,13 +58,17 @@
   --border-color: rgba(0, 0, 0, 0.08);
   --shadow-color: rgba(0, 0, 0, 0.05);
   --neon-glow: 0 0 10px rgba(25, 118, 210, 0.1);
+  
   --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-medium: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  
   --gradient-bg: #f1ebe3;
   --glass-effect: saturate(180%) blur(10px);
   --border-radius: 40px;
   --text-description: rgba(0, 0, 0, 0.6);
+
+  /* Fonts */
   --font-family: "DM Serif Display", serif;
   --font-family-2: "Playfair Display", serif;
   --font-family-sequel-book: "Sequel Sans Book", sans-serif;
@@ -62,10 +76,8 @@
   --font-family-sequel-random: "Sequel Sans Random Display", sans-serif;
   --font-family-sequel-bold-display: "Sequel Sans Bold Display", sans-serif;
   --font-family-sequel-light-display: "Sequel Sans Light Display", sans-serif;
-  --font-family-sequel-semi-bold-obl-display: "Sequel Sans Semi Bold Obl Display",
-    sans-serif;
+  --font-family-sequel-semi-bold-obl-display: "Sequel Sans Semi Bold Obl Display", sans-serif;
 }
-
 /* In your global CSS file */
 html.lenis {
   height: auto;
