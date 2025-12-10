@@ -127,7 +127,7 @@ function FooterSection() {
           </div>
           <div className="footer-brand-name">
             <img
-              src="assets/Chimes-footer-logo-white.webp"
+              src="assets/Chimes Logo in White.svg"
               className="h-[108px] "
               alt="Raise infra logo in white"
             />
