@@ -13,7 +13,7 @@ function HeroSection() {
         <div className="w-full" style={{ margin: "auto" }}>
           <p>Large on Life. Light on the Planet</p>
           <img
-            src="assets/Chimes-footer-logo-white.webp"
+            src="assets/Chimes Logo in White.svg"
             alt="logo of chimes"
             className="w-[92vw] mx-auto block hero-the-chimes-logo-white"
           />
