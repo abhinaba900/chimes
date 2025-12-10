@@ -1,5 +1,5 @@
 ﻿import Slider from "react-slick";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import PropTypes from "prop-types";
@@ -16,7 +16,7 @@ const isInMobileView = () => {
 };
 
 // Default floor data that matches your existing structure
-const defaultFloors = [
+const defaultFloors1 = [
   {
     numberId: 1,
     id: "ground-floor",
@@ -24,13 +24,7 @@ const defaultFloors = [
     backgroundImage: "assets/floor-plan-background-image.webp",
     sliderContent: [
       {
-        image: "assets/Dummy floor plan.webp",
-        alt: "Contemporary house layout",
-        caption: "Second Floor - 1,050 sq.ft",
-      },
-      {
-        image:
-          "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+        image: "assets/EAST FACING VILLA- R2 - Ground.png",
         alt: "Open concept design",
         caption: "Main Floor - 1,800 sq.ft",
       },
@@ -44,8 +38,7 @@ const defaultFloors = [
       "assets/ECUMENE_CHIMES(2773-V)DINING_V2_25-07-2025-1st-flore.webp",
     sliderContent: [
       {
-        image:
-          "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+        image: "assets/EAST FACING VILLA- R2 - First Floor.png",
         alt: "Luxury penthouse layout",
         caption: "Penthouse - 2,400 sq.ft",
       },
@@ -59,8 +52,7 @@ const defaultFloors = [
       "assets/ECUMENE_CHIMES(2773-V)LIVING_V2_25-07-2025-2nd-flore.webp",
     sliderContent: [
       {
-        image:
-          "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+        image: "assets/EAST FACING VILLA- R2 - Second Floor.png",
         alt: "Contemporary house layout",
         caption: "Second Floor - 1,050 sq.ft",
       },
@@ -74,8 +66,64 @@ const defaultFloors = [
       "assets/Ecumene_Chimes_(2773_N)_Cam 13_Master Bedroom_Ver 01_25-07-2025-3rd-flore.webp",
     sliderContent: [
       {
-        image:
-          "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+        image: "assets/EAST FACING VILLA- R2 - Third Floor.png",
+        alt: "Open concept design",
+        caption: "Main Floor - 1,800 sq.ft",
+      },
+    ],
+  },
+];
+const defaultFloors2 = [
+  {
+    numberId: 1,
+    id: "ground-floor",
+    name: isInMobileView() ? "Ground" : "Ground",
+    backgroundImage: "assets/floor-plan-background-image.webp",
+    sliderContent: [
+      {
+        image: "assets/WEST FACING VILLA R2 - Ground Floor.png",
+        alt: "Open concept design",
+        caption: "Main Floor - 1,800 sq.ft",
+      },
+    ],
+  },
+  {
+    numberId: 2,
+    id: "first-floor",
+    name: isInMobileView() ? "First" : "First",
+    backgroundImage:
+      "assets/ECUMENE_CHIMES(2773-V)DINING_V2_25-07-2025-1st-flore.webp",
+    sliderContent: [
+      {
+        image: "assets/WEST FACING VILLA R2 - First Floor.png",
+        alt: "Luxury penthouse layout",
+        caption: "Penthouse - 2,400 sq.ft",
+      },
+    ],
+  },
+  {
+    numberId: 3,
+    id: "second-floor",
+    name: isInMobileView() ? "Second" : "Second",
+    backgroundImage:
+      "assets/ECUMENE_CHIMES(2773-V)LIVING_V2_25-07-2025-2nd-flore.webp",
+    sliderContent: [
+      {
+        image: "assets/WEST FACING VILLA R2 - Second Floor.png",
+        alt: "Contemporary house layout",
+        caption: "Second Floor - 1,050 sq.ft",
+      },
+    ],
+  },
+  {
+    numberId: 4,
+    id: "third-floor",
+    name: isInMobileView() ? "Third" : "Third",
+    backgroundImage:
+      "assets/Ecumene_Chimes_(2773_N)_Cam 13_Master Bedroom_Ver 01_25-07-2025-3rd-flore.webp",
+    sliderContent: [
+      {
+        image: "assets/WEST FACING VILLA R2 - Third Floor.png",
         alt: "Open concept design",
         caption: "Main Floor - 1,800 sq.ft",
       },
@@ -93,22 +141,34 @@ function FloorPlan({
   onDownloadClick = () => {},
   showDownloadButton = true,
   // New prop for dynamic floors
-  floors = defaultFloors,
+  floors = defaultFloors1,
   defaultActiveFloor = "ground-floor",
 }) {
-  const [clickedValue, setClickedValue] = React.useState(defaultActiveFloor);
-
+  const [clickedValue, setClickedValue] = useState(defaultActiveFloor);
   const [isOpen, setIsOpen] = useState(false);
 
-  // Find the active floor data
-  const activeFloor =
-    floors.find((floor) => floor.id === clickedValue) || floors[0];
+  const [selectedOption, setSelectedOption] = useState("East");
 
-  // Use either the passed floorPlans or the active floor's slider content
+  // ⭐ NEW → State for dynamically selected floors
+  const [currentFloors, setCurrentFloors] = useState(defaultFloors1);
+
+  // Update floors when dropdown changes
+  useEffect(() => {
+    setCurrentFloors(
+      selectedOption === "East" ? defaultFloors1 : defaultFloors2
+    );
+    setClickedValue("ground-floor"); // reset floor to ground for UX
+  }, [selectedOption]);
+
+  // Active floor
+  const activeFloor =
+    currentFloors.find((floor) => floor.id === clickedValue) ||
+    currentFloors[0];
+
+  // Decide slider content
   const plansToShow =
     floorPlans.length > 0 ? floorPlans : activeFloor.sliderContent;
 
-  // Default slider settings
   const defaultSettings = {
     dots: true,
     infinite: false,
@@ -117,13 +177,6 @@ function FloorPlan({
     slidesToScroll: 1,
     arrows: false,
   };
-
-  React.useEffect(() => {
-    floors.forEach((floor) => {
-      const img = new Image();
-      img.src = floor.backgroundImage;
-    });
-  }, [floors]);
 
   return (
     <div
@@ -176,12 +229,7 @@ function FloorPlan({
                   ) => (
                     <div key={index} className="px-2">
                       <AnimatePresence mode="wait">
-                        <motion.img
-                          key={activeFloor.id}
-                          initial={{ opacity: 0.9, filter: "blur(5px)" }}
-                          animate={{ opacity: 1, filter: "blur(0px)" }}
-                          exit={{ opacity: 0.9, filter: "blur(5px)" }}
-                          transition={{ duration: 0.2 }}
+                        <img
                           src={plan.image}
                           alt={plan.alt || `Floor plan ${index + 1}`}
                           className="w-full h-100 max-h-[461.4649658203125px] object-cover mx-auto mb-4  floor-plan-section-optimization-image"
@@ -201,7 +249,10 @@ function FloorPlan({
             )}
 
             {showDownloadButton && (
-              <div className="text-center mt-4">
+              <div
+                className="text-center w-[90%]  mt-4"
+                style={{ marginInline: "auto" }}
+              >
                 <button
                   className="download-button"
                   onClick={() => setIsOpen(true)}
@@ -227,6 +278,8 @@ function FloorPlan({
             <div className="clickid-item-holder-in-floor-plan">
               <div className="floor-item and-this-is-dropdown-floor-plan">
                 <GlassDropdown
+                  selectedOption={selectedOption}
+                  setSelectedOption={setSelectedOption}
                   options={directions}
                   defaultLabel="Choose facing"
                 />
@@ -251,6 +304,8 @@ function FloorPlan({
           <div className="mobile-view clickid-item-holder-in-floor-plan grid grid-cols-3 grid-rows-2 gap-4 items-stretch  overflow-visible px-2">
             <div className="floor-item and-this-is-dropdown-floor-plan row-span-2 flex justify-start items-start">
               <GlassDropdown
+                selectedOption={selectedOption}
+                setSelectedOption={setSelectedOption}
                 options={directions}
                 defaultLabel="Choose facing"
               />

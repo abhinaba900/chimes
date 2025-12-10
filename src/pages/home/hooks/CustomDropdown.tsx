@@ -7,15 +7,19 @@ type GlassDropdownProps = {
   options: string[];
   defaultLabel?: string;
   onSelect?: (selectedOption: string) => void;
+  selectedOption: string;
+  setSelectedOption: React.Dispatch<React.SetStateAction<string>>;
 };
 
 const GlassDropdown = ({
   options,
   defaultLabel = "Select",
+  selectedOption,
+  setSelectedOption,
   onSelect,
 }: GlassDropdownProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState(defaultLabel);
+  
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
