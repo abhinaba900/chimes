@@ -20,7 +20,10 @@ function FooterSection() {
         </div>
         <div className="content-holder-for-mobile">
           <div className="social-media-icons gap-4">
-            <Link href="#">
+            <Link
+              href="https://www.instagram.com/thechimesbyraiseinfra/"
+              target="_blank"
+            >
               <svg
                 width="18"
                 height="18"
@@ -46,8 +49,24 @@ function FooterSection() {
                 </defs>
               </svg>
             </Link>
-            <Link href="#">
+            <Link
+              href="https://www.facebook.com/profile.php?id=61584371294144"
+              target="_blank"
+            >
               <svg
+                width="18"
+                height="18"
+                viewBox="0 0 81 156"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M52.294 155.139V84.378H76.036L79.598 56.793H52.294V39.184C52.294 31.2 54.502 25.759 65.964 25.759L80.559 25.753V1.08C78.035 0.752 69.371 0 59.287 0C38.23 0 23.814 12.853 23.814 36.452V56.793H0V84.378H23.814V155.139H52.294Z"
+                  fill="#15420E"
+                />
+              </svg>
+
+              {/* <svg
                 width="18"
                 height="18"
                 viewBox="0 0 18 18"
@@ -70,9 +89,12 @@ function FooterSection() {
                     />
                   </clipPath>
                 </defs>
-              </svg>
+              </svg> */}
             </Link>
-            <Link href="#">
+            <Link
+              href="https://www.linkedin.com/in/the-chimes-raise-infra-160510393/"
+              target="_blank"
+            >
               <svg
                 width="18"
                 height="20"
@@ -98,7 +120,11 @@ function FooterSection() {
                 </defs>
               </svg>
             </Link>
-            <Link href="#">
+            <Link
+              href="https://wa.me/919731744266"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <svg
                 width="18"
                 height="18"

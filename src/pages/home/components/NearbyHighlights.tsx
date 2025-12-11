@@ -38,7 +38,7 @@
           alt=""
         />
 
-        <h3>The INTL School Bangalore</h3>
+        <h3>TISB School</h3>
 
         {/* Desktop Image */}
         <img

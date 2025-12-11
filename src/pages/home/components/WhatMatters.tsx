@@ -10,7 +10,7 @@ export default function WhatMatters() {
   const [showPopup, setShowPopup] = useState(true);
 
   return (
-    <div className="what-matters-content-holder-parent">
+    <div className="what-matters-content-holder-parent" id="nearby">
       <h3>
         Connected to What <br /> <span>Matters</span>
       </h3>
