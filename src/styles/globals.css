@@ -4,38 +4,44 @@
 
 /* Tailwind v4 only needs this single line. 
    It automatically includes base, components, and utilities. */
-@import "tailwindcss"; 
+@import "tailwindcss";
 
 /* 2. @font-face definitions go second */
 @font-face {
   font-family: "Sequel Sans Book";
   /* Note: In Next.js, referencing public folder usually works best with root paths like '/assets/...' */
-  src: url("/assets/font/Sequel Sans OTF/Sequel Sans Book Body.otf") format("opentype");
+  src: url("/assets/font/Sequel Sans OTF/Sequel Sans Book Body.otf")
+    format("opentype");
 }
 
 @font-face {
   font-family: "Sequel Sans Medium";
-  src: url("/assets/font/Sequel Sans OTF/Sequel Sans Medium Disp.otf") format("opentype");
+  src: url("/assets/font/Sequel Sans OTF/Sequel Sans Medium Disp.otf")
+    format("opentype");
 }
 
 @font-face {
   font-family: "Sequel Sans Random Display";
-  src: url("/assets/font/Sequel Sans OTF/Sequel Sans Roman Disp.otf") format("opentype");
+  src: url("/assets/font/Sequel Sans OTF/Sequel Sans Roman Disp.otf")
+    format("opentype");
 }
 
 @font-face {
   font-family: "Sequel Sans Bold Display";
-  src: url("/assets/font/Sequel Sans OTF/Sequel Sans Bold Disp.otf") format("opentype");
+  src: url("/assets/font/Sequel Sans OTF/Sequel Sans Bold Disp.otf")
+    format("opentype");
 }
 
 @font-face {
   font-family: "Sequel Sans Light Display";
-  src: url("/assets/font/Sequel Sans OTF/Sequel Sans Light Disp.otf") format("opentype");
+  src: url("/assets/font/Sequel Sans OTF/Sequel Sans Light Disp.otf")
+    format("opentype");
 }
 
 @font-face {
   font-family: "Sequel Sans Semi Bold Obl Display";
-  src: url("/assets/font/Sequel Sans OTF/Sequel Sans Semi Bold Obl Disp.otf") format("opentype");
+  src: url("/assets/font/Sequel Sans OTF/Sequel Sans Semi Bold Obl Disp.otf")
+    format("opentype");
 }
 
 /* 3. Your Custom Theme configuration (Tailwind v4 detects these variables) */
@@ -58,11 +64,11 @@
   --border-color: rgba(0, 0, 0, 0.08);
   --shadow-color: rgba(0, 0, 0, 0.05);
   --neon-glow: 0 0 10px rgba(25, 118, 210, 0.1);
-  
+
   --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-medium: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  
+
   --gradient-bg: #f1ebe3;
   --glass-effect: saturate(180%) blur(10px);
   --border-radius: 40px;
@@ -76,7 +82,8 @@
   --font-family-sequel-random: "Sequel Sans Random Display", sans-serif;
   --font-family-sequel-bold-display: "Sequel Sans Bold Display", sans-serif;
   --font-family-sequel-light-display: "Sequel Sans Light Display", sans-serif;
-  --font-family-sequel-semi-bold-obl-display: "Sequel Sans Semi Bold Obl Display", sans-serif;
+  --font-family-sequel-semi-bold-obl-display: "Sequel Sans Semi Bold Obl Display",
+    sans-serif;
 }
 /* In your global CSS file */
 html.lenis {
@@ -4743,8 +4750,7 @@ body {
   gap: 0.2rem;
   color: #2c6c22;
   cursor: pointer;
-  border: 1px solid #2C6C22
-  ;
+  border: 1px solid #2c6c22;
   height: 44px;
   border-radius: 40px;
 }
@@ -4839,6 +4845,20 @@ input:-moz-autofill:active {
 
   .natureinspiredvilla-content-holder-image {
     height: 450px !important;
+  }
+}
+
+@media (min-width: 1700px) and (max-width: 1919px) {
+  .naturallybuiltarea-text-holder-top {
+    margin-top: 8rem !important;
+  }
+
+  .naturallybuiltarea-text-holder-top {
+    margin-bottom: -15rem;
+  }
+
+  .s-cardContainer {
+    top: -10rem;
   }
 }
 

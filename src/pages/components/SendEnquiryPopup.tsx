@@ -224,8 +224,12 @@ const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                   <button type="submit" disabled={!otpSent}>
                     Send Enquiry
                   </button>
-                  <button type="button" disabled={!otpSent} className="reach-us-in-popup-section">
-                    Or reach out to us at: <span>9731744266</span>
+                  <button
+                    type="button"
+                    disabled={!otpSent}
+                    className="reach-us-in-popup-section"
+                  >
+                    Or simply give us a call at: <span>9731744266</span>
                   </button>
                 </form>
               </div>

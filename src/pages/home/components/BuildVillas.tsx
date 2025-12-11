@@ -61,11 +61,11 @@ function BuildVillas() {
         </div>
         <div className="build-villas-line-holder">
           <img
-            src="/assets/Precision in Every Brick.gif"
+            src="/assets/Zero Guilt. Pure Living.gif"
             className="w-[125px]"
             alt=""
           />
-          <h5>Zero Guilt. Pure Living.</h5>
+          <h5>Zero Guilt. Pure Living</h5>
           {/* <p>
             Carbon Neutral with an Ultra Low <br /> Environmental Footprint
           </p> */}
