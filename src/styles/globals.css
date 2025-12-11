@@ -152,6 +152,71 @@ body {
   transition: var(--transition-medium);
 }
 
+/* Container for the white popup box */
+.chimes-map-popup-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* translate x -50%, y -130% to position it above the pin */
+  transform: translate(-50%, -130%);
+
+  background-color: white;
+  padding: 1.25rem; /* p-5 */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px; /* rounded */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+
+  z-index: 20;
+  width: 300px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Inner content wrapper */
+.chimes-map-popup-content {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+/* The Logo Image */
+.chimes-map-popup-logo {
+  height: 30px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  object-fit: contain;
+  margin-bottom: 0.5rem; /* mb-2 */
+}
+
+/* The Address Text */
+.chimes-map-popup-address {
+  font-size: 0.75rem; /* text-xs */
+  color: rgb(55, 65, 81); /* text-gray-700 */
+  line-height: 1.25; /* leading-tight */
+}
+
+/* The Triangle Arrow at the bottom */
+.chimes-map-popup-arrow {
+  position: absolute;
+  left: 50%;
+  bottom: -8px; /* -bottom-2 */
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+
+  /* CSS Triangle Logic */
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid white;
+}
 /* Logo */
 .logo {
   font-size: 1.5rem;
@@ -2086,17 +2151,6 @@ body {
   cursor: pointer;
 }
 
-.popup-content-holder p {
-  font-family: var(--font-family-sequel-book);
-  font-weight: 405;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0%;
-  text-align: center;
-  vertical-align: middle;
-  color: #15420e;
-}
-
 /* NearbyHighlights */
 
 .nearby-highlights {
@@ -2705,6 +2759,18 @@ body {
   color: white !important;
 }
 
+.chimes-map-popup-address {
+  font-family: var(--font-family-sequel-book) !important;
+  font-weight: 405 !important;
+  font-size: 1rem !important;
+  line-height: 1.5rem !important;
+  letter-spacing: 0% !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  color: #15420e !important;
+  margin-bottom: 0 !important;
+}
+
 @media screen and (max-width: 768px) and (orientation: portrait) {
   .naturallybuiltarea-text-holder-top {
     padding-bottom: 0rem !important;
@@ -2828,6 +2894,28 @@ body {
 
   .right-side-popup-content-holder {
     height: 98vh;
+  }
+
+  .chimes-map-popup-card {
+    width: 200px;
+
+    transform: translate(-50%, -80%);
+  }
+
+  .chimes-map-popup-address {
+    font-family: var(--font-family-sequel-book) !important;
+    font-weight: 405 !important;
+    font-size: 0.8rem !important;
+    line-height: 1rem !important;
+    letter-spacing: 0% !important;
+    text-align: center !important;
+    vertical-align: middle !important;
+    color: #15420e !important;
+    margin-bottom: 0 !important;
+  }
+
+  .chimes-map-popup-logo {
+    width: 130px;
   }
 
   .natureinspiredvilla-content-holder-text h4 {

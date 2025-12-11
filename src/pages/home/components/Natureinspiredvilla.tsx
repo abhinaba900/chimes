@@ -44,7 +44,7 @@ function Natureinspiredvilla() {
 
       <div className="natureinspiredvilla-text-holder-and-content-holder">
         <h3>
-          Where every Brick <br /> has a <span>Brain</span>
+          Bricks that <span>Breathe</span> <br /> in and out with you
         </h3>
 
         <div className="natureinspiredvilla-content-holder-image"></div>
@@ -94,7 +94,7 @@ function Natureinspiredvilla() {
                   <h4>
                     Space that Respects <br /> every role
                   </h4>
-                  <p>Includes a spacious 400 Sq.ft servant’s quarter</p>
+                  <p>Includes optional 400 sq.ft living space</p>
                 </section>
               }
             />
