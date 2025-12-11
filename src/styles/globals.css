@@ -548,7 +548,6 @@ body {
 
   /* Mobile: top (transparent) */
   .mobile-bg-top {
-    background: transparent !important;
     transition: background 0.3s ease;
   }
 
@@ -2898,25 +2897,30 @@ body {
   }
 
   .chimes-map-popup-card {
-    width: 200px;
-
-    transform: translate(-50%, -80%);
+    width: 140px;
+    padding: 0.5rem;
+    transform: translate(-50%, -130%);
   }
 
   .chimes-map-popup-address {
     font-family: var(--font-family-sequel-book) !important;
     font-weight: 405 !important;
-    font-size: 0.8rem !important;
-    line-height: 1rem !important;
+    font-size: 0.5rem !important;
+    line-height: 0.6rem !important;
     letter-spacing: 0% !important;
     text-align: center !important;
     vertical-align: middle !important;
     color: #15420e !important;
     margin-bottom: 0 !important;
+    padding-left:  0  !important;
+    padding-right: 0  !important;
+
   }
 
   .chimes-map-popup-logo {
-    width: 130px;
+    width: 100px;
+
+    margin-bottom: 0;
   }
 
   .natureinspiredvilla-content-holder-text h4 {
@@ -4038,7 +4042,7 @@ body {
   }
 
   .natureinspiredvilla-content-holder-image-2 {
-    height: fit-content !important;
+    height: 293.33px !important;
   }
 
   .left-and-right-padding-add {
@@ -4455,52 +4459,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 1366px) and (max-height: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) and (pointer: coarse) {
-  .button,
-  .button:hover {
-    background: #2c6c22 !important;
-  }
 
-  .hero-the-chimes-logo-white {
-    height: 300px !important;
-    object-fit: contain !important;
-    margin-bottom: -30px;
-  }
-
-  /* Remove the hover animation from the .button class */
-  .button:hover {
-    transform: none !important;
-    box-shadow: none !important;
-    transition: none !important;
-  }
-
-  /* Remove the icon animation inside button on hover */
-  .button:hover .icon {
-    transform: none !important;
-    transition: none !important;
-  }
-
-  /* Remove the hover animation from specific button states */
-  .button:hover .active-link {
-    background: #2c6c22 !important;
-  }
-  .button .active-link {
-    background: #2c6c22 !important;
-  }
-
-  /* Remove the hover animation for audio button pause state */
-  .button:hover .audio-button-pause {
-    background: transparent !important;
-  }
-  .button .audio-button-pause {
-    background: transparent !important;
-  }
-
-  .button:hover svg path,
-  .audio-button-pause svg path {
-    fill: white !important;
-  }
-}
 
 @media (min-width: 1341px) and (max-width: 1390px) {
   /* your styles here */
@@ -4632,7 +4591,56 @@ body {
     margin-top: -4rem;
   }
 }
+@media only screen and (min-width: 1366px) and (max-height: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) and (pointer: coarse) {
+  .button,
+  .button:hover {
+    background: #2c6c22 !important;
+  }
 
+  .hero-the-chimes-logo-white {
+    height: 300px !important;
+    object-fit: contain !important;
+    margin-bottom: -30px;
+  }
+
+  .s-cardContainer {
+    margin-top: -14rem !important;
+  }
+
+  /* Remove the hover animation from the .button class */
+  .button:hover {
+    transform: none !important;
+    box-shadow: none !important;
+    transition: none !important;
+  }
+
+  /* Remove the icon animation inside button on hover */
+  .button:hover .icon {
+    transform: none !important;
+    transition: none !important;
+  }
+
+  /* Remove the hover animation from specific button states */
+  .button:hover .active-link {
+    background: #2c6c22 !important;
+  }
+  .button .active-link {
+    background: #2c6c22 !important;
+  }
+
+  /* Remove the hover animation for audio button pause state */
+  .button:hover .audio-button-pause {
+    background: transparent !important;
+  }
+  .button .audio-button-pause {
+    background: transparent !important;
+  }
+
+  .button:hover svg path,
+  .audio-button-pause svg path {
+    fill: white !important;
+  }
+}
 @media screen and (min-width: 1920px) {
   .custom-image-large {
     height: 900px;
