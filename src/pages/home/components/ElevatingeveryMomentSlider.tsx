@@ -37,7 +37,7 @@ const slides = [
   },
   {
     image: "assets/Ecumene_Chimes_(2773_N)_Cam 09_Park_Ver 02_03-07-2025.webp",
-    title: "Garden Escapade",
+    title: "The Park",
   },
   {
     image:

@@ -94,7 +94,7 @@ function Natureinspiredvilla() {
                   <h4>
                     Space that Respects <br /> every role
                   </h4>
-                  <p>Includes optional 400 sq.ft living space</p>
+                  <p>Provision for 400 Sq.ft of maid's room</p>
                 </section>
               }
             />
