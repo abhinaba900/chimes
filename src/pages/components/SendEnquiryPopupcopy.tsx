@@ -18,6 +18,13 @@ function SendEnquiryPopup({
     phone: "",
   });
 
+  // 1. ADDED: Logic to check if all fields are valid
+  const isFormValid =
+    formData.name.trim() !== "" &&
+    formData.email.trim() !== "" &&
+    formData.phone.trim() !== "" &&
+    error.phone === "";
+
   // Handle generic input changes (Name, Email)
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { id, value } = e.target;
@@ -70,11 +77,10 @@ function SendEnquiryPopup({
     console.log("Download Request Submitted:", formData);
 
     // 2. Trigger PDF Download
-    // REPLACE '/assets/brochure.pdf' with the actual path to your file in the public folder
     const pdfUrl = "/assets/The Chimes - Brochure.pdf";
     const link = document.createElement("a");
     link.href = pdfUrl;
-    link.download = "Brochure.pdf"; // The name the file will have when downloaded
+    link.download = "Brochure.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -173,7 +179,16 @@ function SendEnquiryPopup({
                     )}
                   </div>
 
-                  <button type="submit">Download</button>
+                  {/* 2. UPDATED: Button with disabled logic and styling */}
+                  <button
+                    type="submit"
+                    disabled={!isFormValid}
+                    className={
+                      !isFormValid ? "opacity-50 cursor-not-allowed" : ""
+                    }
+                  >
+                    Download
+                  </button>
                 </form>
               </div>
             </div>

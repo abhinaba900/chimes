@@ -18,7 +18,14 @@ function SendEnquiryPopup({
     phone: "",
   });
 
-  // Handle generic input changes (Name, Email)
+  // 1. ADD THIS LOGIC: Check if form is valid
+  // It checks if fields are not empty AND if there are no errors in error.phone
+  const isFormValid =
+    formData.name.trim() !== "" &&
+    formData.email.trim() !== "" &&
+    formData.phone.trim() !== "" &&
+    error.phone === "";
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { id, value } = e.target;
     setFormData((prev) => ({
@@ -27,12 +34,10 @@ function SendEnquiryPopup({
     }));
   };
 
-  // Handle Phone specific logic
   const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const rawValue = e.target.value;
     let normalizedPhone = rawValue.trim();
 
-    // Remove country code if present for validation
     if (normalizedPhone.startsWith("+91")) {
       normalizedPhone = normalizedPhone.slice(3);
     } else if (
@@ -42,12 +47,10 @@ function SendEnquiryPopup({
       normalizedPhone = normalizedPhone.slice(2);
     }
 
-    // Remove spaces and hyphens
     normalizedPhone = normalizedPhone.replace(/[\s-]/g, "");
 
     setFormData({ ...formData, phone: rawValue });
 
-    // Validate normalized number: should be 10 digits starting with [6-9]
     const isValidPhone = /^[6-9][0-9]{9}$/.test(normalizedPhone);
 
     if (isValidPhone) {
@@ -60,32 +63,26 @@ function SendEnquiryPopup({
   const handleSend = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Prevent submission if there are validation errors
     if (error.phone) {
       alert("Please enter a valid phone number");
       return;
     }
 
-    // 1. Log the data (or send to backend API here)
     console.log("Enquiry Data Submitted:", formData);
 
-    // 2. Trigger PDF Download
-    // REPLACE '/assets/brochure.pdf' with the actual path to your file in the public folder
     const pdfUrl = "/assets/The Chimes - Brochure.pdf";
     const link = document.createElement("a");
     link.href = pdfUrl;
-    link.download = "Brochure.pdf"; // The name the file will have when downloaded
+    link.download = "Brochure.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
 
-    // 3. Close the popup
     handleClose();
   };
 
   const handleClose = () => {
     setOpen(false);
-    // Optional: Reset form on close
     setFormData({ name: "", email: "", phone: "" });
     setError({ phone: "" });
   };
@@ -162,7 +159,6 @@ function SendEnquiryPopup({
                         placeholder="Enter your contact number"
                         value={formData.phone}
                         onChange={handlePhoneChange}
-                        // HTML5 validation pattern for general guidance
                         required
                       />
                     </div>
@@ -176,7 +172,16 @@ function SendEnquiryPopup({
                     )}
                   </div>
 
-                  <button type="submit">Send Enquiry</button>
+                  {/* 2. UPDATE BUTTON: Add disabled attribute and styling */}
+                  <button
+                    type="submit"
+                    disabled={!isFormValid}
+                    className={
+                      !isFormValid ? "opacity-50 cursor-not-allowed" : ""
+                    }
+                  >
+                    Send Enquiry
+                  </button>
 
                   <button type="button" className="reach-us-in-popup-section">
                     Or simply give us a call at: <span>9731744266</span>
