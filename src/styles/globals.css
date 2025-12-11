@@ -934,9 +934,9 @@ body {
 }
 
 .build-villas-line-holder img {
-  max-width: 72px;
-  width: 100%;
-  height: auto;
+  width: 125px;
+  height: 125px;
+  object-fit: contain;
 }
 
 .build-villas-line-holder h5 {
