@@ -2,7 +2,7 @@
 
 function FooterSection() {
   const phoneNumber = "9731744266";
-  const emailAddress = "support@thechimes.in";
+  const emailAddress = "contact@raiseinfra.in";
   const locationAddress = "Chikkatirupati Rd, Sarjapura, Bengaluru - 562125";
   const googleMapsUrl = `https://maps.app.goo.gl/UYCxebpZkefztAgLA`;
 
