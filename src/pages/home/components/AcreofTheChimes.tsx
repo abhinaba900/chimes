@@ -79,7 +79,7 @@ function AcreofTheChimes() {
       </p>
 
       <VideoShowcase
-        videoUrl="assets/acreo-of-the-chimes-video.mp4"
+        videoUrl="/assets/acreo-of-the-chimes-video.mp4"
         thumbnailUrl={
           isMobile
             ? "assets/overlay-thumpnail-mobile.webp"

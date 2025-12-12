@@ -1,12 +1,8 @@
 ﻿"use client";
 
-import React, { useState } from "react";
-import dynamic from "next/dynamic";
+import React, { useRef, useState, useEffect } from "react";
 import { Play } from "lucide-react";
 import { useAuthContext } from "@/pages/AuthContext/AuthContext";
-
-// SSR-safe import
-const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 interface VideoShowcaseProps {
   videoUrl: string;
@@ -20,27 +16,73 @@ const VideoShowcase: React.FC<VideoShowcaseProps> = ({
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useAuthContext().audioRef;
 
+  // Type the ref correctly for a standard video element
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  // Sync React state 'isPlaying' with the HTML video element
+  useEffect(() => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.play().catch((error) => {
+          console.error("Video play failed:", error);
+        });
+      } else {
+        videoRef.current.pause();
+      }
+    }
+  }, [isPlaying]);
+
   return (
-    <div className="relative w-[95%]  md:w-full h-[220px] md:h-[700px] 2xl:h-[900px] video-showcase-container bg-black mt-[28px] md:mt-[5rem]">
+    <div
+      className="relative w-[95%] md:w-full h-[220px] md:h-[700px] 2xl:h-[900px] video-showcase-container bg-black mt-[28px] md:mt-[5rem]"
+      onContextMenu={(e) => e.preventDefault()} // Block right-click on container
+    >
+      {/* Inject CSS to hide the download button in WebKit browsers (Chrome/Edge/Safari).
+         This is the most robust way to do it for native tags.
+      */}
+      <style jsx global>{`
+        video::-webkit-media-controls-enclosure {
+          overflow: hidden !important;
+        }
+        video::-webkit-media-controls-panel {
+          width: calc(100% + 30px); /* Push the download button off-screen */
+        }
+      `}</style>
+
       {/* Video Layer */}
       <div
         className={`absolute inset-0 w-full h-full transition-opacity duration-500 ${
           isPlaying ? "opacity-100 z-10" : "opacity-0 z-0"
         }`}
       >
-        <ReactPlayer
+        <video
+          ref={videoRef}
           src={videoUrl}
-          width="100%"
-          height="100%"
+          className="w-full h-full object-cover"
           controls
-          playing={isPlaying}
-          muted={!isPlaying} // Required for Android autoplay
-          onPlay={() => audioRef.current?.pause()}
+          // This native attribute hides the download button in Chrome/Edge
+          controlsList="nodownload"
+          // Prevents the "Picture in Picture" button
+          disablePictureInPicture
+          // Stops automatic fullscreen on iOS
+          playsInline
+          onPlay={() => {
+            // Pause background audio when video starts
+            audioRef.current?.pause();
+            setIsPlaying(true);
+          }}
+          onPause={() => {
+            setIsPlaying(false);
+            // now make the time will 0
+            if (videoRef.current) {
+              videoRef.current.currentTime = 0;
+            }
+          }}
           onEnded={() => setIsPlaying(false)}
         />
       </div>
 
-      {/* Thumbnail Layer */}
+      {/* Thumbnail Layer (unchanged) */}
       <div
         className={`absolute inset-0 z-20 flex flex-col items-center justify-center transition-all duration-500 ${
           isPlaying ? "opacity-0 pointer-events-none" : "opacity-100"
@@ -54,14 +96,13 @@ const VideoShowcase: React.FC<VideoShowcaseProps> = ({
           className="absolute inset-0 w-full h-full object-cover -z-10"
         />
 
-        {/* Title */}
         <h2 className="relative z-10 text-white text-4xl md:text-6xl font-light text-center video-showcase-title drop-shadow-lg">
           See <span className="font-bold italic font-serif">The Chimes</span>
           <br />
           come alive
         </h2>
 
-        {/* Desktop: Center button */}
+        {/* Desktop Play Button */}
         <button
           onClick={() => {
             setIsPlaying(true);
@@ -73,7 +114,7 @@ const VideoShowcase: React.FC<VideoShowcaseProps> = ({
           <span className=" text-white">Play Walkthrough</span>
         </button>
 
-        {/* Mobile + Desktop bottom-right button */}
+        {/* Mobile Play Button */}
         <div className="absolute bottom-5 right-5 md:right-10 md:bottom-10 block md:hidden">
           <button
             onClick={() => {

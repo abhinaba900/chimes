@@ -24,7 +24,7 @@ const defaultFloors1 = [
     backgroundImage: "assets/floor-plan-background-image.webp",
     sliderContent: [
       {
-        image: "assets/EAST FACING VILLA- R2 - Ground.png",
+        image: "assets/EAST_FACING_VILLA-_R2_-_Stilt_Plan[1].webp",
         alt: "Open concept design",
         caption: "Main Floor - 1,800 sq.ft",
       },
@@ -38,7 +38,7 @@ const defaultFloors1 = [
       "assets/ECUMENE_CHIMES(2773-V)DINING_V2_25-07-2025-1st-flore.webp",
     sliderContent: [
       {
-        image: "assets/EAST FACING VILLA- R2 - First Floor.png",
+        image: "assets/EAST_FACING_VILLA-_R2_-_First_Floor[1].webp",
         alt: "Luxury penthouse layout",
         caption: "Penthouse - 2,400 sq.ft",
       },
@@ -52,7 +52,7 @@ const defaultFloors1 = [
       "assets/ECUMENE_CHIMES(2773-V)LIVING_V2_25-07-2025-2nd-flore.webp",
     sliderContent: [
       {
-        image: "assets/EAST FACING VILLA- R2 - Second Floor.png",
+        image: "assets/EAST_FACING_VILLA-_R2_-_Second_Floor[1].webp",
         alt: "Contemporary house layout",
         caption: "Second Floor - 1,050 sq.ft",
       },
@@ -66,7 +66,7 @@ const defaultFloors1 = [
       "assets/Ecumene_Chimes_(2773_N)_Cam 13_Master Bedroom_Ver 01_25-07-2025-3rd-flore.webp",
     sliderContent: [
       {
-        image: "assets/EAST FACING VILLA- R2 - Third Floor.png",
+        image: "assets/EAST_FACING_VILLA-_R2_-_Terrace_Floor[1].webp",
         alt: "Open concept design",
         caption: "Main Floor - 1,800 sq.ft",
       },
@@ -81,7 +81,7 @@ const defaultFloors2 = [
     backgroundImage: "assets/floor-plan-background-image.webp",
     sliderContent: [
       {
-        image: "assets/WEST FACING VILLA R2 - Ground Floor.png",
+        image: "assets/WEST_FACING_VILLA_R2_-_Stilt_Floor[1].webp",
         alt: "Open concept design",
         caption: "Main Floor - 1,800 sq.ft",
       },
@@ -95,7 +95,7 @@ const defaultFloors2 = [
       "assets/ECUMENE_CHIMES(2773-V)DINING_V2_25-07-2025-1st-flore.webp",
     sliderContent: [
       {
-        image: "assets/WEST FACING VILLA R2 - First Floor.png",
+        image: "assets/WEST_FACING_VILLA_R2_-_First_Floor[1].webp",
         alt: "Luxury penthouse layout",
         caption: "Penthouse - 2,400 sq.ft",
       },
@@ -109,7 +109,7 @@ const defaultFloors2 = [
       "assets/ECUMENE_CHIMES(2773-V)LIVING_V2_25-07-2025-2nd-flore.webp",
     sliderContent: [
       {
-        image: "assets/WEST FACING VILLA R2 - Second Floor.png",
+        image: "assets/WEST_FACING_VILLA_R2_-_Second_Floor[1].webp",
         alt: "Contemporary house layout",
         caption: "Second Floor - 1,050 sq.ft",
       },
@@ -123,7 +123,7 @@ const defaultFloors2 = [
       "assets/Ecumene_Chimes_(2773_N)_Cam 13_Master Bedroom_Ver 01_25-07-2025-3rd-flore.webp",
     sliderContent: [
       {
-        image: "assets/WEST FACING VILLA R2 - Third Floor.png",
+        image: "assets/WEST_FACING_VILLA_R2_-_Terrace_Floor[1].webp",
         alt: "Open concept design",
         caption: "Main Floor - 1,800 sq.ft",
       },
@@ -232,7 +232,7 @@ function FloorPlan({
                         <img
                           src={plan.image}
                           alt={plan.alt || `Floor plan ${index + 1}`}
-                          className="w-full h-100 max-h-[461.4649658203125px] object-cover mx-auto mb-4  floor-plan-section-optimization-image"
+                          className="w-full h-100 object-contain scale-125 object-center mx-auto mb-4  floor-plan-section-optimization-image"
                         />
                       </AnimatePresence>
                       {/* {plan.caption && (

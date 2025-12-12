@@ -527,7 +527,19 @@ body {
 .mobile-button {
   display: none;
 }
+/* Hide the 'three dots' overflow menu in Chrome/Edge */
+video::-webkit-media-controls-overflow-button {
+  display: none !important;
+}
 
+/* Another attempt: Push the download button off-screen */
+video::-webkit-media-controls-enclosure {
+  overflow: hidden !important;
+}
+ 
+video::-webkit-media-controls-panel { 
+    width: calc(100% + 30px) !important; /* Adjust as needed */ 
+} 
 /* responsive design */
 
 /* Responsive styles */
@@ -545,6 +557,8 @@ body {
     border-radius: 40px;
     background: rgba(242, 238, 238, 0.12) !important;
   }
+
+
 
   /* Mobile: top (transparent) */
   .mobile-bg-top {
@@ -4945,7 +4959,7 @@ input:-moz-autofill:active {
   }
 }
 
-@media (min-width: 1700px) and (max-width: 1919px) {
+@media (min-width: 1710px) and (max-width: 1919px) {
   .naturallybuiltarea-text-holder-top {
     margin-top: 8rem !important;
   }
