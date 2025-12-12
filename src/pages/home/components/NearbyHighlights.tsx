@@ -38,7 +38,7 @@
           alt=""
         />
 
-        <h3>TISB School</h3>
+        <h3>TISB SCHOOL</h3>
 
         {/* Desktop Image */}
         <img
