@@ -72,11 +72,9 @@ const VideoShowcase: React.FC<VideoShowcaseProps> = ({
             setIsPlaying(true);
           }}
           onPause={() => {
-            setIsPlaying(false);
-            // now make the time will 0
-            if (videoRef.current) {
-              videoRef.current.currentTime = 0;
-            }
+           if (videoRef.current) {
+             videoRef.current.pause();
+           }
           }}
           onEnded={() => setIsPlaying(false)}
         />
